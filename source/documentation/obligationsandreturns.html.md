@@ -24,6 +24,20 @@ Customers can also find out their obligations for their income source, through t
 * retrieve self-employment business obligations - provides obligation dates for all self-employment businesses, including grace periods and whether obligations have been met or not 
 * retrieve all UK property business obligations - provides obligation dates for their UK property, including grace periods and whether obligations have been met or not 
 
+
+Here is an [example JSON response](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_list-all-selfemployment-businesses_get_accordion) to the list all self employment businesses.
+
+Here is an [example JSON Obligation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_retrieve-end-of-period-statement-obligations-for-a-selfemployment-business_get_accordion) response.
+
+<div class="notice">
+<i class="icon icon-important"><span class="visually-hidden">Notice:</span></i>
+<p>
+<strong class="bold-small">At the moment in production the response only provides previous obligations and the next one it does not provide a full year but this will be available in the future.
+</strong></p>
+</div>
+
+
+
 ## Submit Periodic updates for SE and property businesses
 
 Businesses, and agents who represent them, will be required to provide summary level information of their business income and expenses (transactional information to be kept digitally) on a quarterly basis or more often if they choose.
