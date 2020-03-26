@@ -1,4 +1,4 @@
-# Technical Documentation - Income Tax Service Guide
+# Technical Documentation - Vat Service Guide
 
 ## Getting started
 
