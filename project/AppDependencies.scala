@@ -1,4 +1,3 @@
-import play.core.PlayVersion
 import play.sbt.PlayImport._
 import sbt._
 
@@ -11,5 +10,5 @@ object AppDependencies {
 
   val test = Seq(
     "org.pegdown" % "pegdown" % "1.6.0" % "test",
-    "org.scalatest" %% "scalatest" % "3.0.5" % "test")
+    "org.scalatest" %% "scalatest" % "3.2.0" % "test")
 }
