@@ -17,7 +17,3 @@ lazy val microservice = Project(appName, file("."))
     resolvers += Resolver.jcenterRepo
   )
 
-dependencyUpdatesFilter -= moduleFilter(organization = "com.typesafe.play")
-dependencyUpdatesFilter -= moduleFilter(name = "scala-library")
-dependencyUpdatesFilter -= moduleFilter(name = "scalatest")
-dependencyUpdatesFailBuild := true
