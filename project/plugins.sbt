@@ -12,4 +12,3 @@ addSbtPlugin("uk.gov.hmrc"       % "sbt-distributables" % "1.6.0")
 
 addSbtPlugin("com.typesafe.play" % "sbt-plugin"         % "2.6.25")
 
-addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.5.1")
