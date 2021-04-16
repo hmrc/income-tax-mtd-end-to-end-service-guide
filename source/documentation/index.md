@@ -620,6 +620,7 @@ Version 1.6
 - Revised wording for Draft MTD ITSA Regulations 2021 page.
 
 Version 1.7
+
 - Change of title to Income Tax (Making Tax Digital) end-to-end Service Guide
 - Inclusion of Income Tax (MTD) APIs
 - Inclusion of Tax Terminology
