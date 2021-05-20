@@ -18,6 +18,7 @@ MTD for Income Tax is a service that enables businesses and landlords to keep th
 Instead of sending an annual tax return, businesses and landlords will be required to send HMRC quarterly summary updates of their business income and expenditure and complete a process to finalise their overall tax position at the end of the year.
 
 Based on the information provided, they will receive a view of their emerging tax position, helping them to better budget for their tax throughout the year.
+
 There are no changes to payment dates.
 
 
@@ -28,7 +29,9 @@ Businesses and landlords must provide the following information through the soft
 * finalisation of business income sources with an End of Period Statement (EOPS)
 
 ## Tax Terminology
+
 ### Obligations
+
 Obligations are a set of date periods for which a customer must provide summary income and expense data.
 
 Each obligation has a start date and an end date which together define the obligation period. For MTD, each business has multiple obligations which are based on its accounting period.
@@ -37,6 +40,7 @@ Please note – it may take up to an hour for a change to an obligation to be up
 
 ### Update period
 A period of time within an obligation, for which the customer can submit summarised income and expense data.
+
 An update period might be a single day or the duration of the whole obligation period. Data may be provided as a single update covering the whole period, or as multiple, smaller updates.
 
 ### Annual summary
@@ -48,15 +52,19 @@ End of period statement (EOPS) is the process that allows the customer to finali
 A customer must complete an EOPS for each source of business income (the equivalent of the current SA103 and SA105 forms) E.g. if a customer has a self-employment business and a property business then they will have to complete two EOPS, one for each source of income.
 
 The EOPS is linked to the accounting period for each source of income and cannot be completed until the end of the accounting period. However the customer does not need to complete it until 31st January Year 2.
+
 ### Crystallisation
 This is the process that allows the customer to finalise their end of year position. This includes any business and personal data they need to provide to HMRC to reach their final tax liability for a specific year.
+
 Before starting the crystallisation journey the software package will need to ensure that, for the relevant tax year the taxpayer:
+
 * has finalised EOPS for all their businesses (self-employment and uk-property)
 * has already provided their entire income e.g. interest, dividends, other SA schedules
 * does not have any additional information to provide
 
 ## Making Tax Digital APIs
 This service guide explains how you can integrate your software with the MTD APIs:
+
 * Agent Authorisation   
 * Business Details
 * Business Income Source Summary
@@ -78,17 +86,25 @@ This service guide explains how you can integrate your software with the MTD API
 * Self Assessment Accounts
 
 ### Agent Authorisation API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/agent-authorisation-api/1.0) allows tax agents to request authorisation to act on a client's behalf for a specific Making Tax Digital (MTD) tax service and have the option to cancel the authorisation request.
 
 The API also allows the agent to check the status of authorisations already requested and query active or inactive relationships.
 
 This API has no effect on the existing XML API.
+
 ### Business Details API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0) allows a developer to list all businesses and retrieve additional information about the details of a user’s business.
+
 ### Business Income Source Summary API
+
 This API allows a developer to retrieve a summary of income and expenditure for a specified self-employment, or property business for a given tax year.
+
 ### Business Source Adjustable Summary API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/1.0) allows a developer to retrieve a Business Source Adjustable Summary (BSAS) calculation for a specified self-employment or property business, for a given accounting period. Here a developer can:
+
 * generate a list of BSAS
 * generate an end of accounting period BSAS
 * request a specific BSAS
@@ -100,9 +116,11 @@ This API allows a developer to retrieve a summary of income and expenditure for 
 
 ### CIS Deductions API
 Under the Construction Industry Scheme (CIS), contractors deduct money from a subcontractor’s payments and pass it to HM Revenue and Customs (HMRC).
+
 The deductions count as advance payments towards the subcontractor’s tax and National Insurance.
 
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/1.0) allows a developer to:
+
 * retrieve details of the data the contractor has submitted to HMRC
 * retrieve a list of CIS deductions
 * create CIS deductions
@@ -110,7 +128,9 @@ The deductions count as advance payments towards the subcontractor’s tax and N
 * override previous CIS deductions (after the tax year has ended)
 
 ### Individual Calculations API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0) allows a developer to:
+
 * trigger a self-assessment tax calculation
 * list all their self-assessment tax calculations for a tax year
 * retrieve their self-assessment tax calculation result using multiple endpoints
@@ -126,9 +146,11 @@ The deductions count as advance payments towards the subcontractor’s tax and N
 **From 30 November 2021 this API will be at V2.0, and V1.0 will no longer be available.**
 
 ### Individual Losses API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/2.0) allows a developer to provide financial data for their Brought Forward Losses and Loss Claims.
 
 For Brought Forward losses a developer can:
+
 * provide a list of brought forward losses
 * create a new brought forward loss
 * show a single brought forward loss
@@ -136,6 +158,7 @@ For Brought Forward losses a developer can:
 * update an existing brought forward loss
 
 For Loss claims a developer can:
+
 * provide a list of loss claims
 * create a loss claim against an income source for a specific tax year
 * show the detail of an existing loss claim
@@ -145,26 +168,36 @@ For Loss claims a developer can:
 **From 30 November 2021 this API will be at V2.0, and V1.0 will no longer be available.**
 
 ### Individuals Business End of Period Statement API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/1.0) allows a developer to submit a declaration that the submission data for a business is complete.
+
 ### Individuals Charges API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/1.0) allows a developer to provide a customer’s financial data for their pension charges.
 
 Here a developer can:
+
 * retrieve pension charges
 * create and amend pension charges
 * delete pension charges
 
 ### Individuals Disclosures API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0) allows a developer to create, amend, retrieve and delete data relating to disclosures.
+
 ### Individuals Expenses API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0) allows a developer to retrieve, amend and delete expenses for:
+
 * income for trade union and patent royalties
 * existing employment expenses
 
 This API also allows a developer to ignore HMRC provided employment expenses for a user.
 
 ### Individuals Income Received API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0) allows a developer to retrieve, create, amend or delete data relating to:
+
 * employment income
 * other employment income
 * dividends income
@@ -175,7 +208,9 @@ This API also allows a developer to ignore HMRC provided employment expenses for
 * savings income
 
 ### Individuals Reliefs API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0) allows a developer to retrieve, create, amend or delete relief investments from:
+
 * VCT subscriptions
 * EIS subscriptions
 * community investments
@@ -183,7 +218,9 @@ This API also allows a developer to ignore HMRC provided employment expenses for
 * social enterprise investments
 
 ### Individuals State Benefits API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/1.0) allows a developer to:
+
 * list and retrieve state benefits
 * create, amend or delete customer added state benefits
 * create or amend benefits financial data
@@ -194,22 +231,30 @@ Amendments to customer added state benefit or HMRC held state benefit must be ma
 Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) may be made at any time.
 
 ### Obligations API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0) allows a developer to:
+
 * retrieve obligations for a user's business income sources
 * retrieve the crystallisation obligations for a user's Income Tax account
 * retrieve the End of Period Statement obligations for a user's business income sources
 
 ### Other Deductions API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/other-deductions-api/1.0) allows a developer to retrieve, create and amend, and delete deductions.
 
 ### Property Business API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/1.0) allows a developer to:
+
 * list, retrieve create or amend an individual’s Foreign Property Income & Expenditure Period Summaries
 * retrieve, create, amend or delete an individual’s Foreign Property Annual Summary
 
 ### Self Assessment API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0) allows a developer to supply business and personal financial data to HMRC.<br>
+
 **From 30 June 2021 the following endpoints will be deprecated:**
+
 * [List all self employment businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_list-all-selfemployment-businesses_get_accordion)
 * [Get a self employment business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_get-a-selfemployment-business_get_accordion)
 * [Retrieve a self employment business obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_retrieve-selfemployment-business-obligations_get_accordion)
@@ -217,6 +262,7 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * [Retrieve Crystallisation Obligation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_retrieve-crystallisation-obligations_get_accordion)
 
 **From 30 November 2021 the following endpoints will be deprecated:**
+
 * [Submit self employment end of period statement](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_submit-selfemployment-endofperiod-statement_post_accordion)
 * [Submit UK property end of period statement](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_submit-uk-property-endofperiod-statement_post_accordion)
 * [Get a UK property business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_get-a-uk-property-business_get_accordion)
@@ -226,7 +272,9 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * [Crystallisation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_crystallisation_post_accordion)
 
 ### Self Assessment Accounts API
+
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/1.0) allows a developer to:
+
 * retrieve the overall liability broken down into overdue, payable and pending amounts
 * retrieve a list of charges and payments for a given date range
 * retrieve more detail about a specific transaction
@@ -236,6 +284,7 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * retrieve the allocation details of a specific payment against one or more liabilities
 
 ## Software vendor overview
+
 HMRC expects software providers to offer customers the ability to finalise their overall tax position using the software. This process is sometimes called crystallisation.
 
 In the future, partnerships will be required to provide the information mentioned above for the partnership. Individual partners will not be mandated to report their partner income quarterly.
@@ -301,8 +350,6 @@ The Making Tax Digital for Income Tax APIs that include the endpoints for the fu
 * [Individual Losses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/2.0)
 * [Individuals Disclosures](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0)
 
-
-
 ### Testing requirements
 
 The following endpoints are required to be tested to cover the self-employment reporting:
@@ -325,7 +372,7 @@ summary information.
 9.	‘Submit self-employment End of Period Statement’ to finalise your self- employment income. (Developers must also build the facility for a user to make a declaration of correctness and completeness in relation to the EOPS)
 10.	‘Retrieve End of Period Statement Obligations for a Self-Employment Business’ to check if an EOPS obligation has been fulfilled, this will return a canned response in the sandbox.
 11.	‘Intent to crystallise’ to return the tax Calculation ID for crystallisation.
-12.‘Retrieve a calculation’ with the tax Calculation ID for crystallisation, to return the calculation liability. This will return a canned response in the sandbox.
+12. ‘Retrieve a calculation’ with the tax Calculation ID for crystallisation, to return the calculation liability. This will return a canned response in the sandbox.
 13.	‘Crystallisation’ to finalise the tax liability. (Developers must also build the facility for a user to make a declaration of correctness and completeness when crystallising.)
 
 Once the testing is complete, send details of the dummy NINO (National Insurance Number) used to call the above endpoints in the sandbox to the SDS team at <SDSTeam@hmrc.gsi.gov.uk>.
@@ -350,28 +397,28 @@ Example workflows for self-employment
 
 1. Create an update
 
-a. List all self-employment businesses.<br>
-b. Create a self-employment periodic update.<br>
-c. Trigger a tax calculation - can be triggered anytime but must be triggered at the end of the quarter to meet the obligation.
+    a. List all self-employment businesses.<br>
+    b. Create a self-employment periodic update.<br>
+    c. Trigger a tax calculation - can be triggered anytime but must be triggered at the end of the quarter to meet the obligation.
 
 2. Amend an update
 
-a. List all self-employment update periods.<br>
-b. Amend a self-employment periodic update.<br>
-c. End of Period Statement.<br>
-d. Get a self-employment annual summary.<br>
-e. Amend a self-employment annual summary.<br>
-f. Get self-employment Business Income Summary Source (BISS).<br>
-g. Retrieve end of period statement obligations for a self-employment business.<br>
-h. Agree with the declaration within the software.<br>
-i. Submit self-employment end of period statement.
+    a. List all self-employment update periods.<br>
+    b. Amend a self-employment periodic update.<br>
+    c. End of Period Statement.<br>
+    d. Get a self-employment annual summary.<br>
+    e. Amend a self-employment annual summary.<br>
+    f. Get self-employment Business Income Summary Source (BISS).<br>
+    g. Retrieve end of period statement obligations for a self-employment business.<br>
+    h. Agree with the declaration within the software.<br>
+    i. Submit self-employment end of period statement.
 
 3. Crystallisation
 
-a. Intent to crystallise.<br>
-b. Retrieve a tax calculation - to view the current calculation.<br>
-c. Agree with the declaration within the software.<br>
-d. Crystallisation - agree on the final calculation.<br>
+    a. Intent to crystallise.<br>
+    b. Retrieve a tax calculation - to view the current calculation.<br>
+    c. Agree with the declaration within the software.<br>
+    d. Crystallisation - agree on the final calculation.<br>
 
 
 ### Product Demonstration
@@ -379,20 +426,18 @@ d. Crystallisation - agree on the final calculation.<br>
 The product demonstration is the final part of the process after all preceding steps have been completed. Make sure you have completed the <a href="documentation/mtd-itsa-sa-demo-checklist-self-serve.docx" download>pre-demo checklist</a> before the demonstration.
 
 At the product demonstration HMRC expects to see a consumer-ready product and see software go through the following process flows:
-<ol start="18">
- <li>New customer registers with the software and sets up an account.</li>
- <li>Customer authorises software (OAuth 2.0 journey).</li>
- <li>Customer views obligations and his or her status.</li>
- <li>Customer digitally imports data into the appropriate periodic update and submits information.</li>
- <li>Software triggers a calculation and replays to customer.</li>
- <li>End of Period Statement (EOPs) and declaration.</li>
- <li>Customer crystallisation - the appropriate display of the tax calculation, declarations, and error messages.</li>
-</ol>
+
+1. New customer registers with the software and sets up an account.
+2. Customer authorises software (OAuth 2.0 journey).
+3. Customer views obligations and his or her status.
+4. Customer digitally imports data into the appropriate periodic update and submits information.
+5. Software triggers a calculation and replays to customer.
+6. End of Period Statement (EOPs) and declaration.
+7. Customer crystallisation - the appropriate display of the tax calculation, declarations, and error messages.
 
 ## Terms of use
 
 You must comply with our [terms of use](https://developer.service.hmrc.gov.uk/api-documentation/docs/terms-of-use). You must accept the terms of use before we can issue you with production credentials.
-
 
 ## Software choices
 
@@ -426,6 +471,7 @@ In addition to the minimum standards set out in the terms of use, and the genera
 HMRC would not require free software to link or integrate with an Agent product.
 
 ## Retrieving Obligations
+
 Once a business or agent has completed authentication and granted access to the software, the software can then use our APIs to request the information the customer provided at sign up and to find out the customer’s update obligation dates.
 The software must make customers aware of their obligations.
 
@@ -452,11 +498,13 @@ The software should present these deadlines clearly to the customer and prompt t
 Submissions of summary-level information should not span an obligation period. If this happens, the software will need to send two updates that fall into different obligations.
 
 The software package will need to convert the transactional information into summary totals for each category, for example, expenses by category.
+
 HMRC has provided APIs to enable the software to be able to send the summary information to HMRC for each income source and allow HMRC to provide a calculation based on all the information we have received to date.
 
 When the update is received, HMRC checks if the customer is signed up to MTD, if the submission is coming from an agent and if that agent is subscribed to agent services and authorised to act on behalf of the client if not, an error is returned.
 
 Note: If you still get the error and the client insists they have met all of the scenarios, check they have used the correct Government Gateway credentials when granting access to the software.
+
 * [List all self-employment update periods](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_list-all-selfemployment-update-periods_get_accordion)
 * [Create a self-employment periodic update](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_create-a-selfemployment-periodic-update_post_accordion)
 * [Get a self-employment periodic update](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_get-a-selfemployment-periodic-update_get_accordion)
@@ -467,6 +515,7 @@ The service will include a number of business validation rules to ensure that al
 HMRC cannot apply these rules without knowing that no further submission (APIs calls) will be sent by the customer for the period being validated.
 
 ## Finalise business income End of Period Statement (EOPS)
+
 ### Business or Agent able to submit End of Period Statement through software
 
 This is the process that allows the customer to finalise the profit or loss for any one source of business income.
@@ -502,7 +551,6 @@ Customers must make sure they are confident with the information they have provi
 
 Note: the Tax Calculation can take up to 5 seconds to run, so we recommend the software waits 5 seconds – this is optional, the software does not have to retrieve the tax calculation information at this point.
 
-
 * [List Business Source Adjustable Summaries (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/1.0#_list-business-source-adjustable-summaries-bsas-test-only_get_accordion)
 * [Trigger a Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/1.0#selfemployment-business_retrieve-a-selfemployment-business-source-adjustable-summary-bsas_get_accordion)
 * [Retrieve a Self-Employment Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/1.0#selfemployment-business_retrieve-a-selfemployment-business-source-adjustable-summary-bsas_get_accordion)
@@ -513,8 +561,11 @@ Note: the Tax Calculation can take up to 5 seconds to run, so we recommend the s
 * [Submit an Adjustment to a UK Property Business Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/1.0#uk-property-business_submit-an-adjustment-to-a-uk-property-business-summary_post_accordion)
 
 ## Multiple businesses
+
 Users with multiple self-employment businesses and those with a foreign property business will be able to sign up to Making Tax Digital.
+
 To enable this we are providing a number of new endpoints:
+
 * [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0#_list-all-businesses_get_accordion) - returns a list of the business income sources
 * [Retrieve Business Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0#_retrieve-business-details_get_accordion) - returns further information about a single business income source
 * [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0#_retrieve-income-tax-self-assessment-income-and-expenditure-obligations_get_accordion) - returns the quarterly obligations for each business income source
@@ -522,6 +573,7 @@ To enable this we are providing a number of new endpoints:
 * [Amend Loss Claim Order Preference](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/2.0#loss-claims_amend-loss-claims-order-test-only_put_accordion) - permits a change in the order in which loss claims are consumed
 
 ## Final return (crystallisation)
+
 Final return brings together all the data that a customer needs to provide to HMRC to reach their final tax liability for a specific year. Using this process allows the customer to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise.
 
 It is also the process by which most formal claims for reliefs and allowances and any deductions will be made, where these were previously included within a Self Assessment tax return.
@@ -530,9 +582,10 @@ Customers are able to tell us at this point (subject to the existing limits) how
 
 Customers can crystallise from 6 April Year 1. The deadline for Crystallisation is 31 January Year 2. The software should remind customers to help them to meet this deadline.
 
-
 We suggest that you retrieve the self-assessment metadata first to check there are no validation errors.
+
 If there are errors the calculation will not have been generated. To view the error messages, call the retrieve self assessment tax calculation endpoint.
+
 The customer must go back and amend the digital records. The software should resubmit the revised summary totals for the relevant periods, then call the intent to crystallise endpoint again.
 
 
@@ -552,6 +605,7 @@ These journeys show examples of use:
 * [ITSA (MTD) close down activities](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/closedown.html)
 
 ## Related API documentation
+
 <!--- Section owner: MTD Programme --->
 * [Create Test User API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0)
 * [Test Fraud Prevention Headers API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api/1.0)
@@ -587,6 +641,7 @@ Version 1.6
 * Revised wording for Draft MTD ITSA Regulations 2021 page.
 
 Version 1.7
+
 * Change of title to Income Tax (Making Tax Digital) end-to-end Service Guide
 * Inclusion of Income Tax (MTD) APIs
 * Inclusion of Tax Terminology
@@ -595,6 +650,7 @@ Version 1.7
 * Replaced references to SA Accounting Summary API with BSAS API
 
 Version 1.8
+
 * Addition of deprecation dates for Self Assessment API Endpoints
 * Notice of version change to Business Source Adjustable Summary (MTD) - V 1.0
 * Notice of version change to Individual Losses (MTD) - V1.0
