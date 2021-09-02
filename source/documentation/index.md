@@ -53,10 +53,10 @@ A customer must complete an EOPS for each source of business income (the equival
 
 The EOPS is linked to the accounting period for each source of income and cannot be completed until the end of the accounting period. However the customer does not need to complete it until 31st January Year 2.
 
-### Crystallisation
+### Final Declaration
 This is the process that allows the customer to finalise their end of year position. This includes any business and personal data they need to provide to HMRC to reach their final tax liability for a specific year.
 
-Before starting the crystallisation journey the software package will need to ensure that, for the relevant tax year the taxpayer:
+Before starting the final declaration journey the software package will need to ensure that, for the relevant tax year the customer:
 
 * has finalised EOPS for all their businesses (self-employment and uk-property)
 * has already provided their entire income e.g. interest, dividends, other SA schedules
@@ -235,7 +235,7 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0) allows a developer to:
 
 * retrieve obligations for a user's business income sources
-* retrieve the crystallisation obligations for a user's Income Tax account
+* retrieve the final declaration obligations for a user's Income Tax account
 * retrieve the End of Period Statement obligations for a user's business income sources
 
 ### Other Deductions API
@@ -246,8 +246,8 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 
 [This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/1.0) allows a developer to:
 
-* list, retrieve create or amend an individual’s Foreign Property Income & Expenditure Period Summaries
-* retrieve, create, amend or delete an individual’s Foreign Property Annual Summary
+* list, retrieve create or amend a customer’s Foreign Property Income & Expenditure Period Summaries
+* retrieve, create, amend or delete a customer’s Foreign Property Annual Summary
 
 ### Self Assessment API
 
@@ -268,8 +268,8 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * [Get a UK property business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_get-a-uk-property-business_get_accordion)
 * [Retrieve all UK property business obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_retrieve-all-uk-property-business-obligations_get_accordion)
 * [Retrieve End of Period Statement Obligations for a UK Property Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_retrieve-end-of-period-statement-obligations-for-a-uk-property-business_get_accordion)
-* [Intent to crystallise](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_intent-to-crystallise_post_accordion)
-* [Crystallisation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_crystallisation_post_accordion)
+* [Intent to submit final declartion](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_intent-to-crystallise_post_accordion)
+* [Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_crystallisation_post_accordion)
 
 ### Self Assessment Accounts API
 
@@ -283,9 +283,9 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * retrieve a list of payments for a given date range
 * retrieve the allocation details of a specific payment against one or more liabilities
 
-## Software vendor overview
+## Software provider overview
 
-HMRC expects software providers to offer customers the ability to finalise their overall tax position using the software. This process is sometimes called crystallisation.
+HMRC expects software providers to offer customers the ability to finalise their overall tax position using the software. This process is sometimes called final declaration.
 
 In the future, partnerships will be required to provide the information mentioned above for the partnership. Individual partners will not be mandated to report their partner income quarterly.
 
@@ -295,7 +295,7 @@ By developing a product now, you will support mandate of the service, influence 
 
 ### Developer journey to production credentials
 
-It is important that quality software products are available for customers to submit their self-assessment returns through Making Tax Digital. HMRC is committed to providing help and support for vendors and developers throughout the software development process.
+It is important that quality software products are available for customers to submit their self-assessment returns through Making Tax Digital. HMRC is committed to providing help and support for software providers and developers throughout the software development process.
 
 Here, we describe the steps developers go through from initially registering an application to gaining production credentials to submitting live data and also the support available at each stage and the interactions developers will have with HMRC.
 
@@ -367,13 +367,13 @@ summary information.
 7.	‘Trigger a calculation’ to request a calculation.
 8.	‘Retrieve a calculation’ to return the calculation liability (this will return a canned response from the sandbox).
 
-    The following endpoints are to be tested to cover EOPS (End of Period Statement) and Crystallisation:
+    The following endpoints are to be tested to cover EOPS (End of Period Statement) and final declaration:
 
 9.	‘Submit self-employment End of Period Statement’ to finalise your self- employment income. (Developers must also build the facility for a user to make a declaration of correctness and completeness in relation to the EOPS)
 10.	‘Retrieve End of Period Statement Obligations for a Self-Employment Business’ to check if an EOPS obligation has been fulfilled, this will return a canned response in the sandbox.
 11.	‘Intent to crystallise’ to return the tax Calculation ID for crystallisation.
 12. ‘Retrieve a calculation’ with the tax Calculation ID for crystallisation, to return the calculation liability. This will return a canned response in the sandbox.
-13.	‘Crystallisation’ to finalise the tax liability. (Developers must also build the facility for a user to make a declaration of correctness and completeness when crystallising.)
+13.	‘Final declaration’ to finalise the tax liability. (Developers must also build the facility for a user to make a declaration of correctness and completeness when making the final declaration.)
 
 Once the testing is complete, send details of the dummy NINO (National Insurance Number) used to call the above endpoints in the sandbox to the SDS team at <SDSTeam@hmrc.gsi.gov.uk>.
 
@@ -385,7 +385,7 @@ Developers need to:
 * build functionality to allow business customers to report income from non-business sources
 * consider the one-hour delay as part of the software workflow to update the status of obligations
 * consider a 5 second delay before retrieving the calculation
-* consider developing guidelines within the software for relevant users, including a reference to HMRC user interface journeys for individuals and agents
+* consider developing guidelines within the software for relevant users, including a reference to HMRC user interface journeys for customers and agents
 * use APIs as efficiently as possible to prevent hitting the rate limit
 * build relevant error responses so that the software can deal with exceptions
 * when authorising software, the correct MTD gateway credentials or agent services credentials, need to be used when logging into the system
@@ -413,12 +413,12 @@ Example workflows for self-employment
     h. Agree with the declaration within the software.<br>
     i. Submit self-employment end of period statement.
 
-3. Crystallisation
+3. Final declaration
 
     a. Intent to crystallise.<br>
     b. Retrieve a tax calculation - to view the current calculation.<br>
     c. Agree with the declaration within the software.<br>
-    d. Crystallisation - agree on the final calculation.<br>
+    d. Make a final declaration - agree on the final calculation.<br>
 
 
 ### Product Demonstration
@@ -433,7 +433,7 @@ At the product demonstration HMRC expects to see a consumer-ready product and se
 4. Customer digitally imports data into the appropriate periodic update and submits information.
 5. Software triggers a calculation and replays to customer.
 6. End of Period Statement (EOPs) and declaration.
-7. Customer crystallisation - the appropriate display of the tax calculation, declarations, and error messages.
+7. Customer final declaration - the appropriate display of the tax calculation, declarations, and error messages.
 
 ## Terms of use
 
@@ -441,9 +441,9 @@ You must comply with our [terms of use](https://developer.service.hmrc.gov.uk/ap
 
 ## Software choices
 
-HMRC publishes a [list of compatible software](https://www.gov.uk/government/publications/making-tax-digital-software-suppliers-terms-of-collaboration/terms-of-collaboration-between-hm-revenue-and-customs-and-software-developers#Annex-C) for Making Tax Digital for Income Tax on GOV.UK. Software vendors will be added to this list when they have completed the necessary steps in the ‘Software vendor overview’ section.  
+HMRC publishes a [list of compatible software](https://www.gov.uk/government/publications/making-tax-digital-software-suppliers-terms-of-collaboration/terms-of-collaboration-between-hm-revenue-and-customs-and-software-developers#Annex-C) for Making Tax Digital for Income Tax on GOV.UK. Software providers will be added to this list when they have completed the necessary steps in the ‘Software provider overview’ section.  
 
-From our experience with MTD VAT, businesses, agents and third parties will use this as the definitive list of MTD compatible software. All software listed on the GOV.UK page must allow the user to submit a summary of business or property information up to and including the End of Period Statement, and also offer users the ability to finalise their tax affairs using the software. The current GOV.UK page will be developed over time to meet user needs, including filters that help users to find software.
+From our experience with MTD VAT, businesses, agents and software providers will use this as the definitive list of MTD compatible software. All software listed on the GOV.UK page must allow the user to submit a summary of business or property information up to and including the End of Period Statement, and also offer users the ability to finalise their tax affairs using the software. The current GOV.UK page will be developed over time to meet user needs, including filters that help users to find software.
 
 HMRC expects demand for products that serve all of the requirements of MTD, including keeping the required digital records for business or property income and the ability to submit all relevant non-business information to HMRC.
 
@@ -572,15 +572,15 @@ To enable this we are providing a number of new endpoints:
 * [Retrieve Income Tax (Self Assessment) End of Period Statement Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0#_retrieve-income-tax-self-assessment-end-of-period-statement_get_accordion) - returns the End of Period Statement obligations for a user’s business income sources
 * [Amend Loss Claim Order Preference](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/2.0#loss-claims_amend-loss-claims-order-test-only_put_accordion) - permits a change in the order in which loss claims are consumed
 
-## Final return (crystallisation)
+## Final declaration
 
-Final return brings together all the data that a customer needs to provide to HMRC to reach their final tax liability for a specific year. Using this process allows the customer to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise.
+Final declaration brings together all the data that a customer needs to provide to HMRC to reach their final tax liability for a specific year. Using this process allows the customer to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise.
 
 It is also the process by which most formal claims for reliefs and allowances and any deductions will be made, where these were previously included within a Self Assessment tax return.
 
 Customers are able to tell us at this point (subject to the existing limits) how they wish any losses available to them to be treated.
 
-Customers can crystallise from 6 April Year 1. The deadline for Crystallisation is 31 January Year 2. The software should remind customers to help them to meet this deadline.
+Customers can make a final declaration from 6 April Year 1. The deadline for final declaration is 31 January Year 2. The software should remind customers to help them to meet this deadline.
 
 We suggest that you retrieve the self-assessment metadata first to check there are no validation errors.
 
