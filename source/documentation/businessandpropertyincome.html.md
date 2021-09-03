@@ -134,7 +134,7 @@ Notes:
 * it can take around 5 seconds for the tax calculation response to be ready to retrieve, please wait at least 5 seconds before retrieving the calculation or you may get an error
 * the self-assessment tax calculation endpoints under the Individual Calculations API will replace the tax calculation endpoints under the existing [Self Assessment API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0)
 * the endpoints under the existing Self Assessment API will be supported until 31th July 2020, after that only the Individual Calculations API will be supported
-* it is possible to return both in-year and crystallisation calculations using these endpoints. An in-year calculation is worked out if the calculation was triggered by the [trigger a self-assessment tax calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_trigger-a-self-assessment-tax-calculation_post_accordion) endpoint
+* it is possible to return both in-year and final declaration calculations using these endpoints. An in-year calculation is worked out if the calculation was triggered by the [trigger a self-assessment tax calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_trigger-a-self-assessment-tax-calculation_post_accordion) endpoint
 
 ## Making changes to previously submitted data
 
@@ -293,7 +293,7 @@ Making changes to previously submitted data during and after an EOPS declaration
 
 * if the information the customer has previously provided relating to that source of business income is not correct or complete (for example the previous information provided fails further validation, or a periodic update is missing), then the EOPS declaration is rejected, and error messages are returned. The changes must be made to any relevant periodic or annual summaries and then follow the existing process of submitting updates and triggering the calculation before attempting the declaration again.
 
-* if there are no error failures, it is recommended that customers review any warning messages they have at this point or earlier as warnings will cause a failure at crystallisation.
+* if there are no error failures, it is recommended that customers review any warning messages they have at this point or earlier as warnings will cause a failure at final declaration.
 
 * if after the customer has completed their EOPS declaration, they need to revise any of the data relating to that source of business income then they must make the change to the relevant periodic or annual summaries and follow the existing process of submitting updates and triggering the calculation.
 
@@ -366,7 +366,7 @@ Users with multiple self-employment businesses and those with a foreign property
 * [Retrieve Business Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0#_retrieve-business-details_get_accordion) - returns further information about a single business income source
 * [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0#_retrieve-income-tax-self-assessment-income-and-expenditure-obligations_get_accordion) - returns the quarterly obligations for each business income source
 * [Retrieve Income Tax (Self Assessment) End of Period Statement Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0#_retrieve-income-tax-self-assessment-end-of-period-statement_get_accordion) - returns the End of Period Statement obligations for a user’s business income sources
-* [Retrieve Income Tax (Self Assessment) Crystallisation Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0#_retrieve-income-tax-self-assessment-crystallisation-obligations_get_accordion) - returns the Crystallisation obligation for a user
+* [Retrieve Income Tax (Self Assessment) Final Declaration Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0#_retrieve-income-tax-self-assessment-crystallisation-obligations_get_accordion) - returns the final declaration obligation for a user
 * [Amend Loss Claim Order Preference](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/2.0#loss-claims_amend-loss-claims-order-test-only_put_accordion) - permits a change in the order in which loss claims are consumed 
 
 <a href="figures/list-all-businesses.svg" target="blank"><img src="figures/list-all-businesses.svg" alt="list all businesses diagram" style="width:720px;" /></a>
@@ -384,7 +384,7 @@ In the case where the query is made with a validly formed but incorrect National
 <a href="figures/multiple-businesses-retrieve-itsa-eops-statement.svg" target="blank">Open the retrieve Income Tax (Self Assessment) End of Period Statement obligations diagram in a new tab.</a>
 
 <a href="figures/multiple-businesses-retrieve-income-tax-crystallisation-obligations.svg" target="blank"><img src="figures/multiple-businesses-retrieve-income-tax-crystallisation-obligations.svg" alt="multiple businesses diagram" style="width:720px;" /></a>
-<a href="figures/multiple-businesses-retrieve-income-tax-crystallisation-obligations.svg" target="blank">Open the retrieve Income Tax (Self Assessment) crystallisation obligations diagram in a new tab.</a>
+<a href="figures/multiple-businesses-retrieve-income-tax-crystallisation-obligations.svg" target="blank">Open the retrieve Income Tax (Self Assessment) final declaration obligations diagram in a new tab.</a>
 
 The List Loss Claims endpoint has been extended to include a sequence number that shows the order in which loss claims will be used.
  

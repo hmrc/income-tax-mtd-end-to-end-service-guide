@@ -45,7 +45,7 @@ These endpoints can be broken into three categories:
 
 [Ignore Employment Expenses [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0#_ignore-employment-expenses-test-only_put_accordion)
 
-HMRC will pre-populate the employment information provided by employers. The user should check and correct the information, as necessary, prior to crystallisation. 
+HMRC will pre-populate the employment information provided by employers. The user should check and correct the information, as necessary, prior to final declaration. 
 
 **Note:** 
 

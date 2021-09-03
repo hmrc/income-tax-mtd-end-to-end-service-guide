@@ -259,7 +259,7 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * [Get a self employment business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_get-a-selfemployment-business_get_accordion)
 * [Retrieve a self employment business obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_retrieve-selfemployment-business-obligations_get_accordion)
 * [Retrieve End of period statement obligations for a Self Employment Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_retrieve-end-of-period-statement-obligations-for-a-selfemployment-business_get_accordion)
-* [Retrieve Crystallisation Obligation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_retrieve-crystallisation-obligations_get_accordion)
+* [Retrieve Final Declaration Obligation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_retrieve-crystallisation-obligations_get_accordion)
 
 **From 30 November 2021 the following endpoints will be deprecated:**
 
@@ -338,7 +338,7 @@ In order to be granted production credentials for an MTD for Income Tax product,
 * Customers to have the option to report data using the ‘Annual API’ at any time
 * submission of an End of Period Statement for each business income source (with declaration of completeness)
 * customers to call for and view an estimate of their Income Tax liability for each tax year at any time
-* customers to make a self-assessment of the tax and Class 4 NIC due on their total taxable income and a final declaration of completeness and correctness (‘Crystallisation’) no later than 31 January following the end of tax year in which that income is taxable
+* customers to make a self-assessment of the tax and Class 4 NIC due on their total taxable income and a final declaration of completeness and correctness no later than 31 January following the end of tax year in which that income is taxable
 * losses and adjustments allowing the customer to carry forward or set sideways (when permitted) business losses occurring in any one year as well as to apply losses incurred in earlier years against current year profits
 * customers to pay voluntary Class 2 National Insurance contributions
 
