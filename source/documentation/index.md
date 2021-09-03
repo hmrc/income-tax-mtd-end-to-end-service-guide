@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-Version 1.8 issued 20 May 2021
+Version 1.9 issued September 2021
 ***
 
 This service guide describes HMRC’s Making Tax Digital (MTD) for Income Tax and explains how developers can connect their software to the MTD APIs.
@@ -53,7 +53,7 @@ A customer must complete an EOPS for each source of business income (the equival
 
 The EOPS is linked to the accounting period for each source of income and cannot be completed until the end of the accounting period. However the customer does not need to complete it until 31st January Year 2.
 
-### Final Declaration
+### Final declaration
 This is the process that allows the customer to finalise their end of year position. This includes any business and personal data they need to provide to HMRC to reach their final tax liability for a specific year.
 
 Before starting the final declaration journey the software package will need to ensure that, for the relevant tax year the customer:
@@ -268,8 +268,8 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * [Get a UK property business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_get-a-uk-property-business_get_accordion)
 * [Retrieve all UK property business obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_retrieve-all-uk-property-business-obligations_get_accordion)
 * [Retrieve End of Period Statement Obligations for a UK Property Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_retrieve-end-of-period-statement-obligations-for-a-uk-property-business_get_accordion)
-* [Intent to submit final declartion](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_intent-to-crystallise_post_accordion)
-* [Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_crystallisation_post_accordion)
+* [Intent to submit final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_intent-to-crystallise_post_accordion)
+* [Final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_crystallisation_post_accordion)
 
 ### Self Assessment Accounts API
 
@@ -371,8 +371,8 @@ summary information.
 
 9.	‘Submit self-employment End of Period Statement’ to finalise your self- employment income. (Developers must also build the facility for a user to make a declaration of correctness and completeness in relation to the EOPS)
 10.	‘Retrieve End of Period Statement Obligations for a Self-Employment Business’ to check if an EOPS obligation has been fulfilled, this will return a canned response in the sandbox.
-11.	‘Intent to crystallise’ to return the tax Calculation ID for crystallisation.
-12. ‘Retrieve a calculation’ with the tax Calculation ID for crystallisation, to return the calculation liability. This will return a canned response in the sandbox.
+11.	‘Intent to crystallise’ to return the tax Calculation ID for final declaration.
+12. ‘Retrieve a calculation’ with the tax Calculation ID for final declaration, to return the calculation liability. This will return a canned response in the sandbox.
 13.	‘Final declaration’ to finalise the tax liability. (Developers must also build the facility for a user to make a declaration of correctness and completeness when making the final declaration.)
 
 Once the testing is complete, send details of the dummy NINO (National Insurance Number) used to call the above endpoints in the sandbox to the SDS team at <SDSTeam@hmrc.gsi.gov.uk>.
@@ -655,3 +655,10 @@ Version 1.8
 * Notice of version change to Business Source Adjustable Summary (MTD) - V 1.0
 * Notice of version change to Individual Losses (MTD) - V1.0
 * Notice of version change to Individual Calculations v 1.0
+
+Version 1.9
+
+* Addition of requirement for businesses and landlords to provide information about residential property disposals 
+* Addition of information regarding BSAS adjustments
+* Addition of content changes to meet MTD Style Guide V2.2
+* Replacing the term ‘crystallisation’ with ‘final declaration
