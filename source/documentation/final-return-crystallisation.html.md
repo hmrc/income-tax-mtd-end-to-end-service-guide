@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 <!--- Section owner: MTD Programme --->
 
-# Final return (crystallisation)
+# Final Declaration (Crystallisation)
 **Note: The term final declaration is now used instead of the term crystallisation. Endpoints with crystallisation or crystallise in their name will continue to be used until further notice.**
 
 Final declaration (previously called crystallisation) is the process that allows the customer to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise. In other words, this process brings together all the data that a taxpayer needs to provide to HMRC to reach their final tax liability for a specific year.
