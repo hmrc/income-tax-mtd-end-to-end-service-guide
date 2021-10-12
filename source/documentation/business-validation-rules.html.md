@@ -3,7 +3,7 @@ title: Business Validation Rules (BVRs) | Income Tax (MTD) End-to-End Service Gu
 weight: 12
 ---
 
-# Business validation rules (BVRs)
+# Business Validation Rules (BVRs)
 
 <!--- Section owner: MTD Programme --->
 
