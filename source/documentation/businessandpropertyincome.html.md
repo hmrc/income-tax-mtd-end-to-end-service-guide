@@ -1,12 +1,12 @@
 ---
-title: Business and property income
+title: Business and Property Income
 weight: 3
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
 <!--- Section owner: MTD Programme --->
 
-# Business and property income
+# Business and Property Income
 
 The steps in this section (up to the End of Period Statement) will be the element that will be mandated for digital record keeping and submission through software under MTD (Making Tax Digital).
 
