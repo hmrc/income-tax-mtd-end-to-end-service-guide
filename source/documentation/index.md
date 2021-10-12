@@ -662,3 +662,7 @@ Version 1.9
 * Addition of information regarding BSAS adjustments
 * Addition of content changes to meet MTD Style Guide V2.2
 * Replacing the term ‘crystallisation’ with ‘final declaration
+
+Version 2.0
+
+* Addition of Capital Gains Tax, Marriage Allowance, Non-PAYE Income, Coding out underpayments and debt.

@@ -4,7 +4,7 @@ weight: 30
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
-# Additional income
+# Additional Income
 
 ## Employments
 
@@ -325,3 +325,13 @@ The new functionality provides seven new endpoints: Add State Benefit, Delete St
 <img src="figures/state-benefits.svg" alt=" " style="width:720px;" />
 </a>
 <a href="figures/state-benefits.svg" target="blank">Open diagram in a new tab.</a>
+
+## Non-PAYE Income
+
+Use the Non-PAYE Income resources of the Individuals Incomes Received API to create, amend, retrieve and delete data relating to non PAYE income and tips:
+
+[Create and Amend Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-Non-PAYE-employment-income-test-only_put_accordion)
+
+[Retrieve Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Retrieve-Non-PAYE-employment-income-test-only_get_accordion)
+
+[Delete Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-Non-PAYE-employment-income-test-only_delete_accordion)
