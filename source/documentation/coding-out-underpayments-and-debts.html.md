@@ -1,12 +1,12 @@
 ---
-title: Coding Out Underpayments and Debt | Income Tax (MTD) End-to-End Service Guide
+title: Coding Out Underpayments and Debts | Income Tax (MTD) End-to-End Service Guide
 weight: 33
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
 <!--- Section owner: MTD Programme --->
 
-# Coding Out Underpayments and Debt
+# Coding Out Underpayments and Debts
 
 Coding out is a concept used to collect underpaid tax and debts through a customer’s PAYE tax code.
 
