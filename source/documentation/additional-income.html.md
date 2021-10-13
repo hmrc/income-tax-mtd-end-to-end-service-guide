@@ -302,7 +302,7 @@ The new functionality provides three endpoints, to submit or amend expenses inco
 
 ## Non-PAYE Income
 
-Use the Non-PAYE Income resources of the Individuals Incomes Received API to create, amend, retrieve and delete data relating to non PAYE income and tips:
+Use the Non-PAYE Income resources of the Individuals Income Received API to create, amend, retrieve and delete data relating to non PAYE income and tips:
 
 * [Create and Amend Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-Non-PAYE-employment-income-test-only_put_accordion)
 * [Retrieve Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Retrieve-Non-PAYE-employment-income-test-only_get_accordion)

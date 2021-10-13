@@ -665,4 +665,4 @@ Version 1.9
 
 Version 2.0
 
-* Addition of Capital Gains Tax, Marriage Allowance, Non-PAYE Income, Coding out underpayments and debt.
+* Addition of Capital Gains Tax, Marriage Allowance, Non-PAYE Income, Coding out underpayments and debts.
