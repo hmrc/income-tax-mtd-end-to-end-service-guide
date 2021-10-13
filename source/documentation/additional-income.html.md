@@ -74,7 +74,7 @@ These endpoints allow a user to retrieve other employment income: Share options,
 </a>
 <a href="figures/other-employment-income.svg" target="blank">Open diagram in a new tab.</a>
 
-## Dividends income
+## Dividends Income
 
 These endpoints allow a user to retrieve, amend and delete dividends income: foreign dividend, dividend income received whilst abroad, stock dividend, redeemable shares, bonus issues of securities and close company loans written off.
 
@@ -87,7 +87,7 @@ These endpoints allow a user to retrieve, amend and delete dividends income: for
 </a>
 <a href="figures/dividends-income.svg" target="blank">Open diagram in a new tab.</a>
 
-## Foreign income
+## Foreign Income
 
 These endpoints give the user the ability to manage their data related to foreign earnings and unremittable foreign income.
 
@@ -104,7 +104,7 @@ The new functionality provides three endpoints, to submit or amend foreign earni
 </a>
 <a href="figures/foreign-income.svg" target="blank">Open diagram in a new tab.</a>
 
-## Insurance policies income
+## Insurance Policies Income
 
 These endpoints allow a user to retrieve, amend and delete insurance policies and income for less common types of income: Life Insurance Policies, Life Annuity Contracts, Capital Redemption Policies, Voided ISAs, Foreign Policies. A National Insurance number and tax year must be provided.
 
@@ -117,7 +117,7 @@ These endpoints allow a user to retrieve, amend and delete insurance policies an
 </a>
 <a href="figures/insurance-policies-income.svg" target="blank">Open diagram in a new tab.</a>
 
-## Pensions income
+## Pensions Income
 
 These endpoints allow a user to retrieve, amend and delete previously populated foreign pensions and overseas pension contributions.
 
@@ -130,7 +130,7 @@ These endpoints allow a user to retrieve, amend and delete previously populated 
 </a>
 <a href="figures/pensions-income.svg" target="blank">Open diagram in a new tab.</a>
 
-## Other income
+## Other Income
 
 These endpoints allow a user to retrieve other income: business receipts, all other income received whilst abroad, overseas income and gains, chargeable foreign benefits and gifts and omitted foreign income.
 
@@ -143,7 +143,7 @@ These endpoints allow a user to retrieve other income: business receipts, all ot
 </a>
 <a href="figures/other-income.svg" target="blank">Open diagram in a new tab.</a>
 
-## Savings income
+## Savings Income
 
 These endpoints allow a user to retrieve, amend and delete savings income for securities or foreign interest.
 
@@ -175,7 +175,7 @@ The user would normally call this when they have all the information necessary f
 </a>
 <a href="figures/disclosures.svg" target="blank">Open diagram in a new tab.</a>
 
-## Pension charges
+## Pension Charges
 
 These endpoints allow a user to manage data related to pension contributions and charges. The user can submit details of pension contributions and charges for a specific tax year, as well as amend submissions already made. The user also has the option to delete previous submissions, and to retrieve the information they have previously submitted.
  
@@ -190,7 +190,7 @@ The new functionality provides three new endpoints: amend new pension charges, d
 </a>
 <a href="figures/pension-charges.svg" target="blank">Open diagram in a new tab.</a>
 
-## Pension reliefs
+## Pension Reliefs
 
 These endpoints give the user the ability to manage data related to reliefs on pensions.  The user can submit details of reliefs on pensions for a specific tax year, as well as amend submissions already made.  They also have the option to delete previous submissions, and to retrieve the information they have previously submitted.
  
@@ -222,7 +222,7 @@ These endpoints allow a user to amend, delete and retrieve relief investments fr
 <a href="figures/relief-investments.svg" target="blank">Open diagram in a new tab.</a>
 
 
-### Other reliefs
+### Other Reliefs
 
 This endpoint allows a user to amend, retrieve and delete reliefs other than investments that have previously been submitted.  This includes loan interest, payroll giving, shares and securities redemptions, maintenance payments, post-cessation reliefs, annual payments and qualifying loan interest payments. 
 
@@ -236,7 +236,7 @@ This endpoint allows a user to amend, retrieve and delete reliefs other than inv
 <a href="figures/other-reliefs.svg" target="blank">Open diagram in a new tab.</a>
 
 
-### Foreign reliefs
+### Foreign Reliefs
 
 This endpoint allows a user to retrieve, amend, and delete foreign reliefs that have been previously submitted. 
 
@@ -250,7 +250,7 @@ This endpoint allows a user to retrieve, amend, and delete foreign reliefs that 
 <a href="figures/foreign-reliefs.svg" target="blank">Open diagram in a new tab.</a>
 
 
-### Pensions reliefs
+### Pensions Reliefs
 
 This endpoint allows a user to retrieve, amend, delete tax relief on pension contributions.
 
@@ -264,7 +264,7 @@ This endpoint allows a user to retrieve, amend, delete tax relief on pension con
 <a href="figures/individual-pension-reliefs.svg" target="blank">Open diagram in a new tab.</a>
 
 
-## Other deductions
+## Other Deductions
 
 At present this only relates to seafarers, but other deductions will be added in future.
 
@@ -283,7 +283,7 @@ The new functionality provides three endpoints, to submit or amend deductions, d
 </a>
 <a href="figures/other-deductions.svg" target="blank">Open diagram in a new tab.</a>
 
-## Individual expenses other
+## Individual Expenses Other
 
 These endpoints allow the user to  manage their data related to expenses income for trade union and patent royalties.
 
@@ -300,7 +300,15 @@ The new functionality provides three endpoints, to submit or amend expenses inco
 </a>
 <a href="figures/expenses-other.svg" target="blank">Open diagram in a new tab.</a>
 
-## State benefits
+## Non-PAYE Income
+
+Use the Non-PAYE Income resources of the Individuals Incomes Received API to create, amend, retrieve and delete data relating to non PAYE income and tips:
+
+* [Create and Amend Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-Non-PAYE-employment-income-test-only_put_accordion)
+* [Retrieve Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Retrieve-Non-PAYE-employment-income-test-only_get_accordion)
+* [Delete Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-Non-PAYE-employment-income-test-only_delete_accordion)
+
+## State Benefits
 
 These endpoints give a user the ability to manage data related to state benefits.  The user can add details about state benefits for a specific tax year, as well as update submissions already made.  They also have the option to delete previous submissions, and to retrieve the information they have previously submitted.
  
@@ -325,13 +333,3 @@ The new functionality provides seven new endpoints: Add State Benefit, Delete St
 <img src="figures/state-benefits.svg" alt=" " style="width:720px;" />
 </a>
 <a href="figures/state-benefits.svg" target="blank">Open diagram in a new tab.</a>
-
-## Non-PAYE Income
-
-Use the Non-PAYE Income resources of the Individuals Incomes Received API to create, amend, retrieve and delete data relating to non PAYE income and tips:
-
-[Create and Amend Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-Non-PAYE-employment-income-test-only_put_accordion)
-
-[Retrieve Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Retrieve-Non-PAYE-employment-income-test-only_get_accordion)
-
-[Delete Non-PAYE employment income [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-Non-PAYE-employment-income-test-only_delete_accordion)
