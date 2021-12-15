@@ -150,11 +150,11 @@ Once a customer is confident with all the information, they will have to agree t
 
 > [Here the vendor can decide how to manage the actual declaration in the user interface, for example a tick box, confirm button or other method]
 
-> The information I have provided is correct and complete to the best of my knowledge and belief. If you give false information you may have to pay financial penalties and face prosecution.”
+> I declare that the information and self-assessment I have filed are (taken together) correct and complete to the best of my knowledge. I understand that I may have to pay financial penalties and face prosecution if I give false information.”
 
 > **Declaration for Agents**
  
- > "I confirm that my client has reviewed the information provided and confirmed that it is correct and complete to the best of their knowledge to establish the liability for the tax year [insert tax year]. My client understands that they may have to pay financial penalties or face prosecution if they give false information."
+ > "I confirm that my client has received a copy of all the information being filed and approved the information as being correct and complete to the best of their knowledge and belief. My client understands that they may have to pay financial penalties and face prosecution if they give false information."
 
 The software must send the ```calculationId``` that matches the calculation the customer is declaring against with the declaration.
 
