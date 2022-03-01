@@ -357,10 +357,6 @@ This API should be used to submit any Annual Accounting Adjustments. The adjustm
 * [Retrieve a UK Property Business' Summary Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/1.0#uk-property-business_retrieve-a-uk-property-business-summary-adjustments_get_accordion)
 * [Submit an Adjustment to a UK Property Business Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/1.0#uk-property-business_submit-an-adjustment-to-a-uk-property-business-summary_post_accordion)
 
-|                      | Original (total of all 4 quarters) | 1<sup>st</sup> adjustment | Revised total | 2<sup>nd</sup> adjustment | Revised total |
-|----------------------|------------------------------------|---------------------------|---------------|---------------------------|---------------|
-| premisesRunningCosts | 500                                | 25                        | 525           | 23                        | 523           |
-| travelCosts          | 600                                | -17                       | 583           | -17                       | 583           |
 
 ## Multiple businesses
 
