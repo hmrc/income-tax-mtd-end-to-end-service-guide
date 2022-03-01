@@ -114,32 +114,34 @@ This API has no effect on the existing XML API.
 
 **Note: Adjustments are always made against the total of the original quarterly updates. Each new adjustment will overwrite the previous adjustment.**
 
-<table>
-    <tr>
-        <th></th>
-        <th>Original (total of all 4 quarters)</th>
-        <th>1<sup>st</sup> adjustment</th>
-        <th>Revised total</th>
-        <th>2<sup>nd</sup> adjustment</th>
-        <th>Revised total</th>
-    </tr>
-    <tr>
-        <td>premisesRunningCosts</td>
-        <td>500</td>
-        <td>25</td>
-        <td>525</td>
-        <td>23</td>
-        <td>523</td>
-    </tr>
-    <tr>
-        <td>travelCosts</td>
-        <td>600</td>
-        <td>-17</td>
-        <td>583</td>
-        <td>-17</td>
-        <td>583</td>
-    </tr>
-</table>
+<div class="table-container">
+    <table>
+        <tr>
+            <th></th>
+            <th>Original (total of all 4 quarters)</th>
+            <th>1<sup>st</sup> adjustment</th>
+            <th>Revised total</th>
+            <th>2<sup>nd</sup> adjustment</th>
+            <th>Revised total</th>
+        </tr>
+        <tr>
+            <td>premisesRunningCosts</td>
+            <td>500</td>
+            <td>25</td>
+            <td>525</td>
+            <td>23</td>
+            <td>523</td>
+        </tr>
+        <tr>
+            <td>travelCosts</td>
+            <td>600</td>
+            <td>-17</td>
+            <td>583</td>
+            <td>-17</td>
+            <td>583</td>
+        </tr>
+    </table>
+</div>
 
 ### CIS Deductions API
 Under the Construction Industry Scheme (CIS), contractors deduct money from a subcontractor’s payments and pass it to HM Revenue and Customs (HMRC).
