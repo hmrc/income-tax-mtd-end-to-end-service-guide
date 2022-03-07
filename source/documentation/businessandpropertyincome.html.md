@@ -342,6 +342,13 @@ The Self Assessment BISS (Business Income Source Summary) API allows a developer
 The Self Assessment BSAS (Business Source Adjustable Summary) API allows a developer to retrieve an adjustable summary calculation for a specified self-employment or UK property business, for a given accounting period.
 
 This API should be used to submit any Annual Accounting Adjustments. The adjustments should be submitted as positive or negative amounts, for example, if advertising costs in the BSAS is £250 but the figure should be £200, then the adjustment required would be -50.
+
+**Note: Adjustments are always made against the total of the original quarterly updates. Each new adjustment will overwrite the previous adjustment.**
+
+|                      | Original (total of all 4 quarters) | 1<sup>st</sup> adjustment | Revised total | 2<sup>nd</sup> adjustment | Revised total |
+|----------------------|------------------------------------|---------------------------|---------------|---------------------------|---------------|
+| premisesRunningCosts | 500                                | 25                        | 525           | 23                        | 523           |
+| travelCosts          | 600                                | -17                       | 583           | -17                       | 583           |
  
 <a href="figures/bsas.svg" target="blank"><img src="figures/bsas.svg" alt="BSAS (Business Source Adjustable Summary) diagram" style="width:720px;" /></a>
 
