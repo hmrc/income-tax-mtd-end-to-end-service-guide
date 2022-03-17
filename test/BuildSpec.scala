@@ -16,6 +16,7 @@
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
+import scala.language.postfixOps
 
 import scala.sys.process._
 
