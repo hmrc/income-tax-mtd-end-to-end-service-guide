@@ -61,7 +61,7 @@ In general, the current Software Choices page is being looked at. We are looking
 
 **13. I have a question regarding income from employment. Who is actually responsible for providing this income for a person via MTD? The employer or the employee?**
 
-The employer, if you support employment it would be advisable to support endpoints but it will come from the employer end year. HMRC will use the employment income provided by the employer and include the year-to-date employment income in the in-year tax calculation and the end of year employment income in tax calculations provided after the tax year has ended.
+Employment income is not mandated to be provided by MTD. The employer, if you support employment it would be advisable to support endpoints, but it will come from the employer end year. HMRC will use the employment income provided by the employer and include the year-to-date employment income in the in-year tax calculation and the end of year employment income in tax calculations provided after the tax year has ended.
 
 The employment endpoints are held in the "Individuals Income Received (MTD) API" and these can be used to check and correct the information after the tax year has ended. So, if you support employment income it is advisable to support the appropriate endpoints.
 
