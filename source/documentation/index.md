@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-Version 1.9 issued September 2021
+Version 2.0 issued October 2021
 ***
 
 This service guide describes HMRC’s Making Tax Digital (MTD) for Income Tax and explains how developers can connect their software to the MTD APIs.
