@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-Version 2.0 issued October 2021
+Version 2.1 issued May 2022
 ***
 
 This service guide describes HMRC’s Making Tax Digital (MTD) for Income Tax and explains how developers can connect their software to the MTD APIs.
@@ -99,7 +99,9 @@ This API has no effect on the existing XML API.
 
 ### Business Income Source Summary API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/1.0) allows a developer to retrieve a summary of income and expenditure for a specified self-employment, or property business for a given tax year.
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/2.0) allows a developer to retrieve a summary of income and expenditure for a specified self-employment, or property business for a given tax year.
+
+**From 3 May 2022 this API will be at V2.0, and V1.0 will no longer be available.**
 
 ### Business Source Adjustable Summary API
 
@@ -671,7 +673,7 @@ Version 1.8
 
 Version 1.9
 
-* Addition of requirement for businesses and landlords to provide information about residential property disposals 
+* Addition of requirement for businesses and landlords to provide information about residential property disposals
 * Addition of information regarding BSAS adjustments
 * Addition of content changes to meet MTD Style Guide V2.2
 * Replacing the term ‘crystallisation’ with ‘final declaration
@@ -679,3 +681,7 @@ Version 1.9
 Version 2.0
 
 * Addition of Capital Gains Tax, Marriage Allowance, Non-PAYE Income, Coding out underpayments and debts.
+
+Version 2.1
+
+* Notice of version change to Business Income Source Summary V1.0
