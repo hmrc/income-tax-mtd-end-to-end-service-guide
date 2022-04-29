@@ -49,7 +49,7 @@ An annual summary is defined as a set of summary data for a tax year, containing
 ### End of period statement
 End of period statement (EOPS) is the process that allows the customer to finalise their business income.
 
-A customer must complete an EOPS for each source of business income (the equivalent of the current SA103 and SA105 forms) E.g. if a customer has a self-employment business and a property business then they will have to complete two EOPS, one for each source of income.
+A customer must complete an EOPS for each source of business income (the equivalent of the current SA103, SA105 and SA106 forms). For example, if a customer has a self-employment business and a property business then they will have to complete two EOPS, one for each source of income.
 
 The EOPS is linked to the accounting period for each source of income and cannot be completed until the end of the accounting period. However the customer does not need to complete it until 31st January Year 2.
 
@@ -58,7 +58,7 @@ This is the process that allows the customer to finalise their end of year posit
 
 Before starting the final declaration journey the software package will need to ensure that, for the relevant tax year the customer:
 
-* has finalised EOPS for all their businesses (self-employment and uk-property)
+* has finalised EOPS for all their businesses (self-employment, uk-property and foreign-property)
 * has already provided their entire income e.g. interest, dividends, other SA schedules
 * does not have any additional information to provide
 
@@ -87,7 +87,7 @@ This service guide explains how you can integrate your software with the MTD API
 
 ### Agent Authorisation API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/agent-authorisation-api/1.0) allows tax agents to request authorisation to act on a client's behalf for a specific Making Tax Digital (MTD) tax service and have the option to cancel the authorisation request.
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/agent-authorisation-api/) allows tax agents to request authorisation to act on a client's behalf for a specific Making Tax Digital (MTD) tax service and have the option to cancel the authorisation request.
 
 The API also allows the agent to check the status of authorisations already requested and query active or inactive relationships.
 
@@ -95,17 +95,17 @@ This API has no effect on the existing XML API.
 
 ### Business Details API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0) allows a developer to list all businesses and retrieve additional information about the details of a user’s business.
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/) allows a developer to list all businesses and retrieve additional information about the details of a user’s business.
 
 ### Business Income Source Summary API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/2.0) allows a developer to retrieve a summary of income and expenditure for a specified self-employment, or property business for a given tax year.
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/) allows a developer to retrieve a summary of income and expenditure for a specified self-employment, or property business for a given tax year.
 
-**From 3 May 2022 this API will be at V2.0, and V1.0 will no longer be available.**
+**From 22 March 2022, this API will be at V2.0, and V1.0 will no longer be available.**
 
 ### Business Source Adjustable Summary API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/2.0) allows a developer to retrieve a Business Source Adjustable Summary (BSAS) calculation for a specified self-employment or property business, for a given accounting period. Here a developer can:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/) allows a developer to retrieve a Business Source Adjustable Summary (BSAS) calculation for a specified self-employment or property business, for a given accounting period. Here a developer can:
 
 * generate a list of BSAS
 * generate an end of accounting period BSAS
@@ -114,14 +114,14 @@ This API has no effect on the existing XML API.
 * provide accounting adjustments against a specified BSAS
 * request the adjustments made to a specific property BSAS
 
-**From 30 November 2021 this API will be at V2.0, and V1.0 will no longer be available.**
+**From 22 March 2022, this API will be at V3.0. On 14 April 2022, V2.0 was deprecated and cannot be subscribed to any longer. However, V2.0 can still be called if the subscription was made before this status change.**
 
 ### CIS Deductions API
 Under the Construction Industry Scheme (CIS), contractors deduct money from a subcontractor’s payments and pass it to HM Revenue and Customs (HMRC).
 
 The deductions count as advance payments towards the subcontractor’s tax and National Insurance.
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/1.0) allows a developer to:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/) allows a developer to:
 
 * retrieve details of the data the contractor has submitted to HMRC
 * retrieve a list of CIS deductions
@@ -131,19 +131,29 @@ The deductions count as advance payments towards the subcontractor’s tax and N
 
 ### Individual Calculations API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0) allows a developer to:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/) allows a developer to:
 
 * trigger a self-assessment tax calculation
 * list all their self-assessment tax calculations for a tax year
 * retrieve their self-assessment tax calculation result using multiple endpoints
 * list self-assessment tax calculations for a given National Insurance number (NINO) and tax year
-* trigger a self-assessment tax calculation for a given tax year. The result of the calculation can be explored via the “Retrieve a self-assessment tax calculation metadata” endpoint
+* trigger a self-assessment tax calculation for a given tax year - the result of the calculation can be explored via the “Retrieve a self-assessment tax calculation metadata” endpoint
+* indicate the intent to make a final declaration and receive a Calculation ID
+* submit a final declaration for a tax year
 * retrieve high-level calculation metadata for a given Calculation ID
 * retrieve the calculated Income Tax and National Insurance contributions for a given NINO and Calculation ID
 * retrieve the taxable income that has been used in the self-assessment tax calculation for a given NINO and Calculation ID
 * retrieve the allowances, deductions and reliefs that exist for the self assessment tax calculation for a given NINO and Calculation ID
 * retrieve the end-of-year Income Tax and National Insurance contribution estimates for a given NINO and Calculation ID
 * retrieve “info”, “warning” and “error” level messages linked to a Calculation ID
+
+Final declaration was previously called "crystallisation".
+
+Before starting the final declaration journey, the software package will need to ensure that, for the relevant tax year, the customer:
+
+* has finalised EOPS for all their businesses (self-employment and uk-property)
+* has already provided their entire income e.g. interest, dividends, other SA schedules
+* does not have any additional information to provide
 
 **From 30 November 2021 this API will be at V2.0, and V1.0 will no longer be available.**
 
@@ -167,15 +177,15 @@ For Loss claims a developer can:
 * delete a previously entered loss claim
 * update a previously entered loss claim
 
-**From 30 November 2021 this API will be at V2.0, and V1.0 will no longer be available.**
+**From 22 March 2022, this API will be at V3.0, and V2.0 will no longer be available.**
 
 ### Individuals Business End of Period Statement API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/1.0) allows a developer to submit a declaration that the submission data for a business is complete.
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/) allows a developer to submit a declaration that the submission data for a business is complete.
 
 ### Individuals Charges API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/1.0) allows a developer to provide a customer’s financial data for their pension charges.
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/) allows a developer to provide a customer’s financial data for their pension charges.
 
 Here a developer can:
 
@@ -185,11 +195,14 @@ Here a developer can:
 
 ### Individuals Disclosures API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0) allows a developer to create, amend, retrieve and delete data relating to disclosures.
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/) allows a developer to create, amend, retrieve and delete data relating to:
+
+* An individual's Marriage Allowance
+* An individual's disclosures
 
 ### Individuals Expenses API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/1.0) allows a developer to retrieve, amend and delete expenses for:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/) allows a developer to retrieve, amend and delete expenses for:
 
 * income for trade union and patent royalties
 * existing employment expenses
@@ -198,35 +211,40 @@ This API also allows a developer to ignore HMRC provided employment expenses for
 
 ### Individuals Income Received API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0) allows a developer to retrieve, create, amend or delete data relating to:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/) allows a developer to retrieve, create, amend or delete data relating to:
 
-* employment income
+* employment income (this includes income from occupational pensions)
 * other employment income
+* Non-PAYE employment income
+* Capital Gains on residential property disposal
+* other Capital Gains and disposals
 * dividends income
 * foreign income
 * insurance policies income
 * pensions income
-* other income
 * savings income
+* other income
+
+This API also allows a developer to ignore or unignore an HMRC-provided employment from the list of employments for a user.
 
 ### Individuals Reliefs API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0) allows a developer to retrieve, create, amend or delete relief investments from:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/) allows a developer to retrieve, create, amend or delete:
 
-* VCT subscriptions
-* EIS subscriptions
-* community investments
-* seed enterprise investments
-* social enterprise investments
+* relief investments
+* other reliefs
+* foreign reliefs
+* pension reliefs
 
 ### Individuals State Benefits API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/1.0) allows a developer to:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/) allows a developer to:
 
 * list and retrieve state benefits
 * create, amend or delete customer added state benefits
 * create or amend benefits financial data
 * mark a state benefit as ignored
+* unignore a state benefit
 
 Amendments to customer added state benefit or HMRC held state benefit must be made after the tax year has ended.
 
@@ -234,7 +252,7 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 
 ### Obligations API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0) allows a developer to:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/) allows a developer to:
 
 * retrieve obligations for a user's business income sources
 * retrieve the final declaration obligations for a user's Income Tax account
@@ -242,18 +260,22 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 
 ### Other Deductions API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/other-deductions-api/1.0) allows a developer to retrieve, create and amend, and delete deductions.
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/other-deductions-api/) allows a developer to retrieve, create and amend, and delete deductions.
 
 ### Property Business API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/1.0) allows a developer to:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/) allows a developer to:
 
-* list, retrieve create or amend a customer’s Foreign Property Income & Expenditure Period Summaries
-* retrieve, create, amend or delete a customer’s Foreign Property Annual Summary
+* list, retrieve, create or amend an individual’s UK property Income & Expenses Period Summaries
+* retrieve, create, amend or delete an individual’s UK Property Annual Submissions
+* list, retrieve, create or amend an individual's Foreign Property Income & Expenses Period Summaries
+* retrieve, create, amend or delete an individual's Foreign Property Annual Summary
+
+**From 22 March 2022, this API will be at V2.0. On 14 April 2022, V1.0 was deprecated and cannot be subscribed to any longer. However, v1.0 can still be called if the subscription was made before this status change.**
 
 ### Self Assessment API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0) allows a developer to supply business and personal financial data to HMRC.<br>
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/) allows a developer to supply business and personal financial data to HMRC.<br>
 
 **From 30 June 2021 the following endpoints will be deprecated:**
 
@@ -275,7 +297,7 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 
 ### Self Assessment Accounts API
 
-[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/1.0) allows a developer to:
+[This API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/) allows a developer to:
 
 * retrieve the overall liability broken down into overdue, payable and pending amounts
 * retrieve a list of charges and payments for a given date range
@@ -284,6 +306,8 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * retrieve the history of changes to an individual charge
 * retrieve a list of payments for a given date range
 * retrieve the allocation details of a specific payment against one or more liabilities
+* retrieve, create, amend, or delete coding out amounts
+
 
 ## Software provider overview
 
@@ -348,14 +372,14 @@ The minimum required functionality is as follows:
 * Carry forward or set sideways (when permitted) business losses occurring in any one year as well as to apply losses incurred in earlier years against current year profits
 * Have visibility of all their Class 2 National Insurance contributions (so that they can make additional voluntary contributions if they wish)
 * The Making Tax Digital for Income Tax APIs that include the endpoints for the functionality described above are:
-* [Self Assessment](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0)
-* [Individual Calculations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0)
-* [Individual Losses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/2.0)
-* [Individuals Disclosures (Class 2 NIC’s)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0)
-* [Business Income Source Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/1.0)
-* [Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/2.0)
-* [Individuals Business End of Period Statement](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/1.0)
-* [Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0)
+* [Self Assessment](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/)
+* [Individual Calculations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/)
+* [Individual Losses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/)
+* [Individuals Disclosures (Class 2 NIC’s)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/)
+* [Business Income Source Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/)
+* [Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/)
+* [Individuals Business End of Period Statement](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/)
+* [Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/)
 
 ### Bridging software
 
