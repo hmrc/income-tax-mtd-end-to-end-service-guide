@@ -271,7 +271,7 @@ Amendments to Job Seekers Allowance (JSA) or Employment Support Allowance (ESA) 
 * list, retrieve, create or amend an individual's Foreign Property Income & Expenses Period Summaries
 * retrieve, create, amend or delete an individual's Foreign Property Annual Summary
 
-**From 22 March 2022, this API will be at V2.0. On 14 April 2022, V1.0 was deprecated and cannot be subscribed to any longer. However, v1.0 can still be called if the subscription was made before this status change.**
+**From 22 March 2022, this API will be at V2.0. On 14 April 2022, V1.0 was deprecated and cannot be subscribed to any longer. However, V1.0 can still be called if the subscription was made before this status change.**
 
 ### Self Assessment API
 
@@ -576,15 +576,15 @@ Customers must make sure they are confident with the information they have provi
 3. The customer views the allowances and adjustment information and updates relevant information.
 4. Depending on the business income type you need to update, the software submits information using the [Amend a self-employment annual summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_amend-a-selfemployment-annual-summary_put_accordion), [Amend a non FHL UK property business annual summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_amend-a-nonfhl-uk-property-business-annual-summary_put_accordion) or [Amend a FHL UK Property business annual summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_amend-a-fhl-uk-property-business-annual-summary_put_accordion).
 5. HMRC receives and stores information
-6. The software calls the [Trigger a self-assessment tax calculation endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_trigger-a-self-assessment-tax-calculation_post_accordion) to get the calculation.
+6. The software calls the [Trigger a self-assessment tax calculation endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_trigger-a-self-assessment-tax-calculation_post_accordion) to get the calculation.
 7. HMRC receives the request and returns a Calculation ID (calculationId) software must use this when calling the Self Assessment Tax Calculation endpoints.
 8. The software receives the calculationId. Note: you could display the calculation to customers at this point if you choose, if you do follow steps 20 and 21 in the periodic update section.
 9. The customer wants to make some accounting adjustments following the business accounts being finalised.
-10. The software calls the [BSAS API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/2.0).
+10. The software calls the [BSAS API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/).
 11. HMRC returns summary totals of all the information for that business income source.
 12. The software displays information to the customer.
 13. The customer makes adjustments, confirms and submits.
-14. The software sends information to HMRC using the [BSAS API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/2.0).
+14. The software sends information to HMRC using the [BSAS API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/).
 15. HMRC confirms receipt and stores the information.
 16. The software calls the relevant endpoints to retrieve the calculation.
 
@@ -632,15 +632,15 @@ The customer must go back and amend the digital records. The software should res
 
 These journeys show examples of use:
 
-* [Income Tax Self Assessment (ITSA) set up activities](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/setup.html)
-* [retrieving obligations](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#receive-obligations)
-* [submitting periodic updates for Self Employment and property businesses](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#submit-periodic-updates-for-self-employment-and-property-businesses)
-* [submitting annual updates for Self Employment and property businesses](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#submit-annual-updates-for-se-and-property-businesses)
+* [Income Tax Self Assessment (ITSA) set up activities](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/signup.html)
+* [retrieving obligations](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#retrieving-obligations)
+* [submitting periodic updates for Self Employment and property businesses](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#submit-income-and-expense-updates-for-self-employment-and-property-businesses)
+* [submitting annual updates for Self Employment and property businesses](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#submit-allowance-and-adjustment-updates-for-se-and-property-businesses)
 * [retrieving a tax calculations](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#retrieve-a-tax-calculation)
-* [making changes to previously submitted data](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#make-changes-to-previously-submitted-data)
+* [making changes to previously submitted data](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#making-changes-to-previously-submitted-data)
 * [finalising business income End of Period Statement (EOPS)](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#finalise-business-income-end-of-period-statement-eops)
-* [providing information about how to treat a loss](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-return-crystallisation.html#provide-information-about-how-to-treat-a-loss)
-* [crystallisation](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-return-crystallisation.html#crystallisation)
+* [providing information about how to treat a loss](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration-crystallisation.html#providing-information-about-how-to-treat-a-loss)
+* [making a final declaration](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration-crystallisation.html#final-declaration)
 * [ITSA (MTD) close down activities](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/closedown.html)
 
 ## Related API documentation
@@ -709,3 +709,18 @@ Version 2.0
 Version 2.1
 
 * Notice of version change to Business Income Source Summary V1.0
+* "Set up" heading replaced by "Sign up" with the menu tree updated to only have three sections: **Agent**, **Individual** and **Link software to HMRC**.
+* Updated content in the **Minimum functionality standards** section with two other sections added: **Bridging software** and **Non-MTD products**
+* Updated content in the **Declaration** and **Declaration for agents** sections of **Final declaration** (previously called "crystallisation")
+
+Version 2.2
+
+* Added a Frequently Asked Questions section to the menu tree
+
+Version 2.3
+
+* Added note and an example table demonstrating how adjustments submitted work
+
+Version 2.4
+
+* Updated Frequently Asked Questions section to remove some items.
