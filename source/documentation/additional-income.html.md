@@ -192,7 +192,7 @@ The new functionality provides three new endpoints: amend new pension charges, d
 </a>
 <a href="figures/pension-charges.svg" target="blank">Open diagram in a new tab.</a>
 
-## Pension Reliefs
+## Pensions Reliefs
 
 These endpoints give the user the ability to manage data related to reliefs on pensions.  The user can submit details of reliefs on pensions for a specific tax year, as well as amend submissions already made.  They also have the option to delete previous submissions, and to retrieve the information they have previously submitted.
 
@@ -318,7 +318,7 @@ The new functionality provides seven new endpoints: Add State Benefit, Delete St
 * [Ignore State Benefit](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/1.0#_ignore-state-benefit-test-only_put_accordion)
 * [Unignore State Benefit](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/1.0#Unignore%20State%20Benefit)
 
-<a href="figures/state-benefitssvg" target="blank">
+<a href="figures/state-benefits.svg" target="blank">
 <img src="figures/state-benefits.svg" alt=" " style="width:720px;" />
 </a>
 <a href="figures/state-benefits.svg" target="blank">Open diagram in a new tab.</a>

@@ -501,8 +501,8 @@ For the avoidance of any doubt, there is no expectation that a free product will
 
 In addition to the minimum standards set out in the terms of use, and the general functionality standards applicable to all MTD for Income Tax software, we expect any free software product you provide to small businesses to:
 
-* enable the provision of a dataset that correlates to the current [SA103S (self-employment supplementary page) (short) (2020 version](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/604987/sa103s-2017.pdf)
-* enable the provision of a dataset that correlates to the current [SA105 UK property pages (2019-20 version)](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/604310/sa105-2017.pdf) where the number of properties does not exceed one
+* enable the provision of a dataset that correlates to the current [SA103S self-employment supplementary page (short)](https://www.gov.uk/government/publications/self-assessment-self-employment-short-sa103s)
+* enable the provision of a dataset that correlates to the current [SA105 UK property](https://www.gov.uk/government/publications/self-assessment-uk-property-sa105) or [SA106 foreign property](https://www.gov.uk/government/publications/self-assessment-foreign-sa106) pages, where the number of properties does not exceed one
 * provide a reasonable level of guidance, help and support to users (HMRC is open to views on what might be ‘reasonable’ for a free product and will publish further advice on this in due course)
 * allow the end user to own and have access to all their records created using the software product (past and present) to enable them to retrieve data and promptly export it if necessary
 * be free for the business to use to comply with their MTD for Income Tax obligations for a full annual accounting period on the understanding the business continues to meet the eligibility criteria below
@@ -516,13 +516,11 @@ The software must make customers aware of their obligations.
 
 ### Endpoints
 
-The [list all self-employment businesses endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_list-all-selfemployment-businesses_get_accordion) provides a list of all the customer’s self-employment businesses, along with the self-employment ID which the software will need to send to HMRC (this is currently limited to one but functionality to add more will be available later and stated in the roadmap)
+The [List All Businesses endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api#List%20All%20Businesses) provides a list of all the customer’s self-employment businesses, along with the business ID which the software will need to send to HMRC.
 
-The [get a self-employment business endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_get-a-selfemployment-business_get_accordion),  [get a UK property business endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_get-a-uk-property-business_get_accordion) and [Foreign Property endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/1.0) will provide the information HMRC holds for a specific self-employment or property business.
+The [Retrieve Business Details endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api#Retrieve%20business%20details) will provide the information HMRC holds for a specific self-employment or property business.
 
-The [retrieve self-employment business obligations endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#selfemployment-business_retrieve-selfemployment-business-obligations_get_accordion) provides obligation dates for all self-employment businesses, including grace periods and whether obligations have been met or not.
-
-The [retrieve all UK property business obligations endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#uk-property-business_retrieve-all-uk-property-business-obligations_get_accordion) provides obligation dates for their UK property, including grace periods and whether obligations have been met or not.
+The [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api#Retrieve%20Income%20Tax%20%28Self%20Assessment%29%20Income%20and%20Expenditure%20Obligations) provides obligation dates for all self-employment businesses, including grace periods and whether obligations have been met or not.
 
 Note: the obligations for property obligations cover both FHL and non-FHL.
 
