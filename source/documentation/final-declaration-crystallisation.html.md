@@ -28,27 +28,27 @@ If the business has a loss for a year prior to signing up to Making Tax Digital,
 
 <a href="figures/losses-api-diagram.svg" target="blank">Open the Losses diagram in a new tab</a>.
 
-Vendors can use the [create a brought forward losses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/1.0#brought-forward-losses_create-a-brought-forward-loss_post_accordion) endpoint to enable customers to submit the brought forward loss to HMRC.
+Vendors can use the [create a brought forward losses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/#brought-forward-losses_create-a-brought-forward-loss_post_accordion) endpoint to enable customers to submit the brought forward loss to HMRC.
 
 When the loss detail has been submitted, or if a loss arises for a tax year following sign up to Making Tax Digital, a claim will need to be made to either:
 
 * utilise the loss against an income source for a specific year, or
 * claim to carry the loss forward so that it is available to use in later years
 
-The [Loss claims](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/1.0#loss-claims) endpoint allows the user to do the following:
+The [Loss claims](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/#loss-claims) endpoint allows the user to do the following:
 
-* [provide a list of Loss claims](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/1.0#loss-claims_list-loss-claims-test-only_get_accordion)
-* [create a Loss claim against an income source for a specific tax year](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/1.0#loss-claims_create-a-loss-claim-test-only_post_accordion)
-* [show the detail of an existing Loss claim](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/1.0#loss-claims_retrieve-a-loss-claim-test-only_get_accordion)
-* [delete a previously entered Loss claim](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/1.0#loss-claims_delete-a-loss-claim-test-only_delete_accordion)
-* [update a previously entered Loss claim](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/1.0#loss-claims_amend-a-loss-claim-test-only_post_accordion)
+* provide a list of Loss claims
+* create a Loss claim against an income source for a specific tax year
+* show the detail of an existing Loss claim
+* delete a previously entered Loss claim
+* update a previously entered Loss claim
 
 ### Brought Forward Losses
 
 These resources allow software packages to provide a customer's financial data for their brought forward losses. Here the developer can:
 
 * provide a list of brought forward losses
-* create a new brought forward loss to submit against self-employment, self-employment class 4, UK FHL property and UK other (Non-FHL) property
+* create a new brought forward loss to submit against self-employment, self-employment class 4, UK FHL property, other UK (non-FHL) property, foreign property FHL in the European Economic Area (EEA) or other foreign property
 * show a single brought forward loss
 * delete an existing brought forward loss
 * update an existing brought forward loss
@@ -60,9 +60,9 @@ To carry-back a loss, the customer should contact HMRC who will be able to apply
 
 The software should prompt customers to make sure they have considered the following potential additional income sources (there are links to the APIs where the functionality is available, we will continue to release additional functionality and update this page).
 
-* any income from [bank or building society interest](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#savings-accounts) (supported in live)
-* any income from [dividends](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#dividends-income) (supported in live)  
-*	any [gift aid contributions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#charitable-giving) they have made (supported in live)  
+* any income from [bank or building society interest](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/#savings-accounts) (supported in live)
+* any income from [dividends](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/#dividends-income) (supported in live)  
+*	any [gift aid contributions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/#charitable-giving) they have made (supported in live)  
 *	any pension contributions
 *	any pension income
 *	capital gains
@@ -78,33 +78,33 @@ Information currently provided through the existing self-assessment process: if 
 
 ## Final Declaration
 
-The software will have to let HMRC know that the customer is ready to submit a final declaration, to do this you must call the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_intent-to-crystallise_post_accordion) endpoint. This will start the final declaration process in HMRC. It will trigger the business validation rules (which will become errors rather than warnings) and generate a final liability calculation.
+The software will have to let HMRC know that the customer is ready to submit a final declaration, to do this you must call the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/#crystallisation_intent-to-crystallise_post_accordion) endpoint. This will start the final declaration process in HMRC. It will trigger the business validation rules (which will become errors rather than warnings) and generate a final liability calculation.
 
 The response to the intent to make a final declaration includes a ```calculationId``` the same as the trigger calculation endpoint. The software will then have to retrieve the calculation using the ```calculationId``` to retrieve a tax calculation endpoint to get the calculation output.
 
-A final declaration calculation is performed if the calculation was triggered by the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_intent-to-crystallise_post_accordion) endpoint under the Self Assessment (MTD) API.
+A final declaration calculation is performed if the calculation was triggered by the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/#crystallisation_intent-to-crystallise_post_accordion) endpoint under the Self Assessment (MTD) API.
 
-The Calculation ID output provides a summary of each income source (for example self-employment, UK property, UK bank and building society interest), plus a breakdown of allowances and reliefs applied, and a breakdown of the Income Tax and NIC payable - broadly the equivalent of the current SA302.
+The Calculation ID output provides a summary of each income source (for example self-employment, UK property, foreign property and UK bank and building society interest), plus a breakdown of allowances and reliefs applied, and a breakdown of the Income Tax and NIC payable - broadly the equivalent of the current SA302.
 
 For a final declaration calculation the minimum number of endpoints that need to be called are the following:
 
-* [retrieve self assessment tax calculation metadata](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-metadata-test-only_get_accordion)
-* [retrieve self assessment tax calculation taxable income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-taxable-income-test-only_get_accordion)
-* [retrieve self assessment tax calculation Income Tax NICs calculated](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-income-tax-and-nics-calculated-test-only_get_accordion)
-* [retrieve self assessment tax calculation allowances, deductions and reliefs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-allowances-deductions-and-reliefs-test-only_get_accordion) (if applicable)
-* [retrieve self assessment tax calculation messages](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-messages-test-only_get_accordion) (if applicable)
+* [retrieve self assessment tax calculation metadata](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-metadata-test-only_get_accordion)
+* [retrieve self assessment tax calculation taxable income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-taxable-income-test-only_get_accordion)
+* [retrieve self assessment tax calculation Income Tax NICs calculated](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-income-tax-and-nics-calculated-test-only_get_accordion)
+* [retrieve self assessment tax calculation allowances, deductions and reliefs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-allowances-deductions-and-reliefs-test-only_get_accordion) (if applicable)
+* [retrieve self assessment tax calculation messages](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-messages-test-only_get_accordion) (if applicable)
 
 A final declaration Calculation ID will not always have a calculation result. It is possible that errors in previously submitted income data can prevent a calculation from being performed.
 
-The existing paper-based SA302 form fields span the following endpoints in the new [Individual Calculations API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-allowances-deductions-and-reliefs-test-only_get_accordion):
+The existing paper-based SA302 form fields span the following endpoints in the new [Individual Calculations API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-allowances-deductions-and-reliefs-test-only_get_accordion):
 
-* [retrieve self-assessment tax calculation taxable income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-taxable-income-test-only_get_accordion)
-* [retrieve self-assessment tax calculation Income Tax NICs calculated](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-income-tax-and-nics-calculated-test-only_get_accordion)
-* [retrieve self-assessment tax calculation allowances, deductions and reliefs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-allowances-deductions-and-reliefs-test-only_get_accordion)
+* [retrieve self-assessment tax calculation taxable income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-taxable-income-test-only_get_accordion)
+* [retrieve self-assessment tax calculation Income Tax NICs calculated](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-income-tax-and-nics-calculated-test-only_get_accordion)
+* [retrieve self-assessment tax calculation allowances, deductions and reliefs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-allowances-deductions-and-reliefs-test-only_get_accordion)
 
-If calculation errors are present, these errors can be returned to the customer by the [retrieve self assessment tax calculation messages](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/1.0#self-assessment_retrieve-self-assessment-tax-calculation-messages-test-only_get_accordion) endpoint.
+If calculation errors are present, these errors can be returned to the customer by the [retrieve self assessment tax calculation messages](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#self-assessment_retrieve-self-assessment-tax-calculation-messages-test-only_get_accordion) endpoint.
 
-Once the software has called the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_intent-to-crystallise_post_accordion) endpoint, this will trigger a final liability calculation and the software will receive a Calculation ID.
+Once the software has called the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/#crystallisation_intent-to-crystallise_post_accordion) endpoint, this will trigger a final liability calculation and the software will receive a Calculation ID.
 
 <a href="figures/crystallisation-diagram.svg" target="blank"><img src="figures/crystallisation-diagram.svg" alt="crystallisation process API diagram" style="width:720px;" /></a>
 
@@ -138,7 +138,7 @@ c) retrieve self assessment tax calculation allowances, deductions and reliefs</
 
 The software must use the final declaration ```calculationId``` to retrieve the final calculation and display that calculation to the customer. The customer must review this calculation and confirm it is complete and correct by sending the declaration.
 
-If the customer thinks the calculation is incorrect as a result of the data they have submitted, they can go back and change the information, by resubmitting the relevant update with the correct information. Once they have done this the software will have to call the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#crystallisation_intent-to-crystallise_post_accordion) endpoint again to generate a new final liability.
+If the customer thinks the calculation is incorrect as a result of the data they have submitted, they can go back and change the information, by resubmitting the relevant update with the correct information. Once they have done this the software will have to call the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/#crystallisation_intent-to-crystallise_post_accordion) endpoint again to generate a new final liability.
 
 If the customer does not agree with the calculation based on rules HMRC have used, then they will still need to declare against this calculation and follow the existing process to challenge the calculation. If a software vendor identifies what they feel could be a technical issue with the Tax calculation API, they will need to contact the SDS Team immediately.
 

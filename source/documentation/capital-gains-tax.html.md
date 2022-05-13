@@ -21,9 +21,9 @@ Use these endpoints to retrieve the income report for a tax year:
 
 * [Delete CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-CGT-Residential-Property-Disposals-test-only_delete_accordion)
 
-* [Create and Amend Report and Pay Capital Gains Tax on Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-'Report-and-Pay-Capital-Gains-Tax-on-Property'-Overrides-test-only_put_accordion)
+* [Create and Amend ‘Report and Pay Capital Gains Tax on Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-'Report-and-Pay-Capital-Gains-Tax-on-Property'-Overrides-test-only_put_accordion)
 
-* [Delete Report and Pay Capital Gains Tax on residential property Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-'Report-and-Pay-Capital-Gains-Tax-on-residential-property'-Overrides-test-only_delete_accordion)
+* [Delete ‘Report and Pay Capital Gains Tax on Residential Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-'Report-and-Pay-Capital-Gains-Tax-on-residential-property'-Overrides-test-only_delete_accordion)
 
 For Other Capital Gains and Disposals the endpoints are:
 
