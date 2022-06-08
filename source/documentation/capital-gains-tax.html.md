@@ -12,10 +12,11 @@ Capital Gains Tax is a tax on the profit when you sell or dispose of an asset th
 
 From the 6th April 2020, a user selling a residential property in the UK must report and pay Capital Gains Tax. This must be done within 30 days of the sale.
 
-Our endpoints allow a user to create, delete or amend Capitals Gains Income.
-Use these endpoints to retrieve the income report for a tax year:
+These endpoints allow a user to create, retrieve, delete or amend Capitals Gains income.
 
-* [Retrieve All CGT Residential Property Disposals and Overrides (IncludesPPD and Non-PPD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Retrieve-All-CGT-Residential-Property-Disposals-and-Overrides-(Includes-PPD-and-Non-PPD)-test-only_get_accordion)
+Use these endpoints for Capitals Gains income from residential property disposals:
+
+* [Retrieve All CGT Residential Property Disposals and Overrides (Includes PPD and Non-PPD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Retrieve-All-CGT-Residential-Property-Disposals-and-Overrides-(Includes-PPD-and-Non-PPD)-test-only_get_accordion)
 
 * [Create and Amend CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-CGT-Residential-Property-Disposals-test-only_put_accordion)
 
@@ -25,7 +26,7 @@ Use these endpoints to retrieve the income report for a tax year:
 
 * [Delete ‘Report and Pay Capital Gains Tax on Residential Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-'Report-and-Pay-Capital-Gains-Tax-on-residential-property'-Overrides-test-only_delete_accordion)
 
-For Other Capital Gains and Disposals the endpoints are:
+Use these endpoints for other Capital Gains and disposals:
 
 * [Retrieve Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Retrieve-Other-Capital-Gains-and-Disposals-test-only_get_accordion)
 
