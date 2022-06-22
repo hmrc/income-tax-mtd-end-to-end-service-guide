@@ -64,7 +64,7 @@ Custom employments will only apply to the tax year and will not be carried over 
 
 ## Other Employment Income
 
-These endpoints allow a user to create, amend, retrieve and delete other employment income: Share options, Shares awarded or received, Disability and Foreign service.
+These endpoints allow a user to create, amend, retrieve and delete other employment income: Share options, Shares awarded or received, Lump sums, Disability and Foreign service.
 
 * [Retrieve Other Employment Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#other-employment-income_retrieve-other-employment-income-test-only_get_accordion)
 * [Create and Amend Other Employment Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#other-employment-income_amend-other-employment-income-test-only_put_accordion)
@@ -106,7 +106,7 @@ The user can submit details of their foreign earnings and foreign income for a s
 
 ## Insurance Policies Income
 
-These endpoints allow a user to create, retrieve, amend and delete insurance policies and income for less common types of income: Life Insurance Policies, Life Annuity Contracts, Capital Redemption Policies, Voided ISAs, Foreign Policies
+These endpoints allow a user to create, retrieve, amend and delete insurance policies and income for less common types of income: Life Insurance Policies, Life Annuity Contracts, Capital Redemption Policies, Voided ISAs, and Foreign Policies.
 
 * [Retrieve Insurance Policies Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#insurance-policies-income_retrieve-insurance-policies-income-test-only_get_accordion)
 * [Create and Amend Insurance Policies Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#insurance-policies-income_amend-insurance-policies-income-test-only_put_accordion)
@@ -122,7 +122,7 @@ These endpoints allow a user to create, retrieve, amend and delete insurance pol
 These endpoints allow a user to create, retrieve, amend and delete previously populated foreign pensions and overseas pension contributions.
 
 * [Retrieve Pensions Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#pensions-income_retrieve-pensions-income-test-only_get_accordion)
-* [Amend Pensions Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#pensions-income_amend-pensions-income-test-only_put_accordion)
+* [Create and Amend Pensions Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#pensions-income_amend-pensions-income-test-only_put_accordion)
 * [Delete Pensions Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#pensions-income_delete-pensions-income-test-only_delete_accordion)
 
 <a href="figures/pensions-income.svg" target="blank">
@@ -206,10 +206,10 @@ These endpoints give the user the ability to manage data related to reliefs on p
 
 ### Relief Investments
 
-These endpoints allow a user to amend, delete and retrieve relief investments from VCT subscriptions, EIS subscriptions, Community Investments, Seed Enterprise Investments and Social Enterprise Investments.
+These endpoints allow a user to create, amend, delete and retrieve relief investments from VCT subscriptions, EIS subscriptions, Community Investments, Seed Enterprise Investments and Social Enterprise Investments.
 
 * [Retrieve Relief Investments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0#relief-investments_retrieve-relief-investments-test-only_get_accordion)
-* [Amend Relief Investments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0#relief-investments_amend-relief-investments-test-only_put_accordion)
+* [Create and Amend Relief Investments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0#relief-investments_amend-relief-investments-test-only_put_accordion)
 * [Delete Relief Investments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0#relief-investments_delete-relief-investments-test-only_delete_accordion)
 
 <a href="figures/relief-investments.svg" target="blank">

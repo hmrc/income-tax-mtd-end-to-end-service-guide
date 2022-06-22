@@ -90,9 +90,9 @@ For a final declaration calculation the minimum number of endpoints that need to
 
 * [Retrieve Self Assessment Tax Calculation Metadata](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#self-assessment_retrieve-self-assessment-tax-calculation-metadata-test-only_get_accordion)
 * [Retrieve Self Assessment Tax Calculation Taxable Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#self-assessment_retrieve-self-assessment-tax-calculation-taxable-income-test-only_get_accordion)
-* [Retrieve Self Assessment Tax Calculation Income Tax NICs Calculated](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#self-assessment_retrieve-self-assessment-tax-calculation-income-tax-and-nics-calculated-test-only_get_accordion)
-* [Retrieve Self Assessment Tax Calculation Allowances Deductions And Reliefs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#2.0self-assessment_retrieve-self-assessment-tax-calculation-allowances-deductions-and-reliefs-test-only_get_accordion) (if applicable)
-* [Retrieve Self Assessment Tax Calculation Messages](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/#2.0self-assessment_retrieve-self-assessment-tax-calculation-messages-test-only_get_accordion) (if applicable)
+* [Retrieve Self Assessment Tax Calculation Income Tax and NICs Calculated](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#self-assessment_retrieve-self-assessment-tax-calculation-income-tax-and-nics-calculated-test-only_get_accordion)
+* [ Retrieve Self Assessment Tax Calculation Allowances, Deductions and Reliefs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#self-assessment_retrieve-self-assessment-tax-calculation-allowances-deductions-and-reliefs-test-only_get_accordion) (if applicable)
+* [Retrieve Self Assessment Tax Calculation Messages](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#self-assessment_retrieve-self-assessment-tax-calculation-messages-test-only_get_accordion) (if applicable)
 
 A final declaration Calculation ID will not always have a calculation result. It is possible that errors in previously submitted income data can prevent a calculation from being performed.
 
@@ -100,18 +100,18 @@ The existing paper-based SA302 form fields span the following endpoints in the n
 
 * [Retrieve Self Assessment Tax Calculation Taxable Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#Retrieve%20Self%20Assessment%20Tax%20Calculation%20Taxable%20Income)
 * [Retrieve Self Assessment Tax Calculation Income Tax and NICs Calculated](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#Retrieve%20Self%20Assessment%20Tax%20Calculation%20Income%20Tax%20and%20NICs%20Calculated)
-* [Retrieve Self Assessment Tax Calculation Allowances Deductions And Reliefs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#Retrieve%20Self%20Assessment%20Tax%20Calculation%20Allowances,%20Deductions%20and%20Reliefs)
+* [Retrieve Self Assessment Tax Calculation Allowances, Deductions and Reliefs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#Retrieve%20Self%20Assessment%20Tax%20Calculation%20Allowances,%20Deductions%20and%20Reliefs)
 
 If calculation errors are present, these errors can be returned to the customer by the [Retrieve Self Assessment Tax Calculation Messages](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0#self-assessment_retrieve-self-assessment-tax-calculation-messages-test-only_get_accordion) endpoint.
 
-Once the software has called the [Intent To Crystallise](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0) endpoint, this will trigger a final liability calculation and the software will receive a Calculation ID.
+Once the software has called the [Intent to Crystallise](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0) endpoint, this will trigger a final liability calculation and the software will receive a Calculation ID.
 
 <a href="figures/crystallisation-diagram.svg" target="blank"><img src="figures/crystallisation-diagram.svg" alt="crystallisation process API diagram" style="width:720px;" /></a>
 
 <a href="figures/crystallisation-diagram.svg" target="blank">Open the final declaration process diagram in a new tab</a>.
 
 1.	Customer is ready to complete their final tax return.
-2.	The software calls the [Intent To Crystallise](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0) endpoint – this endpoint triggers the creation of the final declaration calculation for the customer to agree.
+2.	The software calls the [Intent to Crystallise](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0) endpoint – this endpoint triggers the creation of the final declaration calculation for the customer to agree.
 3.	HMRC receives the request and starts the tax calculation and returns Calculation ID.
 4.	The software receives the ```calculationId```.
 5.	Generates the final declaration tax calculation - this process will also convert any business validation warnings into errors, if there are any errors the calculation will not run and the customer will not be able to declare the liability.
@@ -123,13 +123,13 @@ c) Retrieve Self Assessment Tax Calculation Income Tax and NICs Calculated.</br>
 d) Retrieve Self Assessment Tax Calculation Allowances Deductions And Reliefs (if applicable).</br>
 e) Retrieve Self Assessment Tax Calculation Messages.</br>
 
-We suggest that you retrieve the self-assessment metadata first to check there are no validation errors.  If there are errors the calculation will not have been generated. The customer must go back and amend the digital records, software should resubmit the revised summary totals for the relevant periods, then call the intent to make a final declaration endpoint again.
+We suggest that you retrieve the self-assessment metadata first to check there are no validation errors.  If there are errors the calculation will not have been generated. The customer must go back and amend the digital records, software should resubmit the revised summary totals for the relevant periods, then call the Intent to Crystallise endpoint again.
 
 8.	HMRC provides the calculation response.
 9.	Software surfaces the calculation to the customer – at this point in the journey, it is mandatory that the customer is shown a copy of the calculation resulting from the intent to final declaration ```calculationId```. As a minimum a customer must view the equivalent of what is currently in the SA302, to do that the following endpoints must be called: </br>
-a) retrieve self assessment tax calculation taxable income</br>
-b) retrieve self assessment tax calculation Income Tax NICs calculated</br>
-c) retrieve self assessment tax calculation allowances, deductions and reliefs</br>
+a) Retrieve Self Assessment Tax Calculation Taxable Income</br>
+b) Retrieve Self Assessment Tax Calculation Income Tax NICs Calculated</br>
+c) Retrieve Self Assessment Tax Calculation Allowances Deductions and Reliefs</br>
 10.	The customer reviews the calculation and declaration text.
 11.	The customer confirms the declaration and the software calls the Crystallisation endpoint using the Calculation ID to confirm the calculation to which the customer is agreeing.
 12.	HMRC receives the submission and confirms receipt with a success message and marks the obligation as fulfilled.
@@ -138,7 +138,7 @@ c) retrieve self assessment tax calculation allowances, deductions and reliefs</
 
 The software must use the final declaration ```calculationId``` to retrieve the final calculation and display that calculation to the customer. The customer must review this calculation and confirm it is complete and correct by sending the declaration.
 
-If the customer thinks the calculation is incorrect as a result of the data they have submitted, they can go back and change the information, by resubmitting the relevant update with the correct information. Once they have done this the software will have to call the [intent to make a final declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/#crystallisation_intent-to-crystallise_post_accordion) endpoint again to generate a new final liability.
+If the customer thinks the calculation is incorrect as a result of the data they have submitted, they can go back and change the information, by resubmitting the relevant update with the correct information. Once they have done this the software will have to call the [Intent to Crystallise](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/2.0) endpoint again to generate a new final liability.
 
 If the customer does not agree with the calculation based on rules HMRC have used, then they will still need to declare against this calculation and follow the existing process to challenge the calculation. If a software vendor identifies what they feel could be a technical issue with the Tax calculation API, they will need to contact the SDS Team immediately.
 
