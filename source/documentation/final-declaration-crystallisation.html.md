@@ -120,7 +120,7 @@ Once the software has called the [Intent to Crystallise](https://developer.servi
 a) Retrieve Self Assessment Tax Calculation Metadata.</br>
 b) Retrieve Self Assessment Tax Calculation Taxable Income.</br>
 c) Retrieve Self Assessment Tax Calculation Income Tax and NICs Calculated.</br>
-d) Retrieve Self Assessment Tax Calculation Allowances Deductions And Reliefs (if applicable).</br>
+d) Retrieve Self Assessment Tax Calculation Allowances, Deductions and Reliefs (if applicable).</br>
 e) Retrieve Self Assessment Tax Calculation Messages.</br>
 
 We suggest that you retrieve the self-assessment metadata first to check there are no validation errors.  If there are errors the calculation will not have been generated. The customer must go back and amend the digital records, software should resubmit the revised summary totals for the relevant periods, then call the Intent to Crystallise endpoint again.
@@ -128,8 +128,8 @@ We suggest that you retrieve the self-assessment metadata first to check there a
 8.	HMRC provides the calculation response.
 9.	Software surfaces the calculation to the customer – at this point in the journey, it is mandatory that the customer is shown a copy of the calculation resulting from the intent to final declaration ```calculationId```. As a minimum a customer must view the equivalent of what is currently in the SA302, to do that the following endpoints must be called: </br>
 a) Retrieve Self Assessment Tax Calculation Taxable Income</br>
-b) Retrieve Self Assessment Tax Calculation Income Tax NICs Calculated</br>
-c) Retrieve Self Assessment Tax Calculation Allowances Deductions and Reliefs</br>
+b) Retrieve Self Assessment Tax Calculation Income Tax and NICs Calculated</br>
+c) Retrieve Self Assessment Tax Calculation Allowances, Deductions and Reliefs</br>
 10.	The customer reviews the calculation and declaration text.
 11.	The customer confirms the declaration and the software calls the Crystallisation endpoint using the Calculation ID to confirm the calculation to which the customer is agreeing.
 12.	HMRC receives the submission and confirms receipt with a success message and marks the obligation as fulfilled.

@@ -591,11 +591,11 @@ Note: the Tax Calculation can take up to 5 seconds to run, so we recommend the s
 
 * [List Business Source Adjustable Summaries](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#List%20Business%20Source%20Adjustable%20Summaries)
 * [Trigger a Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Trigger%20a%20Business%20Source%20Adjustable%20Summary)
-* [Retrieve a Self-Employment Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Retrieve%20a%20Self)
+* [Retrieve a Self-Employment Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Retrieve%20a%20Self)
 * [Submit Self-Employment Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Submit%20Self)
-* [Retrieve a UK Property Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Retrieve%20a%20UK%20Property%20Business%20Source%20Adjustable%20Summary%20(BSAS))
+* [Retrieve a UK Property Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Retrieve%20a%20UK%20Property%20Business%20Source%20Adjustable%20Summary%20(BSAS))
 * [Submit UK Property Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Submit%20UK%20Property%20Accounting%20Adjustments)
-* [Retrieve a Foreign Property Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Retrieve%20a%20Foreign%20Property%20Business%20Source%20Adjustable%20Summary%20(BSAS))
+* [Retrieve a Foreign Property Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Retrieve%20a%20Foreign%20Property%20Business%20Source%20Adjustable%20Summary%20(BSAS))
 * [Submit Foreign Property Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0#Submit%20Foreign%20Property%20Accounting%20Adjustments)
 
 ## Multiple businesses
