@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-Version 2.5 issued June 2022
+Version 2.6 issued December 2022
 ***
 
 This service guide describes HMRC’s Making Tax Digital (MTD) for Income Tax and explains how developers can connect their software to the MTD APIs.
@@ -84,6 +84,7 @@ This service guide explains how you can integrate your software with the MTD API
 * Property Business
 * Self Assessment
 * Self Assessment Accounts
+* Self Employment Business
 
 ### Agent Authorisation API
 
@@ -727,3 +728,7 @@ Version 2.4
 Version 2.5
 
 * Updated guide to reflect new API versions, update links and correct and clarify some content.
+
+Version 2.6
+
+* Updated guide to reflect API changes including refactored Self Assessment Accounts API.

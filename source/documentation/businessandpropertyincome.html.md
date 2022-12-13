@@ -95,6 +95,7 @@ Note:
 *	The met obligation must be presented clearly to the customer in the software.
 *	Businesses can  also check this information in their Business Tax Account.
 *	The customer will not receive any communication from HMRC to confirm that the obligation has been met. The software should provide this confirmation to the customer. For property businesses, an update for either FHL or Non-FHL for the full quarter will mark the obligation as fulfilled, even if they have both income types.
+* There are separate income and expenses period summary endpoints for submitting historic data prior to the 2021-22 tax year (back to 2017-2018). For later years, use the main endpoints.
 
 Each update period cannot overlap the previous one, for example:
 
