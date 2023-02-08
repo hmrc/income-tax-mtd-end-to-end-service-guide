@@ -17,5 +17,4 @@ gem 'govuk_tech_docs'
 
 gem 'thin', '~> 1.7.0'
 
-gem 'execjs'
 
