@@ -1,44 +1,53 @@
 ---
-title: Online Business Tax Account (BTA)
+title: HMRC online services
 weight: 9
-description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
+description: Sign in to HMRC online services to manage your income tax.
 ---
 
 <!--- Section owner: MTD Programme --->
 
-# Online Business Tax Account
+# HMRC online services
+People who have signed up for Making Tax Digital for Income Tax can [sign into HMRC online services](https://www.gov.uk/log-in-register-hmrc-online-services) to access relevant services. They will be able to see:
 
-## Making a change of circumstances
+* a tax calculation based on income submitted to date (or a calculation forecast for the year)
+* when their filings and payments are due
+* how much they owe
+* their Self Assessment calculation for the previous year
+* a link to earlier Self Assessment records from before they joined Making Tax Digital
 
-Functionality within the Business Tax Account will allow businesses to update their change of circumstances, until then they should call the HMRC helpline about a change of circumstances.
-When the online functionality is delivered, vendors should present messages to business users regularly to remind them to check and update their details with HMRC.
-Business users will then be able to do that by visiting their Business Tax Account at:
+They will also be able to:
 
-[https://www.access.service.gov.uk/login/signin/creds](https://www.access.service.gov.uk/login/signin/creds)
+* make a payment
+* change their contact preference between paper and digital secure messages
+* submit an Income Tax return for income and allowances that aren’t supported by the software they use
 
-Businesses will be able to update a range of information including addresses, telephone numbers, e-mail and business type.
+## Future changes
 
-## Agent able to notify their own change of circumstances
+More features will be added to users’ accounts in the future. They will let people:
 
-This will be the initial process, which can be used to remove the agent reference number and Government Gateway (GGW) enrolment (HMRC-AS-AGENTS).
-The scenario is needed where an agency firm ceases trading. If an agent no longer wants to participate in MTD they can stop using their GGW ID. An online interface is being developed as part of the wider change of circumstances solution.
+* claim a repayment
+* request a budget payment plan
+* change the amount of a payment on account
+* provide bank details for future repayments
+* change their business details
+* add new business details for a self-employment or property business
+* close (‘cease’) a self-employment or property business
+* leave MTD if they’re a voluntary customer - they will also be able to sign up again from their account
+* print their Self Assessment SA302 tax calculation
 
-## View future obligations or previous returns in BTA
+## Agent access
 
-Some customers may wish to view information regarding their Income Tax for assurance purposes, and this may also include any previous updates that have been submitted.
+Agents will be able to access Making Tax Digital for Income Tax services through their agent services account. They’ll be able to access all current and future services on behalf of their clients, except for:
 
-Vendors should make available within software products as many suitable features as possible to meet user needs.
+* changing their client’s repayment bank details
+* changing their client’s contact preference
 
-Vendors can direct users to visit their [Business Tax Account](https://www.access.service.gov.uk/login/signin/creds) to view certain information.
+## The customer journey between software and HMRC online services
 
-A customer who has signed up for MTD and agreed to report using the software, can choose to sign into their Business Tax Account and view information such as obligation periods, year-to-date and Income Tax calculations.
-User research will continue, and further iterations will be made which will enhance the functionality of BTA and help improve the user experience.
+To support the filing of business income updates and finalising their Self Assessment for the year, customers will be able use their software to:
 
-Future features developed will enable customers to have a statement view, make a change of their business information, along with links to make card payments.
+* change their quarterly period dates - they’ll be able to set their periods to finish at month end, rather than the 5th of the following month
+* view filing and payment obligations
+* request tax calculations
 
-The Business Tax Account displays the following information:
-
-* reporting obligations, and their status, per income source
-* tax estimates
-* year-to-date Income Tax calculation
-
+For services that are not supported in their software, customers must use [HMRC online services](https://www.gov.uk/log-in-register-hmrc-online-services) and agents must use their [agent services account](https://www.gov.uk/guidance/sign-in-to-your-agent-services-account).
