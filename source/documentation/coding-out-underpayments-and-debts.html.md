@@ -6,18 +6,13 @@ description: Software developers, designers, product owners or business analysts
 
 <!--- Section owner: MTD Programme --->
 
-# Coding Out Underpayments and Debts
+# Coding Out
 
-Coding out is a concept used to collect underpaid tax and debts through a customer’s PAYE tax code.
+Where a Self Assessment customer has PAYE income in addition to business income, HMRC will try to collect any tax due on their final declaration via their tax code for the following tax year. There are some restrictions around this - see [Pay your Self Assessment tax bill: Through your tax code](https://www.gov.uk/pay-self-assessment-tax-bill/through-your-tax-code).
 
-The coding out underpayments and debts endpoints allow software packages to overwrite coding out underpayment and debt amounts that are held by HMRC for a previous tax year and given NINO.
+Where a customer does not want us to collect the underpayment via the tax code, they have to request this via [Self Assessment Accounts (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0#coding-out-underpayments-and-debts). This can be also be done via the ITSA submission service.
 
-Software packages can then amend previously submitted overwrite amounts, retrieve the HMRC held or user submitted coding out amounts or delete the user submitted amounts.
 
-Use these endpoints to create, amend, retrieve or delete a coding out amount:
+## Collecting MTD debts through the tax code
 
-* [Retrieve Coding Out underpayments and debt amounts [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/1.0#_retrieve-Coding-Out-underpayments-and-debt-amounts-test-only_get_accordion)
-
-* [Create or Amend Coding Out underpayment and debt amounts [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/1.0#_Create-or-Amend-Coding-Out-underpayment-and-debt-amounts-test-only_put_accordion)
-
-* [Delete Coding Out underpayments and debt amounts [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/1.0#_Delete-Coding-Out-underpayments-and-debt-amounts-test-only_delete_accordion)
+ In future, where an MTD customer with PAYE income in addition to business income has overdue tax charges, HMRC will try to collect this debt via their PAYE tax code.
