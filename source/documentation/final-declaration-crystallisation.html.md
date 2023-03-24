@@ -80,6 +80,7 @@ Information currently provided through the existing self-assessment process: if 
 
 The software will have to let HMRC know that the customer is ready to submit a final declaration, to do this you must call the [Trigger A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/3.0#tax-calculations_trigger-a-self-assessment-tax-calculation_post_details) endpoint under the **Individual Calculations (MTD) API** with the ```finalDeclaration``` parameter set to true. This will start the final declaration process in HMRC. It will trigger the business validation rules (which will become errors rather than warnings) and generate a final liability calculation.
 
+
 The response includes a ```calculationId```. The software will then have to retrieve the calculation using the ```calculationId``` to get the calculation output.
 
 The Calculation ID output provides a summary of each income source (for example self-employment, UK property, foreign property and UK bank and building society interest), plus a breakdown of allowances and reliefs applied, and a breakdown of the Income Tax and NIC payable - broadly the equivalent of the current SA302.
@@ -87,6 +88,7 @@ The Calculation ID output provides a summary of each income source (for example 
 As of v3.0, the results of the final declaration calculation are available at a single endpoint:
 
 * [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/3.0#tax-calculations_retrieve-a-self-assessment-tax-calculation_get_details)
+
 
 A final declaration Calculation ID will not always have a calculation result. It is possible that errors in previously submitted income data can prevent a calculation from being performed.
 

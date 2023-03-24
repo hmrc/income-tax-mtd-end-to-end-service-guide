@@ -15,4 +15,5 @@ Where a customer does not want us to collect the underpayment via the tax code, 
 
 ## Collecting MTD debts through the tax code
 
- In future, where an MTD customer with PAYE income in addition to business income has overdue tax charges, HMRC will try to collect this debt via their PAYE tax code.
+In future, where an MTD customer with PAYE income in addition to business income has overdue tax charges, HMRC may try to collect this debt via their PAYE tax code.
+
