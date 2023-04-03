@@ -29,23 +29,23 @@ HMRC Assist will be integrated into HMRC’s ITSA Submission Service so that cus
 
 There are two endpoints:
 
-* [Produce a HMRC Assist Report](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/transactional-risking/1.0#Produce a HMRC Assist Report) - this endpoint allows a developer to generate and return a HMRC Assist report for a tax calculation for a given customer.
-* [Acknowledge a HMRC Assist Report](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/transactional-risking/1.0#Acknowledge a HMRC Assist Report) - this endpoint allows a developer to acknowledge that the customer or agent has read the report.
+* [Produce a HMRC Assist Report](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-assist/1.0#self-assessment-assist_produce-a-hmrc-self-assessment-assist-report_post_details) - this endpoint enables you to generate and return a HMRC Assist report for a tax calculation for a given customer.
+* [Acknowledge a HMRC Assist Report](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-assist/1.0#self-assessment-assist_acknowledge-a-hmrc-self-assessment-assist-report_post_details) - this endpoint enables you to acknowledge that the customer or agent has read the report.
 
 ### Produce a HMRC Assist Report
 
-The report contains targeted feedback based on what the customer advises HMRC in their update for the given National Insurance number (NINO), Calculation ID, and Tax year.
+The report contains targeted feedback based on what the customer advises HMRC in their update for the given National Insurance number (NINO), Calculation ID, and tax year.
 
 
 <a href="figures/customer-journey-transactional-risking-produce-report.svg" target="blank"><img src="figures/customer-journey-transactional-risking-produce-report.svg" alt="Produce report" style="width:720px;" /></a>
 
 <a href="figures/customer-journey-transactional-risking-produce-report.svg" target="blank">Open the produce a report diagram in a new tab.</a>
 
-A HTTP 200 success code is returned and the targeted message, recommended action and guidance links are within the JSON for the software to display
+A HTTP 200 success code is returned and the targeted message, recommended action and guidance links are within the JSON for the software to display.
 
 ### Acknowledge a HMRC Assist Report
 
-This endpoint allows a developer to acknowledge that the given report has been read by either 
+This endpoint enables you to acknowledge that the given report has been read by either the customer or agent.
 
 <a href="figures/customer-journey-transactional-risking-acknowledge.svg" target="blank"><img src="figures/customer-journey-transactional-risking-acknowledge.svg" alt="Acknowledge a HMRC Assist Report" style="width:720px;" /></a>
 
