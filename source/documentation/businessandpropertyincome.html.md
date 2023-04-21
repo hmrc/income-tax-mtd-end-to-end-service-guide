@@ -16,12 +16,12 @@ Once a business or agent has completed authentication and granted access to the 
 
 Actions to take are as follows:
 
-* the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api#List%20All%20Businesses) endpoint provides a list of all the customer’s business income sources, along with the business ID which the software will need to send to HMRC
-* the [Retrieve Business Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api#Retrieve%20business%20details) endpoint will provide the information HMRC holds for a specific self-employment or property business
+* the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint provides a list of all the customer’s business income sources, along with the business ID which the software will need to send to HMRC
+* the [Retrieve Business Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D/get) endpoint will provide the information HMRC holds for a specific self-employment or property business
 
 You can retrieve a customer's obligations through the following endpoint:
 
-* [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api#Retrieve%20Income%20Tax%20%28Self%20Assessment%29%20Income%20and%20Expenditure%20Obligations) - provides obligation dates for all self-employment and property businesses, including grace periods and whether or not obligations have been met
+* [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get) - provides obligation dates for all self-employment and property businesses, including grace periods and whether or not obligations have been met
 
 Note: the obligations for property obligations cover both FHL and non-FHL.
 
@@ -57,10 +57,10 @@ The triggering of the tax calculation will mark the obligation as fulfilled, if 
 <a href="figures/submit-periodics.svg" target="blank">Open the submit periodics diagram in a new tab</a>.
 
 1. The customer enters digital records through accountancy software or a spreadsheet. The records are uploaded digitally.  MTD mandates that a business keeps digital records for all self-employment and property businesses.
-2. The software calls the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0#List%20All%20Businesses) endpoint which provides the business ID. You will need to call this the first time your customer uses the software but it's not needed for every interaction.
+2. The software calls the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint which provides the business ID. You will need to call this the first time your customer uses the software but it's not needed for every interaction.
 3. The HMRC API returns the business ID which is required to interact with other self-employment and property APIs.
 4. The software receives the business ID.  You should store the business ID which will save you having to repeatedly call this endpoint.
-5. The software calls the [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api#Retrieve%20Income%20Tax%20%28Self%20Assessment%29%20Income%20and%20Expenditure%20Obligations) endpoint - quarterly obligations are initially created based on the accounting period for the income source. The deadline for meeting a quarterly obligation is one month after the obligation period end date. The software should communicate these deadlines clearly to the customer and prompt them to submit the information when the update is due.
+5. The software calls the [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get) endpoint - quarterly obligations are initially created based on the accounting period for the income source. The deadline for meeting a quarterly obligation is one month after the obligation period end date. The software should communicate these deadlines clearly to the customer and prompt them to submit the information when the update is due.
 6. HMRC returns obligations for the requested date range.
 7. The software receives the obligations for the requested date range. It can hold on to this information and prompt the customer closer to the due date.
 8. The software prompts the customer when they are due to submit an update.
