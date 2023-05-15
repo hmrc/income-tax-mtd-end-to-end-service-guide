@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-Version 2.8 issued April 2022
+Version 2.9 issued May 2022
 
 
 **Note:** This guide is currently under review to ensure it meets the needs of software providers. See the [changelog](#changelog) for latest updates.
