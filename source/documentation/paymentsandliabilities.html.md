@@ -41,6 +41,6 @@ This endpoint enables you to list the payments and allocation details of one or 
 
 <a href="figures/payments-and-liabilities-rsach.svg" target="blank">Open the Retrieve a Self Assessment Charge's History diagram in a new tab</a>.
 
-[Retrieve History of a Self-Assessment Charge [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1charges~1%7BtransactionId%7D/get)
+[Retrieve History of a Self-Assessment Charge](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1charges~1%7BtransactionId%7D/get)
 
 This endpoint enables you to retrieve the history of changes to an individual charge. The user must quote a unique identifier (National Insurance number) for the account and also a transaction ID.
