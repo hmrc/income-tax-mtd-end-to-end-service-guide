@@ -522,11 +522,11 @@ The software must make customers aware of their obligations.
 
 ### Endpoints
 
-The [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api#List%20All%20Businesses) endpoint provides a list of all the customer’s business income sources, along with the business ID which the software will need to send to HMRC.
+The [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint provides a list of all the customer’s business income sources, along with the business ID which the software will need to send to HMRC.
 
-The [Retrieve Business Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api#Retrieve%20business%20details) endpoint will provide the information HMRC holds for a specific self-employment or property business.
+The [Retrieve Business Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D/get) endpoint will provide the information HMRC holds for a specific self-employment or property business.
 
-The [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api#Retrieve%20Income%20Tax%20%28Self%20Assessment%29%20Income%20and%20Expenditure%20Obligations) endpoint provides obligation dates for all self-employment and property businesses, including grace periods and whether obligations have been met or not.
+The [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get) endpoint provides obligation dates for all self-employment and property businesses, including grace periods and whether obligations have been met or not.
 
 Note: the obligations for property obligations cover both FHL and non-FHL.
 
@@ -575,6 +575,8 @@ Customers must make sure they are confident with the information they have provi
 
 ### EOPS process
 
+<!--- some endpoints below are deprecated, need to update with equivalents -->
+
 1. The customer inputs information about allowances and adjustments for the business income source. They can provide this information throughout the year, but must do it before they complete the EOPS.
 2. Depending on the business income type you need to submit, the software calls the [Get a self-employment annual summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#Get%20a%20self-employment%20annual%20summary), [Get a non-FHL UK property business annual summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#Get%20a%20non-FHL%20UK%20property%20business%20annual%20summary) or [Get a FHL UK property business annual summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-api/2.0#Get%20a%20FHL%20UK%20property%20business%20annual%20summary). This step is optional, but we recommend it to ensure you are getting the most up-to-date information.
 3. The customer views the allowances and adjustment information and updates relevant information.
@@ -594,14 +596,14 @@ Customers must make sure they are confident with the information they have provi
 
 Note: the Tax Calculation can take up to 5 seconds to run, so we recommend the software waits 5 seconds – this is optional, the software does not have to retrieve the tax calculation information at this point.
 
-* [List Business Source Adjustable Summaries](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api#List%20Business%20Source%20Adjustable%20Summaries)
-* [Trigger a Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api#Trigger%20a%20Business%20Source%20Adjustable%20Summary)
-* [Retrieve a Self-Employment Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api#Retrieve%20a%20Self)
-* [Submit Self-Employment Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api#Submit%20Self)
-* [Retrieve a UK Property Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api#Retrieve%20a%20UK%20Property%20Business%20Source%20Adjustable%20Summary%20(BSAS))
-* [Submit UK Property Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api#Submit%20UK%20Property%20Accounting%20Adjustments)
-* [Retrieve a Foreign Property Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api#Retrieve%20a%20Foreign%20Property%20Business%20Source%20Adjustable%20Summary%20(BSAS))
-* [Submit Foreign Property Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api#Submit%20Foreign%20Property%20Accounting%20Adjustments)
+* [List Business Source Adjustable Summaries](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D/get)
+* [Trigger a Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1trigger/post)
+* [Retrieve a Self-Employment Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/Self-employment-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1self-employment~1%7BcalculationId%7D/get)
+* [Submit Self-Employment Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/Self-employment-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1self-employment~1%7BcalculationId%7D~1adjust/post)
+* [Retrieve a UK Property Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/UK-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1uk-property~1%7BcalculationId%7D/get)
+* [Submit UK Property Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/UK-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1uk-property~1%7BcalculationId%7D~1adjust/post)
+* [Retrieve a Foreign Property Business Source Adjustable Summary (BSAS)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/Foreign-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1foreign-property~1%7BcalculationId%7D/get)
+* [Submit Foreign Property Accounting Adjustments](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/Foreign-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1foreign-property~1%7BcalculationId%7D~1adjust/post)
 
 ## Multiple businesses
 
@@ -609,11 +611,11 @@ Users with multiple self-employment businesses and those with a foreign property
 
 To enable this we are providing a number of new endpoints:
 
-* [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0#List%20All%20Businesses) - returns a list of the business income sources
-* [Retrieve Business Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0#Retrieve%20business%20details) - returns further information about a single business income source
-* [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0#Retrieve%20Income%20Tax%20%28Self%20Assessment%29%20Income%20and%20Expenditure%20Obligations) - returns the quarterly obligations for each business income source
-* [Retrieve Income Tax (Self Assessment) End of Period Statement Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0#Retrieve%20Income%20Tax%20%28Self%20Assessment%29%20End%20of%20Period%20Statement%20Obligations) - returns the End of Period Statement obligations for a user’s business income sources
-* [Amend Loss Claims Order](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/3.0#Amend%20Loss%20Claims%20Order) - permits a change in the order in which loss claims are consumed
+* [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) - returns a list of the business income sources
+* [Retrieve Business Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D/get) - returns further information about a single business income source
+* [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get) - returns the quarterly obligations for each business income source
+* [Retrieve Income Tax (Self Assessment) End of Period Statement Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/1.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1end-of-period-statement/get) - returns the End of Period Statement obligations for a user’s business income sources
+* [Amend Loss Claims Order](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/3.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1%7Bnino%7D~1loss-claims~1order~1%7BtaxYearClaimedFor%7D/put) - permits a change in the order in which loss claims are consumed
 
 ## Final declaration
 
@@ -659,6 +661,10 @@ These journeys show examples of use:
 The full changelog for Income Tax MTD APIs is now at [https://github.com/hmrc/income-tax-mtd-changelog](https://github.com/hmrc/income-tax-mtd-changelog) - that is the best source for detailed and comprehensive information about API changes.
 
 Below is a summary of significant updates to this service guide:
+
+Version 2.9
+
+* Updated direct links to endpoints to reflect changes in how API documentation is published
 
 Version 2.8
 

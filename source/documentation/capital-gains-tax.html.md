@@ -16,20 +16,20 @@ These endpoints allow a user to create, retrieve, delete or amend Capitals Gains
 
 Use these endpoints for Capitals Gains income from residential property disposals:
 
-* [Retrieve All CGT Residential Property Disposals and Overrides (Includes PPD and Non-PPD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Retrieve-All-CGT-Residential-Property-Disposals-and-Overrides-(Includes-PPD-and-Non-PPD)-test-only_get_accordion)
+* [Retrieve All CGT Residential Property Disposals and Overrides (Includes PPD and Non-PPD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D/get)
 
-* [Create and Amend CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#Create%20and%20Amend%20CGT%20Residential%20Property%20Disposals)
+* [Create and Amend CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D/put)
 
-* [Delete CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#Delete%20CGT%20Residential%20Property%20Disposals)
+* [Delete CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-* [Create and Amend ‘Report and Pay Capital Gains Tax on Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-'Report-and-Pay-Capital-Gains-Tax-on-Property'-Overrides-test-only_put_accordion)
+* [Create and Amend ‘Report and Pay Capital Gains Tax on Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D~1ppd/put)
 
-* [Delete ‘Report and Pay Capital Gains Tax on Residential Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-'Report-and-Pay-Capital-Gains-Tax-on-residential-property'-Overrides-test-only_delete_accordion)
+* [Delete ‘Report and Pay Capital Gains Tax on Residential Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D~1ppd/delete)
 
 Use these endpoints for other Capital Gains and disposals:
 
-* [Retrieve Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#Retrieve%20Other%20Capital%20Gains%20and%20Disposals)
+* [Retrieve Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1income-received~1disposals~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/get)
 
-* [Create and Amend Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Create-and-Amend-Other-Capital-Gains-and-Disposals-test-only_put_accordion)
+* [Create and Amend Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1income-received~1disposals~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/put)
 
-* [Delete Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0#_Delete-Other-Capital-Gains-and-Disposals-test-only_delete_accordion)
+* [Delete Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/1.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1income-received~1disposals~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/delete)

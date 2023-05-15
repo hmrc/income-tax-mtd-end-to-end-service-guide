@@ -16,4 +16,4 @@ To create a Marriage Allowance claim the recipients name, date of birth and NINO
 
 Use the Create Marriage Allowance endpoint in the Individuals Disclosures API.
 
-[Create Marriage Allowance](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0#Create%20Marriage%20Allowance)
+[Create Marriage Allowance](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0/oas/page#tag/Marriage-Allowance/paths/~1individuals~1disclosures~1marriage-allowance~1%7Bnino%7D/post)

@@ -25,7 +25,7 @@ range
 
 <a href="figures/payments-and-liabilities-rsab.svg" target="blank">Open the Retrieve a Self Assessment Balance and Transactions diagram in a new tab</a>.
 
-[Retrieve Self Assessment Balance and Transactions (test only)](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0#payments-and-liabilities_retrieve-self-assessment-balance-and-transactions-test-only_get_content)
+[Retrieve Self Assessment Balance and Transactions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1balance-and-transactions/get)
 
 This endpoint enables you to retrieve the overall liability broken down into overdue, currently due (payable) and pending (not yet due) amounts. A unique identifier (National Insurance number) for the account must be used.
 
@@ -33,7 +33,7 @@ This endpoint enables you to retrieve the overall liability broken down into ove
 
 <a href="figures/payments-and-liabilities-lsat.svg" target="blank">Open the List Self Assessment Payments and Allocation Details diagram in a new tab</a>.
 
-[List Self Assessment Payments and Allocation Details (test only)](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0#payments-and-liabilities_list-self-assessment-payments-allocation-details-test-only_get_content)
+[List Self Assessment Payments and Allocation Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1payments-and-allocations/get)
 
 This endpoint enables you to list the payments and allocation details of one or more liabilities for a given National Insurance number.
 
@@ -41,6 +41,6 @@ This endpoint enables you to list the payments and allocation details of one or 
 
 <a href="figures/payments-and-liabilities-rsach.svg" target="blank">Open the Retrieve a Self Assessment Charge's History diagram in a new tab</a>.
 
-[Retrieve History of a Self-Assessment Charge [test only]](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0#payments-and-liabilities_retrieve-history-of-a-self-assessment-charge-test-only_get_details)
+[Retrieve History of a Self-Assessment Charge [test only]](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/2.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1charges~1%7BtransactionId%7D/get)
 
 This endpoint enables you to retrieve the history of changes to an individual charge. The user must quote a unique identifier (National Insurance number) for the account and also a transaction ID.
