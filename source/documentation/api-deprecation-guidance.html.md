@@ -30,11 +30,12 @@ Any change that might break software that relies on an API is counted as breakin
 
 The table below lists changes that we consider breaking. 
 
-| Query Param   | Adding mandatory query param Removing a query param Renaming a query param Changing an optional query param to be mandatory Removing/Renaming a value from an enum                                                            |
+| Area | Breaking changes |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Request Body  | * Adding a mandatory field * Removing a field * Renaming a field * Changing an optional field to be mandatory * Removing/renaming a value from an enum                                                                                  |
-| Response Body | * Removing a field * Renaming a field * Changing a mandatory field to be optional * Adding/renaming a value to an enum                                                                                                                |
-|  Other        | * Changing the URL of the endpoint * Removing a resource/endpoint * Changing the semantics of a field value (for example, the value returned changes from inclusive of VAT to exclusive of VAT) * Changing validation to have stronger constraints |
+| Query Param   | <ul><li>Adding mandatory query param</li><li>Removing a query param</li><li>Renaming a query param</li><li>Changing an optional query param to be mandatory</li><li>Removing/renaming a value from an enum   </li></ul>                                                         |
+| Request Body  | <ul><li> Adding a mandatory field </li><li> Removing a field </li><li> Renaming a field </li><li> Changing an optional field to be mandatory </li><li> Removing/renaming a value from an enum  </li></ul>                                                                                |
+| Response Body | <ul><li> Removing a field </li><li> Renaming a field </li><li> Changing a mandatory field to be optional </li><li> Adding/renaming a value to an enum  </li></ul>                                                                                                               |
+|  Other        | <ul><li> Changing the URL of the endpoint </li><li> Removing a resource/endpoint </li><li> Changing the semantics of a field value (for example, the value returned changes from inclusive of VAT to exclusive of VAT) </li><li> Changing validation to have stronger constraints </li></ul> |
 
 
 ## Changes to errors
