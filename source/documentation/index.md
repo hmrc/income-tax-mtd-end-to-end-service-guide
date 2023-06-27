@@ -1,6 +1,6 @@
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-Version 3.0 issued June 2023
+Version 3.1 issued June 2023
 
 
 **Note:** This guide is currently under review to ensure it meets the needs of software providers. See the [changelog](#changelog) for latest updates.
@@ -355,6 +355,10 @@ These journeys show examples of use:
 The full changelog for Income Tax MTD APIs is now at [https://github.com/hmrc/income-tax-mtd-changelog](https://github.com/hmrc/income-tax-mtd-changelog) - that is the best source for detailed and comprehensive information about API changes.
 
 Below is a summary of significant updates to this service guide:
+
+Version 3.1
+
+* Added 'API lifecycle & deprecation' section, removed some duplicated content
 
 Version 3.0
 
