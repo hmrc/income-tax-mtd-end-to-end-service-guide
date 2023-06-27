@@ -23,7 +23,6 @@ The following table gives details of the possible API statuses:
 | RETIRED    | API is no longer in use.                                                                                                                                                                                                                                                                                                                                                                                           | No                     | No                                     | No                 |                                                                                                                                                                                                                                                                                                                                                                                        | No                     | No                                     | No                 |
 
 
-
 ## Breaking changes
 
 Any change that might break software that relies on an API is counted as breaking change.
@@ -58,6 +57,7 @@ For example, suppose we add a new optional string field to the request body and 
 
 * Removing an error code
 * Changing the message of an error
+
 
 
 ## Deprecating APIs
