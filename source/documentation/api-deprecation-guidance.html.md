@@ -23,21 +23,53 @@ The following table gives details of the possible API statuses:
 | RETIRED    | API is no longer in use.                                                                                                                                                                                                                                                                                                                                                                                           | No                     | No                                     | No                 |                                                                                                                                                                                                                                                                                                                                                                                        | No                     | No                                     | No                 |
 
 
+
+## Breaking changes
+
+Any change that might break software that relies on an API is counted as breaking change.
+
+The table below lists changes that we consider breaking. 
+
+| Query Param   | Adding mandatory query param Removing a query param Renaming a query param Changing an optional query param to be mandatory Removing/Renaming a value from an enum                                                            |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Request Body  | * Adding a mandatory field * Removing a field * Renaming a field * Changing an optional field to be mandatory * Removing/renaming a value from an enum                                                                                  |
+| Response Body | * Removing a field * Renaming a field * Changing a mandatory field to be optional * Adding/renaming a value to an enum                                                                                                                |
+|  Other        | * Changing the URL of the endpoint * Removing a resource/endpoint * Changing the semantics of a field value (for example, the value returned changes from inclusive of VAT to exclusive of VAT) * Changing validation to have stronger constraints |
+
+
+## Changes to errors
+
+When we make changes to errors, we will not usually change the JSON structure returned (in the rare case when this is necessary, this will be considered a breaking change). The values of the error fields may change. 
+
+
+### Breaking changes for errors
+
+* Changing the HTTP Status code to a different value
+* Renaming an error code
+* Adding a new error code (but see below)
+
+If we add a new error code to an endpoint as part of a new field/object which is not itself a breaking change, then the new error is not counted as breaking change.
+
+For example, suppose we add a new optional string field to the request body and the field must satisfy a specific condition, otherwise it fails with a new error. This error is not considered a breaking change, since existing software will keep functioning as the error can only be returned if the new field is used.
+
+
+### Non-breaking changes for errors
+
+* Removing an error code
+* Changing the message of an error
+
+
 ## Deprecating APIs
 
 If an API has been in production with a status of STABLE, we aim for a deprecation period of 6 months. 
 
-For an API in BETA, we aim to give a minimum of 6 weeks notice before deprecation.
+For an API in BETA, we aim for a deprecation period of 6 weeks minimum.
+
 
 The status of APIs is indicated in the API documentation. In releases from June 2023 onwards, deprecation status will also be indicated in the response headers.
 
 Applications cannot subscribe to a deprecated API version, but can still call the API version if the subscription was made before the status changed.
 
-## Deprecating endpoints
-
-We will not deprecate specific API endpoints. Removing an endpoint from an API will cause a breaking change. 
-
-If we have to remove an endpoint, we will mark the API as DEPRECATED and release a new version of the API by making a major version change, for example, v1.0 to v2.0. 
 
 ## Retiring APIs
 
