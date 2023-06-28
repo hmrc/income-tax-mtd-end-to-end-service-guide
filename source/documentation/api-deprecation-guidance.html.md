@@ -8,7 +8,7 @@ weight: 55
 
 Each MTD API follows a lifecycle from the point where it is first published to the point where it is retired.
 
-More specifically, every version of each API follows a lifecycle. Different versions of the same API can be at different points in the lifecycle. For example, v1.0 might be retired, v2.0 might be stable and v3.0 might be in private beta.
+More specifically, every version of each API follows a lifecycle. Different versions of the same API can be at different points in the lifecycle. For example, v1.0 might be retired, v2.0 might be stable and v3.0 might be in beta.
 
 ## API status
 
@@ -31,18 +31,18 @@ The table below lists changes that we consider breaking.
 
 | Area | Breaking changes |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Query Param   | <ul><li>Adding mandatory query param</li><li>Removing a query param</li><li>Renaming a query param</li><li>Changing an optional query param to be mandatory</li><li>Removing/renaming a value from an enum   </li></ul>                                                         |
+| Query Parameter   | <ul><li>Adding mandatory query parameter</li><li>Removing a query parameter</li><li>Renaming a query parameter</li><li>Changing an optional query parameter to be mandatory</li><li>Removing/renaming a value from an enum   </li></ul>                                                         |
 | Request Body  | <ul><li> Adding a mandatory field </li><li> Removing a field </li><li> Renaming a field </li><li> Changing an optional field to be mandatory </li><li> Removing/renaming a value from an enum  </li></ul>                                                                                |
 | Response Body | <ul><li> Removing a field </li><li> Renaming a field </li><li> Changing a mandatory field to be optional </li><li> Adding/renaming a value to an enum  </li></ul>                                                                                                               |
 |  Other        | <ul><li> Changing the URL of the endpoint </li><li> Removing a resource/endpoint </li><li> Changing the semantics of a field value (for example, the value returned changes from inclusive of VAT to exclusive of VAT) </li><li> Changing validation to have stronger constraints </li></ul> |
 
 
-## Changes to errors
+### Changes to errors
 
 When we make changes to errors, we will not usually change the JSON structure returned (in the rare case when this is necessary, this will be considered a breaking change). The values of the error fields may change. 
 
 
-### Breaking changes for errors
+#### Breaking changes for errors
 
 * Changing the HTTP Status code to a different value
 * Renaming an error code
@@ -53,7 +53,7 @@ If we add a new error code to an endpoint as part of a new field/object which is
 For example, suppose we add a new optional string field to the request body and the field must satisfy a specific condition, otherwise it fails with a new error. This error is not considered a breaking change, since existing software will keep functioning as the error can only be returned if the new field is used.
 
 
-### Non-breaking changes for errors
+#### Non-breaking changes for errors
 
 * Removing an error code
 * Changing the message of an error
@@ -66,10 +66,16 @@ If an API has been in production with a status of STABLE, we aim for a deprecati
 
 For an API in BETA, we aim for a deprecation period of 6 weeks minimum.
 
-
-The status of APIs is indicated in the API documentation. In releases from June 2023 onwards, deprecation status will also be indicated in the response headers.
-
 Applications cannot subscribe to a deprecated API version, but can still call the API version if the subscription was made before the status changed.
+
+The status of APIs is indicated in the API documentation. 
+
+In releases from June 2023 onwards, deprecation status will also be indicated with a `Deprecation` response header like this:
+
+| Name        | Example value                                                                                                                                             |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Deprecation | This endpoint is deprecated. See the API documentation: https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api |
+
 
 
 ## Retiring APIs
