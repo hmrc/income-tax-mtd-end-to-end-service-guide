@@ -39,10 +39,12 @@ The table below lists changes that we consider breaking.
 
 ### Changes to errors
 
+
 When we make changes to errors, we will not usually change the JSON structure returned (in the rare case when this is necessary, this will be considered a breaking change). The values of the error fields may change. 
 
 
 #### Breaking changes for errors
+
 
 * Changing the HTTP Status code to a different value
 * Renaming an error code
@@ -54,6 +56,7 @@ For example, suppose we add a new optional string field to the request body and 
 
 
 #### Non-breaking changes for errors
+
 
 * Removing an error code
 * Changing the message of an error
@@ -75,6 +78,7 @@ In releases from June 2023 onwards, deprecation status will also be indicated wi
 | Name        | Example value                                                                                                                                             |
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Deprecation | This endpoint is deprecated. See the API documentation: https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api |
+
 
 
 
