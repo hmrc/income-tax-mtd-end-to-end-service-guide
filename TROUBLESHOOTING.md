@@ -8,6 +8,12 @@ Some of these are described below:
 
 The current Ruby version in `.ruby-version` is `2.6.3`. This is no longer supported, so it's best to use a newer version of Ruby such as `3.2.0`.
 
+### Error running '__rvm_make -j8',
+
+You may get this error installing 3.2.2 using RVM. In a nutshell, then there's been a problem accessing openssl, and you'll need to (explicitly) include the path in your request.
+
+      rvm install 3.2.2 --enable-shared --with-openssl-dir=/opt/homebrew/opt/openssl@1.1 --with-out-ext=fiddle
+
 ## Bundle Install
 
 You may need to remove the `Gemfile.lock` to get things running locally before running `bundle install`. You may also encounter the following issues:
@@ -34,3 +40,4 @@ gem install thin -v '1.7.2' -- --with-cflags="-Wno-error=implicit-function-decla
 If you have not modified the existing `Gemfile.lock` you may see this error due to the `BUNDLED WITH` section, which forces the install
 to use an older version of the Bundler which isn't compatible with the newer Ruby version. Try removing the `Gemfile.lock` before installing,
 but remember not to commit this change.
+
