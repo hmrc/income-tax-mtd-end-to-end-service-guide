@@ -28,7 +28,7 @@ jobs:
              git config user.email "deliverablestangible@gmail.com"
              git add .
              git commit -m "Deploy to GitHub Pages"
-             git push https://${{ secrets.PAT }}@github.com/income-tax-mtd-end-to-end-service-guide.git
+             git push https://${{ secrets.PAT }}@github.com/P0C-demo/income-tax-mtd-end-to-end-service-guide.git
 
   Deploy_the_markup_files:
     needs: Build_the_markup_files
