@@ -4,8 +4,8 @@ on:
     branches:
       - main
     paths-ignore:
-    - 'build'
-    - .git
+      - 'build'
+      - .git
       
 jobs:
   Build_the_markup_files:
