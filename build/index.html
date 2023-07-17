@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>ITSA end-to-end service guide - HMRC Developer Hub</title>
+
+    <link href="stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="docs.developer.service.hmrc.gov.uk/">
+
+      <meta name="description" content="Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital." />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="docs.developer.service.hmrc.gov.uk/images/govuk-large.png" />
+      <meta name="twitter:title" content="ITSA end-to-end service guide - HMRC Developer Hub" />
+      <meta name="twitter:url" content="docs.developer.service.hmrc.gov.uk/" />
+
+      <meta property="og:description" content="Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital." />
+      <meta property="og:image" content="docs.developer.service.hmrc.gov.uk/images/govuk-large.png" />
+      <meta property="og:site_name" content="HMRC Developer Hub" />
+      <meta property="og:title" content="ITSA end-to-end service guide" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="docs.developer.service.hmrc.gov.uk/" />
+
+      <!--[if !IE]>-->
+  <script
+    src="/tracking-consent/tracking.js"
+    id="tracking-consent-script-tag"
+    data-gtm-container="b"
+    data-language="en"
+  ></script>
+  <!--<![endif]-->
+
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://developer.service.hmrc.gov.uk/api-documentation" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 132 97"
+            height="30"
+            width="36"
+          >
+            <path
+              fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+            ></path>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+        <span class="govuk-header__product-name">
+          HMRC Developer Hub
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <nav class="govuk-header__navigation govuk-header__navigation--end" aria-label="Menu">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu">Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/">Income Tax (MTD) End-to-End Service Guide</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/api-documentation/docs/using-the-hub">Documentation</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/developer/applications">Applications</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://developer.service.hmrc.gov.uk/developer/support">Support</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
+              <div class="search" data-module="search" data-path-to-site-root="./">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="docs.developer.service.hmrc.gov.uk"/>
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
+      Search (via Google)
+    </label>
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="./index.html"><span>Income Tax (Making Tax Digital) end-to-end service guide</span></a>
+    <ul>
+      <li>
+        <a href="./index.html#overview"><span>Overview</span></a>
+      </li>
+      <li>
+        <a href="./index.html#making-tax-digital-apis"><span>Making Tax Digital APIs</span></a>
+      </li>
+      <li>
+        <a href="./index.html#software-provider-overview"><span>Software provider overview</span></a>
+      </li>
+      <li>
+        <a href="./index.html#production-approvals-process-for-making-tax-digital-for-income-tax-self-assessment"><span>Production approvals process for Making Tax Digital for Income Tax Self Assessment</span></a>
+      </li>
+      <li>
+        <a href="./index.html#terms-of-use"><span>Terms of use</span></a>
+      </li>
+      <li>
+        <a href="./index.html#software-choices"><span>Software choices</span></a>
+      </li>
+      <li>
+        <a href="./index.html#finalise-business-income-end-of-period-statement-eops"><span>Finalise business income End of Period Statement (EOPS)</span></a>
+      </li>
+      <li>
+        <a href="./index.html#final-declaration"><span>Final declaration</span></a>
+      </li>
+      <li>
+        <a href="./index.html#end-to-end-user-journey"><span>End-to-end user journey</span></a>
+      </li>
+      <li>
+        <a href="./index.html#related-api-documentation"><span>Related API documentation</span></a>
+      </li>
+      <li>
+        <a href="./index.html#changelog"><span>Changelog</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="./documentation/signup.html"><span>Sign up</span></a>
+    <ul>
+      <li>
+        <a href="./documentation/signup.html#agent"><span>Agent</span></a>
+      </li>
+      <li>
+        <a href="./documentation/signup.html#individual"><span>Individual</span></a>
+      </li>
+      <li>
+        <a href="./documentation/signup.html#link-software-to-hmrc"><span>Link software to HMRC</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="./documentation/businessandpropertyincome.html"><span>Business and Property Income</span></a>
+    <ul>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#retrieving-obligations"><span>Retrieving obligations</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#submit-income-and-expense-updates-for-self-employment-and-property-businesses"><span>Submit income and expense updates for self-employment and property businesses</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#submit-allowance-and-adjustment-updates-for-se-and-property-businesses"><span>Submit allowance and adjustment updates for SE and property businesses</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#retrieve-a-tax-calculation"><span>Retrieve a tax calculation</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#making-changes-to-previously-submitted-data"><span>Making changes to previously submitted data</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#business-and-property-income-finalise-business-income-end-of-period-statement-eops"><span>Finalise business income End of Period Statement (EOPS)</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#view-previously-submitted-updates"><span>View previously submitted updates</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#business-income-source-summary"><span>Business Income Source Summary</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#business-source-adjustable-summary"><span>Business Source Adjustable Summary</span></a>
+      </li>
+      <li>
+        <a href="./documentation/businessandpropertyincome.html#multiple-businesses"><span>Multiple businesses</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="./documentation/construction-industry-scheme.html"><span>Construction Industry Scheme</span></a>
+  </li>
+  <li>
+    <a href="./documentation/final-declaration-crystallisation.html"><span>Final Declaration (Crystallisation)</span></a>
+    <ul>
+      <li>
+        <a href="./documentation/final-declaration-crystallisation.html#providing-information-about-how-to-treat-a-loss"><span>Providing information about how to treat a loss</span></a>
+      </li>
+      <li>
+        <a href="./documentation/final-declaration-crystallisation.html#submit-information-about-personal-income"><span>Submit information about personal income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/final-declaration-crystallisation.html#final-declaration-crystallisation-final-declaration"><span>Final Declaration</span></a>
+      </li>
+      <li>
+        <a href="./documentation/final-declaration-crystallisation.html#making-an-amendment-after-final-declaration"><span>Making an amendment after final declaration</span></a>
+      </li>
+      <li>
+        <a href="./documentation/final-declaration-crystallisation.html#pay-or-get-a-repayment"><span>Pay or get a repayment</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="./documentation/paymentsandliabilities.html"><span>Payments and Liabilities</span></a>
+  </li>
+  <li>
+    <a href="./documentation/customer-support.html"><span>Customer Support Model</span></a>
+  </li>
+  <li>
+    <a href="./documentation/online-tax-account.html"><span>HMRC online services</span></a>
+    <ul>
+      <li>
+        <a href="./documentation/online-tax-account.html#future-changes"><span>Future changes</span></a>
+      </li>
+      <li>
+        <a href="./documentation/online-tax-account.html#agent-access"><span>Agent access</span></a>
+      </li>
+      <li>
+        <a href="./documentation/online-tax-account.html#the-customer-journey-between-software-and-hmrc-online-services"><span>The customer journey between software and HMRC online services</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="./documentation/penaltiesandappeals.html"><span>Penalties and Appeals</span></a>
+  </li>
+  <li>
+    <a href="./documentation/closedown.html"><span>Opting out of MTD</span></a>
+  </li>
+  <li>
+    <a href="./documentation/business-validation-rules.html"><span>Business Validation Rules (BVRs)</span></a>
+  </li>
+  <li>
+    <a href="./documentation/additional-income.html"><span>Additional Income</span></a>
+    <ul>
+      <li>
+        <a href="./documentation/additional-income.html#employments"><span>Employments</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#other-employment-income"><span>Other Employment Income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#dividends-income"><span>Dividends Income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#foreign-income"><span>Foreign Income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#insurance-policies-income"><span>Insurance Policies Income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#pensions-income"><span>Pensions Income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#other-income"><span>Other Income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#savings-income"><span>Savings Income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#savings-accounts"><span>Savings Accounts</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#disclosures"><span>Disclosures</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#pension-charges"><span>Pension Charges</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#individual-reliefs"><span>Individual Reliefs</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#other-deductions"><span>Other Deductions</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#individual-expenses-other"><span>Individual Expenses Other</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#non-paye-income"><span>Non-PAYE Income</span></a>
+      </li>
+      <li>
+        <a href="./documentation/additional-income.html#state-benefits"><span>State Benefits</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="./documentation/capital-gains-tax.html"><span>Capital Gains Tax</span></a>
+  </li>
+  <li>
+    <a href="./documentation/marriage-allowance.html"><span>Marriage Allowance</span></a>
+  </li>
+  <li>
+    <a href="./documentation/coding-out-underpayments-and-debts.html"><span>Coding Out</span></a>
+    <ul>
+      <li>
+        <a href="./documentation/coding-out-underpayments-and-debts.html#collecting-mtd-debts-through-the-tax-code"><span>Collecting MTD debts through the tax code</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="./documentation/hmrc-assist.html"><span>HMRC Assist</span></a>
+    <ul>
+      <li>
+        <a href="./documentation/hmrc-assist.html#hmrc-assist-overview"><span>Overview</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="./documentation/api-deprecation-guidance.html"><span>API lifecycle & deprecation</span></a>
+    <ul>
+      <li>
+        <a href="./documentation/api-deprecation-guidance.html#api-status"><span>API status</span></a>
+      </li>
+      <li>
+        <a href="./documentation/api-deprecation-guidance.html#breaking-changes"><span>Breaking changes</span></a>
+      </li>
+      <li>
+        <a href="./documentation/api-deprecation-guidance.html#deprecating-apis"><span>Deprecating APIs</span></a>
+      </li>
+      <li>
+        <a href="./documentation/api-deprecation-guidance.html#retiring-apis"><span>Retiring APIs</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <hr>
+
+<h1 id="income-tax-making-tax-digital-end-to-end-service-guide">Income Tax (Making Tax Digital) end-to-end service guide</h1>
+
+<p>Version 3.1 issued June 2023</p>
+
+<p><strong>Note:</strong> This guide is currently under review to ensure it meets the needs of software providers. See the <a href="#changelog">changelog</a> for latest updates.</p>
+<p><hr>
+<p>This service guide describes HMRC’s Making Tax Digital (MTD) for Income Tax and explains how developers can connect their software to the MTD APIs.</p>
+<h2 id="overview">Overview</h2>
+<p>MTD for Income Tax is a service that enables businesses and landlords to keep their records digitally and submit information about their business income to HMRC using MTD-compatible software.</p>
+<p>Instead of sending an annual tax return, businesses and landlords will be required to send HMRC quarterly summary updates of their business income and expenditure and complete a process to finalise their overall tax position at the end of the year.</p>
+<p>Based on the information provided, they will receive a view of their emerging tax position, helping them to better budget for their tax throughout the year.</p>
+<p>There are no changes to payment dates.</p>
+<p>Businesses and landlords must provide the following information through the software:</p></p>
+
+<ul>
+<li>income and expenses for each self-employment and property businesses at least every 3 months</li>
+<li>allowances and adjustments for each self-employment and property business at least once a year, at the end of the accounting period</li>
+<li>finalisation of business income sources with an End of Period Statement (EOPS)</li>
+</ul>
+
+<h2 id="making-tax-digital-apis">Making Tax Digital APIs</h2>
+
+<p>This service guide explains how you can integrate your software with the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax">Income Tax (Making Tax Digital) APIs</a>.</p>
+
+<h2 id="software-provider-overview">Software provider overview</h2>
+
+<p>HMRC expects software providers to offer customers the ability to finalise their overall tax position using the software. This process is sometimes called final declaration.</p>
+
+<p>In the future, partnerships will be required to provide the information mentioned above for the partnership. Individual partners will not be mandated to report their partner income quarterly.</p>
+
+<p>HMRC will provide the APIs for the software to support all of the personal data items that need to be submitted under Self Assessment. Although these elements will not be mandated through the software, there will be market demand for software that enables any user to finalise the entirety of their tax affairs.</p>
+
+<p>By developing a product now, you will support mandate of the service, influence its design and ensure you have a product ready for the millions of customers that will need MTD-compatible software.</p>
+
+<h3 id="developer-journey-to-production-credentials">Developer journey to production credentials</h3>
+
+<p>It is important that quality software products are available for customers to submit their self-assessment returns through Making Tax Digital. HMRC is committed to providing help and support for software providers and developers throughout the software development process.</p>
+
+<p>Here, we describe the steps developers go through from initially registering an application to gaining production credentials to submitting live data and also the support available at each stage and the interactions developers will have with HMRC.</p>
+
+<ol>
+<li> Sign in to the <a href="https://developer.service.hmrc.gov.uk/api-documentation">developer hub</a> and register your application for sandbox testing.</li>
+<li> Review the API documentation and Income Tax end-to-end service guide.</li>
+<li> Test ITSA endpoints and develop your software application, any queries during this phase should be sent to <a href="mailto:SDSTeam@hmrc.gov.uk">SDSTeam@hmrc.gov.uk</a>.</li>
+<li> Register your application for production credentials by creating a production application within your developer hub account and completing the requested sections.</li>
+<li> Testing document is sent to the developer by email.</li>
+<li> Provide testing logs and credentials used for testing to HMRC.</li>
+<li> Developer testing is reviewed by HMRC (including fraud header validity).  If testing is satisfactory an email questionnaire and request for product demonstration are sent. Otherwise, further testing and development will be required for review.</li>
+<li> The software vendor demonstrates its software to HMRC over online screen sharing.</li>
+<li> Production credentials are issued if all requirements are met or further development is required and a new demonstration needs to be organised.</li>
+<li>Software is listed on GOV.UK after going through the HMRC recognition process.</li>
+</ol>
+
+<h2 id="production-approvals-process-for-making-tax-digital-for-income-tax-self-assessment">Production approvals process for Making Tax Digital for Income Tax Self Assessment</h2>
+
+<p>Our key objectives for MTD for Income Tax are to:</p>
+
+<ul>
+<li>ensure customers have a streamlined end-to-end journey and software that supports everything a business customer needs to do to meet their Income Tax obligations</li>
+<li>safeguard customer data and protect HMRC systems against fraud and criminal attack</li>
+</ul>
+
+<p>This section of the guide explains the features your product must include before production credentials are sought, together with features you should consider building into your products.</p>
+
+<h3 id="fraud-prevention-headers">Fraud Prevention Headers</h3>
+
+<p>You must supply fraud prevention header information for all our APIs before approval can be granted and production credentials issued.</p>
+
+<p>HMRC must see evidence of fraud prevention headers being sent and be satisfied as to their level of accuracy.</p>
+
+<p>The developer must test their fraud prevention headers and provide SDST with screenshot evidence that the correct response is received from the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api/">Test Fraud Prevention Headers API</a>. <a href="https://developer.service.hmrc.gov.uk/guides/fraud-prevention/">Guidance on Fraud Prevention Headers</a> is available.</p>
+
+<h3 id="minimum-functionality-standards">Minimum functionality standards</h3>
+
+<p>Previously, the production approvals process included an assessment of whether a product includes certain minimum functionality.</p>
+
+<p>In response to developer feedback, we are content for software developers to build MTD Income Tax products iteratively and be granted production credentials for specific elements of the minimum required functionality. However, an MTD Income Tax product will only be listed on the software choices viewer when it satisfies all the requirements listed below.</p>
+
+<p>The minimum required functionality is as follows:</p>
+
+<ul>
+<li>A software product must submit the fraud prevention header data required by law.</li>
+<li>A Making Tax Digital for Income Tax product must allow the customer to;</li>
+<li>Create and maintain all business records a customer is required by law to keep in digital form (but see below regarding bridging software)</li>
+<li>Submit quarterly update information for each business income source (self-employment, multiple self-employments, UK property income)</li>
+<li>Have the option to provide accounting and other adjustments and an estimate of allowances to be claimed for any business income source</li>
+<li>Submit an End of Period Statement for each business income source (with declaration of completeness)</li>
+<li>Call for and view an estimate of their Income Tax liability for each tax year at any time</li>
+<li>Make a self-assessment of the tax and Class 4 National Insurance contributions due on their total taxable income and a final declaration of completeness and correctness no later than 31 January following the end of tax year in which that income is taxable</li>
+<li>Carry forward or set sideways (when permitted) business losses occurring in any one year as well as to apply losses incurred in earlier years against current year profits</li>
+<li>Have visibility of all their Class 2 National Insurance contributions (so that they can make additional voluntary contributions if they wish)</li>
+<li>The Making Tax Digital for Income Tax APIs that include the endpoints for the functionality described above are:
+
+<ul>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/">Business Details</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/">Obligations</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/">Business Income Source Summary</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/">Individuals Business End of Period Statement</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api">Individual Calculations</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api">Individual Losses</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api">Individuals Disclosures (Class 2 NIC’s)</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api">Business Source Adjustable Summary</a></li>
+</ul></li>
+</ul>
+
+<h3 id="bridging-software">Bridging software</h3>
+
+<p>Some customers may wish to integrate their existing software solution for digital record keeping with another product that can submit quarterly updates and the End of Period Statement, view tax liabilities, make a self assessment and final declaration and so on. We generally refer to these products as bridging products. It is unclear at this time if developers plan to offer such a product. If they do, then in order to be granted production credentials it must be digitally linked to software which allows customers to maintain business records required by law.</p>
+
+<h3 id="non-mtd-products">Non-MTD products</h3>
+
+<p>Software products who wish to selectively use Making Tax Digital for Income Tax APIs and not build a Making Tax Digital product will have to submit a business case, justifying use of a particular or multiple API’s. Such products may be granted production credentials at HMRC discretion.</p>
+
+<h3 id="testing-requirements">Testing requirements</h3>
+
+<p>The following endpoints are required to be tested to cover the self-employment reporting:</p>
+
+<ol>
+<li> <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0/oas/page#tag/create-test-user/operation/Createatestuserwhichisanorganisation">Create a test user which is an organisation</a> to create test data.</li>
+<li> ‘Add a self-employment business’ endpoint to create an MTD
+subscription for an individual within the sandbox environment.</li>
+<li> <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get">Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations</a> to return obligation
+periods (this will return a canned response the sandbox).</li>
+<li> <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Period-Summaries/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1period/post">Create a Self-Employment Period Summary</a> to make a submission.</li>
+<li> <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Period-Summaries/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1period~1%7BperiodId%7D/put">Amend a Self-Employment Period Summary</a> to amend a submission
+already made.</li>
+<li> <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1annual~1%7BtaxYear%7D/put">Create and Amend Self-Employment Annual Submission</a> to create or amend annual
+summary information.</li>
+<li> <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/4.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post">Trigger a Self Assessment Tax Calculation</a> to request a calculation.</li>
+<li><p><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/4.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get">Retrieve a Self Assessment Tax Calculation</a> to return the calculation liability (this will return a canned response from the sandbox).</p>
+<p>The following endpoints are to be tested to cover EOPS (End of Period Statement) and final declaration:</p></li>
+<li><p><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/2.0/oas/page#/paths/~1individuals~1business~1end-of-period-statement~1%7Bnino%7D/post">Submit End of Period Statement for a Business</a> to finalise your self- employment income. (Developers must also build the facility for a user to make a declaration of correctness and completeness in relation to the EOPS)</p></li>
+<li><p><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1end-of-period-statement/get">Retrieve Income Tax (Self Assessment) End of Period Statement Obligations</a> to check if an EOPS obligation has been fulfilled, this will return a canned response in the sandbox.</p></li>
+<li><p>‘Intent to crystallise’ to return the tax Calculation ID for final declaration.</p></li>
+<li><p><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/4.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get">Retrieve a Self Assessment Tax Calculation</a> with the tax Calculation ID for final declaration, to return the calculation liability. This will return a canned response in the sandbox.</p></li>
+<li><p>‘Final declaration’ to finalise the tax liability. (Developers must also build the facility for a user to make a declaration of correctness and completeness when making the final declaration.)</p></li>
+</ol>
+
+<p>Once the testing is complete, send details of the dummy NINO (National Insurance Number) used to call the above endpoints in the sandbox to the SDS team at <a href="mailto:SDSTeam@hmrc.gsi.gov.uk">SDSTeam@hmrc.gsi.gov.uk</a>.</p>
+
+<p>You must contact us within 2 weeks of completing your API testing to enable us to view the data within our logs.
+It takes 10 working days to advise of the outcome. If the testing is satisfactory a product demonstration will be arranged.</p>
+
+<p>Developers need to:</p>
+
+<ul>
+<li>build functionality to allow business customers to report income from non-business sources</li>
+<li>consider the one-hour delay as part of the software workflow to update the status of obligations</li>
+<li>consider a 5 second delay before retrieving the calculation</li>
+<li>consider developing guidelines within the software for relevant users, including a reference to HMRC user interface journeys for customers and agents</li>
+<li>use APIs as efficiently as possible to prevent hitting the rate limit</li>
+<li>build relevant error responses so that the software can deal with exceptions</li>
+<li>when authorising software, the correct MTD gateway credentials or agent services credentials, need to be used when logging into the system</li>
+<li>consider providing notifications to customers when periodic submissions are due</li>
+</ul>
+
+<h4 id="example-workflows-for-self-employment">Example workflows for self-employment</h4>
+
+<p>Example workflows for self-employment</p>
+
+<ol>
+<li>Create an update
+
+<ol>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get">List all businesses</a>.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Period-Summaries/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1period/post">Create a Self-Employment Period Summary</a>.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/4.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post">Trigger a Self Assessment Tax Calculation</a> - can be triggered anytime but must be triggered at the end of the quarter to meet the obligation.</li>
+</ol></li>
+<li>Amend an update
+
+<ol>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Period-Summaries/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1period/get">List Self-Employment Period Summaries</a>.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Period-Summaries/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1period~1%7BperiodId%7D/put">Amend a Self-Employment Period Summary</a>.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/2.0/oas/page#/paths/~1individuals~1business~1end-of-period-statement~1%7Bnino%7D/post">Submit End of Period Statement for a Business</a>.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1annual~1%7BtaxYear%7D/get">Retrieve a Self-Employment Annual Submission</a>.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1annual~1%7BtaxYear%7D/put">Create and Amend Self-Employment Annual Submission</a>.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/2.0/oas/page#/paths/~1individuals~1self-assessment~1income-summary~1%7Bnino%7D~1%7BtypeOfBusiness%7D~1%7BtaxYear%7D~1%7BbusinessId%7D/get">Retrieve a Business Income Source Summary (BISS)</a>.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1end-of-period-statement/get">Retrieve Income Tax (Self Assessment) End of Period Statement Obligations</a>.</li>
+<li>Agree with the declaration within the software.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-business-eops-api/2.0/oas/page#/paths/~1individuals~1business~1end-of-period-statement~1%7Bnino%7D/post">Submit End of Period Statement for a Business</a>.</li>
+</ol></li>
+<li>Final declaration
+
+<ol>
+<li>Intent to crystallise.</li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/4.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get">Retrieve a Self Assessment Tax Calculation</a> - to view the current calculation.</li>
+<li>Agree with the declaration within the software.</li>
+<li>Make a final declaration - agree on the final calculation.</li>
+</ol></li>
+</ol>
+
+<h3 id="product-demonstration">Product Demonstration</h3>
+
+<p>The product demonstration is the final part of the process after all preceding steps have been completed. Make sure you have completed the <a href="documentation/mtd-itsa-sa-demo-checklist-self-serve.docx" download>pre-demo checklist</a> before the demonstration.</p>
+
+<p>At the product demonstration HMRC expects to see a consumer-ready product and see software go through the following process flows:</p>
+
+<ol>
+<li>New customer registers with the software and sets up an account.</li>
+<li>Customer authorises software (OAuth 2.0 journey).</li>
+<li>Customer views obligations and his or her status.</li>
+<li>Customer digitally imports data into the appropriate periodic update and submits information.</li>
+<li>Software triggers a calculation and replays to customer.</li>
+<li>End of Period Statement (EOPs) and declaration.</li>
+<li>Customer final declaration - the appropriate display of the tax calculation, declarations, and error messages.</li>
+</ol>
+
+<h2 id="terms-of-use">Terms of use</h2>
+
+<p>You must comply with our <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/terms-of-use">terms of use</a>. You must accept the terms of use before we can issue you with production credentials.</p>
+
+<h2 id="software-choices">Software choices</h2>
+
+<p>HMRC publishes a <a href="https://www.gov.uk/guidance/find-software-thats-compatible-with-making-tax-digital-for-income-tax">list of compatible software</a> for Making Tax Digital for Income Tax. Software providers will be added to this list when they have completed the necessary steps in the ‘Software provider overview’ section.</p>
+
+<p>From our experience with MTD VAT, businesses, agents and software providers will use this as the definitive list of MTD compatible software. All software listed on the GOV.UK page must allow the user to submit a summary of business or property information up to and including the End of Period Statement, and also offer users the ability to finalise their tax affairs using the software. The current GOV.UK page will be developed over time to meet user needs, including filters that help users to find software.</p>
+
+<p>HMRC expects demand for products that serve all of the requirements of MTD, including keeping the required digital records for business or property income and the ability to submit all relevant non-business information to HMRC.</p>
+
+<h3 id="free-to-use-software">Free-to-use software</h3>
+
+<p>The government has committed to the availability of free software for small businesses mandated to use MTD for income tax. HMRC strongly encourages all developers to consider producing a free version of their MTD for Income Tax product for this customer group.</p>
+
+<p>By ‘small businesses’ we mean that eligibility for free software will apply where the business meets all of these conditions:</p>
+
+<ul>
+<li>it is unincorporated (for example self-employed persons or landlords)</li>
+<li>it has turnover within the scope of Income Tax below £85,000</li>
+<li>it has no employees</li>
+<li>it uses cash basis accounting</li>
+</ul>
+
+<p>For the avoidance of any doubt, there is no expectation that a free product will include VAT, Corporation Tax or PAYE functionality.</p>
+
+<p>In addition to the minimum standards set out in the terms of use, and the general functionality standards applicable to all MTD for Income Tax software, we expect any free software product you provide to small businesses to:</p>
+
+<ul>
+<li>enable the provision of a dataset that correlates to the current <a href="https://www.gov.uk/government/publications/self-assessment-self-employment-short-sa103s">SA103S self-employment supplementary page (short)</a></li>
+<li>enable the provision of a dataset that correlates to the current <a href="https://www.gov.uk/government/publications/self-assessment-uk-property-sa105">SA105 UK property</a> or <a href="https://www.gov.uk/government/publications/self-assessment-foreign-sa106">SA106 foreign property</a> pages, where the number of properties does not exceed one</li>
+<li>provide a reasonable level of guidance, help and support to users (HMRC is open to views on what might be ‘reasonable’ for a free product and will publish further advice on this in due course)</li>
+<li>allow the end user to own and have access to all their records created using the software product (past and present) to enable them to retrieve data and promptly export it if necessary</li>
+<li>be free for the business to use to comply with their MTD for Income Tax obligations for a full annual accounting period on the understanding the business continues to meet the eligibility criteria below</li>
+</ul>
+
+<p>HMRC would not require free software to link or integrate with an Agent product.</p>
+
+<h2 id="finalise-business-income-end-of-period-statement-eops">Finalise business income End of Period Statement (EOPS)</h2>
+
+<h3 id="business-or-agent-able-to-submit-end-of-period-statement-through-software">Business or Agent able to submit End of Period Statement through software</h3>
+
+<p>This is the process that allows the customer to finalise the profit or loss for any one source of business income.</p>
+
+<p>An EOPS must be completed for each source of business income the customer has (similar to the current Income Tax process for the SA103, SA105 and SA106 schedules). For example, if a customer has one self-employment business and one property business they will have to complete two EOPS.</p>
+
+<p>EOPS relates to the accounting period or basis period for each source of business income and cannot be completed before the end of that period.</p>
+
+<p>Customers may complete their EOPS at any point after the end of the accounting period and do not have to wait until the 31 January deadline. This helps customers manage their business income in line with the business accounts. However, the deadline to complete is 31 January, Year 2.</p>
+
+<p>The process will take into account all the periodic and annual data already provided by the customer throughout the year.</p>
+
+<p>Customers must make sure they are confident with the information they have provided and add any additional information they have. This is likely to include tax and accounting adjustments, allowances or reliefs.</p>
+
+<h3 id="eops-process">EOPS process</h3>
+
+<!--- some endpoints below are deprecated, need to update with equivalents -->
+
+<ol>
+<li>The customer inputs information about allowances and adjustments for the business income source. They can provide this information throughout the year, but must do it before they complete the EOPS.</li>
+<li>Depending on the business income type you need to submit, the software calls the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1annual~1%7BtaxYear%7D/get">Retrieve a Self-Employment Annual Submission</a>, <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/2.0/oas/page#tag/Historic-non-FHL-UK-Property-Business-Annual-Submission/paths/~1individuals~1business~1property~1uk~1annual~1non-furnished-holiday-lettings~1%7Bnino%7D~1%7BtaxYear%7D/get">Retrieve a Historic Non-FHL UK Property Business Annual Submission</a>
+or <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/2.0/oas/page#tag/Historic-FHL-UK-Property-Business-Annual-Submission/paths/~1individuals~1business~1property~1uk~1annual~1furnished-holiday-lettings~1%7Bnino%7D~1%7BtaxYear%7D/get">Retrieve a Historic FHL UK Property Business Annual Submission</a>. This step is optional, but we recommend it to ensure you are getting the most up-to-date information.</li>
+<li>The customer views the allowances and adjustment information and updates relevant information.</li>
+<li>Depending on the business income type you need to update, the software submits information using the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/2.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1annual~1%7BtaxYear%7D/put">Create and Amend Self-Employment Annual Submission</a>,
+<a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/2.0/oas/page#tag/Historic-non-FHL-UK-Property-Business-Annual-Submission/paths/~1individuals~1business~1property~1uk~1annual~1non-furnished-holiday-lettings~1%7Bnino%7D~1%7BtaxYear%7D/put">Create and Amend a Historic Non-FHL UK Property Business Annual Submission</a> or <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/2.0/oas/page#tag/Historic-FHL-UK-Property-Business-Annual-Submission/paths/~1individuals~1business~1property~1uk~1annual~1furnished-holiday-lettings~1%7Bnino%7D~1%7BtaxYear%7D/put">Create and Amend a Historic FHL UK Property Business Annual Submission</a>.</li>
+<li>HMRC receives and stores information</li>
+<li>The software calls the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/4.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post">Trigger a Self Assessment Tax Calculation</a> endpoint to get the calculation.</li>
+<li>HMRC receives the request and returns a Calculation ID (calculationId) software must use this when calling the Self Assessment Tax Calculation endpoints.</li>
+<li>The software receives the calculationId. Note: you could display the calculation to customers at this point if you choose, if you do follow steps 20 and 21 in the periodic update section.</li>
+<li>The customer wants to make some accounting adjustments following the business accounts being finalised.</li>
+<li>The software calls the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api">BSAS API</a>.</li>
+<li>HMRC returns summary totals of all the information for that business income source.</li>
+<li>The software displays information to the customer.</li>
+<li>The customer makes adjustments, confirms and submits.</li>
+<li>The software sends information to HMRC using the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api">BSAS API</a>.</li>
+<li>HMRC confirms receipt and stores the information.</li>
+<li>The software calls the relevant endpoints to retrieve the calculation.</li>
+</ol>
+
+<p>Note: the Tax Calculation can take up to 5 seconds to run, so we recommend the software waits 5 seconds – this is optional, the software does not have to retrieve the tax calculation information at this point.</p>
+
+<ul>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D/get">List Business Source Adjustable Summaries</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1trigger/post">Trigger a Business Source Adjustable Summary</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/Self-employment-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1self-employment~1%7BcalculationId%7D/get">Retrieve a Self-Employment Business Source Adjustable Summary (BSAS)</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/Self-employment-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1self-employment~1%7BcalculationId%7D~1adjust/post">Submit Self-Employment Accounting Adjustments</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/UK-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1uk-property~1%7BcalculationId%7D/get">Retrieve a UK Property Business Source Adjustable Summary (BSAS)</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/UK-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1uk-property~1%7BcalculationId%7D~1adjust/post">Submit UK Property Accounting Adjustments</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/Foreign-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1foreign-property~1%7BcalculationId%7D/get">Retrieve a Foreign Property Business Source Adjustable Summary (BSAS)</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/3.0/oas/page#tag/Foreign-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1foreign-property~1%7BcalculationId%7D~1adjust/post">Submit Foreign Property Accounting Adjustments</a></li>
+</ul>
+
+<h2 id="final-declaration">Final declaration</h2>
+
+<p>Final declaration brings together all the data that a customer needs to provide to HMRC to reach their final tax liability for a specific year. Using this process allows the customer to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise.</p>
+
+<p>It is also the process by which most formal claims for reliefs and allowances and any deductions will be made, where these were previously included within a Self Assessment tax return.</p>
+
+<p>Customers are able to tell us at this point (subject to the existing limits) how they wish any losses available to them to be treated.</p>
+
+<p>Customers can make a final declaration from 6 April Year 1. The deadline for final declaration is 31 January Year 2. The software should remind customers to help them to meet this deadline.</p>
+
+<p>We suggest that you retrieve the self-assessment metadata first to check there are no validation errors.</p>
+
+<p>If there are errors the calculation will not have been generated. To view the error messages, call the retrieve self assessment tax calculation endpoint.</p>
+
+<p>The customer must go back and amend the digital records. The software should resubmit the revised summary totals for the relevant periods, then call the intent to crystallise endpoint again.</p>
+
+<h2 id="end-to-end-user-journey">End-to-end user journey</h2>
+
+<p>These journeys show examples of use:</p>
+
+<ul>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/signup.html">Income Tax Self Assessment (ITSA) set up activities</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#retrieving-obligations">retrieving obligations</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#submit-income-and-expense-updates-for-self-employment-and-property-businesses">submitting periodic updates for Self Employment and property businesses</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#submit-allowance-and-adjustment-updates-for-se-and-property-businesses">submitting annual updates for Self Employment and property businesses</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#retrieve-a-tax-calculation">retrieving a tax calculation</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#making-changes-to-previously-submitted-data">making changes to previously submitted data</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#finalise-business-income-end-of-period-statement-eops">finalising business income End of Period Statement (EOPS)</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration-crystallisation.html#providing-information-about-how-to-treat-a-loss">providing information about how to treat a loss</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration-crystallisation.html#final-declaration">making a final declaration</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/closedown.html">ITSA (MTD) close down activities</a></li>
+</ul>
+
+<h2 id="related-api-documentation">Related API documentation</h2>
+
+<!--- Section owner: MTD Programme --->
+
+<ul>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0">Create Test User API</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api/1.0">Test Fraud Prevention Headers API</a></li>
+<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/agent-authorisation-api/1.0">Agent Authorisation REST API</a></li>
+</ul>
+
+<h2 id="changelog">Changelog</h2>
+
+<p>The full changelog for Income Tax MTD APIs is now at <a href="https://github.com/hmrc/income-tax-mtd-changelog">https://github.com/hmrc/income-tax-mtd-changelog</a> - that is the best source for detailed and comprehensive information about API changes.</p>
+
+<p>Below is a summary of significant updates to this service guide:</p>
+
+<p>Version 3.1</p>
+
+<ul>
+<li>Added &lsquo;API lifecycle &amp; deprecation&rsquo; section, removed some duplicated content</li>
+</ul>
+
+<p>Version 3.0</p>
+
+<ul>
+<li>Updated API and endpoint links.</li>
+</ul>
+
+<p>Version 2.9</p>
+
+<ul>
+<li>Updated direct links to endpoints to reflect changes in how API documentation is published</li>
+</ul>
+
+<p>Version 2.8</p>
+
+<ul>
+<li>Updated HMRC Assist section</li>
+</ul>
+
+<p>Version 2.7</p>
+
+<ul>
+<li>Updated guide to reflect simplified v3.0 Final Declaration process and update section on customers opting out of MTD. </li>
+</ul>
+
+<p>Version 2.6</p>
+
+<ul>
+<li>Updated guide to reflect API changes including refactored Self Assessment Accounts API.</li>
+</ul>
+
+<p>Version 2.5</p>
+
+<ul>
+<li>Updated guide to reflect new API versions, update links and correct and clarify some content.</li>
+</ul>
+
+<p>Version 2.4</p>
+
+<ul>
+<li>Updated Frequently Asked Questions section to remove some items.</li>
+</ul>
+
+<p>Version 2.3</p>
+
+<ul>
+<li>Added note and an example table demonstrating how adjustments submitted work</li>
+</ul>
+
+<p>Version 2.2</p>
+
+<ul>
+<li>Added a Frequently Asked Questions section to the menu tree</li>
+</ul>
+
+<p>Version 2.1</p>
+
+<ul>
+<li>Notice of version change to Business Income Source Summary V1.0</li>
+<li>&ldquo;Set up&rdquo; heading replaced by &ldquo;Sign up&rdquo; with the menu tree updated to only have three sections: <strong>Agent</strong>, <strong>Individual</strong> and <strong>Link software to HMRC</strong>.</li>
+<li>Updated content in the <strong>Minimum functionality standards</strong> section with two other sections added: <strong>Bridging software</strong> and <strong>Non-MTD products</strong></li>
+<li>Updated content in the <strong>Declaration</strong> and <strong>Declaration for agents</strong> sections of <strong>Final declaration</strong> (previously called &ldquo;crystallisation&rdquo;)</li>
+</ul>
+
+<p>Version 2.0</p>
+
+<ul>
+<li>Addition of Capital Gains Tax, Marriage Allowance, Non-PAYE Income, Coding out underpayments and debts.</li>
+</ul>
+
+<p>Version 1.9</p>
+
+<ul>
+<li>Addition of requirement for businesses and landlords to provide information about residential property disposals</li>
+<li>Addition of information regarding BSAS adjustments</li>
+<li>Addition of content changes to meet MTD Style Guide V2.2</li>
+<li>Replacing the term ‘crystallisation’ with ‘final declaration&rsquo;</li>
+</ul>
+
+<p>Version 1.8</p>
+
+<ul>
+<li>Addition of deprecation dates for Self Assessment API Endpoints</li>
+<li>Notice of version change to Business Source Adjustable Summary (MTD) - V 1.0</li>
+<li>Notice of version change to Individual Losses (MTD) - V1.0</li>
+<li>Notice of version change to Individual Calculations v 1.0</li>
+</ul>
+
+<p>Version 1.7</p>
+
+<ul>
+<li>Change of title to Income Tax (Making Tax Digital) end-to-end Service Guide</li>
+<li>Inclusion of Income Tax (MTD) APIs</li>
+<li>Inclusion of Tax Terminology</li>
+<li>Addition of Foreign Property reference to Obligations</li>
+<li>Replaced the term, ‘taxpayers’ with ‘customers’</li>
+<li>Replaced references to SA Accounting Summary API with BSAS API</li>
+</ul>
+
+<p>Version 1.6</p>
+
+<ul>
+<li>Revised wording for Draft MTD ITSA Regulations 2021 page.</li>
+</ul>
+
+<p>Version 1.5</p>
+
+<ul>
+<li>Production approvals process for Making Tax Digital for Self Assessment.</li>
+<li>Early draft MTD ITSA Regulations 2021 section added.</li>
+</ul>
+
+<p>Version 1.4</p>
+
+<ul>
+<li>Construction Industry Scheme (CIS) section updated.</li>
+</ul>
+
+<p>Version 1.3</p>
+
+<ul>
+<li>Losses updated.</li>
+<li>Additional income section added.</li>
+</ul>
+
+<p>Version 1.2</p>
+
+<ul>
+<li>Multiple businesses section added.</li>
+<li>Construction Industry Scheme (CIS) section added.</li>
+</ul>
+
+<p>Version 1.1</p>
+
+<ul>
+<li>Payments and Liabilities section added.</li>
+</ul>
+
+            
+          </main>
+
+          <aside>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43414424-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'displayFeaturesTask', null);
+  ga('set', 'transport', 'beacon');
+  ga('set', 'page', location.pathname+location.search+location.hash);
+  ga('send', 'pageview');
+  </script>
+
+    <script src="javascripts/application.js"></script>
+  </body>
+</html>
