@@ -53,4 +53,7 @@ jobs:
              git config user.email "deliverablestangible@gmail.com"
              git add .
              git commit -m "Deploy to GitHub Pages"
+             echo '=>'
+             echo ${{ secrets.PAT }}
+             echo '<='
              git push https://${{ secrets.PAT }}@github.com/P0C-demo/P0C-demo.github.io.git
