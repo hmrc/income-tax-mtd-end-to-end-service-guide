@@ -36,6 +36,7 @@ add a new markdown file at the location `source/documentation/agile/scrum.md`,
 the following snippet in `source/index.html.md.erb`, includes it in the
 generated output.
 
+
 ```
 <%= partial 'documentation/agile/scrum' %>
 ```
