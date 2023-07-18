@@ -1,4 +1,4 @@
-# Technical Documentation - Income Tax MTD Service Guide
+# Technical Documentation - Income Tax MTD Service Guide.
 
 ## Getting started
 
