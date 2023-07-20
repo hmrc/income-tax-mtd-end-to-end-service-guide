@@ -328,7 +328,7 @@ Below is a summary of significant updates to this service guide:
 
 #### Version 3.1
 
-* Added 'API lifecycle & deprecation' section, removed some duplicated content
+* Added 'API lifecycle & deprecation' section, removed some duplicated content.
 
 #### Version 3.0
 
@@ -336,11 +336,11 @@ Below is a summary of significant updates to this service guide:
 
 #### Version 2.9
 
-* Updated direct links to endpoints to reflect changes in how API documentation is published
+* Updated direct links to endpoints to reflect changes in how API documentation is published.
 
 #### Version 2.8
 
-* Updated HMRC Assist section
+* Updated HMRC Assist section.
 
 #### Version 2.7
 
@@ -360,18 +360,18 @@ Below is a summary of significant updates to this service guide:
 
 #### Version 2.3
 
-* Added note and an example table demonstrating how adjustments submitted work
+* Added note and an example table demonstrating how adjustments submitted work.
 
 #### Version 2.2
 
-* Added a Frequently Asked Questions section to the menu tree
+* Added a Frequently Asked Questions section to the menu tree.
 
 #### Version 2.1
 
 * Notice of version change to Business Income Source Summary V1.0
 * "Set up" heading replaced by "Sign up" with the menu tree updated to only have three sections: **Agent**, **Individual** and **Link software to HMRC**.
-* Updated content in the **Minimum functionality standards** section with two other sections added: **Bridging software** and **Non-MTD products**
-* Updated content in the **Declaration** and **Declaration for agents** sections of **Final declaration** (previously called "crystallisation")
+* Updated content in the **Minimum functionality standards** section with two other sections added: **Bridging software** and **Non-MTD products**.
+* Updated content in the **Declaration** and **Declaration for agents** sections of **Final declaration** (previously called "crystallisation").
 
 #### Version 2.0
 
@@ -379,26 +379,26 @@ Below is a summary of significant updates to this service guide:
 
 #### Version 1.9
 
-* Addition of requirement for businesses and landlords to provide information about residential property disposals
-* Addition of information regarding BSAS adjustments
-* Addition of content changes to meet MTD Style Guide V2.2
-* Replacing the term ‘crystallisation’ with ‘final declaration'
+* Addition of requirement for businesses and landlords to provide information about residential property disposals.
+* Addition of information regarding BSAS adjustments.
+* Addition of content changes to meet MTD Style Guide V2.2.
+* Replacing the term ‘crystallisation’ with ‘final declaration'.
 
 #### Version 1.8
 
-* Addition of deprecation dates for Self Assessment API Endpoints
-* Notice of version change to Business Source Adjustable Summary (MTD) - V 1.0
-* Notice of version change to Individual Losses (MTD) - V1.0
-* Notice of version change to Individual Calculations v 1.0
+* Addition of deprecation dates for Self Assessment API Endpoints.
+* Notice of version change to Business Source Adjustable Summary (MTD) - V 1.0.
+* Notice of version change to Individual Losses (MTD) - V1.0.
+* Notice of version change to Individual Calculations v 1.0.
 
 #### Version 1.7
 
-* Change of title to Income Tax (Making Tax Digital) end-to-end Service Guide
-* Inclusion of Income Tax (MTD) APIs
-* Inclusion of Tax Terminology
-* Addition of Foreign Property reference to Obligations
-* Replaced the term, ‘taxpayers’ with ‘customers’
-* Replaced references to SA Accounting Summary API with BSAS API
+* Change of title to Income Tax (Making Tax Digital) end-to-end Service Guide.
+* Inclusion of Income Tax (MTD) APIs.
+* Inclusion of Tax Terminology.
+* Addition of Foreign Property reference to Obligations.
+* Replaced the term, ‘taxpayers’ with ‘customers’.
+* Replaced references to SA Accounting Summary API with BSAS API.
 
 #### Version 1.6
 
