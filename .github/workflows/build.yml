@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'source'
 
 jobs:
   Build_the_markup_files:
