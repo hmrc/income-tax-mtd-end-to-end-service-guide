@@ -3,9 +3,8 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'build'
-      - .git
+    paths:
+      - 'source'
 
 jobs:
   Build_the_markup_files:
