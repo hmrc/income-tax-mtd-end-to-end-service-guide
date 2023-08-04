@@ -8,9 +8,9 @@ This service guide describes HMRC’s Making Tax Digital (MTD) for Income Tax an
 
 
 
-|Help us improve this guide |
+>|Help us improve this guide |
 |---|  
-|We&#39;d really like to hear from you if you have used this service guide.<br/><br/>If you are a Developer, Product Manager, Product Owner, Business Analyst or Delivery Manager as part of our ongoing collaboration we&#39;d like to invite you to share your thoughts and feedback to help influence change within the ITSA MTD service.<br/><br/>The sessions will take place via an online video call, which will involve a 60-minute one-to-one interview.<br/><br/>We’d like to explore:<ul><li>Your current use and experience on the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide and exploring how it fits your needs and how it can be improved</li></ul><br/>If this sounds like something you would like to take part in, please use the following link to book in a slot:<br/><a href="https://calendly.com/sofia-pereira-nui/user-interviews">https://calendly.com/sofia-pereira-nui/user-interviews</a><br/><br/>If the dates are not convenient, please contact our User Researcher <a href="mailto:sofia.pereira@digital.hmrc.gov.uk">sofia.pereira@digital.hmrc.gov.uk</a> and we will do our best to accommodate you.|
+|We&#39;d really like to hear from you if you have used this service guide.<br/><br/>If you are a Developer, Product Manager, Product Owner, Business Analyst or Delivery Manager as part of our ongoing collaboration we&#39;d like to invite you to share your thoughts and feedback to help influence change within the ITSA MTD service.<br/><br/>The sessions will take place via an online video call, which will involve a 60-minute one-to-one interview.<br/><br/>We’d like to explore:<ul><li>Your current use and experience on the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide and exploring how it fits your needs and how it can be improved</li></ul><br/>If this sounds like something you would like to take part in, please contact our User Researcher <a href="mailto:sofia.pereira@digital.hmrc.gov.uk">sofia.pereira@digital.hmrc.gov.uk</a> to arrange an interview.|
 
 
 
