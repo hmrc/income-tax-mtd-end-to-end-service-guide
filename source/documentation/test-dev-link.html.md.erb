@@ -7,9 +7,9 @@ description: Technical writers. Add anchor links to the latest version of an OAS
 <!--- Section owner: MTD Programme --->
 # About the link
 To create an anchor link, you need to do the following:
-* Rename the page, appending .erb. This is to indicate that the page contains embedded Ruby code.
-* Add the link code to the page < % = make_a_link("api-name", "anchor-name", "Link text") % >. The anchor name is the ID of the anchor in the OAS document. The link text is the text that appears in the link.
-* The markup will contain a link to the most recent version of the api. Note that the anchor is all code after the # in the url.
+ - Rename the page, appending .erb. This is to indicate that the page contains embedded Ruby code.
+ - Add the link code to the page < % = make_a_link("api-name", "anchor-name", "Link text") % >. The anchor name is the ID of the anchor in the OAS document. The link text is the text that appears in the link.
+ - The markup will contain a link to the most recent version of the api. Note that the anchor is all code after the # in the url.
 
 ---
 <%= make_a_link("individual-calculations-api", "trigger_a_self_assessment_tax_calculation", "Trigger A Self Assessment Tax Calculation")  %>
