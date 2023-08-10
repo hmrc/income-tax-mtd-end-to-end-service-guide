@@ -1,15 +1,60 @@
 ---
-title: Creating an anchor link to an unknown version of an OAS document
+title: Linking to API base pages and endpoints
 weight: 1
 description: Technical writers. Add anchor links to the latest version of an OAS document.
 ---
 
 <!--- Section owner: MTD Programme --->
-# About the link
+# Linking to API base pages and endpoints
+
+## Creating a link to an API base page
+Use the standard markdown coding. For example:
+
+    [Test Fraud Prevention Headers API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api/)
+
+Notice that the version number is intentionally omitted from the end of the URL. This results in the link automatically pointing to the latest version.
+
+## Creating an anchor link to the latest version of an API endpoint
 To create an anchor link, you need to do the following:
- - Rename the page, appending .erb. This is to indicate that the page contains embedded Ruby code.
- - Add the link code to the page < % = make_a_link("api-name", "anchor-name", "Link text") % >. The anchor name is the ID of the anchor in the OAS document. The link text is the text that appears in the link.
- - The markup will contain a link to the most recent version of the api. Note that the anchor is all code after the # in the url.
+
+1. Rename the page, appending .erb. This is to indicate that the page contains embedded Ruby code.
+2. Add the following link code to the page:
+
+```
+< % = make_a_link("api-name", "anchor-name", "Link text") % >
+```
+The anchor name is the ID of the anchor in the OAS document. The link text is the text that appears in the link.
+
+The markup will contain a link to the most recent version of the api. Note that the anchor is all code after the # in the url.
 
 ---
+Here's an example of the correctly rendered link code:
 <%= make_a_link("individual-calculations-api", "trigger_a_self_assessment_tax_calculation", "Trigger A Self Assessment Tax Calculation")  %>
+
+For example, the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint link uses this code:
+
+    [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get)
+
+Notice the "business-details-api/1.0" embedded in the middle. This solution involves constructing the URL from the three building blocks, which you place within the "make_a_link" code. The "make_a_link" code then constructs the link with the version number always pointing to the latest version.
+
+
+In this example: 
+
+ - api-name = **business-details-api**
+ - anchor-name = **/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get**
+ - Link text = **List All Businesses**
+
+So the link code you would add in this example is:
+
+```
+< % = make_a_link("business-details-api", "/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get", "List All Businesses")  % >
+```
+
+### Search and Replace Regular Expressions
+To speed up the process of converting from markdown link coding to the anchor link coding, you can use the following search and replace regular expressions:
+
+#### Search
+    \[(.*)\]\((https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/)(.*\/)[0-9]+.[0-9]/oas/page#(.*)\)
+
+#### Replace
+    < % = make_a_link(“$3”, “$4”, “$1”) % >
