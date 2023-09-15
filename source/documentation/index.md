@@ -3,23 +3,21 @@
 **Version 3.1** issued June 2023
 
 
-
-
+This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax). 
 
 >|Help us improve this guide |
 |---|  
-|This guide is currently being revised and overhauled to ensure it meets the needs of software providers. See the service guide [changelog](#changelog) for latest updates.<br/><br/>If there is a way that this guide could be improved or expanded to meet your needs, <b>now is the time to let us know.</b><br/><br/>If you are a Developer, Product Manager, Product Owner, Business Analyst or Delivery Manager, we&#39;d like to invite you to share your thoughts and feedback via an online video call, which will involve a 60-minute one-to-one interview.<br/><br/>We’d like to explore:<ul><li>Your current use of and experience with the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide, how it fits your needs and how it can be improved</li></ul><br/>If you would like to help us improve this guide, please contact our User Researcher <a href="mailto:sofia.pereira@digital.hmrc.gov.uk">sofia.pereira@digital.hmrc.gov.uk</a> to arrange an interview.|
+|This guide is currently being revised and overhauled to ensure it meets the needs of software providers. See the service guide [changelog](#changelog) for latest updates.<br/><br/>If there is a way that this guide could be improved or expanded to meet your needs, <b>now is the time to let us know.</b><br/><br/>If you use this guide regularly, we&#39;d like to invite you to share your thoughts and feedback via an online video call, which will involve a 60-minute one-to-one interview.<br/><br/>We’d like to explore:<ul><li>Your current use of and experience with the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide, how it fits your needs and how it can be improved</li></ul><br/>If you would like to help us improve this guide, please contact our User Researcher <a href="mailto:sofia.pereira@digital.hmrc.gov.uk">sofia.pereira@digital.hmrc.gov.uk</a> to arrange an interview.|
 
 
 
 ## Overview
 
-This guide explains how you can integrate your software with our APIs, and provides examples of how they fit into various end-to-end user journeys to enable agents and individuals to meet their obligations once they have signed up to Making Tax Digital, a service where quarterly updates and final declarations will replace the need for a Self Assessment return to be submitted.
+Making Tax Digital (MTD) is a new service where quarterly updates and final declarations will replace the need for a Self Assessment return to be submitted.
+
+This guide explains how you can integrate your software with the MTD APIs, and provides examples of how they fit into various end-to-end user journeys to enable agents and individuals to meet their obligations once they have signed up.
 
 For more information about eligibility and how to use Making Tax Digital for Income Tax, please refer to the [Making Tax Digital step by step guidance](https://www.gov.uk/government/collections/making-tax-digital-for-income-tax-for-businesses-step-by-step).
-
-## Making Tax Digital APIs
-This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax). 
 
 
 ## Software provider overview
