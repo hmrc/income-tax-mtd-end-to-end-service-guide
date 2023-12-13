@@ -7,7 +7,7 @@ weight: 3
 
 To manage a customer's filing obligations, MTD needs to identify different types of customer in the service. To do this, MTD has allocated a status for each customer for each tax year. This status will be reviewed annually by HMRC using the latest tax return received from the customer. This status will persist year-on-year. 
 
-In software, the customer status can be retrieved using the [Self Assessment Individual Details](/api-documentation/docs/api/service/self-assessment-individual-details-api/) API. However, the software should not show the ITSA status to the customer. Instead, the statuses can be used in software in the following ways: 
+In software, the customer status can be retrieved by using the [Self Assessment Individual Details](/api-documentation/docs/api/service/self-assessment-individual-details-api/) API. However, the software should not show the ITSA status to the customer. Instead, the statuses can be used in software in the following ways: 
 
 - encourage customers to fulfil their obligations 
 - where necessary, inform customers that they may receive a penalty if they do not submit their updates on time
