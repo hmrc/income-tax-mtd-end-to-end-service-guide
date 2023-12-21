@@ -22,7 +22,6 @@ At any time of the year, customers can check their obligations. To provide this 
 Quarterly obligations are created for sole trader and property income sources. In software, the retrieval of customer’s obligations is done by calling any of the following endpoints depending on the customer’s type of income source:
 
 * [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get)
-* [Retrieve Income Tax (Self Assessment) End of Period Statement Obligations](/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1end-of-period-statement/get)
 * [Retrieve Income Tax (Self Assessment) Final Declaration Obligations](/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1crystallisation/get)
 
 These endpoints provide obligation dates for all self-employment and property businesses, and inform whether or not obligations have been met. The deadline for meeting a quarterly obligation is one month after the obligation period end date. The software should communicate these deadlines clearly to the customer and prompt them to submit the information when the update is due. 
@@ -33,9 +32,6 @@ A customer should always be able to view their latest obligations. To do this, t
 * when a customer submits updates
 * when a customer adds a new sole trader business in HMRC online services
 * when a customer ceases an existing business in HMRC online services
-
-
-
 
 ## Submit income and expense updates for self-employment and property businesses
 
