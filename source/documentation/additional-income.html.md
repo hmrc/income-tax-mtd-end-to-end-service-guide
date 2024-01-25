@@ -200,17 +200,14 @@ These endpoints allow a user to create, retrieve, amend and delete savings incom
 
 ## Savings Accounts
 
-These endpoints allow a user to retrieve and maintain information about an individual's UK savings account.
+Customers must submit information to HMRC about any UK savings accounts they hold. For information about eligible account types, refer to [How to complete your tax return for Self Assessment (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100#supplementary-pages).
 
-* [List All UK Savings Accounts](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1%7Bnino%7D/get)
-* [Add a UK Savings Account](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1%7Bnino%7D/post)
-* [Retrieve UK Savings Account Annual Summary](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1%7Bnino%7D~1%7BtaxYear%7D~1%7BsavingsAccountId%7D/get)
-* [Create and Amend a UK Savings Account Annual Summary](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1%7Bnino%7D~1%7BtaxYear%7D~1%7BsavingsAccountId%7D/put)
+Customers can use their software to submit information about each account and record the annual interest income data for it. The software can use the following endpoints to enable customers to:
 
-<a href="figures/savings-accounts.svg" target="blank">
-<img src="figures/savings-accounts.svg" alt=" " style="width:720px;" />
-</a>
-<a href="figures/savings-accounts.svg" target="blank">Open diagram in a new tab.</a>
+- [Add a UK Savings Account](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1{nino}/post)
+- [Create and Amend a UK Savings Account Annual Summary](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1{nino}~1{taxYear}~1{savingsAccountId}/put)
+- [List All UK Savings Accounts](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1{nino}/get)
+- [Retrieve UK Savings Account Annual Summary](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1{nino}~1{taxYear}~1{savingsAccountId}/get)
 
 ## Disclosures
 

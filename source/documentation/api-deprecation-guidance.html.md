@@ -87,7 +87,6 @@ The Sunset header contains the earliest date/time that the endpoint could be ret
 
 The Sunset header may not be returned in some rare cases (such as when the retirement date for an endpoint is uncertain).
 
-
 ### Older deprecation headers
 
 In previous releases, deprecation status could be indicated with a `Deprecation` response header like this:
