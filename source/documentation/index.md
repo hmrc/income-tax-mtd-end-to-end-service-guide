@@ -248,6 +248,10 @@ The full changelog for Income Tax MTD APIs is now at [https://github.com/hmrc/in
 
 Below is a summary of updates to this service guide:
 
+#### Version 3.8
+
+- Updated the [API Deprecation Guidance](/guides/income-tax-mtd-end-to-end-service-guide/documentation/api-deprecation-guidance.html) section with details of new deprecation headers
+
 #### Version 3.7
 
 24 January 2024
