@@ -73,13 +73,30 @@ Applications cannot subscribe to a deprecated API version, but can still call th
 
 The status of APIs is indicated in the API documentation. 
 
-In releases from June 2023 onwards, deprecation status will also be indicated with a `Deprecation` response header like this:
+## Indicating deprecation in headers
+
+In future releases, deprecation status may be indicated with these response headers:
+
+| Name        | Meaning | Example value    |                                                                                                                                         |
+|-------------|---------|------------------|------------------------------------------------------------------------------------------------------------------------------|
+| Deprecation | The deprecation date/time for this endpoint. | Sun, 01 Jan 2023 23:59:59 UTC |
+| Sunset | The earliest date/time this endpoint will become unavailable after deprecation. | Sun, 02 Jul 2023 23:59:59 UTC |
+| Link |  https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api | Documentation URL for the relevant API |
+
+The Sunset header contains the earliest date/time that the endpoint could be retired after being deprecated. You should not rely on the availability of the endpoint after Sunset.
+
+We are adding support for these headers to all endpoints, but currently it is possible that an endpoint will be deprecated without returning these headers. 
+
+### Older deprecation headers
+
+In previous releases, deprecation status could be indicated with a `Deprecation` response header like this:
 
 | Name        | Example value                                                                                                                                             |
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Deprecation | This endpoint is deprecated. See the API documentation: /api-documentation/docs/api/service/self-assessment-bsas-api |
 
 
+This was only implemented for the Business Source Adjustable Summary API.
 
 
 ## Retiring APIs
