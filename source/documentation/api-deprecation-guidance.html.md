@@ -75,7 +75,7 @@ The status of APIs is indicated in the API documentation.
 
 ## Indicating deprecation in headers
 
-In future releases, deprecation status may be indicated with these response headers:
+For releases after January 2024, a deprecated endpoint is indicated with these response headers:
 
 | Name        | Meaning | Example value    |                                                                                                                                         |
 |-------------|---------|------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -84,9 +84,9 @@ In future releases, deprecation status may be indicated with these response head
 | Link |  Documentation URL for the relevant API | https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api |
 
 The Sunset header contains the earliest date/time that the endpoint could be retired after being deprecated. Do not rely on the availability of the endpoint after this.
+
 The Sunset header may not be returned in some rare cases (such as when the retirement date for an endpoint is uncertain).
 
-We are adding support for these headers to all endpoints, but currently it is possible that an endpoint will be deprecated without returning these headers. 
 
 ### Older deprecation headers
 
