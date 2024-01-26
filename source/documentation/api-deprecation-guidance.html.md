@@ -77,6 +77,7 @@ The status of APIs is indicated in the API documentation.
 
 For releases after January 2024, when an endpoint becomes deprecated it will return these response headers:
 
+
 | Name        | Meaning | Example value  |                                                                                                                                          
 |-------------|---------|----------------|
 | Deprecation | The deprecation date/time for this endpoint, in IMF-fixdate format. | Sun, 01 Jan 2023 23:59:59 GMT |
