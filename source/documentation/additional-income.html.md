@@ -7,26 +7,12 @@ description: Software developers, designers, product owners or business analysts
 # Additional Income
 
 ## Submit information about personal income
-### Self-assessment return
 
-The software should prompt customers to make sure they have considered the following potential additional income sources (there are links to the APIs where the functionality is available, we will continue to release additional functionality and update this page).
+If MTD customers are earning any type of income in addition to their self-employment and property income, they must report that to HMRC just as they would in their Self Assessment return. 
 
-* any income from [bank or building society interest](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account) (supported in live)
-* any income from [dividends](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Dividends-Income) (supported in live)  
-*	any [gift aid contributions](/api-documentation/docs/api/service/individuals-reliefs-api/1.0/oas/page#tag/Charitable-Givings) they have made (supported in live)  
-*	any pension contributions
-*	any pension income
-*	capital gains
-*	income from employment
-*	additional information (currently provided on the SA101)
-*	any income from partnerships
-*	any income from trusts
-*	any foreign income
+The software should prompt customers to consider such additional income sources. If the software does not support submission of any applicable additional income, the customer must use HMRC online services to make their submission. For more information about which type of income to tell HMRC, refer to [Check if you need to tell HMRC about additional income (GOV.UK)](https://www.gov.uk/check-additional-income-tax). 
 
-**Note:**
-
-Information currently provided through the existing self-assessment process: if a customer needs to report information to HMRC that is not yet supported under MTD or your software, they will need to complete a Self Assessment tax return.  Any information they have provided through MTD will not be considered and they will have to submit everything through the existing HMRC Self Assessment service.
-
+Customers who need to submit their additional income must do it before submitting their final declaration. The following sections will cover the different types of additional income and the endpoints needed to submit them in the software. 
 
 ## Employments
 
@@ -105,8 +91,6 @@ User-generated content:
 ### Custom employments
 
 Custom employments will only apply to the tax year and will not be carried over in subsequent years.  The expenses values are summed values from all PAYE employments, they are not available by employment.
-
-
 
 ## Other Employment Income
 
@@ -187,16 +171,13 @@ These endpoints allow a user to create, retrieve, amend and delete other income:
 
 ## Savings Income
 
-These endpoints allow a user to create, retrieve, amend and delete savings income for securities or foreign interest.
+Savings income can include interest for certain securities and income from overseas savings. For more information, refer to [How to complete your tax return for Self Assessment (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100#supplementary-pages).
+
+Customers can use their software to submit information about savings income. The software can use the following endpoints to enable customers to:
 
 * [Retrieve Savings Income](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Savings-Income/paths/~1individuals~1income-received~1savings~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Create and Amend Savings Income](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Savings-Income/paths/~1individuals~1income-received~1savings~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Savings Income](/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Savings-Income/paths/~1individuals~1income-received~1savings~1%7Bnino%7D~1%7BtaxYear%7D/delete)
-
-<a href="figures/savings-income.svg" target="blank">
-<img src="figures/savings-income.svg" alt=" " style="width:720px;" />
-</a>
-<a href="figures/savings-income.svg" target="blank">Open diagram in a new tab.</a>
 
 ## Savings Accounts
 
