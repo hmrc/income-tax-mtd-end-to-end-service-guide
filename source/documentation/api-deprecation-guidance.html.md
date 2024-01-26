@@ -77,12 +77,10 @@ The status of APIs is indicated in the API documentation.
 
 For releases after January 2024, when an endpoint becomes deprecated it will return these response headers:
 
-| Name        | Meaning | Example value    |                                                                                                                                         |
-|-------------|---------|------------------|------------------------------------------------------------------------------------------------------------------------------|
-
+| Name        | Meaning | Example value  |                                                                                                                                          
+|-------------|---------|----------------|
 | Deprecation | The deprecation date/time for this endpoint, in IMF-fixdate format. | Sun, 01 Jan 2023 23:59:59 GMT |
 | Sunset | (optional) The earliest date/time this endpoint will become unavailable after deprecation, in IMF-fixdate format. | Sun, 02 Jul 2023 23:59:59 GMT |
-
 | Link |  Documentation URL for the relevant API | https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api |
 
 The Sunset header contains the earliest date/time that the endpoint could be retired after being deprecated. Do not rely on the availability of the endpoint after this.
