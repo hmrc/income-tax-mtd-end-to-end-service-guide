@@ -250,7 +250,7 @@ Below is a summary of updates to this service guide:
 
 #### Version 3.8
 
-- Updated the [API Deprecation Guidance](/guides/income-tax-mtd-end-to-end-service-guide/documentation/api-deprecation-guidance.html) section with details of new deprecation headers
+- Updated the [Deprecating APIs](/guides/income-tax-mtd-end-to-end-service-guide/documentation/api-deprecation-guidance.html#deprecating-apis) section with details of new deprecation headers
 
 #### Version 3.7
 
