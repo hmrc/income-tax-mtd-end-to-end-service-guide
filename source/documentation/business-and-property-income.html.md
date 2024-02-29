@@ -10,8 +10,8 @@ description: Software developers, designers, product owners or business analysts
 
 A customer’s MTD mandated income consists of the following:
 
-* self-employed sole trader income
-* property income
+- self-employed sole trader income
+- property income
 
 This is the ‘qualifying’ income HMRC uses to establish if the customer meets the criteria for MTD.  MTD Customers can have one, or multiple, businesses with these types of income. For more information on qualifying income, refer to [Check what is included in your qualifying income](https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax#check-what-is-included-in-your-qualifying-income).
 
@@ -23,12 +23,12 @@ If the customer is working for themselves, they are a sole trader. For more info
 
 A customer’s property income includes the following:
 
-* rental income and other receipts from UK land or property
-* rental income and other receipts from foreign land or property
-* income from letting furnished rooms in customer’s own home
-* income from furnished holiday lettings (FHL) and non-furnished holiday lettings (non-FHL) in the UK
-* premiums from leasing UK land
-* inducements to take an interest in letting a property (a reverse premium)
+- rental income and other receipts from UK land or property
+- rental income and other receipts from foreign land or property
+- income from letting furnished rooms in customer’s own home
+- income from furnished holiday lettings (FHL) and non-furnished holiday lettings (non-FHL) in the UK
+- premiums from leasing UK land
+- inducements to take an interest in letting a property (a reverse premium)
 
 For more information on property income, refer to [Work out your rental income when you let property (GOV.UK)](https://www.gov.uk/guidance/income-tax-when-you-rent-out-a-property-working-out-your-rental-income).
 
@@ -36,34 +36,36 @@ For more information on property income, refer to [Work out your rental income w
 
 An MTD mandated or voluntary customer will have a set of obligations for each tax year. These are:
 
-* four quarterly updates
-* final declaration 
+- four quarterly updates
+- final declaration 
 
 At any time of the year, customers can check their obligations. To provide this information, the software needs details about their business income sources. It gets this information by using the [List All Businesses](/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint, which provides the business ID. This ID is required to call multiple self-employment and property endpoints. To save time, the software should store this ID instead of making extra calls.
 
 Quarterly obligations are created for sole trader and property income sources. In software, the retrieval of customer’s obligations is done by calling any of the following endpoints depending on the customer’s type of income source:
 
-* [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get)
-* [Retrieve Income Tax (Self Assessment) Final Declaration Obligations](/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1crystallisation/get)
+- [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get)
+- [Retrieve Income Tax (Self Assessment) Final Declaration Obligations](/api-documentation/docs/api/service/obligations-api/2.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1crystallisation/get)
 
 These endpoints provide obligation dates for all self-employment and property businesses, and inform whether or not obligations have been met. The deadline for meeting a quarterly obligation is one month after the obligation period end date. The software should communicate these deadlines clearly to the customer and prompt them to submit the information when the update is due. 
 
 A customer should always be able to view their latest obligations. To do this, the software should be aware that the customer’s obligation will be created or updated for the following reasons:
 
-* start of financial year
-* when a customer submits updates
-* when a customer adds a new sole trader business in HMRC online services
-* when a customer ceases an existing business in HMRC online services
+- start of financial year
+- when a customer submits updates
+- when a customer adds a new sole trader business in HMRC online services
+- when a customer ceases an existing business in HMRC online services
 
 ## Submit quarterly updates for self-employment and property businesses
 
 MTD mandated and voluntary customers must maintain and submit digital records of their self-employment and property business income and expenses every quarter. If they wish, they can also submit summary-level information more frequently, for example, monthly.
 
-Customers must submit at least one update for each quarter. For example:
+Customers must submit at least one update for each quarter. The following table shows an example.
 
-- **Update 1 (Q1).** 6 April to 5 July is accepted.
-- **Update 2 (Q2).** 6 July to 5 October is accepted.
-- **Update 3 (Q3 and Q4).** 6 October to 5 April is accepted with a possible penalty.
+| Update | Quarter(s) | Result |
+| ------ | ---------- | ------ |
+| 1 | 1 | 6 April to 5 July is accepted |
+| 2 | 2 | 6 July to 5 October is accepted |
+| 3 | 3, 4 | 6 October to 5 April is accepted with a possible penalty |
 
 ### Submit quarterly update
 
@@ -261,15 +263,15 @@ As part of the EOPS process, customers must ensure that they have provided all t
 4. The customer is encouraged to review the Business Income Source Summary (BISS) information before submitting their EOPS. In software, this information can be retrieved in one of two ways. The software can either choose to create a BISS from data stored locally or the software can use the [Business Income Source Summary (BISS)](/api-documentation/docs/api/service/self-assessment-biss-api) API to retrieve the BISS information from HMRC.
 
 5. The software is encouraged to display the following information to the customer. This allows the customer to confirm it is complete and correct for that source of business income before they send the declaration.
-    * Total Business Income
-    * Total Expenses
-    * Business Net Profit
-    * Business Net Loss
-    * Total Additions to net profit or deductions to a net loss
-    * Total Deductions to net profit or additions to a net loss
-    * Accounting Adjustments
-    * Taxable Profit
-    * Taxable Loss
+    - Total Business Income
+    - Total Expenses
+    - Business Net Profit
+    - Business Net Loss
+    - Total Additions to net profit or deductions to a net loss
+    - Total Deductions to net profit or additions to a net loss
+    - Accounting Adjustments
+    - Taxable Profit
+    - Taxable Loss
 
 6. The customer can then go ahead and submit their end-of-period statement for the business income source. In software, this submission is done by calling the [Submit End of Period Statement for a Business](/api-documentation/docs/api/service/individuals-business-eops-api/3.0/oas/page#/paths/~1individuals~1business~1end-of-period-statement~1%7Bnino%7D/post) endpoint.
 

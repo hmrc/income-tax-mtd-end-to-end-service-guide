@@ -24,3 +24,16 @@ At the end of the tax year, the customer will review their calculations before s
 
 If the customer has submitted an amendment to the coded out amount after the end of the tax year but later realises they agree with the coded out amount shown by HMRC, they can delete their submitted amount. This deletion needs to be done before the final declaration is submitted. In software, this deletion is done by calling the [Delete Coding Out Underpayments and Debt Amounts](/api-documentation/docs/api/service/self-assessment-accounts-api/2.0/oas/page#tag/Coding-Out-Underpayments-and-Debts/paths/~1accounts~1self-assessment~1%7Bnino%7D~1%7BtaxYear%7D~1collection~1tax-code/delete) endpoint.
 
+## Opting out of Coding Out
+
+Customers can tell HMRC not to collect any tax owed through their tax code. This is known as ‘coding out’. 
+
+It can be done only after the end of the tax year but must be done before 31 December. For more information, refer to [Pay your Self Assessment tax bill through your tax code (GOV.UK)](https://www.gov.uk/pay-self-assessment-tax-bill/through-your-tax-code).
+
+Coding out is specific to the tax year. If a customer opts out of coding out for a specific tax year, they will not be opted out for future tax years. 
+
+The software can use the following endpoints to enable customers to:
+
+- [Opt Out of Coding Out](/api-documentation/docs/api/service/self-assessment-accounts-api/3.0/oas/page#tag/Coding-Out-Status/paths/~1accounts~1self-assessment~1{nino}~1{taxYear}~1collection~1tax-code~1coding-out~1opt-out/post) 
+- [Retrieve Coding Out Status](/api-documentation/docs/api/service/self-assessment-accounts-api/3.0/oas/page#tag/Coding-Out-Status/paths/~1accounts~1self-assessment~1{nino}~1{taxYear}~1collection~1tax-code~1coding-out~1status/get)
+- [Opt in to Coding Out](/api-documentation/docs/api/service/self-assessment-accounts-api/3.0/oas/page#tag/Coding-Out-Status/paths/~1accounts~1self-assessment~1{nino}~1{taxYear}~1collection~1tax-code~1coding-out~1opt-in/post)

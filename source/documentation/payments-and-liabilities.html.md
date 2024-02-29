@@ -22,7 +22,7 @@ A customer, at any time, can view a breakdown of their MTD liabilities for a giv
 
 <a href="figures/payments-and-liabilities-rsab.svg" target="blank">Open the Retrieve a Self Assessment Balance and Transactions diagram in a new tab</a>.
 
-A customer, at any time, can view a history of their MTD payments for a given date range. In software, this is done by calling the [List Self Assessment Payments and Allocation Details](/api-documentation/docs/api/service/self-assessment-accounts-api/2.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1payments-and-allocations/get) endpoint. The endpoint also retrieves details on how each payment was used by HMRC.
+A customer, at any time, can view a history of their MTD payments for a given date range. In software, this is done by calling the [List Self Assessment Payments and Allocation Details](/api-documentation/docs/api/service/self-assessment-accounts-api/2.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1payments-and-allocations/get) endpoint. The endpoint also retrieves details about how each payment was used by HMRC.
 
 <a href="figures/payments-and-liabilities-lsat.svg" target="blank"><img src="figures/payments-and-liabilities-lsat.svg" alt="List Self Assessment Transactions diagram" style="width:720px;" /></a>
 
@@ -33,5 +33,4 @@ A customer, at any time, can view the history of changes made to an individual c
 <a href="figures/payments-and-liabilities-rsach.svg" target="blank"><img src="figures/payments-and-liabilities-rsach.svg" alt="Retrieve a Self Assessment Charge's History diagram" style="width:720px;" /></a>
 
 <a href="figures/payments-and-liabilities-rsach.svg" target="blank">Open the Retrieve a Self Assessment Charge's History diagram in a new tab</a>.
-
 

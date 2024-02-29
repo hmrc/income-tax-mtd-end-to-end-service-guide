@@ -8,7 +8,7 @@ description: Software developers, designers, product owners or business analysts
 
 ## Signing up to Making Tax Digital for Income Tax
 
-Sign up via API has been ruled out for security reasons.
+Sign up by means of an API has been ruled out for security reasons.
 
 Taxpayers can sign up for Making Tax Digital for Income Tax without having software in place. However, they must get and authorise [software](/guides/income-tax-mtd-end-to-end-service-guide/index.html#software-choices) before they start using Making Tax Digital for Income Tax.
 
@@ -16,15 +16,15 @@ To use Making Tax Digital for Income Tax, individuals need to sign up first.
 
 To sign up, a user must:
 
-- Be a sole trader (self-employed) and/or
-- Have income from property, either in the UK or abroad
+- be a sole trader (self-employed) and/or
+- have income from property, either in the UK or abroad
 
 See [Sign up as an individual for Making Tax Digital for Income Tax](https://www.gov.uk/guidance/sign-up-your-business-for-making-tax-digital-for-income-tax) for more information.
 
-If an individual is a self employed partner in a partnership, they do not need to sign up to MTD ITSA unless they have other MTD qualifying income such as:
+If an individual is a self employed partner in a partnership, they do not need to sign up to MTD ITSA unless they have other MTD qualifying income, such as:
 
-- They are also a self employed sole trader
-- They receive UK or foreign property income
+- sole trader income
+- UK or foreign property income
 
 If this is the case, the individual must not include either their partner or partnership business details in the sign up service. Instead, this income will continue to be submitted as part of their self assessment tax return.  There is no requirement at this time to submit partner or partnership income quarterly to HMRC.
 
@@ -36,25 +36,23 @@ We advise customers to speak to their agent (if they have one) before choosing s
 
 Before agents can sign up clients to Making Tax Digital, they must:
 
-* [Create an agent services account](https://www.gov.uk/guidance/get-an-hmrc-agent-services-account)
-* Have authorisation in place from their clients. Existing authorisations can be copied from Self Assessment, or agents can request authorisation for new clients. Both of these tasks can be done using their [agent services account](https://www.gov.uk/guidance/sign-in-to-your-agent-services-account).
+- [create an agent services account](https://www.gov.uk/guidance/get-an-hmrc-agent-services-account)
+- use their [agent services account](https://www.gov.uk/guidance/sign-in-to-your-agent-services-account) to have authorisation in place from their clients:
+  - existing clients - copy existing authorisations from Self Assessment
+  - new clients - request authorisation
 
-For more information, visit:
-
-[Making Tax Digital for Income Tax as an agent: step by step](https://www.gov.uk/government/collections/making-tax-digital-for-income-tax-as-an-agent-step-by-step)
+For more information, refer to [Making Tax Digital for Income Tax as an agent: step by step](https://www.gov.uk/government/collections/making-tax-digital-for-income-tax-as-an-agent-step-by-step).
 
 ## Individual sign-up
 
 Individuals who are self employed and/or have property income can sign themselves up for Making Tax Digital for Income Tax.
 
-For more information, visit:
-
-[Making Tax Digital for Income Tax for individuals: step by steps](https://www.gov.uk/government/collections/making-tax-digital-for-income-tax-for-businesses-step-by-step)
+For more information, refer to [Making Tax Digital for Income Tax for individuals: step by steps](https://www.gov.uk/government/collections/making-tax-digital-for-income-tax-for-businesses-step-by-step).
 
 ## Linking software to HMRC
 
 Businesses and agents using your software to connect to the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax) must grant authority to your software to interact with HMRC on their behalf. We use the open standard [OAuth 2.0](https://oauth.net/2/) (opens in a new tab), which involves the business or agent signing in via their Government Gateway account and following the grant authority user journey.
- 
+
 <a href="figures/link-software-to-hmrc.svg" target="blank"><img src="figures/link-software-to-hmrc.svg" alt="Link software to HMRC" style="width:720px;" /></a>
 
 [Open the link software to HMRC process diagram in a new tab.](/guides/vat-mtd-end-to-end-service-guide/documentation/figures/link-software-to-hmrc.svg)

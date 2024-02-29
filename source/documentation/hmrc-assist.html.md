@@ -29,15 +29,16 @@ HMRC Assist will be integrated into HMRC’s ITSA Submission Service so that cus
 
 ## HMRC Assist endpoints
 
-There are two endpoints:
+There are two endpoints.
 
-* [Produce a HMRC Self Assessment Assist Report](/api-documentation/docs/api/service/self-assessment-assist/1.0/oas/page#tag/Generate-Report/paths/~1individuals~1self-assessment~1assist~1reports~1%7Bnino%7D~1%7BtaxYear%7D~1%7BcalculationId%7D/post) - this endpoint enables you to generate and return a HMRC Self Assessment Assist report for a tax calculation for a given customer.
-* [Acknowledge a HMRC Self Assessment Assist Report](/api-documentation/docs/api/service/self-assessment-assist/1.0/oas/page#tag/Acknowledge-Report/paths/~1individuals~1self-assessment~1assist~1reports~1acknowledge~1%7Bnino%7D~1%7BreportId%7D~1%7BcorrelationId%7D/post) - this endpoint enables you to acknowledge that the customer or agent has read the report.
+| Endpoint | Description |
+| -------- | ----------- |
+| [Produce a HMRC Self Assessment Assist Report](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-assist/1.0/oas/page#tag/Generate-Report/paths/~1individuals~1self-assessment~1assist~1reports~1{nino}~1{taxYear}~1{calculationId}/post) | Enables you to generate and return a HMRC Self Assessment Assist report for a tax calculation for a given customer. |
+| [Acknowledge a HMRC Self Assessment Assist Report](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-assist/1.0/oas/page#tag/Acknowledge-Report/paths/~1individuals~1self-assessment~1assist~1reports~1acknowledge~1{nino}~1{reportId}~1{correlationId}/post) | Enables you to acknowledge that the customer or agent has read the report. |
 
 ### Produce a HMRC Self Assessment Assist Report
 
 The report contains targeted feedback based on what the customer advises HMRC in their update for the given National Insurance number (NINO), Calculation ID, and tax year.
-
 
 <a href="figures/customer-journey-transactional-risking-produce-report.svg" target="blank"><img src="figures/customer-journey-transactional-risking-produce-report.svg" alt="Produce report" style="width:720px;" /></a>
 
