@@ -8,8 +8,9 @@ service_link: https://developer.service.hmrc.gov.uk/api-documentation
 
 # Links to show on right-hand-side of header
 header_links:
-  MTD ITSA Vendors Roadmap: https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/
-  Documentation: https://developer.service.hmrc.gov.uk/api-documentation/docs/using-the-hub
+  Vendor Roadmap: https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/
+  API Changelog: https://github.com/hmrc/income-tax-mtd-changelog
+  API Documentation: https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax-mtd
   Applications: https://developer.service.hmrc.gov.uk/developer/applications
   Support: https://developer.service.hmrc.gov.uk/developer/support
 
