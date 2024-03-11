@@ -1,6 +1,6 @@
 # Technical Documentation - Income Tax MTD Service Guide
 
-## 
+## Getting started
 
 To preview or build the website, you need to use the terminal.
 
