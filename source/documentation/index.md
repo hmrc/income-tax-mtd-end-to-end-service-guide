@@ -1,6 +1,6 @@
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-**Version 3.8** issued January 2024
+**Version 3.9** issued March 2024
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -243,21 +243,41 @@ The full changelog for Income Tax MTD APIs is now at [https://github.com/hmrc/in
 
 ### Documentation changelog
 
-Below is a summary of updates to this service guide:
+Below is a summary of updates to this service guide.
+
+#### Version 3.9
+
+18 March 2024
+
+- Update [Business and Property Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
+  - add new section [Change to calendar quarters](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#change-to-calendar-quarters)
+  - add new content to section [Submit quarterly update](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#submit-quarterly-update)
+- Update [Final Declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section:
+  - remove all references to ‘crystallisation’
+  - remove sections ‘Calculations that produce errors’ and ‘Calculations that are free from errors’, which are now in section [Tax calculation](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#tax-calculation)
+  - change ’calcuationId' to 'Calculation ID' and 'finalDeclaraton' to 'Final Declaration'
+  - update tax account links in section [Pay or get a repayment](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html#pay-or-get-a-repayment)
+- Update [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html) section:
+  - update status of ‘Elect for calendar quarterly periods’ task
+  - add new table column that explains choice of service (HMRC online services or software or both) used to make each functionality available
+- Update [Using Tax Codes to Collect Tax Due](/guides/income-tax-mtd-end-to-end-service-guide/documentation/using-tax-codes-to-collect-taxes-due.html) section (formerly ‘Coding Out’):
+  - retitle section
+  - rewrite section
+  - add content about opting out
 
 #### Version 3.8
 
 31 January 2024
 
-- Updated [Deprecating APIs](/guides/income-tax-mtd-end-to-end-service-guide/documentation/api-deprecation-guidance.html#deprecating-apis) section with details about new deprecation headers
-- Updated the following section of [Business and Property Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
+- Update [Deprecating APIs](/guides/income-tax-mtd-end-to-end-service-guide/documentation/api-deprecation-guidance.html#deprecating-apis) section with details about new deprecation headers
+- Update the following section of [Business and Property Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
 
   - [Tax calculation](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#tax-calculation) (formerly 'Retrieve a tax calculation')
 
-- Updated the following sections of [Additional Information](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html) section (formerly 'Additional Income'):
+- Update the following sections of [Additional Information](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html) section (formerly 'Additional Income'):
 
-  - New section introduction for Additional Information (removed ‘Submit information about personal income’)
-  - [Employments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#employments) (moved some content to new section ‘Employment Expenses’)
+  - New section introduction for Additional Information (remove ‘Submit information about personal income’)
+  - [Employments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#employments) (move some content to new section ‘Employment Expenses’)
   - [Dividends Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#dividends-income)
   - [Pensions Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#pensions-income)
   - [Other Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#other-income)
@@ -276,7 +296,7 @@ Below is a summary of updates to this service guide:
 
 24 January 2024
 
-- Updated the following sections of [Business and Property Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
+- Update the following sections of [Business and Property Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
 
   - [Retrieving obligations](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#retrieving-obligations)
   - [Submit quarterly updates for self-employment and property businesses](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#submit-quarterly-updates-for-self-employment-and-property-businesses)
@@ -284,21 +304,21 @@ Below is a summary of updates to this service guide:
   - [Submit accounting adjustments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#submit-accounting-adjustments)
   - [Construction Industry Scheme](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#construction-industry-scheme)
   - [Finalise business income End of Period Statement (EOPS)](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#finalise-business-income-end-of-period-statement-eops)
-  - [Retrieve a tax calculation](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#retrieve-a-tax-calculation)
+  - [Tax calculation](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#tax-calculation) (formerly 'Retrieve a tax calculation')
 
-- Moved the content of the following sections to other sections in Business and Property Income section:
+- Move the content of the following sections to other sections in Business and Property Income section:
 
   -  Business Income Source Summary
   -  View previously submitted updates
   -  Making changes to previously submitted data
   -  Multiple businesses
 
-- Updated the [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html) section as follows:
+- Update the [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html) section as follows:
 
-  - updated status of 2 tasks
-  - moved [Opting out of MTD](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html#opting-out-of-mtd) section into HMRC online services section
+  - update status of 2 tasks
+  - move [Opting out of MTD](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html#opting-out-of-mtd) section into HMRC online services section
 
-- Updated the following sections of [Additional Information](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html) section:
+- Update the following sections of [Additional Information](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html) section:
 
   - [Foreign Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#foreign-income)
   - [Insurance Policies Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#insurance-policies-income)
@@ -309,148 +329,148 @@ Below is a summary of updates to this service guide:
 
 13 December 2023
 
-* Updated [Additional Information / Employments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#employments) section with off-payroll working details
-* Updated [Customer Support Model](/guides/income-tax-mtd-end-to-end-service-guide/documentation/customer-support.html) section
-* Updated [Using Tax Codes to Collect Tax Due](/guides/income-tax-mtd-end-to-end-service-guide/documentation/using-tax-codes-to-collect-taxes-due.html) section (formerly 'Coding Out')
-* Updated UR contact email address
+* Update [Additional Information / Employments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#employments) section with off-payroll working details
+* Update [Customer Support Model](/guides/income-tax-mtd-end-to-end-service-guide/documentation/customer-support.html) section
+* Update [Using Tax Codes to Collect Tax Due](/guides/income-tax-mtd-end-to-end-service-guide/documentation/using-tax-codes-to-collect-taxes-due.html) section (formerly 'Coding Out')
+* Update UR contact email address
 
 #### Version 3.5
 
 15 November 2023
 
-* Updated content and diagram in [Payments and liabilities](/guides/income-tax-mtd-end-to-end-service-guide/documentation/payments-and-liabilities.html) section
-* Removed crystallisation endpoint content from [Final Declaration (Crystallisation)](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration-crystallisation.html) section
+* Update content and diagram in [Payments and liabilities](/guides/income-tax-mtd-end-to-end-service-guide/documentation/payments-and-liabilities.html) section
+* Remove crystallisation endpoint content from [Final Declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section
 
 #### Version 3.4
 
 2 November 2023
 
-* Added new [Customer status](/guides/income-tax-mtd-end-to-end-service-guide/documentation/customer-status.html) section describing business purpose of the new Self Assessment Individual Details API
-* Updated [Construction Industry Scheme](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#construction-industry-scheme) section and moved it into 'Business and Property Income' section
-* Updated [Software choices](#software-choices) section
-* Updated APIs in [Minimum functionality standards](#minimum-functionality-standards) section
-* Removed duplicate 'Finalise business income End of Period Statement (EOPS)' section
+* Add new [Customer status](/guides/income-tax-mtd-end-to-end-service-guide/documentation/customer-status.html) section describing business purpose of the new Self Assessment Individual Details API
+* Update [Construction Industry Scheme](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#construction-industry-scheme) section and move it into 'Business and Property Income' section
+* Update [Software choices](#software-choices) section
+* Update APIs in [Minimum functionality standards](#minimum-functionality-standards) section
+* Remove duplicate 'Finalise business income End of Period Statement (EOPS)' section
 
 #### Version 3.3
 
 4 October 2023
 
-* Updated content for [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html) section
-* Updated content for [Opting out of MTD](/guides/income-tax-mtd-end-to-end-service-guide/documentation/closedown.html) section
-* Updated content for [HMRC Assist](/guides/income-tax-mtd-end-to-end-service-guide/documentation/hmrc-assist.html) section
+* Update content for [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html) section
+* Update content for [Opting out of MTD](/guides/income-tax-mtd-end-to-end-service-guide/documentation/closedown.html) section
+* Update content for [HMRC Assist](/guides/income-tax-mtd-end-to-end-service-guide/documentation/hmrc-assist.html) section
 
 #### Version 3.2
 
 20 September 2023
 
-* Updated content for [Penalties and Appeals](/guides/income-tax-mtd-end-to-end-service-guide/documentation/penalties-and-appeals.html) section
-* Updated content for [Final Declaration (Crystallisation)](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration-crystallisation.html) section
-* Updated content for [Production approvals process](#production-approvals-process-for-making-tax-digital-for-income-tax-self-assessment) section
-* Updated content for [Software choices](#software-choices) section
-* Updated content for [Bridging software](#bridging-software) section
-* Removed Business Validation Rules section
+* Update content for [Penalties and Appeals](/guides/income-tax-mtd-end-to-end-service-guide/documentation/penalties-and-appeals.html) section
+* Update content for [Final Declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section
+* Update content for [Production approvals process](#production-approvals-process-for-making-tax-digital-for-income-tax-self-assessment) section
+* Update content for [Software choices](#software-choices) section
+* Update content for [Bridging software](#bridging-software) section
+* Remove Business Validation Rules section
 
 #### Version 3.1
 
 27 June 2023
 
-* Added [API lifecycle & deprecation](/guides/income-tax-mtd-end-to-end-service-guide/documentation/api-deprecation-guidance.html) section, removed some duplicated content
+* Add [API lifecycle & deprecation](/guides/income-tax-mtd-end-to-end-service-guide/documentation/api-deprecation-guidance.html) section, remove some duplicated content
 
 #### Version 3.0
 
 14 June 2023
 
-* Updated API and endpoint links.
+* Update API and endpoint links
 
 #### Version 2.9
 
-* Updated direct links to endpoints to reflect changes in how API documentation is published
+* Update direct links to endpoints to reflect changes in how API documentation is published
 
 #### Version 2.8
 
-* Updated HMRC Assist section
+* Update HMRC Assist section
 
 #### Version 2.7
 
-* Updated guide to reflect simplified v3.0 Final Declaration process and update section on customers opting out of MTD. 
+* Update guide to reflect simplified v3.0 Final Declaration process and update section on customers opting out of MTD
 
 #### Version 2.6
 
-* Updated guide to reflect API changes including refactored Self Assessment Accounts API.
+* Update guide to reflect API changes including refactored Self Assessment Accounts API
 
 #### Version 2.5
 
-* Updated guide to reflect new API versions, update links and correct and clarify some content.
+* Update guide to reflect new API versions, update links and correct and clarify some content
 
 #### Version 2.4
 
-* Updated Frequently Asked Questions section to remove some items.
+* Update Frequently Asked Questions section to remove some items
 
 #### Version 2.3
 
-* Added note and an example table demonstrating how adjustments submitted work
+* Add note and an example table demonstrating how adjustments submitted work
 
 #### Version 2.2
 
-* Added a Frequently Asked Questions section to the menu tree
+* Add a Frequently Asked Questions section to the menu tree
 
 #### Version 2.1
 
 * Notice of version change to Business Income Source Summary V1.0
-* 'Set up' heading replaced by 'Sign up' with the menu tree updated to only have three sections: **Agent**, **Individual** and **Link software to HMRC**.
-* Updated content in the **Minimum functionality standards** section with two other sections added: **Bridging software** and **Non-MTD products**
-* Updated content in the **Declaration** and **Declaration for agents** sections of **Final declaration** (previously called 'crystallisation')
+* Replace 'Set up' heading with 'Sign up' with and update menu tree to have only three sections: **Agent**, **Individual** and **Link software to HMRC**
+* Update content in the **Minimum functionality standards** section and add two other sections: **Bridging software** and **Non-MTD products**
+* Update content in the **Declaration** and **Declaration for agents** sections of **Final declaration** (previously called 'crystallisation')
 
 #### Version 2.0
 
-* Addition of Capital Gains Tax, Marriage Allowance, Non-PAYE Income, Coding out underpayments and debts.
+* Add Capital Gains Tax, Marriage Allowance, Non-PAYE Income, Coding out underpayments and debts
 
 #### Version 1.9
 
-* Addition of requirement for businesses and landlords to provide information about residential property disposals
-* Addition of information regarding BSAS adjustments
-* Addition of content changes to meet MTD Style Guide V2.2
-* Replacing the term ‘crystallisation’ with ‘final declaration'
+* Add requirement for businesses and landlords to provide information about residential property disposals
+* Add information regarding BSAS adjustments
+* Add content changes to meet MTD Style Guide V2.2
+* Replace the term ‘crystallisation’ with ‘final declaration'
 
 #### Version 1.8
 
-* Addition of deprecation dates for Self Assessment API Endpoints
+* Add deprecation dates for Self Assessment API Endpoints
 * Notice of version change to Business Source Adjustable Summary (MTD) - V 1.0
 * Notice of version change to Individual Losses (MTD) - V1.0
 * Notice of version change to Individual Calculations v 1.0
 
 #### Version 1.7
 
-* Change of title to Income Tax (Making Tax Digital) end-to-end Service Guide
-* Inclusion of Income Tax (MTD) APIs
-* Inclusion of Tax Terminology
-* Addition of Foreign Property reference to Obligations
-* Replaced the term, ‘taxpayers’ with ‘customers’
-* Replaced references to SA Accounting Summary API with BSAS API
+* Change title to Income Tax (Making Tax Digital) end-to-end Service Guide
+* Include Income Tax (MTD) APIs
+* Include Tax Terminology
+* Add Foreign Property reference to Obligations
+* Replace the term 'taxpayers' with 'customers'
+* Replace references to SA Accounting Summary API with BSAS API
 
 #### Version 1.6
 
-* Revised wording for Draft MTD ITSA Regulations 2021 page.
+* Revise wording for Draft MTD ITSA Regulations 2021 page
 
 #### Version 1.5
 
-* Production approvals process for Making Tax Digital for Self Assessment.
-* Early draft MTD ITSA Regulations 2021 section added.
+* Add Production approvals process for Making Tax Digital for Self Assessment
+* Add early draft MTD ITSA Regulations 2021 section
 
 #### Version 1.4
 
-* Construction Industry Scheme (CIS) section updated.
+* Update Construction Industry Scheme (CIS) section
 
 #### Version 1.3
 
-* Losses updated.
-* Additional Information section added.
+* Update Losses
+* Add Additional Information section
 
 #### Version 1.2
 
-* Multiple businesses section added.
-* Construction Industry Scheme (CIS) section added.
+* Add Multiple businesses section
+* Add Construction Industry Scheme (CIS) section
 
 #### Version 1.1
 
-* Payments and Liabilities section added.
+* Add Payments and Liabilities section
