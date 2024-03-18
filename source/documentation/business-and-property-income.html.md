@@ -217,7 +217,7 @@ Consider the following example:
 - the customer uses the steps described in [Submit quarterly updates for self-employment and property businesses](#submit-quarterly-updates-for-self-employment-and-property-businesses) to submit their calendar quarterly updates through their software
 - when all calendar quarterly updates have been made, the customer needs to account for the income and expense information for the period to 5 April - they can do this through their software by using the [Business Source Adjustable Summary API](/api-documentation/docs/api/service/self-assessment-bsas-api/)
 
-After the calendar quarterly election change has been made, it will continue year on year until the customer requests a change back to standard quarterly updates. The software can use the [Create and Amend Quarterly Period Type for a Business](/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1{nino}~1{businessId}~1{taxYear}/put) endpoint to allow a customer to change their periods back to standard quarterly updates. 
+After the calendar quarterly election change has been made, it will continue year on year until the customer requests a change back to standard quarterly updates. The software can use the [Create and Amend Quarterly Period Type for a Business](/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1{nino}~1{businessId}~1{taxYear}/put) endpoint to allow a customer to change their periods back to standard quarters. Each year the customer makes these changes, the first period start date will be affected and will reflect the previous quarterly update type.
 
 ## Submit accounting adjustments
 
