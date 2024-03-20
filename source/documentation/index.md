@@ -249,10 +249,10 @@ Below is a summary of updates to this service guide.
 
 18 March 2024
 
-- Update [Business and Property Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
+- Update [Business and property income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
   - add new section [Change to calendar quarters](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#change-to-calendar-quarters)
   - add new content to section [Submit quarterly update](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#submit-quarterly-update)
-- Update [Final Declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section:
+- Update [Final declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section:
   - remove all references to ‘crystallisation’
   - remove sections ‘Calculations that produce errors’ and ‘Calculations that are free from errors’, which are now in section [Tax calculation](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#tax-calculation)
   - change ’calcuationId' to 'Calculation ID' and 'finalDeclaraton' to 'Final Declaration'
@@ -260,7 +260,7 @@ Below is a summary of updates to this service guide.
 - Update [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html) section:
   - update status of ‘Elect for calendar quarterly periods’ task
   - add new table column that explains choice of service (HMRC online services or software or both) used to make each functionality available
-- Update [Using Tax Codes to Collect Tax Due](/guides/income-tax-mtd-end-to-end-service-guide/documentation/using-tax-codes-to-collect-taxes-due.html) section (formerly ‘Coding Out’):
+- Update [Using tax codes to collect tax due](/guides/income-tax-mtd-end-to-end-service-guide/documentation/using-tax-codes-to-collect-taxes-due.html) section (formerly ‘Coding Out’):
   - retitle section
   - rewrite section
   - add content about opting out
@@ -270,11 +270,11 @@ Below is a summary of updates to this service guide.
 31 January 2024
 
 - Update [Deprecating APIs](/guides/income-tax-mtd-end-to-end-service-guide/documentation/api-deprecation-guidance.html#deprecating-apis) section with details about new deprecation headers
-- Update the following section of [Business and Property Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
+- Update the following section of [Business and property income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
 
   - [Tax calculation](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#tax-calculation) (formerly 'Retrieve a tax calculation')
 
-- Update the following sections of [Additional Information](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html) section (formerly 'Additional Income'):
+- Update the following sections of [Additional information](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html) section (formerly 'Additional Income'):
 
   - New section introduction for Additional Information (remove ‘Submit information about personal income’)
   - [Employments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#employments) (move some content to new section ‘Employment Expenses’)
@@ -296,7 +296,7 @@ Below is a summary of updates to this service guide.
 
 24 January 2024
 
-- Update the following sections of [Business and Property Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
+- Update the following sections of [Business and property income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html) section:
 
   - [Retrieving obligations](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#retrieving-obligations)
   - [Submit quarterly updates for self-employment and property businesses](/guides/income-tax-mtd-end-to-end-service-guide/documentation/business-and-property-income.html#submit-quarterly-updates-for-self-employment-and-property-businesses)
@@ -318,7 +318,7 @@ Below is a summary of updates to this service guide.
   - update status of 2 tasks
   - move [Opting out of MTD](/guides/income-tax-mtd-end-to-end-service-guide/documentation/online-tax-account.html#opting-out-of-mtd) section into HMRC online services section
 
-- Update the following sections of [Additional Information](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html) section:
+- Update the following sections of [Additional information](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html) section:
 
   - [Foreign Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#foreign-income)
   - [Insurance Policies Income](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#insurance-policies-income)
@@ -329,9 +329,9 @@ Below is a summary of updates to this service guide.
 
 13 December 2023
 
-* Update [Additional Information / Employments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#employments) section with off-payroll working details
-* Update [Customer Support Model](/guides/income-tax-mtd-end-to-end-service-guide/documentation/customer-support.html) section
-* Update [Using Tax Codes to Collect Tax Due](/guides/income-tax-mtd-end-to-end-service-guide/documentation/using-tax-codes-to-collect-taxes-due.html) section (formerly 'Coding Out')
+* Update [Additional information / Employments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#employments) section with off-payroll working details
+* Update [Customer support model](/guides/income-tax-mtd-end-to-end-service-guide/documentation/customer-support.html) section
+* Update [Using tax codes to collect tax due](/guides/income-tax-mtd-end-to-end-service-guide/documentation/using-tax-codes-to-collect-taxes-due.html) section (formerly 'Coding Out')
 * Update UR contact email address
 
 #### Version 3.5
@@ -339,7 +339,7 @@ Below is a summary of updates to this service guide.
 15 November 2023
 
 * Update content and diagram in [Payments and liabilities](/guides/income-tax-mtd-end-to-end-service-guide/documentation/payments-and-liabilities.html) section
-* Remove crystallisation endpoint content from [Final Declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section
+* Remove crystallisation endpoint content from [Final declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section
 
 #### Version 3.4
 
@@ -363,8 +363,8 @@ Below is a summary of updates to this service guide.
 
 20 September 2023
 
-* Update content for [Penalties and Appeals](/guides/income-tax-mtd-end-to-end-service-guide/documentation/penalties-and-appeals.html) section
-* Update content for [Final Declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section
+* Update content for [Penalties and appeals](/guides/income-tax-mtd-end-to-end-service-guide/documentation/penalties-and-appeals.html) section
+* Update content for [Final declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html) section
 * Update content for [Production approvals process](#production-approvals-process-for-making-tax-digital-for-income-tax-self-assessment) section
 * Update content for [Software choices](#software-choices) section
 * Update content for [Bridging software](#bridging-software) section
@@ -392,11 +392,11 @@ Below is a summary of updates to this service guide.
 
 #### Version 2.7
 
-* Update guide to reflect simplified v3.0 Final Declaration process and update section on customers opting out of MTD
+* Update guide to reflect simplified v3.0 final declaration process and update section on customers opting out of MTD
 
 #### Version 2.6
 
-* Update guide to reflect API changes including refactored Self Assessment Accounts API
+* Update guide to reflect API changes, including refactored Self Assessment Accounts API
 
 #### Version 2.5
 
@@ -464,7 +464,7 @@ Below is a summary of updates to this service guide.
 #### Version 1.3
 
 * Update Losses
-* Add Additional Information section
+* Add Additional information section
 
 #### Version 1.2
 
@@ -473,4 +473,4 @@ Below is a summary of updates to this service guide.
 
 #### Version 1.1
 
-* Add Payments and Liabilities section
+* Add Payments and liabilities section

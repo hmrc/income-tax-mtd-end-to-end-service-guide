@@ -1,12 +1,12 @@
 ---
-title: Business and Property Income
+title: Business and property income | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 4
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
 <!--- Section owner: MTD Programme --->
 
-# Business and Property Income
+# Business and property income
 
 A customer’s MTD mandated income consists of the following:
 

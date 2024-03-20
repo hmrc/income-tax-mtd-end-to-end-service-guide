@@ -1,12 +1,12 @@
 ---
-title: Final Declaration
+title: Final declaration | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 6
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
 <!--- Section owner: MTD Programme --->
 
-# Final Declaration
+# Final declaration
 Final declaration is the process that allows customers to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise. 
 
 It is also the process by which most formal claims for reliefs and allowances and any deductions are made, where these were previously included within a Self Assessment tax return.

@@ -1,10 +1,10 @@
 ---
-title: Additional Information | Income Tax (MTD) End-to-End Service Guide
+title: Additional information | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 30
 description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
 ---
 
-# Additional Information
+# Additional information
 
 If MTD customers are earning any type of income in addition to their self-employment and property income, they must report that to HMRC just as they would in their Self Assessment return. 
 
