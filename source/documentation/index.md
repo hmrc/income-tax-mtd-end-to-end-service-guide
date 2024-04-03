@@ -235,11 +235,25 @@ These journeys show examples of use:
 - [providing information about how to treat a loss](/guides/income-tax-mtd-end-to-end-service-guide/documentation/additional-information.html#providing-information-about-how-to-treat-a-loss)
 - [making a final declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/final-declaration.html#making-a-final-declaration)
 
+## Mapping APIs to Self Assessment tax return forms
+
+Many parameters in some Income Tax (Making Tax Digital) APIs map to box numbers in [Self Assessment tax return forms (GOV.UK)](https://www.gov.uk/self-assessment-tax-return-forms). You can download this mapping information as CSV files from the [income-tax-mtd-changelog/mapping](https://github.com/hmrc/income-tax-mtd-changelog?tab=readme-ov-file#mapping-apis-to-self-assessment-tax-return-forms) (GitHub).
+
+Some APIs map to box numbers in more than one form. The following table shows which APIs are linked to which forms. 
+
+| Self Assessment tax return form                              | Related APIs                                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [SA100 Main tax return (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100) | [Individual Calculations](/api-documentation/docs/api/service/individual-calculations-api) <br />[Individuals Disclosures](/api-documentation/docs/api/service/individuals-disclosures-api) <br />[Individuals Income Received](/api-documentation/docs/api/service/individuals-income-received-api) <br />[Individuals Reliefs](/api-documentation/docs/api/service/individuals-reliefs-api) <br />[Individuals State Benefits](/api-documentation/docs/api/service/individuals-state-benefits-api) <br />[Self Assessment Accounts](/api-documentation/docs/api/service/self-assessment-accounts-api) |
+| [SA101 Additional Information (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-additional-information-sa101) | [Individuals Charges](/api-documentation/docs/api/service/individuals-charges-api) <br />[Individuals Disclosures](/api-documentation/docs/api/service/individuals-disclosures-api) <br />[Individuals Expenses](/api-documentation/docs/api/service/individuals-expenses-api) <br />[Individuals Income Received](/api-documentation/docs/api/service/individuals-income-received-api) <br />[Individuals Reliefs](/api-documentation/docs/api/service/individuals-reliefs-api) <br />[Other Deductions](/api-documentation/docs/api/service/other-deductions-api) |
+| [SA102 Employment (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-employment-sa102) | [Individuals Expenses](/api-documentation/docs/api/service/individuals-expenses-api) <br />[Individuals Income Received](/api-documentation/docs/api/service/individuals-income-received-api) |
+| [SA105 UK Property (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-uk-property-sa105) | [Individual Losses](/api-documentation/docs/api/service/individual-losses-api) <br />[Property Business](/api-documentation/docs/api/service/property-business-api) |
+| [SA106 Foreign (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-foreign-sa106) | [Individual Losses](/api-documentation/docs/api/service/individual-losses-api) <br />[Individuals Income Received](/api-documentation/docs/api/service/individuals-income-received-api) <br />[Individuals Reliefs](/api-documentation/docs/api/service/individuals-reliefs-api) <br />[Property Business](/api-documentation/docs/api/service/property-business-api) |
+
 ## Changelogs
 
 ### API changelog
 
-The full changelog for Income Tax MTD APIs is now at [https://github.com/hmrc/income-tax-mtd-changelog](https://github.com/hmrc/income-tax-mtd-changelog) - that is the best source for detailed and comprehensive information about API changes.
+The [income-tax-mtd-changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) provides detailed and comprehensive information about API changes.
 
 ### Documentation changelog
 
