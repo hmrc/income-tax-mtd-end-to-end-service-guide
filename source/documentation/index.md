@@ -1,12 +1,12 @@
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-**Version 4.0** issued April 2024
+**Version 4.1** issued April 2024
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
 >|Help us improve this guide |
 |---|
-|This guide is currently being revised and overhauled to ensure it meets the needs of software providers. See the service guide [changelog](#documentation-changelog) for latest updates.<br/><br/>If there is a way that this guide could be improved or expanded to meet your needs, <b>now is the time to let us know.</b><br/><br/>If you use this guide regularly, we would like to invite you to a 60-minute one-to-one video call to share your thoughts and feedback.<br/><br/>We would like to explore:<ul><li>Your current use of and experience with the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide, how it fits your needs and how it can be improved</li></ul><br/>If you would like to help us improve this guide, contact our User Researcher <a href="mailto:chris.samms@digital.hmrc.gov.uk">chris.samms@digital.hmrc.gov.uk</a> to arrange an interview.|
+|This guide is currently being revised and overhauled to ensure it meets the needs of software providers. See the service guide [changelog](#documentation-changelog) for latest updates.<br/><br/>If there is a way that this guide could be improved or expanded to meet your needs, <b>now is the time to let us know.</b><br/><br/>If you use this guide regularly, we&#39;d like to invite you to share your thoughts and feedback via an online video call, which will involve a 60-minute one-to-one interview.<br/><br/>We’d like to explore:<ul><li>Your current use of and experience with the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide, how it fits your needs and how it can be improved</li></ul><br/>If you would like to help us improve this guide, email [mtdapi-ur-g@digital.hmrc.gov.uk](mailto:mtdapi-ur-g@digital.hmrc.gov.uk) to arrange an interview.|
 
 ## Overview
 
@@ -316,6 +316,12 @@ The [income-tax-mtd-changelog](https://github.com/hmrc/income-tax-mtd-changelog)
 ### Documentation changelog
 
 Below is a summary of updates to this service guide.
+
+#### Version 4.1
+
+23 April 2024
+
+- Update user research contact email address
 
 #### Version 4.0
 
