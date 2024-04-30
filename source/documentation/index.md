@@ -1,6 +1,6 @@
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-**Version 4.2** issued May 2024
+**Version 4.2** issued April 2024 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -32,25 +32,11 @@ To be granted production credentials for a bridging product, it must be digitall
 
 Software providers who wish to selectively use Making Tax Digital for Income Tax APIs and not build a Making Tax Digital product will have to submit a business case, justifying use of a particular or multiple API’s. Such products may be granted production credentials at the discretion of HMRC.
 
-## How to use this guide
-
-(Content needed)
+<!-- ## How to use this guide -->
 
 ## Mapping APIs to Self Assessment tax return forms
 
-Many parameters in some Income Tax (Making Tax Digital) APIs map to box numbers in [Self Assessment tax return forms (GOV.UK)](https://www.gov.uk/self-assessment-tax-return-forms). You can download this mapping information as CSV files from the [income-tax-mtd-changelog/mapping](https://github.com/hmrc/income-tax-mtd-changelog?tab=readme-ov-file#mapping-apis-to-self-assessment-tax-return-forms) (GitHub).
-
-Some APIs map to box numbers in more than one form. The following table shows which APIs are linked to which forms. 
-
-| Self Assessment tax return form | Related APIs |
-| ------------------------------- | ------------ |
-| [SA100 Main tax return (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100) | [Individual Calculations](/api-documentation/docs/api/service/individual-calculations-api) <br />[Individuals Disclosures](/api-documentation/docs/api/service/individuals-disclosures-api) <br />[Individuals Dividends Income](/api-documentation/docs/api/service/individuals-dividends-income-api) <br />[Individuals Employments Income](/api-documentation/docs/api/service/individuals-employments-income-api) <br />[Individuals Reliefs](/api-documentation/docs/api/service/individuals-reliefs-api) <br />[Individuals Savings Income](/api-documentation/docs/api/service/individuals-savings-income-api) <br />[Individuals State Benefits](/api-documentation/docs/api/service/individuals-state-benefits-api) <br />[Self Assessment Accounts](/api-documentation/docs/api/service/self-assessment-accounts-api) |
-| [SA101 Additional Information (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-additional-information-sa101) | [Individuals Charges](/api-documentation/docs/api/service/individuals-charges-api) <br />[Individuals Disclosures](/api-documentation/docs/api/service/individuals-disclosures-api) <br />[Individuals Dividends Income](/api-documentation/docs/api/service/individuals-dividends-income-api) <br />[Individuals Employments Income](/api-documentation/docs/api/service/individuals-employments-income-api) <br />[Individuals Expenses](/api-documentation/docs/api/service/individuals-expenses-api) <br />[Individuals Foreign Income](/api-documentation/docs/api/service/individuals-foreign-income-api) <br />[Individuals Insurance Policies Income](/api-documentation/docs/api/service/individuals-insurance-policies-income-api) <br />[Individuals Other Income](/api-documentation/docs/api/service/individuals-other-income-api) <br />[Individuals Pensions Income](/api-documentation/docs/api/service/individuals-pensions-income-api) <br />[Individuals Reliefs](/api-documentation/docs/api/service/individuals-reliefs-api) <br />[Individuals Savings Income](/api-documentation/docs/api/service/individuals-savings-income-api) <br />[Other Deductions](/api-documentation/docs/api/service/other-deductions-api) |
-| [SA102 Employment (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-employment-sa102) | [Individuals Expenses](/api-documentation/docs/api/service/individuals-expenses-api) <br />[Individuals Employments Income](/api-documentation/docs/api/service/individuals-employments-income-api) |
-| [SA103F Self-employment (Full) (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-self-employment-full-sa103f) | [CIS Deductions](/api-documentation/docs/api/service/cis-deductions-api) <br />[Individual Losses](/api-documentation/docs/api/service/individual-losses-api) <br />[Individuals Disclosures](/api-documentation/docs/api/service/individuals-disclosures-api) <br />[Self-Employment Business](/api-documentation/docs/api/service/self-employment-business-api) |
-| [SA105 UK Property (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-uk-property-sa105) | [Individual Losses](/api-documentation/docs/api/service/individual-losses-api) <br />[Property Business](/api-documentation/docs/api/service/property-business-api) |
-| [SA106 Foreign (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-foreign-sa106) | [Individual Losses](/api-documentation/docs/api/service/individual-losses-api) <br />[Individuals Dividends Income](/api-documentation/docs/api/service/individuals-dividends-income-api) <br />[Individuals Insurance Policies Income](/api-documentation/docs/api/service/individuals-insurance-policies-income-api) <br />[Individuals Other Income](/api-documentation/docs/api/service/individuals-other-income-api) <br />[Individuals Pensions Income](/api-documentation/docs/api/service/individuals-pensions-income-api) <br />[Individuals Reliefs](/api-documentation/docs/api/service/individuals-reliefs-api) <br />[Individuals Savings Income](/api-documentation/docs/api/service/individuals-savings-income-api) <br />[Property Business](/api-documentation/docs/api/service/property-business-api) |
-| [SA108 Capital gains summary (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-capital-gains-summary-sa108) | [Individuals Capital Gains Income](/api-documentation/docs/api/service/individuals-capital-gains-income-api) |
+Parameters in some Income Tax (Making Tax Digital) APIs map to box numbers in [Self Assessment tax return forms (GOV.UK)](https://www.gov.uk/self-assessment-tax-return-forms). You can download this mapping information as CSV files from the [income-tax-mtd-changelog/mapping](https://github.com/hmrc/income-tax-mtd-changelog/blob/main/mapping/mapping-csv-files.md) (GitHub).
 
 ## Changelogs
 
@@ -58,15 +44,15 @@ Some APIs map to box numbers in more than one form. The following table shows wh
 
 The [income-tax-mtd-changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) provides detailed and comprehensive information about API changes.
 
-### Documentation changelog
+### Document changelog
 
 Below is a summary of updates to this service guide.
 
 #### Version 4.2
 
-1 May 2024
+30 April 2024
 
-- Implement revised document structure
+- Implement revised document structure (no content has been removed)
 
 #### Version 4.1
 

@@ -6,8 +6,6 @@ description: Software developers, designers, product owners or business analysts
 
 # How to integrate with HMRC APIs
 
-(Content needed)
-
 ## Minimum functionality standards
 
 Previously, the production approvals process included an assessment of whether a product includes certain minimum functionality.

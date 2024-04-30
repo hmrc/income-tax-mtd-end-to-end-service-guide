@@ -8,8 +8,6 @@ description: Software developers, designers, product owners or business analysts
 
 # Making updates during the tax year
 
-(Content needed)
-
 ## MTD mandated income
 
 A customer’s MTD mandated income consists of the following:

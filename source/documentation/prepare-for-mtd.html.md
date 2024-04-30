@@ -6,8 +6,6 @@ description: Software developers, designers, product owners or business analysts
 
 # Customers and agents preparing for MTD
 
-(Content needed)
-
 ## Who can sign up and how
 
 Sign-up by means of an API has been ruled out for security reasons.

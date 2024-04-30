@@ -6,8 +6,6 @@ description: Software developers, designers, product owners or business analysts
 
 # Making updates at the end of a tax year
 
-(Content needed)
-
 ## Additional information
 
 If Making Tax Digital (MTD) customers are earning any type of income in addition to their self-employment and property income, they must report that to HMRC just as they would in their Self Assessment return. 
@@ -613,8 +611,6 @@ The software can use the following endpoints to enable customers to:
 - [Opt in to Coding Out](/api-documentation/docs/api/service/self-assessment-accounts-api/3.0/oas/page#tag/Coding-Out-Status/paths/~1accounts~1self-assessment~1{nino}~1{taxYear}~1collection~1tax-code~1coding-out~1opt-in/post)
 
 ## Penalties and appeals
-
-(Content needed)
 
 ### Penalties for late payment and late submission
 
