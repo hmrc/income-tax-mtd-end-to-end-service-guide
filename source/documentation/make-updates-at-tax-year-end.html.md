@@ -440,7 +440,7 @@ Submitted updates can be viewed any time throughout the year. The following endp
 
 ### Amend allowance and adjustments
 
-The software should use the same endpoints and process for submitting annual information as [Submit allowance and adjustment updates for SE and property businesses](/guides/income-tax-mtd-end-to-end-service-guide/documentation/businessandpropertyincome.html#submit-allowance-and-adjustment-updates-for-se-and-property-businesses).
+The software should use the same endpoints and process for submitting annual information as [Submit allowance and adjustments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#submit-allowance-and-adjustments).
 
 When a customer amends an annual summary update, it is necessary to provide all previously submitted figures again in addition to any new information. This means all previous entries will be removed after the new submission. 
 
