@@ -1,5 +1,5 @@
 require 'nokogiri'
-require 'pp'  # Add this line to include the 'pp' library
+require 'pp'
 
 def extract_version(url)
   url.match(/\/(\d+\.\d+)\//) { |m| m[1] }
@@ -28,7 +28,6 @@ def check_markdown_links(api_list, file_path)
 
   markdown.scan(/\[.*?\]\(.*?\)/).each do |link|
     link_text = link.match(/\[(.*?)\]/)[1].gsub(/[^\w\s]/, '').squeeze(' ').downcase
-    # puts "Checking link_text #{link_text}"
     href = link.match(/\((.*?)\)/)[1]
 
     api_list.each do |api_info, endpoints|
@@ -36,12 +35,11 @@ def check_markdown_links(api_list, file_path)
 
       endpoints.each do |endpoint_name|
         sanitized_endpoint_name = endpoint_name.gsub(/[^\w\s]/, '').squeeze(' ').downcase
-       # puts "Checking sanitized_endpoint_name #{sanitized_endpoint_name}"
         if link_text == sanitized_endpoint_name
           link_version = extract_version(href)
 
           if link_version && link_version != api_version
-           puts "Warning: Endpoint '#{endpoint_name}' in the Markdown file has version #{link_version}, " \
+            puts "Warning: Endpoint '#{endpoint_name}' in the Markdown file '#{File.basename(file_path)}' has version #{link_version}, " \
                  "but it belongs to #{api_name} in the API list."
           end
         end
@@ -51,15 +49,21 @@ def check_markdown_links(api_list, file_path)
 end
 
 # Get the file paths from command-line arguments
-api_list_file = ARGV[0]
-markdown_file = ARGV[1]
+api_list_file = 'api-list.md'
+markdown_directory = 'documentation'
 
 # Parse the API list
 api_list = parse_api_list(api_list_file)
 
 # Output the api_list hash in a human-readable format
-puts "API List:"
+puts "Parsing API List..."
 pp api_list
 
-# Check the Markdown file for mismatched version numbers in links
-check_markdown_links(api_list, markdown_file)
+# Check each Markdown file in the directory for mismatched version numbers in links
+Dir.glob("#{markdown_directory}/**/*").each do |file_path|
+  next if File.directory?(file_path) || File.extname(file_path) != '.md'
+  
+  puts "------"
+  puts "Checking file: #{file_path}"
+  check_markdown_links(api_list, file_path)
+end
