@@ -50,7 +50,7 @@ end
 
 # Get the file paths from command-line arguments
 api_list_file = 'api-list.md'
-markdown_directory = 'documentation'
+markdown_directory = 'source/documentation'
 
 # Parse the API list
 api_list = parse_api_list(api_list_file)
