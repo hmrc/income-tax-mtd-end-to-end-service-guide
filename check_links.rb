@@ -34,6 +34,8 @@ end
 
 def check_markdown_links(api_list, file_path)
   markdown = File.read(file_path)
+  warnings = []
+
   markdown.scan(/\[.*?\]\(.*?\)/).each do |link|
     link_text = link.match(/\[(.*?)\]/)[1].gsub(/[^\w\s]/, '').squeeze(' ').downcase
     href = link.match(/\((.*?)\)/)[1]
@@ -47,21 +49,31 @@ def check_markdown_links(api_list, file_path)
           if link_version.nil?
             next
           elsif versions[:production] == 'N/A'
-            puts "Warning: URL '#{href}' in the Markdown file '#{File.basename(file_path)}' has version #{link_version}, " \
-                 "but the Production version for the API '#{api_name}' is not available (N/A) in the API list."
+            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'no prod version']
           elsif link_version < versions[:production]
-            puts "Warning: URL '#{href}' in the Markdown file '#{File.basename(file_path)}' has version #{link_version}, " \
-                 "which is lower than the Production version #{versions[:production]} for the API '#{api_name}' in the API list. " \
-                 "The link is stale and should be updated."
+            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'stale (newer prod version available)']
           elsif link_version == versions[:sandbox] && link_version > versions[:production]
-            puts "Warning: URL '#{href}' in the Markdown file '#{File.basename(file_path)}' has version #{link_version}, " \
-                 "which matches the Sandbox version but is higher than the Production version #{versions[:production]} for the API '#{api_name}' in the API list."
+            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'links to sandbox version when prod is lower']
+          elsif link_version > versions[:sandbox]
+            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'links to version that is not public (broken?)']
           elsif link_version != versions[:production]
-            puts "Warning: URL '#{href}' in the Markdown file '#{File.basename(file_path)}' has version #{link_version}, " \
-                 "but it should match the Production version #{versions[:production]} for the API '#{api_name}' in the API list."
+            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'other']
           end
         end
       end
+    end
+  end
+
+  if warnings.any?
+    puts "Warnings:"
+    warnings.each do |warning|
+      puts "----"
+      puts "URL: #{warning[0]}"
+      puts "API name: #{warning[1]}"
+      puts "Markdown version: #{warning[2]}"
+      puts "Sandbox version: #{warning[3]}"
+      puts "Production version: #{warning[4]}"
+      puts "Problem: #{warning[5]}"
     end
   end
 end
@@ -76,7 +88,7 @@ api_list = parse_api_list(api_list_file)
 
 # Output the api_list hash in a human-readable format
 puts "Parsing API List..."
-pp api_list
+# pp api_list
 
 # Check each Markdown file in the directory for mismatched version numbers in links
 Dir.glob("#{markdown_directory}/**/*").each do |file_path|
