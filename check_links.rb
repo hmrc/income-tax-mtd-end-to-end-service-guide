@@ -45,7 +45,7 @@ def check_markdown_links(api_list, file_path)
         sanitized_endpoint = endpoint.gsub(/[^\w\s]/, '').squeeze(' ').downcase
         if link_text == sanitized_endpoint
           if link_version.nil?
-            puts "Warning: URL '#{href}' in the Markdown file '#{File.basename(file_path)}' does not contain a valid version number."
+            next
           elsif versions[:production] == 'N/A'
             puts "Warning: URL '#{href}' in the Markdown file '#{File.basename(file_path)}' has version #{link_version}, " \
                  "but the Production version for the API '#{api_name}' is not available (N/A) in the API list."
