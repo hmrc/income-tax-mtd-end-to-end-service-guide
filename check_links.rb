@@ -49,15 +49,15 @@ def check_markdown_links(api_list, file_path)
           if link_version.nil?
             next
           elsif versions[:production] == 'N/A'
-            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'no prod version']
+            warnings << [href, api_name, endpoint, link_version, versions[:sandbox], versions[:production], 'no prod version']
           elsif link_version < versions[:production]
-            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'stale (newer prod version available)']
+            warnings << [href, api_name, endpoint, link_version, versions[:sandbox], versions[:production], 'stale (newer prod version available)']
           elsif link_version == versions[:sandbox] && link_version > versions[:production]
-            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'links to sandbox version when prod is lower']
+            warnings << [href, api_name, endpoint, link_version, versions[:sandbox], versions[:production], 'links to sandbox version when prod is lower']
           elsif link_version > versions[:sandbox]
-            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'links to version that is not public (broken?)']
+            warnings << [href, api_name, endpoint, link_version, versions[:sandbox], versions[:production], 'links to version that is not public (broken?)']
           elsif link_version != versions[:production]
-            warnings << [href, api_name, link_version, versions[:sandbox], versions[:production], 'other']
+            warnings << [href, api_name, endpoint, link_version, versions[:sandbox], versions[:production], 'other']
           end
         end
       end
@@ -70,10 +70,11 @@ def check_markdown_links(api_list, file_path)
       puts "----"
       puts "URL: #{warning[0]}"
       puts "API name: #{warning[1]}"
-      puts "Markdown version: #{warning[2]}"
-      puts "Sandbox version: #{warning[3]}"
-      puts "Production version: #{warning[4]}"
-      puts "Problem: #{warning[5]}"
+      puts "Endpoint: #{warning[2]}"
+      puts "Markdown version: #{warning[3]}"
+      puts "Sandbox version: #{warning[4]}"
+      puts "Production version: #{warning[5]}"
+      puts "Problem: #{warning[6]}"
     end
   end
 end
@@ -92,8 +93,8 @@ puts "Parsing API List..."
 
 # Check each Markdown file in the directory for mismatched version numbers in links
 Dir.glob("#{markdown_directory}/**/*").each do |file_path|
-  next if File.directory?(file_path) || File.extname(file_path) != '.md'
-  
+
+  next if File.directory?(file_path) || File.extname(file_path) != '.md' || File.basename(file_path).start_with?('_')
   puts "------"
   puts "Checking file: #{file_path}"
   check_markdown_links(api_list, file_path)
