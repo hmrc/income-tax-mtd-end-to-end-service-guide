@@ -529,7 +529,7 @@ The software will have to let HMRC know that the customer is ready to submit a f
 * it generates a final liability calculation and a Calculation ID
 * the software must then quote the Calculation ID when retrieving the calculation output using the [Retrieve A Self Assessment Tax Calculation](/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint
 
-If the [Trigger a Self Assessment Tax Calculation](/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}/post) does not pass HMRC validation, it results in an error. For more information, refer to [Tax calculations](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tax-calculations). If it results in no errors, the results of the final declaration calculation are available to the software to show the customer.
+If the [Trigger a Self Assessment Tax Calculation](/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}/post) does not pass HMRC validation, it results in an error. For more information, refer to [Tax calculations](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tax-calculations.html). If it results in no errors, the results of the final declaration calculation are available to the software to show the customer.
 
 If a customer thinks the calculation is incorrect based on the data they have submitted, they can go back and change the information by resubmitting the relevant update with the correct information. After they have done this, the software will have to call the [Trigger a Self Assessment Tax Calculation](/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint again to generate a new final liability.
 
@@ -614,20 +614,19 @@ The software can use the following endpoints to enable customers to:
 
 ### Penalties for late payment and late submission
 
-The way that HMRC penalises ITSA late payments and late submissions will be changing. The changes, referred to as 'Penalty Reform for ITSA', will apply to ITSA customers from the tax year in which they become mandated to join MTD. More information will follow as it is made available.
+The way that HMRC penalises late payments and late submissions is changing. From tax year 2024-25 onwards, the changes referred to as 'Penalty Reform for ITSA' will apply to customers who volunteer to test the Making Tax Digital for Income Tax Self Assessment service.
 
-For tax years prior to the changes, the existing late payment and late filing penalties continue to apply. You can find more information about these penalties on gov.uk:
+Customers will need to choose to become subject to the new penalty regime and HMRC will confirm in writing when this has taken place. Customers cannot make this choice through software. For more information about how customers will agree to these penalties, refer to [Penalties for Income Tax Self Assessment volunteers (GOV.UK)](https://www.gov.uk/guidance/penalties-for-income-tax-self-assessment-volunteers).
 
-- [Penalties for late filing of Self Assessment tax returns](https://www.gov.uk/self-assessment-tax-returns/penalties)
-- [Self Assessment: how to appeal against penalties for late filing and late payment](https://www.gov.uk/government/publications/self-assessment-appeal-against-penalties-for-late-filing-and-late-payment-sa370/self-assessment-how-to-appeal-against-penalties-for-late-filing-and-late-payment)
+For tax years before 2024-25, the existing late payment and late filing penalties continue to apply. For more information, refer to [Self Assessment tax returns: Penalties (GOV.UK)](https://www.gov.uk/self-assessment-tax-returns/penalties).
 
 ### Other penalties
 
-Other penalties that apply to ITSA customers are unchanged by Penalty Reform and will continue to be charged where appropriate. These include:
+Other penalties that apply to Income Tax Self Assessment customers are unchanged by 'Penalty Reform for ITSA' and will continue to be charged where appropriate. These include:
 
-- [Inaccuracy penalties - Factsheet CC/FS7a](https://www.gov.uk/government/publications/compliance-checks-penalties-for-inaccuracies-in-returns-or-documents-ccfs7a)
-- [Penalties for not telling HMRC about an under-assessment - Factsheet CC/FS7b](https://www.gov.uk/government/publications/compliance-checks-penalties-for-not-telling-hmrc-about-an-under-assessment-ccfs7b)
-- [Penalties for failure to notify HMRC of a liability to tax - Factsheet CC/FS11](https://www.gov.uk/government/publications/compliance-checks-penalties-for-failure-to-notify-ccfs11)
+- [Compliance checks: penalties for inaccuracies in returns or documents — Factsheet CC/FS7a](https://www.gov.uk/government/publications/compliance-checks-penalties-for-inaccuracies-in-returns-or-documents-ccfs7a)
+- [Compliance checks: penalties for not telling HMRC about an under-assessment – Factsheet CC/FS7b](https://www.gov.uk/government/publications/compliance-checks-penalties-for-not-telling-hmrc-about-an-under-assessment-ccfs7b)
+- [Compliance checks: penalties for failure to notify — Factsheet CC/FS11](https://www.gov.uk/government/publications/compliance-checks-penalties-for-failure-to-notify-ccfs11)
 
 ### Paying penalties and interest
 
@@ -635,6 +634,6 @@ Penalties must be paid within 30 days of the date on the penalty notice. Late pa
 
 ### Appeals
 
-The [existing process for appeals](https://www.gov.uk/tax-appeals/penalty) will remain in place, although a provision will be made as part of Penalty Reform to allow the user to appeal their late submission and late payment penalties through the digital tax account.
+The existing process for appeals, as described in [Appeal a Self Assessment penalty for late filing or late payment (GOV.UK)](https://www.gov.uk/guidance/check-when-to-appeal-a-self-assessment-penalty-for-late-filing-or-late-payment), will remain in place, but a provision will be made as part of 'Penalty Reform for ITSA' to allow a customer to appeal their late submission and late payment penalties through their digital tax account.
 
-A customer or agent may contact HMRC if they have a query about a tax decision. If they don’t understand the decision they can also get advice from HMRC or professional help.
+A customer or agent may contact HMRC if they have a query about a tax decision. If they do not understand the decision, they can also get advice from HMRC or professional help.

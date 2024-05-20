@@ -6,7 +6,7 @@ This service guide explains how you can integrate your software with the [Income
 
 >|Help us improve this guide |
 |---|
-|This guide is currently being revised and overhauled to ensure it meets the needs of software providers. See the service guide [changelog](#documentation-changelog) for latest updates.<br/><br/>If there is a way that this guide could be improved or expanded to meet your needs, <b>now is the time to let us know.</b><br/><br/>If you use this guide regularly, we&#39;d like to invite you to share your thoughts and feedback via an online video call, which will involve a 60-minute one-to-one interview.<br/><br/>We’d like to explore:<ul><li>Your current use of and experience with the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide, how it fits your needs and how it can be improved</li></ul><br/>If you would like to help us improve this guide, email [mtdapi-ur-g@digital.hmrc.gov.uk](mailto:mtdapi-ur-g@digital.hmrc.gov.uk) to arrange an interview.|
+|This guide is currently being revised and overhauled to ensure it meets the needs of software providers. See the service guide [changelog](#document-changelog) for latest updates.<br/><br/>If there is a way that this guide could be improved or expanded to meet your needs, <b>now is the time to let us know.</b><br/><br/>If you use this guide regularly, we&#39;d like to invite you to share your thoughts and feedback via an online video call, which will involve a 60-minute one-to-one interview.<br/><br/>We’d like to explore:<ul><li>Your current use of and experience with the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide, how it fits your needs and how it can be improved</li></ul><br/>If you would like to help us improve this guide, email [mtdapi-ur-g@digital.hmrc.gov.uk](mailto:mtdapi-ur-g@digital.hmrc.gov.uk) to arrange an interview.|
 
 ## Overview
 
@@ -84,7 +84,7 @@ Below is a summary of updates to this service guide.
   - add new content to section Submit quarterly update
 - Update Final declaration section:
   - remove all references to ‘crystallisation’
-  - remove sections Calculations that produce errors and Calculations that are free from errors, which are now in section Tax calculation
+  - remove sections Calculations that produce errors and Calculations that are free from errors, which are now in section Tax calculations
   - change ’calcuationId' to 'Calculation ID' and 'finalDeclaraton' to 'Final Declaration'
   - update tax account links in section Pay or get a repayment
 - Update HMRC online services section:
@@ -102,7 +102,7 @@ Below is a summary of updates to this service guide.
 - Update Deprecating APIs section with details about new deprecation headers
 - Update the following section of Business and property income section:
 
-  - Tax calculation (formerly Retrieve a tax calculation)
+  - Tax calculations (formerly Retrieve a tax calculation)
 
 - Update the following sections of Additional information section (formerly Additional Income):
 
@@ -134,7 +134,7 @@ Below is a summary of updates to this service guide.
   - Submit accounting adjustments
   - Construction Industry Scheme
   - Finalise business income End of Period Statement (EOPS)
-  - Tax calculation (formerly 'Retrieve a tax calculation')
+  - Tax calculations (formerly 'Retrieve a tax calculation')
 
 - Move the content of the following sections to other sections in Business and Property Income section:
 
