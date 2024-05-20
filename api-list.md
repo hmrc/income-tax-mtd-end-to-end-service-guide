@@ -6,15 +6,15 @@
 - API: [Business Income Source Summary (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/2.0) (Sandbox: 2.0, Production: 2.0)
   - Endpoint: Retrieve a Business Income Source Summary (BISS)
 
-- API: [Business Source Adjustable Summary (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/4.0) (Sandbox: 4.0, Production: 4.0)
-  - Endpoint: List Business Source Adjustable Summaries
-  - Endpoint: Trigger a Business Source Adjustable Summary
+- API: [Business Source Adjustable Summary (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/5.0) (Sandbox: 5.0, Production: 4.0)
+  - Endpoint: List Business Source Adjustable Summaries [test only]
+  - Endpoint: Trigger a Business Source Adjustable Summary [test only]
   - Endpoint: Retrieve a Self-Employment Business Source Adjustable Summary (BSAS)
-  - Endpoint: Submit Self-Employment Accounting Adjustments
+  - Endpoint: Submit Self-Employment Accounting Adjustments [test only]
   - Endpoint: Retrieve a UK Property Business Source Adjustable Summary (BSAS)
-  - Endpoint: Submit UK Property Accounting Adjustments
+  - Endpoint: Submit UK Property Accounting Adjustments [test only]
   - Endpoint: Retrieve a Foreign Property Business Source Adjustable Summary (BSAS)
-  - Endpoint: Submit Foreign Property Accounting Adjustments
+  - Endpoint: Submit Foreign Property Accounting Adjustments [test only]
 
 - API: [CIS Deductions (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/2.0) (Sandbox: 2.0, Production: 2.0)
   - Endpoint: Retrieve CIS Deductions for Subcontractor
@@ -167,9 +167,9 @@
   - Endpoint: Delete Other Income [Test only]
 
 - API: [Individuals Pensions Income (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-pensions-income-api/1.0) (Sandbox: 1.0, Production: N/A)
-  - Endpoint: Retrieve Pensions Income [Test only]
-  - Endpoint: Create and Amend Pensions Income [Test only]
-  - Endpoint: Delete Pensions Income [Test only]
+  - Endpoint: Retrieve Pensions Income
+  - Endpoint: Create and Amend Pensions Income
+  - Endpoint: Delete Pensions Income
 
 - API: [Individuals Reliefs (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0) (Sandbox: 1.0, Production: 1.0)
   - Endpoint: Retrieve Relief Investments
