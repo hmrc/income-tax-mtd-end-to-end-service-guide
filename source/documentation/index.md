@@ -1,6 +1,6 @@
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-**Version 4.2** issued April 2024 (see [changelog](#document-changelog))
+**Version 4.3** issued May 2024 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -50,7 +50,11 @@ Below is a summary of updates to this service guide.
 
 #### Version 4.3
 
-- Update API endpoint links within the guide to point to latest available versions
+28 May 2024
+
+- Update API endpoint links within this document to point to latest available versions
+- Update Penalties and appeals section with latest information about Penalty Reform for ITSA
+- Update HMRC Assist section introduction
 
 #### Version 4.2
 
