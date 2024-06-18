@@ -71,9 +71,7 @@ If you are creating a new Production application, you must comply with our [term
 
 ### Product build
 
-Software providers have the option to either build all elements required to meet [minimum functionality standards](#minimum-functionality-standards) in one go or to build these elements iteratively. If you choose to build iteratively, you are required to test the relevant APIs and complete the Production Approvals checklist for the appropriate stage of the build.
-
-There are three different types of products to build. They are:
+There are 3 different types of products that can be built:
 
 - full end-to-end product
 - in-year product
@@ -81,7 +79,9 @@ There are three different types of products to build. They are:
 
 #### Full end-to-end product
 
-For a full end-to-end product there are two distinct stages and the APIs required for each are:
+Software providers have the option to either build all elements required to meet [minimum functionality standards](#minimum-functionality-standards) in one go or to build these elements iteratively. If you choose to build iteratively, you are required to test the relevant APIs and complete the Production Approvals Checklist for the appropriate stage of the build.
+
+For a full end-to-end product, there are 2 distinct stages and the APIs required for each are:
 
 - In-year functionality (submitting periodic updates):
 
@@ -122,7 +122,7 @@ The APIs required are:
 
 HMRC requires software providers to test all the API endpoints to which they need access. The following guidelines apply to accessing new API subscriptions and version updates of existing API subscriptions.
 
-For APIs included in the minimum functionality standards:
+For APIs included in the [minimum functionality standards](#minimum-functionality-standards):
 
 - you are required to test all endpoints shown within the documentation 
 - ensure it aligns with the information in your completed Production Approvals Checklist
@@ -142,9 +142,9 @@ Production access will be granted after we are satisfied that:
 
 - the relevant APIs and endpoints have been tested satisfactorily
 - calls include compliant fraud prevention headers
-- the checklist is completed satisfactorily and aligns with the testing
+- the Checklist is completed satisfactorily and aligns with the testing
 
-For access to updated APIs (that is, new versions), we don’t generally require a new Production Approvals Checklist but do need to see evidence of satisfactory testing.
+For access to updated APIs (that is, new versions), we do not generally require a new Production Approvals Checklist but do need to see evidence of satisfactory testing.
 
 **Note:** It is important to build relevant error responses in your software to handle exceptions.
 
