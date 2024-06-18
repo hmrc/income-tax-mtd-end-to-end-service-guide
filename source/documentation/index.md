@@ -14,7 +14,7 @@ This guidance explains how you can integrate your software with our APIs. It pro
 
 For more information about eligibility, sign-up and how customers will use Making Tax Digital for Income Tax, refer to [Making Tax Digital for Income Tax step by step guidance (GOV.UK)](https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax).
 
-HMRC's vision for Making Tax Digital (MTD) for Income Tax is to allow individuals to fulfil their income tax obligations and optionally manage their wider obligations entirely through compatible software. Customers will be able to:
+HMRC's vision for Making Tax Digital (MTD) for Income Tax is to allow individuals to fulfil their income tax obligations entirely through compatible software whilst still being fully responsible for the data that is submitted. Customers will be able to:
 
 - maintain a digital record of their tax affairs
 - submit quarterly updates of income and expenditure
@@ -31,7 +31,7 @@ HMRC will provide APIs to support submission of all personal data items under Se
 
 Compatible software can mean either a single end-to-end piece of software or a set of compatible software products. To gain Production credentials for, and access to, Making Tax Digital for Income Tax APIs, software needs to meet the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards).
 
-HMRC recognises that an all-in-one product will not be right for everyone, and some customers or agents may wish to use combinations of different pieces of software. For example, combining dedicated record keeping software with dedicated tax filing software. When a customer uses a combination of products, after they have entered a digital record into a compatible software product, they should be able to follow the rules for digital links set out by HMRC in the Software Notice.
+HMRC recognises that an all-in-one product will not be right for everyone, and some customers or agents may wish to use combinations of different pieces of software. For example, combining dedicated record keeping software with dedicated tax filing software. When a customer uses a combination of products, after they have entered a digital record into a compatible software product, they must be able to follow the rules for digital links set out by HMRC in the Software Notice.
 
 ## Bridging software
 
