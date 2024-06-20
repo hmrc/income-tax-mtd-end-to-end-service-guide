@@ -34,7 +34,7 @@ The Making Tax Digital for Income Tax APIs that include the endpoints for the fu
 
 HMRC will be providing tailored feedback messaging through nudges and prompts that software providers can incorporate into their software to support customers with their tax affairs. This is known as [HMRC Assist](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tax-calculations.html#hmrc-assist). We encourage software providers to build meaningful prompts and nudges into their software products to support the customer journey and drive compliant behaviours.
 
-In addition, software providers may wish to offer other functionality over and above the minimum standards. This could include automated functionality, for example, automated quarterly updates. Where this is the case, customers remain legally responsible for meeting their quarterly obligations, and HMRC would expect that appropriate safeguards would be built in to remind customers of this when additional functionality exists.
+In addition, software providers may wish to offer other functionality over and above the minimum standards. This could include automated functionality, for example, automated quarterly updates. Where this is the case, customers remain legally responsible for meeting their quarterly obligations, and HMRC would expect appropriate safeguards to be built in.
 
 ### Software Choices
 
