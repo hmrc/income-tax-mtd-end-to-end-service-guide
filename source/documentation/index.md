@@ -1,6 +1,6 @@
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-**Version 4.4** issued June 2024 (see [changelog](#document-changelog))
+**Version 4.5** issued June 2024 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -77,6 +77,16 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 ### Document changelog
 
 Below is a summary of updates to this service guide.
+
+#### Version 4.5
+
+20 June 2024
+
+- Revise Overview and Software provider sections
+- Revise Minimum functionality standards section
+- Revise Getting Production Approval section
+- Retitle Stateful and dynamic testing section to 'Sandbox testing'
+- Update HMRC Assist section
 
 #### Version 4.4
 
