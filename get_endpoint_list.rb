@@ -41,14 +41,12 @@ File.open('api-list.md', 'w') do |file|
         else
           sandbox_version_number = version_number
           prod_version_number = 'N/A'
-
           # Parse the URL with one version less
           current_version = version_number.to_f
           while current_version > 1.0
             current_version -= 1.0
             previous_version_url = link_url.gsub(version_number, current_version.to_s)
             previous_version_doc = Nokogiri::HTML(URI.open(previous_version_url))
-
             previous_production_element = previous_version_doc.at('th:contains("Available in Production")')
             if previous_production_element
               previous_production_status = previous_production_element.next_element.text.strip
@@ -67,20 +65,24 @@ File.open('api-list.md', 'w') do |file|
         yaml_data = YAML.safe_load(yaml_content, permitted_classes: [Date, Time])
         clean_api_name = link.text.strip.gsub(/\s*\(MTD\)\z/, '')
         api_details = "API: [#{clean_api_name}](#{link_url})" + "\n" + "(Sandbox: #{sandbox_version_number}, Production: #{prod_version_number})"
+        
         # Extract and write the "summary" elements to the output file
         puts api_details
         file.puts api_details
         file.puts ""
-        yaml_data['paths'].each do |path, methods|
-          methods.each do |method, details|
-            puts "- Endpoint: #{details['summary']}"
-            file.puts "- Endpoint: #{details['summary']}"
+
+        if yaml_data['paths']
+          yaml_data['paths'].each do |path, methods|
+            methods.each do |method, details|
+              puts "- Endpoint: #{details['summary']}"
+              file.puts "- Endpoint: #{details['summary']}"
+            end
           end
         else
           puts "*** Monolith detected, not listing endpoints to avoid problems with duplicate endpoint names"
           file.puts "  - Skipping monolith endpoints to avoid problems with duplicate endpoint names"
         end
-      file.puts ""
+        file.puts ""
       rescue OpenURI::HTTPError => e
         puts "Error fetching YAML content for #{resolved_url}: #{e.message}"
       rescue Psych::SyntaxError => e
