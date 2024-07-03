@@ -230,8 +230,10 @@ The following table provides details about possible API statuses.
 | Alpha| Early prototype - documentation only, available in External Test. Intended for feedback about the initial API design and documentation. Expect breaking changes and behaviour changes. | Yes | No | No |
 | Beta | Live service but not stable. Breaking changes and behaviour changes are possible. | Yes | Yes | Yes |
 | Stable | Stable live service. No breaking changes and only minor behaviour changes. | Yes | Yes | Yes |
-| Deprecated | Set to be retired, either because a new version of the API is available or because the API is no longer supported. If applicable, a new version of the API will be available in external test when the current version is deprecated. | Yes | No | Yes |
+| Deprecated | Set to be retired, either because a new version of the API is available or because the API is no longer supported. If applicable, a new version of the API will be available in external test when the current version is deprecated. | Yes (see note) | No | Yes |
 | Retired | API is no longer in use. | No | No | No |
+
+**Note:** If all versions of an API are deprecated, it no longer appears on the [list of APIs](https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax-mtd) unless you are signed in to the Developer Hub and have an active subscription to that API. You can still access the API documentation directly without being signed in.
 
 ### Breaking changes
 
