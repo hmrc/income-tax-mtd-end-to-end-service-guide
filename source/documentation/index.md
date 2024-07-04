@@ -1,6 +1,6 @@
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-**Version 4.6** issued July 2024 (see [changelog](#document-changelog))
+Updated 5 July 2024 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -78,15 +78,12 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
-#### Version 4.6
+#### 5 July 2024
 
-July 2024
-
+- Add [MTD terminology (style guide)](/guides/guides/income-tax-mtd-end-to-end-service-guide/documentation/mtd-terminology.html) section
 - Update [API status](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#api-status) table with note about fully deprecated APIs
 
-#### Version 4.5
-
-20 June 2024
+#### 20 June 2024
 
 - Revise Overview and Software provider sections
 - Revise Minimum functionality standards section
@@ -94,35 +91,25 @@ July 2024
 - Retitle Stateful and dynamic testing section to 'Sandbox testing'
 - Update HMRC Assist section
 
-#### Version 4.4
-
-11 June 2024
+#### 11 June 2024
 
 - Add section Navigating Income Tax (Making Tax Digital) API documentation
 
-#### Version 4.3
-
-28 May 2024
+#### 28 May 2024
 
 - Update API endpoint links within this document to point to latest available versions
 - Update Penalties and appeals section with latest information about Penalty Reform for ITSA
 - Update HMRC Assist section introduction
 
-#### Version 4.2
-
-30 April 2024
+#### 30 April 2024
 
 - Implement revised document structure (no content has been removed)
 
-#### Version 4.1
-
-23 April 2024
+#### 23 April 2024
 
 - Update user research contact email address
 
-#### Version 4.0
-
-16 April 2024
+#### 16 April 2024
 
 - Add section Stateful and dynamic testing, which includes an example user journey to:
   - make a Self-Employment or Property Business submission
@@ -135,29 +122,25 @@ July 2024
   - update section introduction with new content about breakup of Individuals Income Received API
   - update API endpoint links to point to new APIs that replace Individuals Income Received API
 
-#### Version 3.9
-
-18 March 2024
+#### 18 March 2024
 
 - Update Business and property income section:
   - add new section Change to calendar quarters
   - add new content to section Submit quarterly update
 - Update Final declaration section:
-  - remove all references to ‘crystallisation’
+  - remove all references to 'crystallisation'
   - remove sections Calculations that produce errors and Calculations that are free from errors, which are now in section Tax calculations
-  - change ’calcuationId' to 'Calculation ID' and 'finalDeclaraton' to 'Final Declaration'
+  - change 'calcuationId' to 'Calculation ID' and 'finalDeclaraton' to 'Final Declaration'
   - update tax account links in section Pay or get a repayment
 - Update HMRC online services section:
-  - update status of ‘Elect for calendar quarterly periods’ task
+  - update status of 'Elect for calendar quarterly periods' task
   - add new table column that explains choice of service (HMRC online services or software or both) used to make each functionality available
 - Update Using tax codes to collect tax due section (formerly Coding Out):
   - retitle section
   - rewrite section
   - add content about opting out
 
-#### Version 3.8
-
-31 January 2024
+#### 31 January 2024
 
 - Update Deprecating APIs section with details about new deprecation headers
 - Update the following section of Business and property income section:
@@ -182,9 +165,7 @@ July 2024
   - State Benefits
   - Providing information about how to treat a loss
 
-#### Version 3.7
-
-24 January 2024
+#### 24 January 2024
 
 - Update the following sections of Business and property income section:
 
@@ -215,25 +196,19 @@ July 2024
   - Capital Gains Tax
   - Marriage Allowance
 
-#### Version 3.6
-
-13 December 2023
+#### 13 December 2023
 
 * Update Additional information / Employments section with off-payroll working details
 * Update Customer support mode section
 * Update Using tax codes to collect tax due section (formerly Coding Out)
 * Update UR contact email address
 
-#### Version 3.5
-
-15 November 2023
+#### 15 November 2023
 
 * Update content and diagram in Payments and liabilities section
 * Remove crystallisation endpoint content from Final declaration section
 
-#### Version 3.4
-
-2 November 2023
+#### 2 November 2023
 
 * Add new Customer status section describing business purpose of the new Self Assessment Individual Details API
 * Update Construction Industry Scheme section and move it into Business and Property Income section
@@ -241,17 +216,13 @@ July 2024
 * Update APIs in Minimum functionality standards section
 * Remove duplicate Finalise business income End of Period Statement (EOPS) section
 
-#### Version 3.3
-
-4 October 2023
+#### 4 October 2023
 
 * Update content for HMRC online services section
 * Update content for Opting out of MTD section
 * Update content for HMRC Assist section
 
-#### Version 3.2
-
-20 September 2023
+#### 20 September 2023
 
 * Update content for Penalties and appeals section
 * Update content for Final declaration section
@@ -260,107 +231,10 @@ July 2024
 * Update content for Bridging software section
 * Remove Business Validation Rules section
 
-#### Version 3.1
-
-27 June 2023
+#### 27 June 2023
 
 * Add API lifecycle & deprecation section, remove some duplicated content
 
-#### Version 3.0
-
-14 June 2023
+#### 14 June 2023
 
 * Update API and endpoint links
-
-#### Version 2.9
-
-* Update direct links to endpoints to reflect changes in how API documentation is published
-
-#### Version 2.8
-
-* Update HMRC Assist section
-
-#### Version 2.7
-
-* Update guide to reflect simplified v3.0 final declaration process and update section on customers opting out of MTD
-
-#### Version 2.6
-
-* Update guide to reflect API changes, including refactored Self Assessment Accounts API
-
-#### Version 2.5
-
-* Update guide to reflect new API versions, update links and correct and clarify some content
-
-#### Version 2.4
-
-* Update Frequently Asked Questions section to remove some items
-
-#### Version 2.3
-
-* Add note and an example table demonstrating how adjustments submitted work
-
-#### Version 2.2
-
-* Add a Frequently Asked Questions section to the menu tree
-
-#### Version 2.1
-
-* Notice of version change to Business Income Source Summary V1.0
-* Replace 'Set up' heading with 'Sign up' with and update menu tree to have only three sections: **Agent**, **Individual** and **Link software to HMRC**
-* Update content in the **Minimum functionality standards** section and add two other sections: **Bridging software** and **Non-MTD products**
-* Update content in the **Declaration** and **Declaration for agents** sections of **Final declaration** (previously called 'crystallisation')
-
-#### Version 2.0
-
-* Add Capital Gains Tax, Marriage Allowance, Non-PAYE Income, Coding out underpayments and debts
-
-#### Version 1.9
-
-* Add requirement for businesses and landlords to provide information about residential property disposals
-* Add information regarding BSAS adjustments
-* Add content changes to meet MTD Style Guide V2.2
-* Replace the term ‘crystallisation’ with ‘final declaration'
-
-#### Version 1.8
-
-* Add deprecation dates for Self Assessment API Endpoints
-* Notice of version change to Business Source Adjustable Summary (MTD) - V 1.0
-* Notice of version change to Individual Losses (MTD) - V1.0
-* Notice of version change to Individual Calculations v 1.0
-
-#### Version 1.7
-
-* Change title to Income Tax (Making Tax Digital) end-to-end Service Guide
-* Include Income Tax (MTD) APIs
-* Include Tax Terminology
-* Add Foreign Property reference to Obligations
-* Replace the term 'taxpayers' with 'customers'
-* Replace references to SA Accounting Summary API with BSAS API
-
-#### Version 1.6
-
-* Revise wording for Draft MTD ITSA Regulations 2021 page
-
-#### Version 1.5
-
-* Add Production approvals process for Making Tax Digital for Self Assessment
-* Add early draft MTD ITSA Regulations 2021 section
-
-#### Version 1.4
-
-* Update Construction Industry Scheme (CIS) section
-
-#### Version 1.3
-
-* Update Losses
-* Add Additional information section
-
-#### Version 1.2
-
-* Add Multiple businesses section
-* Add Construction Industry Scheme (CIS) section
-
-#### Version 1.1
-
-* Add Payments and liabilities section
