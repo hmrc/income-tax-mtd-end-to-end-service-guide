@@ -36,7 +36,7 @@ Avoid using 'abroad'. Say 'outside the UK' instead.
 
 ### accounting methods
 
-Use '[cash basis accounting](#cash-basis-accounting)' and '[traditional accounting](#traditional-accounting)' to refer to the two accounting methods. Do not say 'cash accounting'.
+Use [cash basis accounting](#cash-basis-accounting) and [traditional accounting](#traditional-accounting) to refer to the two accounting methods. Do not say 'cash accounting'.
 
 'Traditional accounting' is sometimes known as 'standard accounting' or 'accruals'. Do not use those terms unless you have evidence your users will be looking for them, and only add them for clarity - for example, 'traditional accounting (also known as 'accruals')'.
 
@@ -54,7 +54,7 @@ Use 'allowable expenses' and 'disallowable expenses' where necessary, and define
 
 ### balancing payment
 
-Use this instead of '[remaining balance](#remaining-balance)'.
+Use this instead of [remaining balance](#remaining-balance).
 
 ### cash basis accounting
 
@@ -98,7 +98,7 @@ People can apply for an exemption from Making Tax Digital if they cannot keep di
 
 This is the final step of submitting a tax return within Making Tax Digital for Income Tax. It lets users confirm that every source of income has been submitted to HMRC and is accurate (to the best of their knowledge).
 
-Do not use 'final declaration' when you're talking about the tax return in general. Use '[tax return](#tax-return)' instead.
+Do not use 'final declaration' when you're talking about the tax return in general. Use [tax return](#tax-return) instead.
 
 The term 'final declaration' is used to refer to the final step of the tax return:
 
@@ -124,7 +124,7 @@ Initial caps.
 
 ### late filing penalty
 
-Do not use 'late filing penalty'. Use '[late submission penalty](#late-submission-penalty-second-late-submission-penalty)'.
+Do not use 'late filing penalty'. Use [late submission penalty](#late-submission-penalty-second-late-submission-penalty).
 
 ### late submission penalty, second late submission penalty
 
@@ -167,7 +167,7 @@ Do not use 'post-mandation'. Say 'you must' and quote the date, if necessary, to
 
 This is a summary of someone's business income and expenses, which they share with HMRC through software.
 
-You can say '[update](#update)' rather than 'quarterly update' where it's clear in context - for example, on buttons or in other microcopy. But use 'quarterly update' whenever you:
+You can say [update](#update) rather than 'quarterly update' where it's clear in context - for example, on buttons or in other microcopy. But use 'quarterly update' whenever you:
 
 - are introducing or defining the concept
 - think it helps make things clearer
@@ -188,7 +188,7 @@ Upper case 'R' and 'R', lower case 'a', 2 hyphens.
 
 ### register
 
-Do not use 'register'. Use '[sign up](#sign-up)'. For example, 'sign your client up to Making Tax Digital'.
+Do not use 'register'. Use [sign up](#sign-up). For example, 'sign your client up to Making Tax Digital'.
 
 ### remaining balance
 
