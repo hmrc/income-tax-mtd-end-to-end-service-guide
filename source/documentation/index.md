@@ -2,6 +2,7 @@
 
 Updated 5 July 2024 (see [changelog](#document-changelog))
 
+
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
 >|Help us improve this guide |
@@ -77,6 +78,7 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 ### Document changelog
 
 Below is a summary of updates to this service guide.
+
 
 #### 5 July 2024
 
