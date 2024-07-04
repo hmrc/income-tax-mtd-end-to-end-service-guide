@@ -82,7 +82,7 @@ Below is a summary of updates to this service guide.
 
 #### 5 July 2024
 
-- Add [MTD terminology (style guide)](/guides/guides/income-tax-mtd-end-to-end-service-guide/documentation/mtd-terminology.html) section
+- Add [MTD terminology (style guide)](/guides/income-tax-mtd-end-to-end-service-guide/documentation/mtd-terminology.html) section
 - Update [API status](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#api-status) table with note about fully deprecated APIs
 
 #### 20 June 2024
