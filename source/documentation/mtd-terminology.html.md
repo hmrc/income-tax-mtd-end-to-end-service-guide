@@ -38,7 +38,7 @@ Avoid using 'abroad'. Say 'outside the UK' instead.
 
 Use [cash basis accounting](#cash-basis-accounting) and [traditional accounting](#traditional-accounting) to refer to the two accounting methods. Do not say 'cash accounting'.
 
-'Traditional accounting' is sometimes known as 'standard accounting' or 'accruals'. Do not use those terms unless you have evidence your users will be looking for them, and only add them for clarity - for example, 'traditional accounting (also known as 'accruals')'.
+'Traditional accounting' is sometimes known as 'standard accounting' or 'accruals'. Do not use those terms unless you have evidence your users will be looking for them, and only add them for clarity - for example, 'traditional accounting' (also known as 'accruals').
 
 Define the terms on each page where they're mentioned, especially when you ask people which method they use.
 
