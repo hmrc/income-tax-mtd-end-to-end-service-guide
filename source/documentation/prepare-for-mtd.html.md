@@ -1,7 +1,7 @@
 ---
 title: Customers and agents preparing for MTD | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 3
-description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
+description: How customers and agents sign up for MTD and authorise their software. Understanding MTD customer status.
 ---
 
 # Customers and agents preparing for MTD

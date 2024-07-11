@@ -1,7 +1,7 @@
 ---
 title: MTD terminology (style guide) | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 20
-description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
+description: Style guide for MTD terminology when writing for HMRC customers and their agents.
 ---
 
 # MTD terminology (style guide)

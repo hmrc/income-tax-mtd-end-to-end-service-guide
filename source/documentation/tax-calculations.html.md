@@ -1,7 +1,7 @@
 ---
 title: Tax calculations | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 5
-description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
+description: How MTD-compatible software can retrieve tax calculations and take advantage of HMRC Assist.
 ---
 
 <!--- Section owner: MTD Programme --->

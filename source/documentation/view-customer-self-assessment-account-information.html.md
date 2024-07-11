@@ -1,7 +1,7 @@
 ---
 title: Viewing a customer's Self Assessment account information | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 8
-description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
+description: How MTD-compatible software can retrieve information about a customer's Self Assessment account.
 ---
 
 <!--- Section owner: MTD Programme --->

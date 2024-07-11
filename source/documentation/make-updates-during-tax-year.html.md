@@ -1,7 +1,7 @@
 ---
 title: Making updates during the tax year | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 4
-description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
+description: How to enable MTD-compatible software to make in-year updates and display customer obligations.
 ---
 
 <!--- Section owner: MTD Programme --->

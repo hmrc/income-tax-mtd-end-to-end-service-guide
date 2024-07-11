@@ -1,7 +1,7 @@
 ---
 title: Making updates at the end of a tax year | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 7
-description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
+description: How to enable MTD-compatible software to make updates at the end of a tax year, including making a final declaration.
 ---
 
 # Making updates at the end of a tax year

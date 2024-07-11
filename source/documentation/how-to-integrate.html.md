@@ -1,7 +1,7 @@
 ---
 title: How to integrate with HMRC APIs | Income Tax (Making Tax Digital) end-to-end service guide
 weight: 2
-description: Software developers, designers, product owners or business analysts. Integrate your software with the Income Tax API for Making Tax Digital.
+description: How to integrate MTD-compatible software with HMRC APIs.
 ---
 
 # How to integrate with HMRC APIs
