@@ -1,9 +1,3 @@
----
-title: MTD terminology (style guide) | Income Tax (Making Tax Digital) end-to-end service guide
-weight: 20
-description: Style guide for MTD terminology when writing for HMRC customers and their agents.
----
-
 # MTD terminology (style guide)
 
 ## Why we use a style guide

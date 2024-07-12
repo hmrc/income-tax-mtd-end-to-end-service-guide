@@ -1,9 +1,3 @@
----
-title: Making updates at the end of a tax year | Income Tax (Making Tax Digital) end-to-end service guide
-weight: 7
-description: How to enable MTD-compatible software to make updates at the end of a tax year, including making a final declaration.
----
-
 # Making updates at the end of a tax year
 
 ## Additional information
