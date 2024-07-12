@@ -207,7 +207,7 @@ The customer support model guides HMRC customers to the most appropriate support
 
 Customers who have signed up to the MTD pilot can get support by contacting the dedicated Customer Support Team on 0300 322 9619 from 8am to 6pm Monday to Friday. 
 
-The team aims to respond to queries that are not resolved at the point of contact within 2 days, and to provide further updates, if required, every 2 working days.
+We aim to respond to queries that are not resolved at the point of contact within 2 days, and to provide further updates, if required, every 2 working days.
 
 ## API lifecycle and deprecation
 
