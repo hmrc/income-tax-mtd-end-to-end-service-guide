@@ -81,7 +81,7 @@ The different types of customer status are described below.
 
 ### MTD Mandated
 
-MTD mandated customers have qualifying income above the MTD threshold. This status will not be set until the first mandated year when their obligations become penalty-bearing. These obligations include quarterly updates, end-of-period statement, and final declaration. 
+MTD mandated customers have qualifying income above the MTD threshold. This status will not be set until the first mandated year when their obligations become penalty-bearing. These obligations include quarterly updates and final declaration. 
 
 ### MTD Voluntary
 

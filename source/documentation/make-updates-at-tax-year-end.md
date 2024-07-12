@@ -46,21 +46,21 @@ If the customer does not agree with the amount the contractor has submitted to H
 
 #### Create CIS deductions
 
-At the end of the year, if the customer still does not agree with the CIS deductions amount the contractor has submitted to HMRC, they can submit what they believe to be the correct amount. This needs to be completed following the fourth quarterly update and before the end-of-period statement is submitted. In software, this is done by calling the [Create CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/2.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments/post) endpoint. After successfully creating CIS deductions for the customer, the API returns a submission ID in the success response. This ID must be used to amend or delete CIS deductions in the future. A customer might also submit their CIS deductions amount if they find that no data from the contractor is included in the tax calculation.
+At the end of the year, if the customer still does not agree with the CIS deductions amount the contractor has submitted to HMRC, they can submit what they believe to be the correct amount. This needs to be completed following the fourth quarterly update and before the final declaration is submitted. In software, this is done by calling the [Create CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/2.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments/post) endpoint. After successfully creating CIS deductions for the customer, the API returns a submission ID in the success response. This ID must be used to amend or delete CIS deductions in the future. A customer might also submit their CIS deductions amount if they find that no data from the contractor is included in the tax calculation.
 
 <a href="figures/cis-create-cis.svg" target="blank"><img src="figures/cis-create-cis.svg" alt="CIS create diagram" style="width:720px;" /></a>
 <a href="figures/cis-create-cis.svg" target="blank">Open the CIS create deduction diagram in a new tab</a>
 
 #### Amend CIS deductions
 
-If the customer has submitted a CIS deduction amount after the end of the year but later realises what they submitted was incorrect, they can provide the correct CIS deduction amount. This amendment can be made even after the end-of-period statement is submitted. However, it needs to be done before the final declaration is submitted. In software, amending CIS deductions is done by calling the [Amend CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/2.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/put) endpoint.
+If the customer has submitted a CIS deduction amount after the end of the year but later realises what they submitted was incorrect, they can provide the correct CIS deduction amount. This amendment should be made before the final declaration is submitted. In software, amending CIS deductions is done by calling the [Amend CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/2.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/put) endpoint.
 
 <a href="figures/cis-amend-cis.svg" target="blank"><img src="figures/cis-amend-cis.svg" alt="CIS amend diagram" style="width:720px;" /></a>
 <a href="figures/cis-amend-cis.svg" target="blank">Open the CIS amend deduction diagram in a new tab</a>
 
 #### Delete CIS deductions
 
-If the customer has submitted a CIS deduction amount after the end of the year but later realises they did not pay any CIS deductions and what they submitted was incorrect, they can delete the amount. This deletion can be made even after the end-of-period statement is submitted. However, it needs to be done before the final declaration is submitted. In software, deleting CIS deductions is done by calling the [Delete CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/2.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/delete) endpoint.
+If the customer has submitted a CIS deduction amount after the end of the year but later realises they did not pay any CIS deductions and what they submitted was incorrect, they can delete the amount. This deletion should be made before the final declaration is submitted. In software, deleting CIS deductions is done by calling the [Delete CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/2.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/delete) endpoint.
 
 <a href="figures/cis-delete-cis.svg" target="blank"><img src="figures/cis-delete-cis.svg" alt="CIS delete diagram" style="width:720px;" /></a>
 <a href="figures/cis-delete-cis.svg" target="blank">Open the CIS delete deduction diagram in a new tab</a>
@@ -508,7 +508,6 @@ Customers can make a final declaration from 6 April Year 1. The deadline for fin
 Before starting the final declaration journey, the software package must ensure that for the relevant tax year, the customer:
 
 * has submitted quarterly update information for each business income source (self-employment and property income)
-* has finalised EOPS for all their businesses (self-employment and property income)
 * has already provided their entire income (for example, interest, dividends, other SA schedules)
 * does not have any additional information to provide (for example, information about how to treat a loss)
 
