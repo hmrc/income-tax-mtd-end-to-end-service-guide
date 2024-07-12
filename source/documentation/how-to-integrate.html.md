@@ -1,3 +1,9 @@
+---
+title: How to integrate with HMRC APIs | Income Tax (Making Tax Digital) end-to-end service guide
+weight: 2
+description: How to integrate MTD-compatible software with HMRC APIs. Minimum functionality standards, production access, testing and API lifecycle.
+---
+
 # How to integrate with HMRC APIs
 
 ## Minimum functionality standards
