@@ -203,11 +203,11 @@ To test the journey for making a Self-Employment or Property Business submission
 
 ## Supporting customers in MTD
 
-The customer support model guides HMRC customers to the most appropriate support. Check [GOV.UK](http://gov.uk/) and the software provider's guidance first.
+The customer support model guides HMRC customers to the most appropriate support. Check [GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees) and the software provider's guidance first.
 
 Customers who have signed up to the MTD pilot can get support by contacting the dedicated Customer Support Team on 0300 322 9619 from 8am to 6pm Monday to Friday. 
 
-The team aims to respond to queries that are not resolved at the point of contact within 2 days, and to provide further updates, if required, within 10 days.
+The team aims to respond to queries that are not resolved at the point of contact within 2 days, and to provide further updates, if required, every 2 working days.
 
 ## API lifecycle and deprecation
 
