@@ -1,6 +1,6 @@
 # Income Tax (Making Tax Digital) end-to-end service guide
 
-Updated 5 July 2024 (see [changelog](#document-changelog))
+Updated 16 July 2024 (see [changelog](#document-changelog))
 
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
@@ -79,6 +79,11 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
+#### 16 July 2024
+
+- Update annual turnover threshold for submitting consolidated expenses in [Submit quarterly update](/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-during-tax-year.html#submit-quarterly-update) (from £85,000 to £90,000)
+- Update response time details and GOV.UK link in [Supporting customers in MTD](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#supporting-customers-in-mtd)
+- Remove mentions of end-of-period statements (EOPS)
 
 #### 5 July 2024
 
