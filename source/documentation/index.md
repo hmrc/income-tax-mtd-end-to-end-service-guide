@@ -5,9 +5,7 @@ Updated 16 July 2024 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
->|Help us improve this guide |
-|---|
-|This guide is currently being revised and overhauled to ensure it meets the needs of software providers. See the service guide [changelog](#document-changelog) for latest updates.<br/><br/>If there is a way that this guide could be improved or expanded to meet your needs, <b>now is the time to let us know.</b><br/><br/>If you use this guide regularly, we&#39;d like to invite you to share your thoughts and feedback via an online video call, which will involve a 60-minute one-to-one interview.<br/><br/>We’d like to explore:<ul><li>Your current use of and experience with the service guide</li><li>Any challenges you face</li><li>How helpful you find the service guide</li><li>Your thoughts on the current service guide, how it fits your needs and how it can be improved</li></ul><br/>If you would like to help us improve this guide, email [mtdapi-ur-g@digital.hmrc.gov.uk](mailto:mtdapi-ur-g@digital.hmrc.gov.uk) to arrange an interview.|
+> **Help us improve this guide**: [leave your feedback here](https://docs.google.com/forms/d/e/1FAIpQLSe9jb0WCXWO9yt6zLBTKZLSK2oiTQcGPD96CTiwnQF0QxH5Tw/viewform).
 
 ## Overview
 
