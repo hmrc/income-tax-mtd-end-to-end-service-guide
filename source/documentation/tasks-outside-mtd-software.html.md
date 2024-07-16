@@ -10,11 +10,11 @@ description: Tasks that customers can accomplish outside of MTD-compatible softw
 
 ## HMRC online services
 
-Self-assessment customers who have signed up for Making Tax Digital for Income Tax can [sign into HMRC online services](https://www.gov.uk/log-in-register-hmrc-online-services) to access relevant services. Customers can reach their Making Tax Digital account by clicking the **Making Tax Digital for Income Tax** link.
+Self Assessment customers who have signed up for Making Tax Digital for Income Tax can [sign into HMRC online services](https://www.gov.uk/log-in-register-hmrc-online-services) to access relevant services. Customers can reach their Making Tax Digital account by clicking the **Making Tax Digital for Income Tax** link.
 
 Software providers need to design a customer journey between software and HMRC online services. Whenever the journey takes the customer to HMRC online services, the service should open in a new browser window. This will allow customers to complete additional tasks not available in the software.
 
-The following table lists the tasks customers will be able to complete through HMRC online services and/or third-party software. For each task, there is a brief explanation about the choice of service (HMRC online services or software or both) used to make the functionality available to customers.
+The following table lists the tasks customers will be able to complete through HMRC online services and/or compatible software. For each task, there is a brief explanation about the choice of service (HMRC online services or software or both) used to make the functionality available to customers.
 
 | Task | Status | HMRC online services | Software | Reason for service choice |
 | ---- | ------ | -------------------- | -------- | -------- |
@@ -25,7 +25,7 @@ The following table lists the tasks customers will be able to complete through H
 | [Add new business details for a self-employment sole trader or property business](#adding-new-business-details-for-a-self-employment-sole-trader-or-property-business) | Live | Yes | No | All business customers need access to this functionality. |
 | [Close (cease) a self-employment sole trader or property business](#closing-ceasing-a-self-employment-sole-trader-or-property-business) | Live | Yes | No | All business customers need access to this functionality. |
 | Elect for calendar quarterly periods | Deployed to sandbox | No | Yes | User journey involves setting up software for sending quarterly updates. |
-| Submit non-MTD income and allowance types required to complete a self assessment tax return | Live | Yes | Yes | Available in HMRC online services because some software applications might not support all income and allowance types. |
+| Submit non-MTD income and allowance types required to complete a Self Assessment tax return | Live | Yes | Yes | Available in HMRC online services because some software applications might not support all income and allowance types. |
 | View Self Assessment tax calculations for in-year, forecast, and final declaration | Live | Yes | Yes | All users need access to this functionality. |
 | Print a Self Assessment SA302 tax calculation | Future development | Yes | Yes | Pending future discovery research and analysis. |
 | Check how much is owed through MTD | Live | Yes | Yes | All users need access to this functionality. |
@@ -33,15 +33,15 @@ The following table lists the tasks customers will be able to complete through H
 | Request a time to pay | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
 | [Make a payment](#making-a-payment) | Live | Yes | No | Functionality will be available in software as part of a future HMRC delivery. |
 | Check money in the account | Live | Yes | Yes | All users need access to this functionality. |
-| [Claim a refund](#claiming-a-refund) | In development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. Discovery is pending on end of year repayments. |
-| Check refund details and status | In development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. Discovery is pending on end of year repayments. |
+| [Claim a refund](#claiming-a-refund) | In development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. Discovery is pending on end of year refunds. |
+| Check refund details and status | In development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. Discovery is pending on end of year refunds. |
 | Provide bank details for future refunds | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
 | [Leave MTD as a voluntary customer](#opting-out-of-mtd) | Future development | Yes | No | Availability as a software service depends on user need. |
 | Sign up to MTD as a voluntary customer for those who have previously opted out of MTD | Future development | Yes | No | Availability as a software service depends on user need. |
 
 Agents will be able to access Making Tax Digital for Income Tax services through their agent services account. They will be able to access all current and future services on behalf of their clients including the services listed in the above table, except for:
 
-- changing their client’s repayment bank details 
+- changing their client’s bank details for refunds
 - changing their client’s contact preference
 - setting up a time-to-pay arrangement or budget payment plan
 
@@ -57,7 +57,7 @@ After a new business is added, it can be seen almost immediately in software whe
 
 Customers need to provide the following information to add a new business source.
 
-| Self employment | UK and foreign property |
+| Self-employment | UK and foreign property |
 | --------------- | ----------------------- |
 | Start date | Start date |
 | Business address | Accounting method |
@@ -65,11 +65,11 @@ Customers need to provide the following information to add a new business source
 | Business name |  |
 | Accounting method |  |
 
-If the customer has more than one self employment source, they all must have the same accounting method.
+If the customer has more than one self-employment source, they all must have the same accounting method.
 
 ### Closing (ceasing) a self-employment sole trader or property business
 
-Self employment and property businesses can be ceased by entering the date the business ended using HMRC online services. However, when ceasing a property business, the customer needs to do this only when they no longer receive any type of rental income from all of their properties. Customers within MTD will be required to submit quarterly updates for the periods up to the date the business ended and any future quarterly obligations will be removed. After a business ceases, customers will not report post-cessation receipts or expenses through subsequent quarterly updates. Additional guidance on their reporting will be provided in due course.
+Self-employment and property businesses can be ceased by entering the date the business ended using HMRC online services. However, when ceasing a property business, the customer needs to do this only when they no longer receive any type of rental income from all of their properties. Customers within MTD will be required to submit quarterly updates for the periods up to the date the business ended and any future quarterly obligations will be removed. After a business ceases, customers will not report post-cessation receipts or expenses through subsequent quarterly updates. Additional guidance on their reporting will be provided in due course.
 
 Customers must update HMRC online services with the cease date as soon as possible to avoid late penalties that could be raised against future quarterly obligations. 
 
@@ -86,7 +86,7 @@ The following tasks are scheduled for future development and we will provide mor
 - print a Self Assessment SA302 tax calculation
 - request a budget payment plan
 - request a time to pay
-- provide bank details for future repayments
+- provide bank details for future refunds
 - leave MTD as a voluntary customer
 - sign up to MTD as a voluntary customer for those who have previously opted out of MTD
 
@@ -120,7 +120,7 @@ Customers will be able to view payments made to HMRC in the software. Details wi
 
 Customers can make a payment towards their liability through [HMRC online services](#hmrc-online-services) or there is an alternative route, which is detailed in [Pay your Self Assessment tax bill (GOV.UK)](https://www.gov.uk/pay-self-assessment-tax-bill). 
 
-When a payment is made, the current payment service will first check to see if there is any outstanding liability from previous Self Assessment Tax returns, and it will prioritise the allocation of funds there.  Following that allocation, if there is any payment remaining, it will be allocated to any unpaid Payment on account charges  or  owed liability following an MTD final declaration.  If those remaining funds do not fully cover that MTD liability, this still must  be paid by 31 January.  In this instance, the [Self Assessment Accounts API](/api-documentation/docs/api/service/self-assessment-accounts-api/) can be used through software to see how much of their MTD liability is outstanding. However, it will not show them the amount that has been apportioned to previous tax year self assessment returns.  To view this, a customer will need to access [HMRC online services](#hmrc-online-services).   
+When a payment is made, the current payment service will first check to see if there is any outstanding liability from previous Self Assessment Tax returns, and it will prioritise the allocation of funds there.  Following that allocation, if there is any payment remaining, it will be allocated to any unpaid Payment on account charges  or  owed liability following an MTD final declaration.  If those remaining funds do not fully cover that MTD liability, this still must  be paid by 31 January.  In this instance, the [Self Assessment Accounts API](/api-documentation/docs/api/service/self-assessment-accounts-api/) can be used through software to see how much of their MTD liability is outstanding. However, it will not show them the amount that has been apportioned to previous tax year Self Assessment returns.  To view this, a customer will need to access [HMRC online services](#hmrc-online-services).   
 
 ## Claiming a refund
 
@@ -137,7 +137,7 @@ The opt-out service will not be available through an API. Customers and agents m
 | User type | Method |
 | --------- | ------ |
 | Customer | Use their [HMRC online services](#hmrc-online-services) account to access the opt-out service and view their changed obligations immediately. |
-| Agent | Use their Agent Services Account to access their client’s account. Changed obligations will be viewable immediately in their software. |
+| Agent | Use their agent services account to access their client’s account. Changed obligations will be viewable immediately in their software. |
 
 If the customer has submitted updates of business income and expenses (self-employment and/or property) through their software for the tax year they opt out of MTD, these updates will be deleted. The customer or their agent will receive a warning message to inform them that this is going to happen. The total business income and expenses (for the tax year) must then be submitted as part of the customer’s tax return before completing their final declaration.
 

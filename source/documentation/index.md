@@ -9,11 +9,11 @@ This service guide explains how you can integrate your software with the [Income
 
 ## Overview
 
-This guidance explains how you can integrate your software with our APIs. It provides examples of how they fit into various end-to-end user journeys to enable individuals and their agents, where authorised, to meet their obligations after they have signed up to Making Tax Digital. Under Making Tax Digital, making your final declaration is the last step of reporting your income to HMRC and filing your Self Assessment tax return.
+This guidance explains how you can integrate your software with our APIs. It provides examples of how they fit into various end-to-end user journeys to enable individuals and their agents, where authorised, to meet their obligations after they have signed up to Making Tax Digital (MTD).
 
-For more information about eligibility, sign-up and how customers will use Making Tax Digital for Income Tax, refer to [Making Tax Digital for Income Tax step by step guidance (GOV.UK)](https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax).
+For more information about eligibility, sign-up and how customers will use MTD, refer to [Making Tax Digital for Income Tax step by step guidance (GOV.UK)](https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax).
 
-HMRC's vision for Making Tax Digital (MTD) for Income Tax is to allow individuals to fulfil their income tax obligations entirely through compatible software whilst still being fully responsible for the data that is submitted. Customers will be able to:
+HMRC's vision for Making Tax Digital for Income Tax is to allow individuals to fulfil their income tax obligations entirely through compatible software whilst still being fully responsible for the data that is submitted. Customers will be able to:
 
 - maintain a digital record of their tax affairs
 - submit quarterly updates of income and expenditure
@@ -24,23 +24,23 @@ HMRC's vision for Making Tax Digital (MTD) for Income Tax is to allow individual
 - submit any other income sources
 - make a final declaration to submit a tax return 
 
-HMRC will provide APIs to support submission of all personal data items under Self Assessment as set out above, that is, all the things individuals need to do to comply with their Income Tax obligations. This will create market demand for third-party software that enables users to finalise the entirety of their tax affairs.
+HMRC will provide APIs to support submission of all personal data items under Self Assessment as set out above - that is, all the things individuals need to do to comply with their Income Tax obligations. This will create market demand for compatible software that enables users to finalise the entirety of their tax affairs.
 
 ## Compatible software
 
-Compatible software can mean either a single end-to-end piece of software or a set of compatible software products. To gain Production credentials for, and access to, Making Tax Digital for Income Tax APIs, software needs to meet the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards).
+Compatible software can mean either a single end-to-end piece of software or a set of compatible software products. To gain Production access to our APIs, software needs to meet the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards).
 
 HMRC recognises that an all-in-one product will not be right for everyone, and some customers or agents may wish to use combinations of different pieces of software. For example, combining dedicated record keeping software with dedicated tax filing software. When a customer uses a combination of products, after they have entered a digital record into a compatible software product, they must be able to follow the rules for digital links set out by HMRC in the Software Notice.
 
-## Bridging software
+### Bridging software
 
-Some customers may wish to integrate their existing software solution for record keeping with Making Tax Digital for Income Tax APIs by using another product that can submit quarterly updates, make a final declaration and view tax liabilities. We refer to these products as 'bridging products'. 
+Some customers may wish to integrate their existing software solution for record keeping with MTD by using another product that can submit quarterly updates, make a final declaration and view tax liabilities. We refer to these products as 'bridging products'. 
 
-Customers who choose to use bridging software must digitally link it to their record-keeping software. This will ensure that customers meet their Making Tax Digital for Income Tax obligations when they use more than one compatible software product, which collectively meet the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards) set out in this guide.
+Customers who choose to use bridging software must digitally link it to their record-keeping software. This will ensure that customers meet their obligations when they use multiple compatible software products which collectively meet the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards) set out in this guide.
 
-For more information about digitally linking to software, refer to[ Use Making Tax Digital for Income Tax (GOV.UK)](https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax/keep-digital-records).
+For more information about digitally linking to software, refer to [Use Making Tax Digital for Income Tax (GOV.UK)](https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax/keep-digital-records).
 
-## Free-to-use software
+### Free-to-use software
 
 The UK government is committed to ensuring the availability of free software products for small businesses with simple tax affairs that are mandated to use Making Tax Digital for Income Tax. HMRC strongly encourages all software providers to produce a free version of their software.
 
@@ -54,18 +54,19 @@ There is no expectation that a free product will include VAT, Corporation Tax or
 
 ## Mapping APIs to Self Assessment tax return forms
 
-Parameters in some Income Tax (Making Tax Digital) APIs map to box numbers in [Self Assessment tax return forms (GOV.UK)](https://www.gov.uk/self-assessment-tax-return-forms). You can download this mapping information as CSV files from [income-tax-mtd-changelog/mapping](https://github.com/hmrc/income-tax-mtd-changelog/blob/main/mapping/mapping-csv-files.md) (GitHub).
+Parameters in some MTD APIs map to box numbers in [Self Assessment tax return forms (GOV.UK)](https://www.gov.uk/self-assessment-tax-return-forms). You can download this mapping information as CSV files from [income-tax-mtd-changelog/mapping](https://github.com/hmrc/income-tax-mtd-changelog/blob/main/mapping/mapping-csv-files.md) (GitHub).
 
-## Navigating Income Tax (Making Tax Digital) API documentation
+## Navigating our documentation
 
-The following table lists the documents for Income Tax (Making Tax Digital) APIs and outlines the content and intended readers of each document.
+The following table lists the documents for Making Tax Digital for Income Tax and outlines the content and intended readers of each document.
 
-| Document | Content type | Summary | Intended readers |
-| -------- | ------------ | ------- | ---------------- |
-| [Income Tax (Making Tax Digital) roadmap](/roadmaps/mtd-itsa-vendors-roadmap/#making-tax-digital-itsa-roadmap) | Functional | Learn about upcoming functional changes to Income Tax (Making Tax Digital) APIs and their scheduled release timelines. | Product managers<br /><br />Business analysts |
-| Income Tax (Making Tax Digital) end-to-end service guide (this document) | Functional | Learn how you can integrate your application software with Income Tax (Making Tax Digital) APIs. | Product managers<br /><br />Business analysts<br /><br />Software developers |
-| [Income Tax (Making Tax Digital) API landing pages](/api-documentation/docs/api?filter=income-tax-mtd) <br /><br />Example: [Business Details API](/api-documentation/docs/api/service/business-details-api/) | Functional | Learn about the high-level functionality of each API. | Product managers<br /><br />Business analysts<br /><br />Software developers |
-| Income Tax (Making Tax Digital) API reference pages (accessible from API landing pages)<br /><br />Example: [Business Details API v1.0](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page) | Technical | Learn in detail about the request and response schemas, test data and error handling of each API. | Business analysts<br /><br />Software developers |
+| Document | Summary | Content type | Intended readers |
+| -------- | ------- | ------------ | ---------------- |
+| [Roadmap](/roadmaps/mtd-itsa-vendors-roadmap/#making-tax-digital-itsa-roadmap) | Learn about upcoming changes to Income Tax (Making Tax Digital) APIs and HMRC online services. | Functional | Product managers<br /><br />Business analysts |
+| End-to-end service guide (this document) | Learn how you can integrate your application software with Income Tax (Making Tax Digital) APIs. | Functional | Product managers<br /><br />Business analysts<br /><br />Software developers |
+| [API landing pages](/api-documentation/docs/api?filter=income-tax-mtd) <br /><br />Example:<br/> [Business Details API](/api-documentation/docs/api/service/business-details-api/) | Learn about the high-level functionality of each API. | Functional | Product managers<br /><br />Business analysts<br /><br />Software developers |
+| API reference pages (accessible from API landing pages)<br /><br />Example:<br/> [Business Details API v1.0](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page) | Learn in detail about the request and response schemas, test data and error handling of each API. | Technical | Business analysts<br /><br />Software developers |
+
 
 ## Changelogs
 
@@ -76,6 +77,10 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 ### Document changelog
 
 Below is a summary of updates to this service guide.
+
+#### July 2024
+
+- Update service guide to use current MTD terminology
 
 #### 16 July 2024
 

@@ -32,7 +32,7 @@ Under the Construction Industry Scheme (CIS), [contractors](https://www.gov.uk/w
 
 Currently, under Self Assessment, a subcontractor submits their deductions on their Self Assessment return and it is checked against HMRC records with what their contractor(s) have submitted. 
 
-Under Making Tax Digital for ITSA, a customer can view what has been submitted by their contractor through their [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account or their software. Customers can complete the following tasks on their CIS deductions:
+Under Making Tax Digital for Income Tax, a customer can view what has been submitted by their contractor through their [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account or their software. Customers can complete the following tasks on their CIS deductions:
 
 - [view CIS deductions](#view-cis-deductions)
 - [create CIS deductions](#create-cis-deductions)
@@ -104,9 +104,9 @@ Employers will also submit financial details that form the customers earnings an
 
 Off-payroll working rules (IR35) govern how a worker (sometimes called a contractor) who is providing their services through an intermediary such as a personal service company, is treated in terms of their Income Tax and National Insurance. For more information about off-payroll working rules, refer to [Understanding off-payroll working (IR35)(GOV.UK)](https://www.gov.uk/guidance/understanding-off-payroll-working-ir35).
 
-The off-payroll worker status can be seen in-year as part of the employment pre-population into the customer’s self-assessment tax calculations. In software, the off-payroll working status is retrieved using the [Retrieve an Employment and its Financial Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Employments/paths/~1individuals~1income-received~1employments~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D~1financial-details/get) endpoint. The status is also available in the [Retrieve A Self Assessment Tax Calculation](/api-documentation/docs/api/ service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint. If the status is set to false, indicating the worker is not regarded as being subject to OPW rules, the software should not display it to the customer. This status is view-only: the customer does not need to take any action unless they think it has been set in error, in which case they must contact their employer.
+The off-payroll worker status can be seen in-year as part of the employment pre-population into the customer’s Self Assessment tax calculations. In software, the off-payroll working status is retrieved using the [Retrieve an Employment and its Financial Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Employments/paths/~1individuals~1income-received~1employments~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D~1financial-details/get) endpoint. The status is also available in the [Retrieve A Self Assessment Tax Calculation](/api-documentation/docs/api/ service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint. If the status is set to false, indicating the worker is not regarded as being subject to OPW rules, the software should not display it to the customer. This status is view-only: the customer does not need to take any action unless they think it has been set in error, in which case they must contact their employer.
 
-After the end of the tax year, the off-payroll working status will be displayed to the customer along with the employment data fields. As part of their self-assessment, if a customer agrees with their off-payroll working status, there is no further action required from them. However, if a customer disagrees with their off-payroll working status, they can change it after the end of tax year before completing their final declaration. This change can be made in software or through their [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account. The software must call the [Create and Amend Employment Financial Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Employments/paths/~1individuals~1income-received~1employments~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D~1financial-details/put) endpoint to change the off-payroll working status. 
+After the end of the tax year, the off-payroll working status will be displayed to the customer along with the employment data fields. As part of their Self Assessment, if a customer agrees with their off-payroll working status, there is no further action required from them. However, if a customer disagrees with their off-payroll working status, they can change it after the end of tax year before completing their final declaration. This change can be made in software or through their [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account. The software must call the [Create and Amend Employment Financial Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Employments/paths/~1individuals~1income-received~1employments~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D~1financial-details/put) endpoint to change the off-payroll working status. 
 
 The following  warning message must be displayed to the customer:
 
@@ -185,7 +185,7 @@ Customers can use their software to submit information about tips they have rece
 
 Customers might get a dividend if they own shares in a company. They must pay tax on dividend income if it is above their personal allowance. For more information, refer to [Tax on dividends (GOV.UK)](https://www.gov.uk/tax-on-dividends).
 
-Customers can use their software to submit different types of dividend income. This includes UK dividend income, foreign dividend income, stock dividend income, redeemable shares income, bonus securities, dividend income received while abroad and close company loans written off.
+Customers can use their software to submit different types of dividend income. This includes UK dividend income, foreign dividend income, stock dividend income, redeemable shares income, bonus securities, dividend income received while outside the UK and close company loans written off.
 
 The software can use the following endpoints to enable customers to:
 
@@ -200,7 +200,7 @@ The software can use the following endpoints to enable customers to:
 
 Foreign income is any income earned outside England, Wales, Scotland and Northern Ireland. The Channel Islands and the Isle of Man are classed as foreign. 
 
-Customers might need to pay UK income tax on their foreign income. This includes wages if they work abroad, foreign investment income and income from pensions held overseas. For more information about tax on foreign income, refer to [Tax on foreign income (GOV.UK)](https://www.gov.uk/tax-foreign-income).
+Customers might need to pay UK income tax on their foreign income. This includes wages if they work outside the UK, foreign investment income and income from pensions held outside the UK. For more information about tax on foreign income, refer to [Tax on foreign income (GOV.UK)](https://www.gov.uk/tax-foreign-income).
 
 Customers can use their software to submit information about foreign earnings and unremittable foreign income. The software can use the following endpoints to enable customers to:
 
@@ -222,7 +222,7 @@ The software can use the following endpoints to enable customers to:
 
 ### Pensions Income
 
-Customers in receipt of foreign pensions must continue to report this income to HMRC. For more information about these income types, refer to [Self Assessment: Foreign (SA106) (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-foreign-sa106). Customers should also tell HMRC about their overseas pension. For more information, refer to [Self Assessment: additional information SA101 (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-additional-information-sa101).
+Customers in receipt of foreign pensions must continue to report this income to HMRC. For more information about these income types, refer to [Self Assessment: Foreign (SA106) (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-foreign-sa106). Customers should also tell HMRC about their foreign pension. For more information, refer to [Self Assessment: additional information SA101 (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-additional-information-sa101).
 
 Customers can use their software to submit the information above. The software can use the following endpoints to enable customers to:
 
@@ -234,7 +234,7 @@ Customers can use their software to submit the information above. The software c
 
 Customers should tell HMRC about their other taxable income. This includes miscellaneous income like casual earnings, commission or freelance income.
 
-Customers can use their software to submit different types of other income. This includes information about business receipts, all other income received while abroad, overseas income and gains, chargeable foreign benefits and gifts and omitted foreign income.
+Customers can use their software to submit different types of other income. This includes information about business receipts, all other income received while outside the UK, foreign income and gains, chargeable foreign benefits and gifts and omitted foreign income.
 
 The software can use the following endpoints to enable customers to:
 
@@ -244,7 +244,7 @@ The software can use the following endpoints to enable customers to:
 
 ### Savings Income
 
-Savings income can include interest for certain securities and income from overseas savings. For more information, refer to [How to complete your tax return for Self Assessment (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100#supplementary-pages).
+Savings income can include interest for certain securities and income from foreign savings. For more information, refer to [How to complete your tax return for Self Assessment (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100#supplementary-pages).
 
 Customers can use their software to submit information about savings income. The software can use the following endpoints to enable customers to:
 
@@ -279,7 +279,7 @@ Customers can use their software to submit disclosures about tax avoidance. The 
 
 This currently applies only to a customer’s pension charges. For more information, refer to [Pension savings - tax charges (GOV.UK)](https://www.gov.uk/government/publications/pensions-tax-charges-on-any-excess-over-the-lifetime-allowance-annual-allowance-special-annual-allowance-and-on-unauthorised-payments-hs345-self).
 
-Customers can use their software to submit different types of pension charges. This includes UK and overseas pension contributions, tax on unauthorised payments, transfer of overseas pension to another pension scheme and tax paid for exceeding their lifetime allowance.
+Customers can use their software to submit different types of pension charges. This includes UK and foreign pension contributions, tax on unauthorised payments, transfer of foreign pension to another pension scheme and tax paid for exceeding their lifetime allowance.
 
 The software can use the following endpoints to enable customers to:
 
@@ -298,7 +298,7 @@ For more information about individual tax reliefs, refer to [Tax reliefs (GOV.UK
 
 #### Pensions relief
 
-Customers can use their software to submit different types of pension relief. This includes regular pension contributions, one-off pension contributions, retirement annuity payments, payments to employer’s scheme, and overseas pensions contributions.
+Customers can use their software to submit different types of pension relief. This includes regular pension contributions, one-off pension contributions, retirement annuity payments, payments to employer’s scheme, and foreign pensions contributions.
 
 The software can use the following endpoints to enable customers to:
 
@@ -617,7 +617,7 @@ The way that HMRC penalises late payments and late submissions is changing. From
 
 Customers will need to choose to become subject to the new penalty regime and HMRC will confirm in writing when this has taken place. Customers cannot make this choice through software. For more information about how customers will agree to these penalties, refer to [Penalties for Income Tax Self Assessment volunteers (GOV.UK)](https://www.gov.uk/guidance/penalties-for-income-tax-self-assessment-volunteers).
 
-For tax years before 2024-25, the existing late payment and late filing penalties continue to apply. For more information, refer to [Self Assessment tax returns: Penalties (GOV.UK)](https://www.gov.uk/self-assessment-tax-returns/penalties).
+For tax years before 2024-25, the existing late payment and late submission penalties continue to apply. For more information, refer to [Self Assessment tax returns: Penalties (GOV.UK)](https://www.gov.uk/self-assessment-tax-returns/penalties).
 
 ### Other penalties
 

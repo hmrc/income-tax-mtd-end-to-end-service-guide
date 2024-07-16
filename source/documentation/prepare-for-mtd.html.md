@@ -10,25 +10,25 @@ description: How customers and agents sign up for MTD and authorise their softwa
 
 Sign-up by means of an API has been ruled out for security reasons.
 
-Taxpayers can sign up for Making Tax Digital for Income Tax without having software in place. However, they must get and authorise [software](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#software-choices) before they start using Making Tax Digital for Income Tax.
+To use Making Tax Digital for Income Tax, HMRC customers need to sign up first.
 
-To use Making Tax Digital for Income Tax, individuals need to sign up first.
+They can sign up without having software in place. However, they must get and authorise [software](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#software-choices) before they start using Making Tax Digital for Income Tax.
 
-To sign up, a user must:
+To sign up, a customer must:
 
 - be a sole trader (self-employed) and/or
-- have income from property, either in the UK or abroad
+- have income from property, either UK or foreign
 
 See [Sign up as an individual for Making Tax Digital for Income Tax (GOV.UK)](https://www.gov.uk/guidance/sign-up-your-business-for-making-tax-digital-for-income-tax) for more information.
 
-If an individual is a self employed partner in a partnership, they do not need to sign up to MTD ITSA unless they have other MTD qualifying income, such as:
+If an individual is a self-employed partner in a partnership, they do not need to sign up unless they have other MTD qualifying income, such as:
 
 - sole trader income
 - UK or foreign property income
 
-If this is the case, the individual must not include either their partner or partnership business details in the sign-up service. Instead, this income will continue to be submitted as part of their self assessment tax return.  There is no requirement at this time to submit partner or partnership income quarterly to HMRC.
+If this is the case, the individual must not include either their partner or partnership business details in the sign-up service. Instead, this income will continue to be submitted as part of their Self Assessment tax return.  There is no requirement at this time to submit partner or partnership income quarterly to HMRC.
 
-A user can also get their appointed tax agent (for instance, an accountant or bookkeeper) to sign up on their behalf, with their permission.
+A customer can also get their appointed tax agent (for instance, an accountant or bookkeeper) to sign up on their behalf, with their permission.
 
 We advise customers to speak to their agent (if they have one) before choosing software to ensure that it is compatible.
 
@@ -45,7 +45,7 @@ For more information, refer to [Making Tax Digital for Income Tax as an agent: s
 
 ### Individual sign-up
 
-Individuals who are self employed and/or have property income can sign themselves up for Making Tax Digital for Income Tax.
+Individuals who are self-employed and/or have property income can sign themselves up for Making Tax Digital for Income Tax.
 
 For more information, refer to [Making Tax Digital for Income Tax for individuals: step by steps (GOV.UK)](https://www.gov.uk/government/collections/making-tax-digital-for-income-tax-for-businesses-step-by-step).
 
@@ -67,7 +67,7 @@ Businesses and agents using your software to connect to the [Income Tax (Making 
 8.	HMRC generates an OAuth token for the business or agent.
 9.	Your software stores the business or agent’s OAuth token for later use in API calls on their behalf.
 
-Businesses and agents authenticate directly with us using their Government Gateway user ID and password, and grant the software the authority to interact with HMRC on their behalf. They grant this for a set of functions called API scopes which are required for each ITSA (MTD) endpoint.
+Businesses and agents authenticate directly with us using their Government Gateway user ID and password, and grant the software the authority to interact with HMRC on their behalf. They grant this for a set of functions called API scopes which are required for each API endpoint.
 
 In the case of agents, they must sign in to their Government Gateway account with the user ID and password for their new agent services account, which was generated as part of the agent services account journey.
 
@@ -95,16 +95,16 @@ MTD voluntary customers have qualifying income below or equal to the MTD thresho
 
 ### Annual
 
-Annual customers have an annual self-assessment return obligation which is penalty-bearing. This status will include customers who have qualifying income below or equal to the MTD threshold and have chosen not to voluntarily sign up for MTD. 
+Annual customers have an annual Self Assessment return obligation which is penalty-bearing. This status will include customers who have qualifying income below or equal to the MTD threshold and have chosen not to voluntarily sign up for MTD. 
 
 ### MTD Exempt
 
-MTD exempt customers have manually applied for an exemption from MTD. If a request has been made for VAT, it is applied to MTD ITSA without the need for a further application. These customers will have an annual self-assessment return obligation which is penalty-bearing.  
+MTD exempt customers have manually applied for an exemption from MTD. If a request has been made for VAT, it is applied to MTD for Income Tax without the need for a further application. These customers will have an annual Self Assessment return obligation which is penalty-bearing.  
 
 ### Non-Digital
 
-Non-digital customers have manually applied for a non-digital status. If a request has been made for VAT, it is applied to MTD ITSA without the need for a further application.  These customers will have an annual self-assessment return obligation which is penalty-bearing. Customers with this status are unlikely to be using a software product to meet their self-assessment obligations. 
+Non-digital customers have manually applied for a non-digital status. If a request has been made for VAT, it is applied to MTD for Income Tax without the need for a further application.  These customers will have an annual Self Assessment return obligation which is penalty-bearing. Customers with this status are unlikely to be using a software product to meet their Self Assessment obligations. 
 
 ### Dormant
 
-Dormant customers are no longer required to file a self-assessment tax return. No obligations will be created. Customers with this status may start using software and intend to file a self-assessment tax return but have yet to inform HMRC.
+Dormant customers are no longer required to file a Self Assessment tax return. No obligations will be created. Customers with this status may start using software and intend to file a Self Assessment tax return but have yet to inform HMRC.
