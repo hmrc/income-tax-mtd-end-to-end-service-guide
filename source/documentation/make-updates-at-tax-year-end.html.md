@@ -146,7 +146,7 @@ For some incorrect employment details held by HMRC, the customer can ask HMRC to
 
 ### Employment expenses
 
-Customers can claim tax relief on certain expenses related to their work. For more information, refer to [Claim tax relief for your job expenses (GOV.UK).](https://www.gov.uk/tax-relief-for-employees) 
+Customers can claim tax relief on certain expenses related to their work. They can submit these expenses after the end of the tax year. For more information, refer to [Claim tax relief for your job expenses (GOV.UK).](https://www.gov.uk/tax-relief-for-employees) 
 
 Customers can use their software to claim tax relief on the following types of expenses related to their employment:
 
@@ -175,17 +175,17 @@ Customers can also use their software to claim tax relief on other types of expe
 
 Customers might need to pay taxes on any tips they have received. For more information about paying taxes on tips, refer to [Tips at work (GOV.UK)](https://www.gov.uk/tips-at-work).
 
-Customers can use their software to submit information about tips they have received through their employment. The software can use the following endpoints to enable customers to:
+Customers can use their software to submit information about tips they have received through their employment at any time during the tax year. The software can use the following endpoints to enable customers to:
 
 * [Create and Amend Non-PAYE Employment Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-employments-income-api/2.0/oas/page#tag/Non-PAYE-Employment-Income/paths/~1individuals~1employments-income~1non-paye~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Retrieve Non-PAYE Employment Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-employments-income-api/2.0/oas/page#tag/Non-PAYE-Employment-Income/paths/~1individuals~1employments-income~1non-paye~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Delete Non-PAYE Employment Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-employments-income-api/2.0/oas/page#tag/Non-PAYE-Employment-Income/paths/~1individuals~1employments-income~1non-paye~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-### Dividends Income
+### Dividends income
 
 Customers might get a dividend if they own shares in a company. They must pay tax on dividend income if it is above their personal allowance. For more information, refer to [Tax on dividends (GOV.UK)](https://www.gov.uk/tax-on-dividends).
 
-Customers can use their software to submit different types of dividend income. This includes UK dividend income, foreign dividend income, stock dividend income, redeemable shares income, bonus securities, dividend income received while outside the UK and close company loans written off.
+Customers can use their software to submit different types of dividend income at any time during the tax year. This includes UK dividend income, foreign dividend income, stock dividend income, redeemable shares income, bonus securities, dividend income received while outside the UK and close company loans written off.
 
 The software can use the following endpoints to enable customers to:
 
@@ -196,23 +196,23 @@ The software can use the following endpoints to enable customers to:
 - [Delete Dividends Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Dividends-Income/paths/~1individuals~1income-received~1dividends~1{nino}~1{taxYear}/delete)
 - [Delete a UK Dividends Income Annual Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Dividends-Income/paths/~1individuals~1income-received~1uk-dividends~1{nino}~1{taxYear}/delete)
 
-### Foreign Income
+### Foreign income
 
 Foreign income is any income earned outside England, Wales, Scotland and Northern Ireland. The Channel Islands and the Isle of Man are classed as foreign. 
 
 Customers might need to pay UK income tax on their foreign income. This includes wages if they work outside the UK, foreign investment income and income from pensions held outside the UK. For more information about tax on foreign income, refer to [Tax on foreign income (GOV.UK)](https://www.gov.uk/tax-foreign-income).
 
-Customers can use their software to submit information about foreign earnings and unremittable foreign income. The software can use the following endpoints to enable customers to:
+Customers can use their software to submit information about foreign earnings and unremittable foreign income at any time during the tax year. The software can use the following endpoints to enable customers to:
 
 - [Create and Amend Foreign Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Foreign-Income/paths/~1individuals~1income-received~1foreign~1{nino}~1{taxYear}/put)
 - [Retrieve Foreign Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Foreign-Income/paths/~1individuals~1income-received~1foreign~1{nino}~1{taxYear}/get)
 - [Delete Foreign Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Foreign-Income/paths/~1individuals~1income-received~1foreign~1{nino}~1{taxYear}/delete)
 
-### Insurance Policies Income
+### Insurance policies income
 
 Income from insurance policies is any chargeable gains from UK life insurance policies. This includes cash or other benefits received on a full or part surrender of a policy, a policy matured or brought to an end by the death of the life insured, the sale or assignment of a UK policy, or part of a policy. For more information about insurance policies income tax, refer to [Insurance Policyholder Taxation Manual (GOV.UK)](https://www.gov.uk/hmrc-internal-manuals/insurance-policyholder-taxation-manual).
 
-Customers can use their software to submit different types of insurance policies income. This includes information about life insurance policies, capital redemption policies, life annuities, voided ISAs, and foreign policies.
+Customers can use their software to submit different types of insurance policies income at any time during the tax year. This includes information about life insurance policies, capital redemption policies, life annuities, voided ISAs, and foreign policies.
 
 The software can use the following endpoints to enable customers to:
 
@@ -220,21 +220,21 @@ The software can use the following endpoints to enable customers to:
 - [Retrieve Insurance Policies Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Insurance-Policies-Income/paths/~1individuals~1income-received~1insurance-policies~1{nino}~1{taxYear}/get)
 - [Delete Insurance Policies Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Insurance-Policies-Income/paths/~1individuals~1income-received~1insurance-policies~1{nino}~1{taxYear}/delete)
 
-### Pensions Income
+### Pensions income
 
 Customers in receipt of foreign pensions must continue to report this income to HMRC. For more information about these income types, refer to [Self Assessment: Foreign (SA106) (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-foreign-sa106). Customers should also tell HMRC about their foreign pension. For more information, refer to [Self Assessment: additional information SA101 (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-additional-information-sa101).
 
-Customers can use their software to submit the information above. The software can use the following endpoints to enable customers to:
+Customers can use their software to submit the information above after the end of the tax year. The software can use the following endpoints to enable customers to:
 
 * [Retrieve Pensions Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Pensions-Income/paths/~1individuals~1income-received~1pensions~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Create and Amend Pensions Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Pensions-Income/paths/~1individuals~1income-received~1pensions~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Pensions Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Pensions-Income/paths/~1individuals~1income-received~1pensions~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-### Other Income
+### Other income
 
 Customers should tell HMRC about their other taxable income. This includes miscellaneous income like casual earnings, commission or freelance income.
 
-Customers can use their software to submit different types of other income. This includes information about business receipts, all other income received while outside the UK, foreign income and gains, chargeable foreign benefits and gifts and omitted foreign income.
+Customers can use their software to submit different types of other income at any time during the tax year. This includes information about business receipts, all other income received while outside the UK, foreign income and gains, chargeable foreign benefits and gifts and omitted foreign income.
 
 The software can use the following endpoints to enable customers to:
 
@@ -242,21 +242,21 @@ The software can use the following endpoints to enable customers to:
 * [Create and Amend Other Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Other-Income/paths/~1individuals~1income-received~1other~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Other Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Other-Income/paths/~1individuals~1income-received~1other~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-### Savings Income
+### Savings income
 
 Savings income can include interest for certain securities and income from foreign savings. For more information, refer to [How to complete your tax return for Self Assessment (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100#supplementary-pages).
 
-Customers can use their software to submit information about savings income. The software can use the following endpoints to enable customers to:
+Customers can use their software to submit information about savings income at any time during the tax year. The software can use the following endpoints to enable customers to:
 
 * [Retrieve Savings Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Savings-Income/paths/~1individuals~1income-received~1savings~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Create and Amend Savings Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Savings-Income/paths/~1individuals~1income-received~1savings~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Savings Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Savings-Income/paths/~1individuals~1income-received~1savings~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-### Savings Accounts
+### Savings accounts
 
 Customers must submit information to HMRC about any UK savings accounts they hold. For information about eligible account types, refer to [How to complete your tax return for Self Assessment (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100#supplementary-pages).
 
-Customers can use their software to submit information about each account and record the annual interest income data for it. The software can use the following endpoints to enable customers to:
+Customers can use their software to submit information about each account and record the annual interest income data for it at any time during the tax year. The software can use the following endpoints to enable customers to:
 
 - [Add a UK Savings Account](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1{nino}/post)
 - [Create and Amend a UK Savings Account Annual Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1income-received~1savings~1uk-accounts~1{nino}~1{taxYear}~1{savingsAccountId}/put)
@@ -269,17 +269,17 @@ Customers should tell HMRC if they think they have not paid the correct amount o
 
 Customers are encouraged to voluntarily tell HMRC about any failures or errors rather than wait for HMRC to contact them. This might reduce any potential penalties on outstanding tax. For more information about making disclosures, refer to [How to make a voluntary disclosure to HMRC (GOV.UK)](https://www.gov.uk/government/publications/hmrc-your-guide-to-making-a-disclosure/your-guide-to-making-a-disclosure).
 
-Customers can use their software to submit disclosures about tax avoidance. The software can use the following endpoints to enable customers to:
+Customers can use their software to submit disclosures about tax avoidance at any time during the tax year. The software can use the following endpoints to enable customers to:
 
 * [Create and Amend Disclosures](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0/oas/page#tag/Disclosures/paths/~1individuals~1disclosures~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Retrieve Disclosures](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0/oas/page#tag/Disclosures/paths/~1individuals~1disclosures~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Delete Disclosures](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0/oas/page#tag/Disclosures/paths/~1individuals~1disclosures~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-### Individual Charges
+### Individual charges
 
 This currently applies only to a customer’s pension charges. For more information, refer to [Pension savings - tax charges (GOV.UK)](https://www.gov.uk/government/publications/pensions-tax-charges-on-any-excess-over-the-lifetime-allowance-annual-allowance-special-annual-allowance-and-on-unauthorised-payments-hs345-self).
 
-Customers can use their software to submit different types of pension charges. This includes UK and foreign pension contributions, tax on unauthorised payments, transfer of foreign pension to another pension scheme and tax paid for exceeding their lifetime allowance.
+Customers can use their software to submit different types of pension charges at any time during the tax year. This includes UK and foreign pension contributions, tax on unauthorised payments, transfer of foreign pension to another pension scheme and tax paid for exceeding their lifetime allowance.
 
 The software can use the following endpoints to enable customers to:
 
@@ -287,14 +287,14 @@ The software can use the following endpoints to enable customers to:
 * [Create and Amend Pension Charges](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/2.0/oas/page#/paths/~1individuals~1charges~1pensions~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Pension Charges](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/2.0/oas/page#/paths/~1individuals~1charges~1pensions~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-### Individual Reliefs
+### Individual reliefs
 
 ‘Tax relief’ means that you either:
 
 - pay less tax to take account of money you have spent on specific things, such as business expenses if you’re self-employed
 - get tax back or get it repaid in another way, such as personal pension payments
 
-For more information about individual tax reliefs, refer to [Tax reliefs (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100/how-to-fill-in-your-tax-return-2021#tax-reliefs). The following sections cover the different types of tax reliefs and the endpoints needed to submit in the  software.
+For more information about individual tax reliefs, refer to [Tax reliefs (GOV.UK)](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100/how-to-fill-in-your-tax-return-2021#tax-reliefs). The following sections cover the different types of tax reliefs and the endpoints needed to submit in the  software. Customers can submit the following tax reliefs at any time during the tax year. 
 
 #### Pensions relief
 
@@ -344,21 +344,21 @@ Customers can use their software to submit information about gifts and gift aid 
 - [Create and Amend Charitable Giving Tax Relief](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0/oas/page#tag/Charitable-Givings/paths/~1individuals~1reliefs~1charitable-giving~1{nino}~1{taxYear}/put)
 - [Delete Charitable Giving Tax Relief](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-reliefs-api/1.0/oas/page#tag/Charitable-Givings/paths/~1individuals~1reliefs~1charitable-giving~1{nino}~1{taxYear}/delete)
 
-### Other Deductions
+### Other deductions
 
-This currently applies only to people working at sea outside of the UK. For more information, refer to [Seafarers Earnings Deduction: tax relief if you work on a ship (GOV.UK)](https://www.gov.uk/guidance/seafarers-earnings-deduction-tax-relief-if-you-work-on-a-ship).
+This currently applies only to people working at sea outside of the UK. For more information, refer to [Seafarers' Earnings Deduction: tax relief if you work on a ship (GOV.UK)](https://www.gov.uk/guidance/seafarers-earnings-deduction-tax-relief-if-you-work-on-a-ship).
 
-Customers can use their software to submit information about seafarers. The software can use the following endpoints to enable customers to:
+Customers can use their software to submit information about working at sea at any time during the tax year. The software can use the following endpoints to enable customers to:
 
 * [Retrieve Deductions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/other-deductions-api/1.0/oas/page#/paths/~1individuals~1deductions~1other~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Create and Amend Deductions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/other-deductions-api/1.0/oas/page#/paths/~1individuals~1deductions~1other~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Deductions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/other-deductions-api/1.0/oas/page#/paths/~1individuals~1deductions~1other~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
-### State Benefits
+### State benefits
 
 State benefits are sums of money paid by the government to people in certain circumstances to help meet their day-to-day living needs. They exist to make sure no one falls below a minimum standard of living. State benefits are sometimes called allowances, pensions, tax credits or entitlements. For more information, refer to [Tax-free and taxable state benefits (GOV.UK)](https://www.gov.uk/income-tax/taxfree-and-taxable-state-benefits).
 
-Customers can use their software to submit information about incapacity benefits, state pension lump sums and other state benefits. The software can use the following endpoints to enable customers to:
+Customers can use their software to submit information about incapacity benefits, state pension lump sums and other state benefits at any time during the tax year. The software can use the following endpoints to enable customers to:
 
 * [List State Benefits](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/1.0/oas/page#/paths/~1individuals~1state-benefits~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Create State Benefit](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/1.0/oas/page#/paths/~1individuals~1state-benefits~1%7Bnino%7D~1%7BtaxYear%7D/post)
@@ -396,7 +396,7 @@ At any time, a customer can view their capital gains tax information. In softwar
 * [Retrieve All CGT Residential Property Disposals and Overrides (Includes PPD and Non-PPD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1income-received~1disposals~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Retrieve Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/2.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1income-received~1disposals~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/get)
 
-#### Creating or Amending Capital Gains Tax
+#### Creating or amending Capital Gains Tax
 
 Customers can create or amend the different types of Capital Gains Tax information after the end of the tax year. This change must be done before they make their final declaration. In software, this information is updated using the following endpoints:
 
@@ -416,7 +416,7 @@ Customers can delete different types of Capital Gains Tax only after the end of 
 
 Marriage Allowance allows the customer to transfer some of their Personal Allowance to their husband, wife or civil partner. This will reduce the customer's tax in the next tax year (6 April to 5 April). For more information about marriage allowance, refer to [Marriage Allowance: How it works - GOV.UK](https://www.gov.uk/marriage-allowance).
 
-Customers can create a Marriage Allowance claim using their name, date of birth and National Insurance number. To do this action, the software must call the [Create Marriage Allowance](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0/oas/page#tag/Marriage-Allowance/paths/~1individuals~1disclosures~1marriage-allowance~1{nino}/post) endpoint in the [Individuals Disclosures API](/api-documentation/docs/api/service/individuals-disclosures-api/). After the claim has been accepted by HMRC, the customer can view their Marriage Allowance in their tax calculations.
+Customers can create a Marriage Allowance claim using their name, date of birth and National Insurance number at any time during the tax year. To do this action, the software must call the [Create Marriage Allowance](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-disclosures-api/1.0/oas/page#tag/Marriage-Allowance/paths/~1individuals~1disclosures~1marriage-allowance~1{nino}/post) endpoint in the [Individuals Disclosures API](/api-documentation/docs/api/service/individuals-disclosures-api/). After the claim has been accepted by HMRC, the customer can view their Marriage Allowance in their tax calculations.
 
 ## Submit allowance and adjustments
 
@@ -558,7 +558,7 @@ The software must send the Calculation ID that matches the specific calculation 
 
 ### Final declaration user journey
 
-<a href="figures/final-declaration-diagram.svg" target="blank"><img src="/figures/final-declaration-diagram.svg" alt="final declaration process API diagram" style="width:720px;" /></a>
+<a href="figures/final-declaration-diagram.svg" target="blank"><img src="figures/final-declaration-diagram.svg" alt="final declaration process API diagram" style="width:720px;" /></a>
 
 <a href="figures/final-declaration-diagram.svg" target="blank">Open the final declaration process diagram in a new tab</a>.
 

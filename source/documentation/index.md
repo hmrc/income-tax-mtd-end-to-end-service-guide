@@ -80,7 +80,8 @@ Below is a summary of updates to this service guide.
 
 #### July 2024
 
-- Update service guide to use current MTD terminology
+- Update service guide to use current MTD terminology where applicable
+- Add details of in-year or end-of-year reporting for [Additional information](/guides/income-tax-mtd-end-to-end-service-guide//documentation/make-updates-at-tax-year-end.html#additional-information) items
 
 #### 16 July 2024
 
