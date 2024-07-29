@@ -1,5 +1,5 @@
 ---
-title: Tax calculations | Income Tax (Making Tax Digital) end-to-end service guide
+title: Tax calculations | Making Tax Digital for Income Tax service guide
 weight: 5
 description: How MTD-compatible software can retrieve tax calculations and take advantage of HMRC Assist.
 ---

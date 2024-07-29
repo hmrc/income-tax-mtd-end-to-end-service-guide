@@ -1,5 +1,5 @@
 ---
-title: Making updates at the end of a tax year | Income Tax (Making Tax Digital) end-to-end service guide
+title: Making updates at the end of a tax year | Making Tax Digital for Income Tax service guide
 weight: 7
 description: How to enable MTD-compatible software to make updates at the end of a tax year, including making a final declaration.
 ---
@@ -613,7 +613,7 @@ The software can use the following endpoints to enable customers to:
 
 ### Penalties for late payment and late submission
 
-The way that HMRC penalises late payments and late submissions is changing. From tax year 2024-25 onwards, the changes referred to as 'Penalty Reform for ITSA' will apply to customers who volunteer to test the Making Tax Digital for Income Tax Self Assessment service.
+The way that HMRC penalises late payments and late submissions is changing. From tax year 2024-25 onwards, the changes referred to as 'Penalty Reform for ITSA' will apply to customers who volunteer to test the Making Tax Digital for Income Tax service.
 
 Customers will need to choose to become subject to the new penalty regime and HMRC will confirm in writing when this has taken place. Customers cannot make this choice through software. For more information about how customers will agree to these penalties, refer to [Penalties for Income Tax Self Assessment volunteers (GOV.UK)](https://www.gov.uk/guidance/penalties-for-income-tax-self-assessment-volunteers).
 
@@ -633,6 +633,6 @@ Penalties must be paid within 30 days of the date on the penalty notice. Late pa
 
 ### Appeals
 
-The existing process for appeals, as described in [Appeal a Self Assessment penalty for late filing or late payment (GOV.UK)](https://www.gov.uk/guidance/check-when-to-appeal-a-self-assessment-penalty-for-late-filing-or-late-payment), will remain in place, but a provision will be made as part of 'Penalty Reform for ITSA' to allow a customer to appeal their late submission and late payment penalties through their digital tax account.
+The existing process for appeals, as described in [Appeal a Self Assessment penalty for late filing or late payment (GOV.UK)](https://www.gov.uk/guidance/check-when-to-appeal-a-self-assessment-penalty-for-late-filing-or-late-payment), will remain in place, but a provision will be made as part of 'Penalty Reform for ITSA' to allow a customer to appeal their late submission and late payment penalties through their digital tax account.
 
 A customer or agent may contact HMRC if they have a query about a tax decision. If they do not understand the decision, they can also get advice from HMRC or professional help.

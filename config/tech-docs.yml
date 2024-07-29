@@ -3,7 +3,7 @@ host: developer.service.hmrc.gov.uk
 
 # Header-related options
 show_govuk_logo: true
-service_name: Income Tax (Making Tax Digital) end-to-end service guide
+service_name: Making Tax Digital for Income Tax service guide
 service_link: /guides/income-tax-mtd-end-to-end-service-guide/
 
 # Links to show on right-hand-side of header

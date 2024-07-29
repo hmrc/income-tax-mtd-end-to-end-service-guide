@@ -1,5 +1,5 @@
 ---
-title: How to integrate with HMRC APIs | Income Tax (Making Tax Digital) end-to-end service guide
+title: How to integrate with HMRC APIs | Making Tax Digital for Income Tax service guide
 weight: 2
 description: How to integrate MTD-compatible software with HMRC APIs. Minimum functionality standards, production access, testing and API lifecycle.
 ---
@@ -150,7 +150,7 @@ For access to updated APIs (that is, new versions), we do not generally require 
 
 ##  Sandbox testing
 
-Some APIs in the Sandbox environment allow software to test different scenarios by including ‘Gov-Test-Scenario’ headers in requests. The [Income Tax (Making Tax Digital) API documentation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax-mtd) provides more information about how to use these test scenarios.
+Some APIs in the Sandbox environment allow software to test different scenarios by including ‘Gov-Test-Scenario’ headers in requests. The [Making Tax Digital for Income Tax API documentation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax-mtd) provides more information about how to use these test scenarios.
 
 ####  Dynamic scenarios
 
@@ -217,7 +217,7 @@ We aim to respond to queries that are not resolved at the point of contact withi
 
 ## API lifecycle and deprecation
 
-Each Income Tax (Making Tax Digital) API follows a lifecycle from the point where it is first published to the point where it is retired.
+Each Making Tax Digital for Income Tax API follows a lifecycle from the point where it is first published to the point where it is retired.
 
 More specifically, every version of each API follows a lifecycle. Different versions of the same API can be at different points in the lifecycle. For example, v1.0 might be retired, v2.0 might be stable and v3.0 might be in beta.
 

@@ -1,5 +1,5 @@
 ---
-title: Viewing a customer's Self Assessment account information | Income Tax (Making Tax Digital) end-to-end service guide
+title: Viewing a customer's Self Assessment account information | Making Tax Digital for Income Tax service guide
 weight: 8
 description: How MTD-compatible software can retrieve information about a customer's Self Assessment account.
 ---
@@ -8,7 +8,7 @@ description: How MTD-compatible software can retrieve information about a custom
 
 # Viewing a customer's Self Assessment account information
 
-The [Self Assessment Accounts API](/api-documentation/docs/api/service/self-assessment-accounts-api/) has a suite of endpoints that retrieve the customer’s payment and liability information. The data returned relates only to payments and liabilities arising for tax years since the customer joined the new service. There may also be outstanding liabilities and payment information a customer needs to view for the years before signing up to Making Tax Digital for Income Tax Self Assessment that can be viewed using the [HMRC online services]( /guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account.
+The [Self Assessment Accounts API](/api-documentation/docs/api/service/self-assessment-accounts-api/) has a suite of endpoints that retrieve the customer’s payment and liability information. The data returned relates only to payments and liabilities arising for tax years since the customer joined the new service. There may also be outstanding liabilities and payment information a customer needs to view for the years before signing up to Making Tax Digital for Income Tax that can be viewed using the [HMRC online services]( /guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account.
 
 The endpoints allow the customer to complete the following tasks:
 

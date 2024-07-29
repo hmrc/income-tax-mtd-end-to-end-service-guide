@@ -1,9 +1,9 @@
-# Income Tax (Making Tax Digital) end-to-end service guide
+# Making Tax Digital for Income Tax end-to-end service guide
 
-Updated 19 July 2024 (see [changelog](#document-changelog))
+Updated July 2024 (see [changelog](#document-changelog))
 
 
-This service guide explains how you can integrate your software with the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
+This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
 > **Help us improve this guide**: [leave your feedback here](https://docs.google.com/forms/d/e/1FAIpQLSe9jb0WCXWO9yt6zLBTKZLSK2oiTQcGPD96CTiwnQF0QxH5Tw/viewform).
 
@@ -62,8 +62,8 @@ The following table lists the documents for Making Tax Digital for Income Tax an
 
 | Document | Summary | Content type | Intended readers |
 | -------- | ------- | ------------ | ---------------- |
-| [Roadmap](/roadmaps/mtd-itsa-vendors-roadmap/#making-tax-digital-itsa-roadmap) | Learn about upcoming changes to Income Tax (Making Tax Digital) APIs and HMRC online services. | Functional | Product managers<br /><br />Business analysts |
-| End-to-end service guide (this document) | Learn how you can integrate your application software with Income Tax (Making Tax Digital) APIs. | Functional | Product managers<br /><br />Business analysts<br /><br />Software developers |
+| [Roadmap](/roadmaps/mtd-itsa-vendors-roadmap/#making-tax-digital-itsa-roadmap) | Learn about upcoming changes to Making Tax Digital for Income Tax APIs and HMRC online services. | Functional | Product managers<br /><br />Business analysts |
+| End-to-end service guide (this document) | Learn how you can integrate your application software with Making Tax Digital for Income Tax APIs. | Functional | Product managers<br /><br />Business analysts<br /><br />Software developers |
 | [API landing pages](/api-documentation/docs/api?filter=income-tax-mtd) <br /><br />Example:<br/> [Business Details API](/api-documentation/docs/api/service/business-details-api/) | Learn about the high-level functionality of each API. | Functional | Product managers<br /><br />Business analysts<br /><br />Software developers |
 | API reference pages (accessible from API landing pages)<br /><br />Example:<br/> [Business Details API v1.0](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page) | Learn in detail about the request and response schemas, test data and error handling of each API. | Technical | Business analysts<br /><br />Software developers |
 
@@ -77,6 +77,10 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 ### Document changelog
 
 Below is a summary of updates to this service guide.
+
+#### July 2024
+
+- Update service name to 'Making Tax Digital for Income Tax' throughout
 
 #### 19 July 2024
 

@@ -1,5 +1,5 @@
 ---
-title: Customers and agents preparing for MTD | Income Tax (Making Tax Digital) end-to-end service guide
+title: Customers and agents preparing for MTD | Making Tax Digital for Income Tax service guide
 weight: 3
 description: How customers and agents sign up for MTD and authorise their software. Understanding MTD customer status.
 ---
@@ -51,7 +51,7 @@ For more information, refer to [Making Tax Digital for Income Tax for individual
 
 ## How users authorise your software
 
-Businesses and agents using your software to connect to the [Income Tax (Making Tax Digital) APIs](/api-documentation/docs/api?filter=income-tax-mtd) must grant authority to your software to interact with HMRC on their behalf. We use the open standard [OAuth 2.0](https://oauth.net/2/), which involves the business or agent signing in using their Government Gateway account and following the grant authority user journey.
+Businesses and agents using your software to connect to the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd) must grant authority to your software to interact with HMRC on their behalf. We use the open standard [OAuth 2.0](https://oauth.net/2/), which involves the business or agent signing in using their Government Gateway account and following the grant authority user journey.
 
 <a href="figures/link-software-to-hmrc.svg" target="blank"><img src="figures/link-software-to-hmrc.svg" alt="Link software to HMRC" style="width:720px;" /></a>
 
