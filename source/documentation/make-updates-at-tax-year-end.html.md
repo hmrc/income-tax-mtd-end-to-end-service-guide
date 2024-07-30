@@ -611,17 +611,17 @@ The software can use the following endpoints to enable customers to:
 
 ## Penalties and appeals
 
-### Penalties for late payment and late submission
+### Penalties for late payment and late submission 
 
-The way that HMRC penalises late payments and late submissions is changing. From tax year 2024-25 onwards, the changes referred to as 'Penalty Reform for ITSA' will apply to customers who volunteer to test the Making Tax Digital for Income Tax Self Assessment service.
+The way that HMRC penalises late payments and late submissions is changing. From tax year 2024-25 onwards, changes will apply to customers who volunteer to test the Making Tax Digital for Income Tax service.
 
-Customers will need to choose to become subject to the new penalty regime and HMRC will confirm in writing when this has taken place. Customers cannot make this choice through software. For more information about how customers will agree to these penalties, refer to [Penalties for Income Tax Self Assessment volunteers (GOV.UK)](https://www.gov.uk/guidance/penalties-for-income-tax-self-assessment-volunteers).
+When volunteering, a customer will make the choice to become subject to the new penalty regime and HMRC will confirm in writing when this has taken place. Customers cannot make this choice through software. For more information about how customers will agree to these penalties, refer to [Penalties for Income Tax Self Assessment volunteers (GOV.UK)](https://www.gov.uk/guidance/penalties-for-income-tax-self-assessment-volunteers).
 
-For tax years before 2024-25, the existing late payment and late submission penalties continue to apply. For more information, refer to [Self Assessment tax returns: Penalties (GOV.UK)](https://www.gov.uk/self-assessment-tax-returns/penalties).
+For tax years before 2024-25, the existing late payment and late filing penalties continue to apply. For more information, refer to [Self Assessment tax returns: Penalties (GOV.UK)](https://www.gov.uk/self-assessment-tax-returns/penalties).
 
-### Other penalties
+### Other penalties 
 
-Other penalties that apply to Income Tax Self Assessment customers are unchanged by 'Penalty Reform for ITSA' and will continue to be charged where appropriate. These include:
+Other penalties that apply to Income Tax Self Assessment customers are unchanged by ‘Penalty Reform for ITSA’ and will continue to be charged where appropriate. These include:
 
 - [Compliance checks: penalties for inaccuracies in returns or documents — Factsheet CC/FS7a](https://www.gov.uk/government/publications/compliance-checks-penalties-for-inaccuracies-in-returns-or-documents-ccfs7a)
 - [Compliance checks: penalties for not telling HMRC about an under-assessment – Factsheet CC/FS7b](https://www.gov.uk/government/publications/compliance-checks-penalties-for-not-telling-hmrc-about-an-under-assessment-ccfs7b)
@@ -631,8 +631,10 @@ Other penalties that apply to Income Tax Self Assessment customers are unchanged
 
 Penalties must be paid within 30 days of the date on the penalty notice. Late payment interest will be charged on penalties that are not paid on time.
 
-### Appeals
+### Appeals 
 
-The existing process for appeals, as described in [Appeal a Self Assessment penalty for late filing or late payment (GOV.UK)](https://www.gov.uk/guidance/check-when-to-appeal-a-self-assessment-penalty-for-late-filing-or-late-payment), will remain in place, but a provision will be made as part of 'Penalty Reform for ITSA' to allow a customer to appeal their late submission and late payment penalties through their digital tax account.
+The existing process for appeals, as described in [Appeal a Self Assessment penalty for late filing or late payment (GOV.UK)](https://www.gov.uk/guidance/check-when-to-appeal-a-self-assessment-penalty-for-late-filing-or-late-payment), will remain in place, but a provision will be made to allow a customer to appeal new late submission and late payment penalties through their digital tax account.
 
 A customer or agent may contact HMRC if they have a query about a tax decision. If they do not understand the decision, they can also get advice from HMRC or professional help.
+
+
