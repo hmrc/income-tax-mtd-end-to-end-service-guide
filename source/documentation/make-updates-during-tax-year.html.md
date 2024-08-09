@@ -50,6 +50,8 @@ Quarterly obligations are created for sole trader and property income sources. I
 
 These endpoints provide obligation dates for all self-employment and property businesses, and inform whether or not obligations have been met. The deadline for meeting a quarterly obligation is one month after the obligation period end date. The software should communicate these deadlines clearly to the customer and prompt them to submit the information when the update is due. 
 
+After submitting a quarterly update or a final declaration, it may take up to an hour for the obligation to be marked as fulfilled in HMRC's system. 
+
 A customer should always be able to view their latest obligations. To do this, the software should be aware that the customer’s obligation will be created or updated for the following reasons:
 
 - start of financial year
@@ -116,7 +118,7 @@ The software should convert transactional information into summary totals. It sh
 
 Customers with an annual turnover (sales) of less than £90,000 can report their total income and expenses in their quarterly updates (no detailed breakdown required). They can do this through the software by using the ‘Consolidated Expenses’ parameter in the [Self-Employment Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/3.0) and [Property Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/4.0) APIs for both self-employment and property income.
 
-When the tax calculation is triggered, it means that the quarterly obligation has been fulfilled, if the data covers the entire period. If the calculation fails, the obligation will not be marked as fulfilled. Customers can also use [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) to check the status of their [obligations](#showing-customers-their-obligations). 
+When the tax calculation is triggered, it means that the quarterly obligation has been fulfilled, if the data covers the entire period. It may take up to an hour for the obligation to be marked as fulfilled in HMRC's system. If the calculation fails, the obligation will not be marked as fulfilled. Customers can also use [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) to check the status of their [obligations](#showing-customers-their-obligations). 
 
 <a href="figures/submit-periodics.svg" target="blank"><img src="figures/submit-periodics.svg" alt="submit periodics diagram" style="width:720px;" /></a>
 

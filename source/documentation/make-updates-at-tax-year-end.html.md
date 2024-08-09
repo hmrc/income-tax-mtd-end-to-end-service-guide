@@ -534,7 +534,7 @@ If a customer thinks the calculation is incorrect based on the data they have su
 
 If a customer does not agree with the calculation based on rules HMRC has used, they will need to contact HMRC before making their final declaration. If a software provider identifies a problem with the [Individual Calculations API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api), they will need to contact [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk).
 
-If a customer thinks the calculation is correct, they can use the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D~1final-declaration/post) endpoint to make their final declaration. 
+If a customer thinks the calculation is correct, they can use the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D~1final-declaration/post) endpoint to make their final declaration. After making the final declaration, it may take up to an hour for the obligation to be marked as fulfilled in HMRC's system.
 
 **Note:** After a customer has made their final declaration, they will not currently be able to amend it using their software.
 
