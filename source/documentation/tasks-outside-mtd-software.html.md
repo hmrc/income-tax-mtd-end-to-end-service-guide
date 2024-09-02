@@ -20,7 +20,7 @@ The following table lists the tasks customers will be able to complete through H
 | ---- | ------ | -------------------- | -------- | -------- |
 | [Change contact preference between paper and digital secure messages](#changing-contact-preference) | Live | Yes | No | For security reasons, this functionality is available only in HMRC online services. |
 | Change business details | Future development | Yes | No | All business customers will need access to this functionality. |
-| Change the amount of a payment on account | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
+| [Change the amount of a payment on account](#change_poa) | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
 | Check when updates and payments are due | Live | Yes | Yes | Filing obligations and payment dates must be fully visible to all customers. |
 | [Add new business details for a self-employment sole trader or property business](#adding-new-business-details-for-a-self-employment-sole-trader-or-property-business) | Live | Yes | No | All business customers need access to this functionality. |
 | [Close (cease) a self-employment sole trader or property business](#closing-ceasing-a-self-employment-sole-trader-or-property-business) | Live | Yes | No | All business customers need access to this functionality. |
@@ -48,6 +48,18 @@ Agents will be able to access Making Tax Digital for Income Tax services through
 ### Changing contact preference
 
 To make MTD communication accessible to all customers, HMRC has provided them with a contact preference for paper or digital methods.  If customers have selected a digital preference, they will be able to view communications sent to them by HMRC through a secure mailbox accessible through HMRC online services.  HMRC encourages customers to sign up for digital messages as they will get reminders for when to make different updates and payments, which is not available through paper messages. 
+
+<a name="change_poa"></a>
+
+### Changing the amount of payments on account
+
+'Payments on account' (POA) are advance payments towards a customer's tax bill. For more information, refer to [Understand your Self-Assessment tax bill (GOV.UK)](https://www.gov.uk/understand-self-assessment-bill/payments-on-account).
+
+When a customer makes their final declaration for the previous tax year, the POAs for the current tax year are calculated. If they believe the amount to be incorrect, they can make a claim to adjust the POAs using [HMRC online services (GOV.UK)](https://www.gov.uk/log-in-register-hmrc-online-services). 
+
+When the customer adjusts the POA for the first time in a tax year, they can only reduce the POA amount. After that, they can either increase or decrease it. However, the increase is limited to the maximum value with which the POA was originally calculated. The updated POA values replace the existing ones and can be retrieved using the [Retrieve Self Assessment Balance and Transactions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/3.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1balance-and-transactions/get) endpoint.
+
+POAs can be adjusted throughout the tax year. However, all adjustments must be made before the customer makes their final declaration (or by 31st January following the end of that tax year). These changes are not dependent on any [customer status](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/prepare-for-mtd.html#mtd-customer-status).
 
 ### Adding new business details for a self-employment sole trader or property business
 
