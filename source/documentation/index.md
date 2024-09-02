@@ -1,6 +1,6 @@
 # Making Tax Digital for Income Tax end-to-end service guide
 
-Updated 5 August 2024 (see [changelog](#document-changelog))
+Updated 2 September 2024 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -77,6 +77,9 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
+#### 2 September 2024
+
+- Add [Changing the amount of payments on account](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#change_poa) section to 'Tasks outside MTD software'
 
 #### 5 August 2024
 
