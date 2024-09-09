@@ -19,25 +19,25 @@ The following table lists the tasks customers will be able to complete through H
 | Task | Status | HMRC online services | Software | Reason for service choice |
 | ---- | ------ | -------------------- | -------- | -------- |
 | [Change contact preference between paper and digital secure messages](#changing-contact-preference) | Live | Yes | No | For security reasons, this functionality is available only in HMRC online services. |
-| Change business details | Future development | Yes | No | All business customers will need access to this functionality. |
-| [Change the amount of a payment on account](#change_poa) | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
+| [Change the amount of payments on account](#changing-the-amount-of-payments-on-account) | Live | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
 | Check when updates and payments are due | Live | Yes | Yes | Filing obligations and payment dates must be fully visible to all customers. |
 | [Add new business details for a self-employment sole trader or property business](#adding-new-business-details-for-a-self-employment-sole-trader-or-property-business) | Live | Yes | No | All business customers need access to this functionality. |
 | [Close (cease) a self-employment sole trader or property business](#closing-ceasing-a-self-employment-sole-trader-or-property-business) | Live | Yes | No | All business customers need access to this functionality. |
-| Elect for calendar quarterly periods | Deployed to sandbox | No | Yes | User journey involves setting up software for sending quarterly updates. |
+| Elect for calendar quarterly periods | Live | No | Yes | User journey involves setting up software for sending quarterly updates. |
 | Submit non-MTD income and allowance types required to complete a Self Assessment tax return | Live | Yes | Yes | Available in HMRC online services because some software applications might not support all income and allowance types. |
 | View Self Assessment tax calculations for in-year, forecast, and final declaration | Live | Yes | Yes | All users need access to this functionality. |
-| Print a Self Assessment SA302 tax calculation | Future development | Yes | Yes | Pending future discovery research and analysis. |
 | Check how much is owed through MTD | Live | Yes | Yes | All users need access to this functionality. |
-| Request a budget payment plan | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
-| Request a time to pay | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
 | [Make a payment](#making-a-payment) | Live | Yes | No | Functionality will be available in software as part of a future HMRC delivery. |
 | Check money in the account | Live | Yes | Yes | All users need access to this functionality. |
+| [Leave MTD as a voluntary customer](#opting-out-of-mtd) | Live | Yes | No | Availability as a software service depends on user need. |
 | [Claim a refund](#claiming-a-refund) | In development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. Discovery is pending on end of year refunds. |
 | Check refund details and status | In development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. Discovery is pending on end of year refunds. |
+| Sign up to MTD as a voluntary customer for those who have previously opted out of MTD | In development | Yes | No | Availability as a software service depends on user need. |
+| Change business details | Future development | Yes | No | All business customers will need access to this functionality. |
+| Print a Self Assessment SA302 tax calculation | Future development | Yes | Yes | Pending future discovery research and analysis. |
+| Request a budget payment plan | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
+| Request a time to pay | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
 | Provide bank details for future refunds | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
-| [Leave MTD as a voluntary customer](#opting-out-of-mtd) | Future development | Yes | No | Availability as a software service depends on user need. |
-| Sign up to MTD as a voluntary customer for those who have previously opted out of MTD | Future development | Yes | No | Availability as a software service depends on user need. |
 
 Agents will be able to access Making Tax Digital for Income Tax services through their agent services account. They will be able to access all current and future services on behalf of their clients including the services listed in the above table, except for:
 
@@ -48,8 +48,6 @@ Agents will be able to access Making Tax Digital for Income Tax services through
 ### Changing contact preference
 
 To make MTD communication accessible to all customers, HMRC has provided them with a contact preference for paper or digital methods.  If customers have selected a digital preference, they will be able to view communications sent to them by HMRC through a secure mailbox accessible through HMRC online services.  HMRC encourages customers to sign up for digital messages as they will get reminders for when to make different updates and payments, which is not available through paper messages. 
-
-<a name="change_poa"></a>
 
 ### Changing the amount of payments on account
 
@@ -88,19 +86,6 @@ Customers must update HMRC online services with the cease date as soon as possib
 After a business has been updated as ceased, it can be seen almost immediately in software when the next API call is made to the [Business Details API](/api-documentation/docs/api/service/business-details-api/). Customers can submit updates or an annual return for this new business on the same day.
 
 In the future, it will be possible to reopen a closed business or change an incorrectly entered end date.
-
-### Future development
-
-The following tasks are scheduled for future development and we will provide more information about them when available:
-
-- change business details
-- change the amount of a payment on account
-- print a Self Assessment SA302 tax calculation
-- request a budget payment plan
-- request a time to pay
-- provide bank details for future refunds
-- leave MTD as a voluntary customer
-- sign up to MTD as a voluntary customer for those who have previously opted out of MTD
 
 ## Making a payment
 
