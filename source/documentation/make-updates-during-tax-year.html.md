@@ -186,7 +186,7 @@ In November 2023, HMRC announced that the current quarterly update design would 
 
 This will remove the burden upon customers of having to resubmit a previous update where corrections are required. Changes are being made to the [Individual Calculations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/), [Self Employment Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/) and [Property Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/) APIs to add this functionality.
 
-The quarterly updates will be sent cumulatively from [April 2025](https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/apis.html#april-2025). The current quarterly updates design can only be used for periods until 2024/25 or earlier.
+The quarterly updates will be sent cumulatively from [April 2025](https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/apis.html#april-2025). The current quarterly updates design can only be used for tax year 2024-25 or earlier.
 
 The following table shows the existing standard and calendar update periods and cumulative standard and calendar update period dates.
 
