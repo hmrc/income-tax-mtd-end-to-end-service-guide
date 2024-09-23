@@ -185,14 +185,14 @@ To test the journey for making a Self-Employment or Property Business submission
 </li>
 <li><p>Trigger a stateful Business Source Adjustable Summary for Self-Employment/Property business for the same National Insurance number and Business ID by calling the <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/5.0/oas/page#/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1trigger/post">Trigger a Business Source Adjustable Summary</a> endpoint. </p>
 </li>
-<li><p>Retrieve a stateful Business Source Adjustable Summary for the Self-Employment/Property Business by using the Calculation ID generated in the previous step and calling one of the following endpoints:</p>
+<li><p>Retrieve a stateful Business Source Adjustable Summary for the Self-Employment/Property Business by using the calculation ID generated in the previous step and calling one of the following endpoints:</p>
 <ul>
 <li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/5.0/oas/page#tag/Self-employment-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1self-employment~1%7BcalculationId%7D/get">Retrieve a Self-Employment Business Source Adjustable Summary (BSAS)</a> </li>
 <li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/5.0/oas/page#tag/UK-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1uk-property~1%7BcalculationId%7D/get">Retrieve a UK Property Business Source Adjustable Summary (BSAS)</a></li>
 <li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/5.0/oas/page#tag/Foreign-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1foreign-property~1%7BcalculationId%7D/get">Retrieve a Foreign Property Business Source Adjustable Summary (BSAS)</a></li>
 </ul>
 </li>
-<li><p>Submit a stateful accounting adjustment for Self-Employment/Property Business by using the same Business ID and  Calculation ID and calling one of the following endpoints:</p>
+<li><p>Submit a stateful accounting adjustment for Self-Employment/Property Business by using the same Business ID and  calculation ID and calling one of the following endpoints:</p>
 <ul>
 <li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/5.0/oas/page#tag/Self-employment-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1self-employment~1%7BcalculationId%7D~1adjust/post">Submit Self-Employment Accounting Adjustments</a></li>
 <li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/5.0/oas/page#tag/UK-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1uk-property~1%7BcalculationId%7D~1adjust/post">Submit UK Property Accounting Adjustments</a></li>

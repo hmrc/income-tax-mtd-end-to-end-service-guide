@@ -145,9 +145,9 @@ When the tax calculation is triggered, it means that the quarterly obligation ha
 7. The software receives the success response and confirms with the customer that the update has been received and stored by HMRC.
 8. The customer views the confirmation.
 9. The software calls the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}/post) endpoint to ensure the obligation is marked as fulfilled, once the update completes an obligation period. 
-10. HMRC receives the request and returns a Calculation ID. 
-11. The software receives the Calculation ID and stores it for future use.
-12. The software can also use this Calculation ID to call the [Retrieve a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}~1{calculationId}/get) endpoint and display the calculation to the customer. However, this step is optional and the software does not have to retrieve the tax calculation information at this point.
+10. HMRC receives the request and returns a calculation ID. 
+11. The software receives the calculation ID and stores it for future use.
+12. The software can also use this calculation ID to call the [Retrieve a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}~1{calculationId}/get) endpoint and display the calculation to the customer. However, this step is optional and the software does not have to retrieve the tax calculation information at this point.
 
 ### View quarterly update
 
