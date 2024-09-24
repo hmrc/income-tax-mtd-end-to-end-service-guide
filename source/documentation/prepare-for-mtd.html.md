@@ -81,7 +81,7 @@ In software, the customer status can be retrieved using the [Self Assessment Ind
 
 - encourage customers to fulfil their obligations 
 - where necessary, inform customers that they may receive a penalty if they do not submit their updates on time
-- establish if a customer can opt out of MTD or sign up and direct them to [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) 
+- establish if a customer can opt out of MTD and direct them to [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) 
 
 The different types of customer status are described below.
 
