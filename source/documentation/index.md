@@ -1,6 +1,6 @@
 # Making Tax Digital for Income Tax end-to-end service guide
 
-Updated 25 September 2024 (see [changelog](#document-changelog))
+Updated 8 October 2024 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -76,6 +76,10 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 ### Document changelog
 
 Below is a summary of updates to this service guide.
+
+#### 8 October 2024
+
+- Update [Submit accounting adjustments](/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#submit-accounting-adjustments) section in 'Making updates at the end of a tax year' to explain when BSAS adjustments become invalid 
 
 #### 25 September 2024
 
