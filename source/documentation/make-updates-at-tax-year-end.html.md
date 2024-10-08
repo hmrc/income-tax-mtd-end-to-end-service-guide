@@ -455,7 +455,7 @@ The customer can also delete their previously submitted annual allowance and adj
 
 When the customer has submitted all quarterly updates, they may need to make an accounting adjustment to their income or expenses. They should first make changes to their digital records and then use the software to submit them to HMRC. The [Business Source Adjustable Summary API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/) enables a customer to submit or retrieve an adjustable summary calculation for a specified self-employment or property business.
 
-If a customer submits an annual or period update after making adjustments using the [Business Source Adjustable Summary API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/), their submitted BSAS adjustments will become invalid. They will need to make their BSAS adjustments again. 
+If a customer submits an annual or quarterly update after making BSAS adjustments, their submitted adjustments will become invalid. They will need to make their BSAS adjustments again. 
 
 The adjustments should be submitted as a positive or negative amount. For example, if a customer has already submitted advertising costs of £250 but the figure should be £200, the adjustment required would be -50. Adjustments are always made against the total of the original quarterly updates. Each new adjustment will overwrite the previous adjustment as shown in the table below.
 
