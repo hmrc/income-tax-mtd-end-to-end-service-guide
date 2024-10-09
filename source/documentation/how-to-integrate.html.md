@@ -8,7 +8,7 @@ description: How to integrate MTD-compatible software with HMRC APIs. Minimum fu
 
 ## Minimum functionality standards
 
-For the customer to complete the end-to-end journey, we expect Making Tax Digital for Income Tax- compatible software products to facilitate the entire journey either in a single product covering the below requirements or through a number of products collectively meeting the below functionalities:
+For the customer to complete the end-to-end journey, we expect Making Tax Digital for Income Tax compatible software products to facilitate the entire journey either in a single product covering the below requirements or through a number of products collectively meeting the below functionalities:
 
 - provide HMRC with transaction monitoring fraud prevention header data
 - obtain business ID unique to each of the customer’s businesses
