@@ -207,6 +207,54 @@ To test the journey for making a Self-Employment or Property Business submission
 
 <a href="figures/stateful-bsas-journey.svg" target="blank">Open the stateful journey diagram in a new tab.</a>
 
+## Multiple agents
+
+Previously, customers could have only one active agent registered to act on their behalf. With the implementation of multiple agent support, customers can now have several agents with different levels of access.
+
+There are two types of agent:
+
+- **Main agent**: full access to all services, can do all tax-related filings including making final declarations, and can view tax calculations. Only one main agent is allowed at a time for a given customer.
+- **Supporting agent**: more limited access, can submit in-year updates but cannot make final declarations and Self Assessment filings or view calculations. Multiple supporting agents are allowed for each customer.
+
+Customers are able to authorise a main agent and multiple supporting agents to act on their behalf. This provides more flexibility in managing their tax affairs.
+
+An agent cannot be both main and supporting for the same customer.
+
+An agent can be the main agent for one customer and a supporting agent for another.
+
+Main agents have access to a larger set of APIs and endpoints than supporting agents. This ensures that sensitive information and critical actions are restricted to the main agent, while still allowing supporting agents to perform necessary tasks.
+
+### Main and supporting agent access
+
+Main agents have access to all MTD APIs. 
+ 
+Supporting agents have more restricted access.
+
+The following APIs are available to supporting agents. For some APIs, supporting agents can only use some of the endpoints, as indicated.
+
+| API | Endpoints available to<br/> supporting agent |
+|-----|-----------------------------------------|
+| CIS Deductions | All |
+| Individuals Expenses | All |
+| Individuals Losses | All |
+| Obligations | All |
+| Other Deductions | All |
+| Self Assessment BISS | All |
+| Self Assessment BSAS | All |
+| Self Assessment Individual Details | All |
+| Self Employment Business | All |
+| Property Business | All |
+| Business Details | All |
+| Individuals Reliefs | Create and Amend Relief Investments,<br/>Retrieve Relief Investments,<br/>Delete Relief Investments,<br/>Create and Amend Other Reliefs,<br/>Retrieve Other Reliefs,<br/>Delete Other Reliefs,<br/>Create and Amend Foreign Reliefs,<br/>Retrieve Foreign Reliefs,<br/>Delete Foreign Reliefs |
+
+### Implementing agent types
+
+MTD APIs enforce agent type authorisation by determining the type of agent (main or supporting).
+
+If a supporting agent tries to use an endpoint that is not allowed for supporting agents, the API will return a 403 CLIENT\_OR\_AGENT\_NOT\_AUTHORISED error.
+
+Your software can check what type of agent is logged in with the Agent Authorisation API [Get Status of a Relationship](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/agent-authorisation-api/1.0/oas/page#tag/Agents/operation/GetStatusofaRelationship) endpoint.
+
 ## Supporting customers in MTD
 
 The customer support model guides HMRC customers to the most appropriate support. Check [GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees) and the software provider's guidance first.
