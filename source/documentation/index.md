@@ -4,8 +4,6 @@ Updated 10 October 2024 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
-> **Help us improve this guide**: [leave your feedback here](https://docs.google.com/forms/d/e/1FAIpQLSe9jb0WCXWO9yt6zLBTKZLSK2oiTQcGPD96CTiwnQF0QxH5Tw/viewform).
-
 ## Overview
 
 This guidance explains how you can integrate your software with our APIs. It provides examples of how they fit into various end-to-end user journeys to enable individuals and their agents, where authorised, to meet their obligations after they have signed up to Making Tax Digital (MTD).
