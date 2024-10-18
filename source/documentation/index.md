@@ -78,6 +78,7 @@ Below is a summary of updates to this service guide.
 #### 21 October 2024
 
 - Add link in [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) section to the [online services information in the roadmap](https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/submission-service.html#hmrc-online-services)
+- Update Obligations API guidance in [Cumulative updates](/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-during-tax-year.html#cumulative-updates) section
 
 #### 10 October 2024
 
