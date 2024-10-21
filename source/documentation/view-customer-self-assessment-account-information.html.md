@@ -1,6 +1,6 @@
 ---
 title: Viewing a customer's Self Assessment account information | Making Tax Digital for Income Tax service guide
-weight: 8
+weight: 17
 description: How MTD-compatible software can retrieve information about a customer's Self Assessment account.
 ---
 

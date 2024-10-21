@@ -1,6 +1,6 @@
 ---
 title: Tax calculations | Making Tax Digital for Income Tax service guide
-weight: 5
+weight: 11
 description: How MTD-compatible software can retrieve tax calculations and take advantage of HMRC Assist.
 ---
 

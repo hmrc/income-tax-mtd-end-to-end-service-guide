@@ -1,6 +1,6 @@
 ---
 title: Customers and agents preparing for MTD | Making Tax Digital for Income Tax service guide
-weight: 3
+weight: 5
 description: How customers and agents sign up for MTD and authorise their software. Understanding MTD customer status.
 ---
 

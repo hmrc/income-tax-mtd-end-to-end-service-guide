@@ -1,6 +1,6 @@
 ---
 title: Tasks outside MTD software | Making Tax Digital for Income Tax service guide
-weight: 6
+weight: 13
 description: Tasks that customers can accomplish outside of MTD-compatible software.
 ---
 

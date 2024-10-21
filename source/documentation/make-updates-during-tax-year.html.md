@@ -1,6 +1,6 @@
 ---
 title: Making updates during the tax year | Making Tax Digital for Income Tax service guide
-weight: 4
+weight: 8
 description: How to enable MTD-compatible software to make in-year updates and display customer obligations.
 ---
 
