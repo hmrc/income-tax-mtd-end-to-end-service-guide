@@ -39,7 +39,7 @@ The following table lists the tasks customers will be able to complete through H
 | Request a time to pay | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
 | Provide bank details for future refunds | Future development | Yes | No | For security reasons, this functionality will be available only in HMRC online services. |
 
-For more information about current and future functionality, refer to the [HMRC online services](https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/submission-service.html#hmrc-online-services) section of the roadmap.
+For more information about current and future income submission functionality, refer to the [HMRC online services](https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/submission-service.html#hmrc-online-services) section of the roadmap.
 
 Agents will be able to access Making Tax Digital for Income Tax services through their agent services account. They will be able to access all current and future services on behalf of their clients including the services listed in the above table, except for:
 
