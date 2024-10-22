@@ -75,6 +75,10 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
+#### October 2024
+
+- Add new [End-to-end customer journey](/guides/income-tax-mtd-end-to-end-service-guide/documentation/customer-journey.html) section
+
 #### 21 October 2024
 
 - Add link in [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) section to the [online services information in the roadmap](https://developer.service.hmrc.gov.uk/roadmaps/mtd-itsa-vendors-roadmap/submission-service.html#hmrc-online-services)
