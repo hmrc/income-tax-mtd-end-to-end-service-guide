@@ -27,7 +27,7 @@ The following end-to-end journey is for a Making Tax Digital for Income Tax cust
 8. The software prepares summary of Quarter 1 income and expenses and displays it to the customer
 9. The customer reviews the information and begins their Quarter 1 submission process
 10. The software submits the information by calling the [Create a Self-Employment Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/3.0/oas/page#tag/Self-Employment-Period-Summaries) endpoint
-11. HMRC receives the submission and updates records
+11. HMRC receives the submission and updates records marks the quarterly update 1 obligation as fulfilled if it satisfies all criteria
 12. The software displays the confirmation that the update has been received and stored by HMRC
 13. The customer views the confirmation
 14. The customer makes Quarter 2, 3 and 4 submissions (same steps as Q1) and can choose to request in-year tax calculations
@@ -60,7 +60,7 @@ The following end-to-end journey is for a Making Tax Digital for Income Tax cust
 41. The customer views final tax calculation results
 42. The customer reviews and confirms the calculation and declaration text 
 43. The software receives confirmation and calls the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D~1final-declaration/post) endpoint to confirm calculation
-44. HMRC receives the submission and marks the obligation as fulfilled 
+44. HMRC receives the submission and marks the final declaration obligation as fulfilled 
 45. The software displays the confirmation of the submission (HMRC does not do this)
 46. The customer views confirmation that the return has been submitted successfully to HMRC
 
