@@ -75,11 +75,7 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
-<<<<<<< HEAD
 #### 24 October 2024
-=======
-#### October 2024
->>>>>>> 1af0338160f606aefb17565d496afb5e91a1450b
 
 - Add new [End-to-end customer journey](/guides/income-tax-mtd-end-to-end-service-guide/documentation/customer-journey.html) section
 
