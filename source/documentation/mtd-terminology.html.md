@@ -22,12 +22,6 @@ This style guide is used alongside the:
 - [Government Digital Service (GDS) style guide](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style)
 - [HMRC content style guide](https://design.tax.service.gov.uk/hmrc-content-style-guide/)
 
-## Suggest a change or addition
-
-If something's not clear or is incorrect, you can suggest an addition, change or clarification to the style guide.
-
-Suggest a change by emailing [mtdapi-ur-g@digital.hmrc.gov.uk](mailto:mtdapi-ur-g@digital.hmrc.gov.uk).
-
 ## A-Z
 
 ### abroad
