@@ -22,7 +22,7 @@ If Making Tax Digital (MTD) customers are earning any type of income in addition
 	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-capital-gains-income-api/">Individuals Capital Gains Income API</a></li></ul>
 <p>These new APIs are now available in Production.</p>
 
-Your software should prompt customers to provide details about any additional income sources. If the software does not support submission of any applicable additional income, customers must use [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) to make their submission. For more information about which type of income to tell HMRC, refer to [Check if you need to tell HMRC about additional income (GOV.UK)](https://www.gov.uk/check-additional-income-tax). 
+Your software should prompt customers to provide details about any additional income sources. If the software does not support submission of any applicable additional income customers must be diverted to a channel where they can make their submission. For more information about which type of income to tell HMRC, refer to [Check if you need to tell HMRC about additional income (GOV.UK)](https://www.gov.uk/check-additional-income-tax). 
 
 Customers who need to submit their additional income must do it before making their final declaration. The following sections cover the different types of additional income and the endpoints needed to submit them in the software. 
 
