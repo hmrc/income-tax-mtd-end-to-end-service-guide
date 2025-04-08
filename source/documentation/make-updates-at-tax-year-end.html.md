@@ -10,8 +10,9 @@ description: How to enable MTD-compatible software to make updates at the end of
 
 If Making Tax Digital (MTD) customers are earning any type of income in addition to their self-employment and property income, they must report that to HMRC just as they would in their Self Assessment return. 
 
-><p>The endpoints for reporting additional income through software were previously included in the 
-	<a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/">Individuals Income Received API</a>. The Individuals Income Received API has now been deprecated and replaced with the following new APIs:</p><ul> 
+<p>The endpoints for reporting additional income through software were previously included in the 
+	<a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/">Individuals Income Received API</a>. The Individuals Income Received API has now been deprecated and replaced with the following new APIs:</p>
+	<ul> 
 	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-employments-income-api/">Individuals Employments Income API</a></li>
 	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/">Individuals Dividends Income API</a></li>
 	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-foreign-income-api/">Individuals Foreign Income API</a></li> 
@@ -571,7 +572,7 @@ The software must send the calculation ID that matches the specific calculation 
 3.	HMRC receives the request, starts the tax calculation, and returns a calculation ID.
 4.	The software receives the calculation ID.
 5.	HMRC generates the final declaration tax calculation - this process will also convert any business validation warnings into errors. If there are any errors, the calculation will not run and the customer will not be able to declare the liability.
-6.	HMRC Stores the tax calculation with the calculation ID.
+6.	HMRC stores the tax calculation with the calculation ID.
 7.	The software uses the calculation ID to receive details about the calculation or errors using the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint.
 8.	HMRC provides the calculation results in case of a successful call. If there are any validation errors, the customer will not be able to view the calculation results.
 9.	The software must make the calculation results available to the customer – at this point in the journey, it is mandatory that the customer is shown a copy of the calculation associated with the calculation ID. As a minimum, a customer must view the equivalent of what is currently in the SA302.
