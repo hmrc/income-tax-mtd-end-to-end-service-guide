@@ -564,24 +564,23 @@ The software must send the calculation ID that matches the specific calculation 
 
 ### Final declaration user journey
 
-<a href="figures/final-declaration-diagram.svg" target="blank"><img src="figures/final-declaration-diagram.svg" alt="final declaration process API diagram" style="width:720px;" /></a>
+<a href="figures/tcp-end-to-end-diagram.svg" target="blank"><img src="figures/tcp-end-to-end-diagram.svg" alt="final declaration process API diagram" style="width:720px;" /></a>
 
-<a href="figures/final-declaration-diagram.svg" target="blank">Open the final declaration process diagram in a new tab</a>.
+<a href="figures/tcp-end-to-end-diagram.svg" target="blank">Open the final declaration process diagram in a new tab</a>.
 
 1.	The customer is ready to make their final declaration.
-2.	The software calls the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint with the Final Declaration parameter set to 'true'.
+2.	The software calls the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint with `finalDeclaration` set to 'true'.
 3.	HMRC receives the request, starts the tax calculation, and returns a calculation ID.
-4.	The software receives the calculation ID.
-5.	HMRC generates the final declaration tax calculation - this process will also convert any business validation warnings into errors. If there are any errors, the calculation will not run and the customer will not be able to declare the liability.
-6.	HMRC Stores the tax calculation with the calculation ID.
-7.	The software uses the calculation ID to receive details about the calculation or errors using the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint.
-8.	HMRC provides the calculation results in case of a successful call. If there are any validation errors, the customer will not be able to view the calculation results.
-9.	The software must make the calculation results available to the customer – at this point in the journey, it is mandatory that the customer is shown a copy of the calculation associated with the calculation ID. As a minimum, a customer must view the equivalent of what is currently in the SA302.
-10.	The customer reviews the calculation and the declaration text.
-11.	The customer confirms the declaration and the software calls the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D~1final-declaration/post) endpoint using the calculation ID to confirm the calculation to which the customer is agreeing.
-12.	HMRC receives the submission, marks the obligation as fulfilled, and confirms receipt with a success code.
-13.	The software receives a success code (HTTP 204) and the software needs to confirm to the customer that HMRC has received the return because HMRC will not communicate this to the customer.
-14.	The customer views confirmation that the return has been successfully submitted to HMRC.
+4. Software receives the calculationId and uses it to call the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/5.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint.
+5. HMRC generates the final declaration tax calculation and converts any business validation warnings into errors.
+6. HMRC stores the tax calculation with the `calculationId` and returns it to the software.
+7. Software receives the calculation and displays it to the user (if there are errors, user will not be able to view calculation results). 
+8. User views and confirms the tax calculation results (must be able to view equivalent of what is in the SA302 as minimum).
+9. Software receives confirmation and calls the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/7.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}~1{calculationId}~1{calculationType}/post) endpoint with `calculationType` set to confirm calculation.
+10. HMRC receives the submission and marks the obligation as fulfilled. Confirms receipt with a success code.
+11. Software displays the confirmation message to the user (HMRC does not do this).
+12. User receives confirmation that the return has been submitted successfully to HMRC.
+
 
 ## Amendments after making a final declaration
 
