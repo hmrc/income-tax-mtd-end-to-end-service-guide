@@ -240,9 +240,39 @@ Customers can use their software to submit different types of other income at an
 
 The software can use the following endpoints to enable customers to:
 
+* [Create or Amend Other Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-other-income-api/1.0/oas/page#tag/Other-Income/paths/~1individuals~1other-income~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Retrieve Other Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-other-income-api/1.0/oas/page#tag/Other-Income/paths/~1individuals~1other-income~1%7Bnino%7D~1%7BtaxYear%7D/get)
-* [Create and Amend Other Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-other-income-api/1.0/oas/page#tag/Other-Income/paths/~1individuals~1other-income~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Other Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-other-income-api/1.0/oas/page#tag/Other-Income/paths/~1individuals~1other-income~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+
+### Other income user journey
+
+<a href="figures/other-income-end-to-end.svg" target="blank"><img src="figures/other-income-end-to-end.svg" alt="other income API process diagram" style="width:720px;" /></a>
+
+<a href="figures/other-income-end-to-end.svg" target="blank">Open the Other income process diagram in a new tab</a>.
+
+#### Create or ammend other income
+
+1. Customer Amends other income.
+2. Software provides nino and taxYear to HMRC.
+3. HMRC creates or amends other income.
+4. Software gets a HTTP 200 response.
+5. Customer receives confirmation that their other income has been amended or created.
+
+#### Retrieve other income 
+
+1. Customer retrieves other income data.
+2. Software provides nino and taxYear to HMRC.
+3. HMRC retrieves other income.
+4. Software displays other income data.
+5. Customer views other income.
+
+#### Delete other income 
+
+1. Customer deletes other income data.
+2. Software provides nino and taxYear to HMRC.
+3. HMRC deletes other income.
+4. Software gets a HTTP 204 response. 
+5. Customer receives confirmation that their other income has been deleted.
 
 ### Savings income
 
