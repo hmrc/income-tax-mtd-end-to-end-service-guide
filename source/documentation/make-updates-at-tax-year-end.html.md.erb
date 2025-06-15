@@ -309,15 +309,30 @@ Customers can use their software to submit disclosures about tax avoidance at an
 
 ### Individual charges
 
-This currently applies only to a customer’s pension charges. For more information, refer to [Pension savings - tax charges (GOV.UK)](https://www.gov.uk/government/publications/pensions-tax-charges-on-any-excess-over-the-lifetime-allowance-annual-allowance-special-annual-allowance-and-on-unauthorised-payments-hs345-self).
+#### Pension charges
 
-Customers can use their software to submit different types of pension charges at any time during the tax year. This includes UK and foreign pension contributions, tax on unauthorised payments, transfer of foreign pension to another pension scheme and tax paid for exceeding their lifetime allowance.
+Customers can use their software to submit different types of pension charges at any time during the tax year. This includes UK and foreign pension contributions, tax on unauthorised payments, transfer of foreign pension to another pension scheme and tax paid for exceeding their lifetime allowance. For more information, refer to [Pension savings - tax charges (GOV.UK)](https://www.gov.uk/government/publications/pensions-tax-charges-on-any-excess-over-the-lifetime-allowance-annual-allowance-special-annual-allowance-and-on-unauthorised-payments-hs345-self).
 
 The software can use the following endpoints to enable customers to:
 
 * [Retrieve Pension Charges](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/2.0/oas/page#/paths/~1individuals~1charges~1pensions~1%7Bnino%7D~1%7BtaxYear%7D/get)
 * [Create and Amend Pension Charges](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/2.0/oas/page#/paths/~1individuals~1charges~1pensions~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Pension Charges](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/2.0/oas/page#/paths/~1individuals~1charges~1pensions~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+
+#### High Income Child Benefit Charge (HICBC)
+
+Customers in receipt of child benefit may have to pay the high income child benefit charge. For more information see [High Income Child Benefit Charge: Overview - GOV.UK](https://www.gov.uk/child-benefit-tax-charge). 
+
+Customers can use their software to submit their high income child benefit information at the end of the year, so that it can be included within their tax liability calculation.
+
+The software can use the following endpoints to enable customers to:
+
+* [Create or Update High Income Child Benefit Charge](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/3.0/oas/page#tag/High-Income-Child-Benefit-Charge-Submission/paths/~1individuals~1charges~1high-income-child-benefit~1%7Bnino%7D~1%7BtaxYear%7D/put)
+* [Get High Income Child Benefit Charge](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/3.0/oas/page#tag/High-Income-Child-Benefit-Charge-Submission/paths/~1individuals~1charges~1high-income-child-benefit~1%7Bnino%7D~1%7BtaxYear%7D/get)
+* [Delete High Income Child Benefit Charge](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/3.0/oas/page#tag/High-Income-Child-Benefit-Charge-Submission/paths/~1individuals~1charges~1high-income-child-benefit~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+
+In addition to this, the Retrieve a Self Assessment Tax Calculation endpoint contains the relevant data so that a customer's HICBC can be factored into their tax liability calculation. 
+
 
 ### Individual reliefs
 
