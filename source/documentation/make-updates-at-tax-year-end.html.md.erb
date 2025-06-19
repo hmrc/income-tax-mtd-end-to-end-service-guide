@@ -198,6 +198,19 @@ The software can use the following endpoints to enable customers to:
 - [Delete Dividends Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/1.0/oas/page#tag/Dividends-Income/paths/~1individuals~1dividends-income~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 - [Delete a UK Dividends Income Annual Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/1.0/oas/page#tag/UK-Dividends-Income/paths/~1individuals~1dividends-income~1uk~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
+### Additional Dividend and Directorship Data
+
+Directors of close companies are asked to separately identify the amount of dividend income received from their owner-managed companies. If the customer has multiple directorships, this will apply for each business they are a director of.
+
+Customers can submit their directorship information in-year, and at the end of year, and it is mandatory for customers to inform HMRC if they are a company director. For those who are company directors, it is also mandatory to inform HMRC whether this is a close company. If the customer is a director of a close company, then all additional dividend data is required; the exception being director cessation date, which only applies if a customer ceased being a director during the tax year.
+
+Software will need to include details about each employment for submitting additional dividend data, software can retrieve the employment information HMRC holds using the [Employment income API](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#employment-income).
+
+The software can also use the following endpoints to enable customers to:
+- [Submit additional directorship/dividend data under each employment ID](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/2.0/oas/page#tag/Additional-Directorship-and-Dividend-Information/paths/~1individuals~1dividends-income~1directorship~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D/put) 
+- [Retrieve additional directorship/dividend data under each employment ID](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/2.0/oas/page#tag/Additional-Directorship-and-Dividend-Information/paths/~1individuals~1dividends-income~1directorship~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D/get)
+- [Delete additional directorship/dividend data under each employment ID](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/2.0/oas/page#tag/Additional-Directorship-and-Dividend-Information/paths/~1individuals~1dividends-income~1directorship~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D/delete)
+
 ### Foreign income
 
 Foreign income is any income earned outside England, Wales, Scotland and Northern Ireland. The Channel Islands and the Isle of Man are classed as foreign. 
