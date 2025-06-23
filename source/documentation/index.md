@@ -75,6 +75,14 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
+#### 23 June 2025
+Add the following sections:
+- [Basis Period of Reform: Capture Period of Account](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#basis-period-reform-capture-period-of-account)
+- [High Income Child Benefit Charge](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#high-income-child-benefit-charge-hicbc)
+- [Capture and Change Accounting Method](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-during-tax-year.html#capture-and-change-accounting-method)
+- [Correcting income source data](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/prepare-for-mtd.html#correcting-income-source-data)
+- [Additional dividend and directorship data](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#additional-dividend-and-directorship-data)
+
 #### 26 March 2025
 
 Update [Minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards)
