@@ -6,7 +6,7 @@ description: How customers and agents sign up for MTD and authorise their softwa
 
 <%= partial 'documentation/partials/google_tag_manager_js' %>
 
-# Customers and agents preparing for MTD
+# Customers and agents preparing for Making Tax Digital for Income Tax
 
 ## Who can sign up and how
 
@@ -84,37 +84,37 @@ We advise that software should cross-check income sources quarterly using the [R
 If software sends through an update to an income source that has been removed, the software will receive a 404 error. In this case the software should call the [Retrieve Business Details endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D/get) to update the income source data.
 
 
-## MTD customer status
+## Making Tax Digital for Income Tax customer status
 
-To manage a customer's filing obligations, MTD needs to identify different types of customer in the service. To do this, MTD has allocated a status for each customer for each tax year. This status will be reviewed annually by HMRC using the latest tax return received from the customer. This status will persist year-on-year. 
+To manage a customer's filing obligations, Making Tax Digital for Income Tax needs to identify different types of customer in the service. To do this, Making Tax Digital for Income Tax has allocated a status for each customer for each tax year. This status will be reviewed annually by HMRC using the latest tax return received from the customer. This status will persist year-on-year. 
 
 In software, the customer status can be retrieved using the [Self Assessment Individual Details](/api-documentation/docs/api/service/self-assessment-individual-details-api/) API. However, the software should not show the ITSA status to the customer. Instead, the statuses can be used in software in the following ways: 
 
 - encourage customers to fulfil their obligations 
 - where necessary, inform customers that they may receive a penalty if they do not submit their updates on time
-- establish if a customer can opt out of MTD and direct them to [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) 
+- establish if a customer can opt out of Making Tax Digital for Income Tax and direct them to [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) 
 
 The different types of customer status are described below.
 
-### MTD Mandated
+### Making Tax Digital for Income Tax Mandated
 
-MTD mandated customers have qualifying income above the MTD threshold. This status will not be set until the first mandated year when their obligations become penalty-bearing. These obligations include quarterly updates and final declaration. 
+Making Tax Digital for Income Tax mandated customers have qualifying income above the Making Tax Digital for Income Tax threshold. This status will not be set until the first mandated year when their obligations become penalty-bearing. These obligations include quarterly updates and final declaration. 
 
-### MTD Voluntary
+### Making Tax Digital for Income Tax Voluntary
 
-MTD voluntary customers have qualifying income below or equal to the MTD threshold. These customers will have the same obligations as MTD mandated customers but only the final declaration is penalty-bearing. 
+Making Tax Digital for Income Tax voluntary customers have qualifying income below or equal to the Making Tax Digital for Income Tax threshold. These customers will have the same obligations as Making Tax Digital for Income Tax mandated customers but only the final declaration is penalty-bearing. 
 
 ### Annual
 
-Annual customers have an annual Self Assessment return obligation which is penalty-bearing. This status will include customers who have qualifying income below or equal to the MTD threshold and have chosen not to voluntarily sign up for MTD. 
+Annual customers have an annual Self Assessment return obligation which is penalty-bearing. This status will include customers who have qualifying income below or equal to the Making Tax Digital for Income Tax threshold and have chosen not to voluntarily sign up for Making Tax Digital for Income Tax. 
 
-### MTD Exempt
+### Making Tax Digital for Income Tax Exempt
 
-MTD exempt customers have manually applied for an exemption from MTD. If a request has been made for VAT, it is applied to MTD for Income Tax without the need for a further application. These customers will have an annual Self Assessment return obligation which is penalty-bearing.  
+Making Tax Digital for Income Tax exempt customers have manually applied for an exemption from Making Tax Digital for Income Tax. If a request has been made for VAT, it is applied to Making Tax Digital for Income Tax without the need for a further application. These customers will have an annual Self Assessment return obligation which is penalty-bearing.  
 
 ### Non-Digital
 
-Non-digital customers have manually applied for a non-digital status. If a request has been made for VAT, it is applied to MTD for Income Tax without the need for a further application.  These customers will have an annual Self Assessment return obligation which is penalty-bearing. Customers with this status are unlikely to be using a software product to meet their Self Assessment obligations. 
+Non-digital customers have manually applied for a non-digital status. If a request has been made for VAT, it is applied to Making Tax Digital for Income Tax without the need for a further application.  These customers will have an annual Self Assessment return obligation which is penalty-bearing. Customers with this status are unlikely to be using a software product to meet their Self Assessment obligations. 
 
 ### Dormant
 

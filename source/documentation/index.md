@@ -1,6 +1,6 @@
 # Making Tax Digital for Income Tax end-to-end service guide
 
-Updated 17 December 2024 (see [changelog](#document-changelog))
+Updated 23 June 2025 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -31,7 +31,7 @@ HMRC recognises that an all-in-one product will not be right for everyone, and s
 
 ### Bridging software
 
-Some customers may wish to integrate their existing software solution for record keeping with MTD by using another product that can submit quarterly updates, make a final declaration and view tax liabilities. We refer to these products as 'bridging products'. 
+Some customers may wish to integrate their existing software solution for record keeping with Making Tax Digital for Income Tax by using another product that can submit quarterly updates, make a final declaration and view tax liabilities. We refer to these products as 'bridging products'. 
 
 Customers who choose to use bridging software must digitally link it to their record-keeping software. This will ensure that customers meet their obligations when they use multiple compatible software products which collectively meet the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards) set out in this guide.
 

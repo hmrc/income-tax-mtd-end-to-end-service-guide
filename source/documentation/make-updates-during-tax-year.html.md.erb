@@ -10,14 +10,14 @@ description: How to enable MTD-compatible software to make in-year updates and d
 
 # Making updates during the tax year
 
-## MTD mandated income
+## Making Tax Digital for Income Tax mandated income
 
-A customer’s MTD mandated income consists of the following:
+A customer’s Making Tax Digital for Income Tax mandated income consists of the following:
 
 - self-employed sole trader income
 - property income
 
-This is the ‘qualifying’ income HMRC uses to establish if the customer meets the criteria for MTD. MTD Customers can have one, or multiple, businesses with these types of income. For more information about qualifying income, refer to [Check what is included in your qualifying income (GOV.UK)](https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax#check-what-is-included-in-your-qualifying-income).
+This is the ‘qualifying’ income HMRC uses to establish if the customer meets the criteria for Making Tax Digital for Income Tax. Making Tax Digital for Income Tax Customers can have one, or multiple, businesses with these types of income. For more information about qualifying income, refer to [Check what is included in your qualifying income (GOV.UK)](https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax#check-what-is-included-in-your-qualifying-income).
 
 ### Self-employed sole trader income
 
@@ -38,9 +38,9 @@ For more information about property income, refer to [Work out your rental incom
 
 ## Showing customers their obligations
 
-An MTD mandated or voluntary customer will have a set of obligations for each tax year. These are:
+A Making Tax Digital for Income Tax mandated or voluntary customer will have a set of obligations for each tax year. These are:
 
-- four quarterly updates
+- 4 quarterly updates
 - final declaration 
 
 At any time of the year, customers can check their obligations. To provide this information, the software needs details about their business income sources. It gets this information by using the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint, which provides the business ID. This ID is required to call multiple self-employment and property endpoints. To save time, the software should store this ID instead of making extra calls.
@@ -63,7 +63,7 @@ A customer should always be able to view their latest obligations. To do this, t
 
 ## Capture and Change Accounting Method
 
-Accounting method refers to a set of rules used to determine when income and expenses are accounted for in the customers’ turnover. For self-employment, a UK Property Business, or Foreign Property Business, this can either be ‘cash basis accounting’ or ‘traditional accounting’ (also known as ‘accruals’).
+'Accounting method' refers to a set of rules used to determine when income and expenses are accounted for in the customers’ turnover. For self-employment, a UK Property Business, or Foreign Property Business, this can either be ‘cash basis accounting’ or ‘traditional accounting’ (also known as ‘accruals’).
 
 A property business with receipts exceeding the income threshold must use accruals accounting method. For more information, refer to [PIM1092 - Cash basis for landlords: overview - HMRC internal manual - GOV.UK](https://www.gov.uk/hmrc-internal-manuals/property-income-manual/pim1092). If the following criteria are met, a warning will be given that users will need to update their accounting method to accruals:
 
@@ -72,18 +72,17 @@ A property business with receipts exceeding the income threshold must use accrua
 
 At the end of the tax year, users/agents must confirm their accounting method for all their relevant self-employment or property income sources for that year before completing their final declaration. 
 
-In software the user should be shown what HMRC holds for their accounting method first by using the Retrieve Accounting type endpoint in [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/). 
+Software should first show the user what HMRC holds for their accounting method by using the Retrieve Accounting Type endpoint in the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/). 
 
-In the event the user needs to change the accounting method, Software should then call the PUT Accounting Method Election Endpoint in the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/).
+In the event the user needs to change the accounting method, software should then call the Update Accounting Type endpoint in the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/).
 
 The selected accounting method for each income source will automatically roll over each year unless the user manually changes it at the end of the year.
-
 
 ## Change to calendar quarters
 
 From the tax year 2024 to 2025, accounting periods that run from 1 April to 31 March will be treated as equivalent to 6 April to 5 April. This removes the need for customers to make small adjustments of a few days to determine their profit or loss for the tax year.
 
-As a result, customers with an accounting period that starts on 1 April (rather than 6 April) and ends on 31 March will have the opportunity to change their quarterly updates to also start at the beginning of the month. Although all MTD customers or their agents will be able to make this change through their software regardless of their accounting period, only customers with accounting periods starting on 1 April will benefit. Consequently, the software must avoid allowing customers with accounting periods other than 1 April to 31 March to make this change.
+As a result, customers with an accounting period that starts on 1 April (rather than 6 April) and ends on 31 March will have the opportunity to change their quarterly updates to also start at the beginning of the month. Although all Making Tax Digital for Income Tax customers or their agents will be able to make this change through their software regardless of their accounting period, only customers with accounting periods starting on 1 April will benefit. Consequently, the software must avoid allowing customers with accounting periods other than 1 April to 31 March to make this change.
 
 The following table shows an example.
 
@@ -96,7 +95,7 @@ The following table shows an example.
 
 By default, a customer’s quarterly updates will be set automatically to standard quarters. If they wish to change to calendar quarterly updates, they must do this through their software. This cannot be done through HMRC online services. The software must make this option available to customers before they submit their first quarterly update. This is because after submitting the first quarterly update for a tax year, the customer cannot change the quarters for that tax year.
 
-However, if the customer is signing up to MTD late in the tax year, they can still make this change as long as it is before their first quarterly update. This change will have no effect on the update deadlines.
+However, if the customer is signing up to Making Tax Digital for Income Tax late in the tax year, they can still make this change as long as it is before their first quarterly update. This change will have no effect on the update deadlines.
 
 To allow a customer to change their periods to calendar quarters, the software should use the [Create and Amend Quarterly Period Type for a Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page#/paths/~1individuals~1business~1details~1{nino}~1{businessId}~1{taxYear}/put) endpoint. The software should use the [Obligations API](/api-documentation/docs/api/service/obligations-api/) to access the new calendar quarterly periods. 
 
@@ -122,7 +121,7 @@ After the calendar quarterly election change has been made, it will continue yea
 
 ## How to submit and view in-year updates after tax year 2025
 
-MTD mandated and voluntary customers must create and keep digital records of their self-employment and property business income and expenses. They must then submit summary totals of the information in their digital records to HMRC every quarter.  If they wish, they can also submit this summary-level information more frequently, for example, monthly.
+Making Tax Digital for Income Tax mandated and voluntary customers must create and keep digital records of their self-employment and property business income and expenses. They must then submit summary totals of the information in their digital records to HMRC every quarter.  If they wish, they can also submit this summary-level information more frequently, for example, monthly.
 
 In November 2023, HMRC announced that the current quarterly updates design would be replaced to allow data to be sent cumulatively. The new design would allow each submission to report the total income and expenses accumulated from the start of the tax year up to that point for each self-employment and property income source.
 
