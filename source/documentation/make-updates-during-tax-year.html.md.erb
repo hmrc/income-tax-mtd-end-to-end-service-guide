@@ -61,23 +61,6 @@ A customer should always be able to view their latest obligations. To do this, t
 - when a customer adds a new sole trader business in [HMRC online services]( /guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services)
 - when a customer ceases an existing business in HMRC online services
 
-## Capture and Change Accounting Method
-
-'Accounting method' refers to a set of rules used to determine when income and expenses are accounted for in the customers’ turnover. For self-employment, a UK Property Business, or Foreign Property Business, this can either be ‘cash basis accounting’ or ‘traditional accounting’ (also known as ‘accruals’).
-
-A property business with receipts exceeding the income threshold must use accruals accounting method. For more information, refer to [PIM1092 - Cash basis for landlords: overview - HMRC internal manual - GOV.UK](https://www.gov.uk/hmrc-internal-manuals/property-income-manual/pim1092). If the following criteria are met, a warning will be given that users will need to update their accounting method to accruals:
-
-- The user's UK Property Business or Foreign Property Business exceeds the threshold
-- HMRC holds cash as their accounting method when calling the retrieve a self assessment tax calculation endpoint in-year or at end of year.
-
-At the end of the tax year, users/agents must confirm their accounting method for all their relevant self-employment or property income sources for that year before completing their final declaration. 
-
-Software should first show the user what HMRC holds for their accounting method by using the Retrieve Accounting Type endpoint in the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/). 
-
-In the event the user needs to change the accounting method, software should then call the Update Accounting Type endpoint in the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/).
-
-The selected accounting method for each income source will automatically roll over each year unless the user manually changes it at the end of the year.
-
 ## Change to calendar quarters
 
 From the tax year 2024 to 2025, accounting periods that run from 1 April to 31 March will be treated as equivalent to 6 April to 5 April. This removes the need for customers to make small adjustments of a few days to determine their profit or loss for the tax year.
