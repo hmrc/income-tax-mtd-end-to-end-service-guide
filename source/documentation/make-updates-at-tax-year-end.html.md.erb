@@ -513,6 +513,20 @@ Once the software has successfully submitted the period of account information t
 
 <a href="figures/BPA-flow.svg" target="blank">Open the Periods of account process diagram in a new tab</a>.
 
+### Late Accounting Date Rule
+
+The Late Accounting Date Rule (LADR) treatment applies when a sole trader's period of account ends between 31st March and 4th April. These special rules are designed to avoid the need to apportion profits between two tax years. The rules apply to these accounting dates automatically; however customers can elect to disapply only through their software.
+
+LADR is applied once a customer has created their period of account, the customer must do this first. They will then be able to view the businesses to which LADR applies using the Retrieve Late Accounting Date Rule election endpoint. 
+
+To disapply, LADR software must use the Business ID for each relevant self-employment business and call the [Disapply Late Accounting Date Rule endpoint](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#tag/Late-Accounting-Date-Rule/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D~1%7BtaxYear%7D~1late-accounting-date-rule-election~1disapply/post) - this will need to be carried out for each self-employment business that the customer has selected.  This information must be provided at the end of year, after all four quarterly updates have been made.
+
+Software can display which businesses have had the LADR disapplied using the Retrieve Late Accounting Date Rule election API. 
+
+Once an election is made it remains in place for 5 years, if the users wants to remove the election before finalising their return they can use the [Withdraw Late Accounting Date Rule endpoint](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#tag/Late-Accounting-Date-Rule/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D~1%7BtaxYear%7D~1late-accounting-date-rule-election~1withdraw/delete). However, they may only remove the election for the year it was made. 
+
+If they have already finalised their return but they are in the 12 month amendment window they can do this using the [Disapply Late Accounting Date Rule endpoint](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#tag/Late-Accounting-Date-Rule/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D~1%7BtaxYear%7D~1late-accounting-date-rule-election~1disapply/post).
+
 ## Submit allowance and adjustments
 
 Some customers must submit an annual summary update. An annual summary is defined as a set of summary data for a tax year, containing allowances and adjustments broken down by category. They can provide updates more frequently if they wish, though they must make this submission before making their final declaration. The following endpoints enable customers to submit their annual allowances or adjustments: 
