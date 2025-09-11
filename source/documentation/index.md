@@ -29,6 +29,8 @@ Compatible software can mean either a single end-to-end piece of software or a s
 
 HMRC recognises that an all-in-one product will not be right for everyone, and some customers or agents may wish to use combinations of different pieces of software. For example, combining dedicated record keeping software with dedicated tax filing software. When a customer uses a combination of products, after they have entered a digital record into a compatible software product, they must be able to follow the rules for digital links set out by HMRC in the Software Notice.
 
+Software Choices is a service designed to help users find compatible software for Making Tax Digital for Income Tax which meets their needs. For further information, refer to the [Software choices section](/guides/income-tax-mtd-end-to-end-service-guide/documentation/prepare-for-mtd.html#software-choices).
+
 ### Bridging software
 
 Some customers may wish to integrate their existing software solution for record keeping with Making Tax Digital for Income Tax by using another product that can submit quarterly updates, make a final declaration and view tax liabilities. We refer to these products as 'bridging products'. 
