@@ -434,7 +434,8 @@ Capital Gains Tax is a tax on the profit when someone sells or disposes of an as
 
 * residential property
 * other property 
-* listed and unlisted shares and securities 
+* listed and unlisted shares and securities
+* crypto assets 
 
 For more information about Capital Gains Tax, refer to [Capital Gains Tax: what you pay it on, rates and allowances (GOV.UK)](https://www.gov.uk/capital-gains-tax).
 
@@ -511,7 +512,10 @@ There may be some sole traders who have a period of account (may also be referre
 
 This information is important to support customers in submitting the correct information for the correct tax year. To allow a customer to inform HMRC of their period of account, software must use the 'Create or Update Periods of Account' endpoint within the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/). This information must be provided at the end of year, after all four quarterly updates have been made.
 
-For each Self Employment business, software must first ask the customer if they have had a period of account that ended in the relevant tax year.  Only in the instance of the response being yes, must the software then go on to collect further information. 
+For each Self Employment business, software must first ask the customer if they have had a period of account that ended in the relevant tax year.  
+- If their period of account ends outside the relevant tax year, the software should return `false`
+- If one or more periods of account end within the relevant tax year, the software should return `true` and submit all relevant periods of account which fall in that tax year
+  
 
 ### Retrieve Periods of Account
 
