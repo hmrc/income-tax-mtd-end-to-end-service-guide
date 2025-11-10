@@ -6,10 +6,11 @@ lazy val microservice = Project(appName, file("."))
     libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
     update / evictionWarningOptions := EvictionWarningOptions.default.withWarnScalaVersionEviction(false),
     majorVersion                    := 0,
-    scalaVersion                    := "2.13.16",
+    scalaVersion                    := "3.5.2",
     scalacOptions ++= Seq(
       "-Xfatal-warnings",
       "-Wconf:src=routes/.*:silent",
+      "-Wconf:msg=Flag.*repeatedly:s",
       "-feature"
     )
   )
