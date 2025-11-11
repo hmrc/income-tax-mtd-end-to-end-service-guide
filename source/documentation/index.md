@@ -77,6 +77,10 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
+#### 11 November 2025
+
+Update guidance for [Capital Gains Tax](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#capital-gains-tax)
+
 #### 16 September 2025
 
 Add the following sections:
