@@ -129,6 +129,17 @@ Customers must submit at least one update for each quarter. The following table 
 | 2   | 2   | 6 April to 5 October is accepted  |
 | 3   | 3, 4   | 6 April to 5 April is accepted with a possible penalty    |
 
+### Foreign property income
+
+Customers must report their rental income and other receipts from foreign land or property through their Making Tax Digital Software. To ensure the correct tax is calculated software must ensure the customer creates a unique property ID for each property within the foreign country. This must still be completed if only one property is applicable.
+
+Software will use the Create Foreign Property Details endpoint with a property name provided by the customer to retrieve a unique property ID from HMRC for each foreign property. 
+
+Software will use the business ID and the property ID when submitting quarterly updates through the Create and Amend a Foreign Property Cumulative Period Summary endpoint. 
+
+To remove a foreign property, software can provide an end date for income from that property at any time during the tax year using the Update Foreign Property Details endpoint.
+
+
 ### Submit and amend quarterly update
 
 The software should convert transactional information into summary totals. It should send this summary information to HMRC for each self-employment and property income source. HMRC can then use this information to calculate business profits based on the most recent data.
