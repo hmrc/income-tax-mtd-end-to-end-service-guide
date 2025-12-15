@@ -173,6 +173,10 @@ Customers can also use their software to claim tax relief on other types of expe
 * [Create and Amend Other Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/3.0/oas/page#tag/Other-Expenses/paths/~1individuals~1expenses~1other~1%7Bnino%7D~1%7BtaxYear%7D/put)
 * [Delete Other Expenses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-expenses-api/3.0/oas/page#tag/Other-Expenses/paths/~1individuals~1expenses~1other~1%7Bnino%7D~1%7BtaxYear%7D/delete)
 
+### Members of Parliament (MPs) income
+
+MPs can sign up to Making Tax Digital for Income Tax. Software can use the standard employment API endpoints to submit their income.
+
 ### Non-PAYE income
 
 Customers might need to pay taxes on any tips they have received. For more information about paying taxes on tips, refer to [Tips at work (GOV.UK)](https://www.gov.uk/tips-at-work).
@@ -726,6 +730,25 @@ The software must send the calculation ID that matches the specific calculation 
 10. HMRC receives the submission and marks the obligation as fulfilled. Confirms receipt with a success code.
 11. Software displays the confirmation message to the user (HMRC does not do this).
 12. User receives confirmation that the return has been submitted successfully to HMRC.
+
+### Non-aligned taxpayers
+
+Non-aligned taxpayers are customers with periods of account, or accounting periods, that do not end on either 31st March or 1-5th April of the tax year.
+
+These taxpayers will need to calculate their taxable profit for the tax year outside MTD in addition to their MTD journey. 
+
+During the tax year, non-aligned taxpayers use software to maintain and keep digital records and submit quarterly updates aligned to the tax year. Taxpayers will need to start keeping digital records from the start of any accounting period which will end in the tax year.
+
+After the end of the accounting period that ends in the tax year, non-aligned taxpayers prepare their accounts for that period, including calculating the taxable profit. The customer will then calculate the proportion of the accounting period’s taxable profit belonging to the tax year based on the number of days in the period that falls in the tax year. The portion calculated as falling within the tax year constitutes the first part of the taxable profit for the tax year.
+
+After the end of the tax year and submission of the final cumulative quarterly update for that tax year, non-aligned taxpayers must submit any accounting adjustments and other relevant allowances and adjustments that were included in the period of account that ended in the tax year, using the [Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/7.0/oas/page) API and the [Self Employment Annual Submission API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/5.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1annual~1%7BtaxYear%7D/put) respectively. This will result in a figure made up of information from the final cumulative quarterly update which is aligned to the tax year, and tax adjustments for the first accounting period which is not aligned to the tax year. The figure can be viewed using the [Business Income Source Summary API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/3.0/oas/page#/paths/~1individuals~1self-assessment~1income-summary~1%7Bnino%7D~1%7BtypeOfBusiness%7D~1%7BtaxYear%7D~1%7BbusinessId%7D/get).
+
+After the end of the second accounting period (which extends beyond the tax year) non-aligned taxpayers prepare their accounts for that period including calculating the taxable profit. The taxpayer will then calculate the proportion of the accounting period’s taxable profit belonging to the tax year based on the number of days in the period that falls in the tax year. The portion calculated as falling within the tax year constitutes the second part of the taxable profit for the tax year. This should be added to the first part of the taxable profit for the tax year, identified earlier, to obtain the full taxable profit for the tax year. The figure obtained by triggering the Business Income Source Summary API should be subtracted from the full taxable profit for the tax year to identify the tax year basis adjustment balancing figure. The basis adjustment balancing figure should then be submitted using the basis adjustment data item in the [Self Employment Annual Submission API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/5.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1annual~1%7BtaxYear%7D/put). This will ensure that the taxable profit for the tax year is reflected accurately. Customers must check that the result of submitting the basis adjustment balancing figure is the same as the taxable profit calculated outside MTD.
+
+Customers with accounting dates later in the calendar year may have to estimate the provisional profits for the second accounting period if their set of accounts won’t be ready in time for the tax year’s filing deadline. These customers would need to submit an amendment to their return when confirmed figures become available.
+
+<a href="figures/non-aligned-tax-payers.svg" target="blank">Open the non-aligned taxpayers customer journey diagram in a new tab</a>.
+
 
 ## Amendments after making a final declaration
 
