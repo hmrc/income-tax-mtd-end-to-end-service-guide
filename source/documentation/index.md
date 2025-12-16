@@ -78,6 +78,15 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
+#### 15 December 2025
+
+Add the following sections:
+
+- [Members of parliament income](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#members-of-parliament-mps-income)
+- [Non-aligned taxpayers](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#non-aligned-taxpayers)
+
+Update 'Non digital' to ['Digitally exempt'](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/prepare-for-mtd.html#digitally-exempt)
+
 #### 11 November 2025
 
 Update guidance for [Capital Gains Tax](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#capital-gains-tax)
