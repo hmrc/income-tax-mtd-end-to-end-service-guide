@@ -1,6 +1,6 @@
 # Making Tax Digital for Income Tax end-to-end service guide
 
-Updated 16 September 2025 (see [changelog](#document-changelog))
+Updated 15 December 2025 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
