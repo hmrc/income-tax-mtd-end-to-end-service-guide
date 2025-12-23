@@ -12,18 +12,6 @@ description: How to enable MTD-compatible software to make updates at the end of
 
 If Making Tax Digital (MTD) customers are earning any type of income in addition to their self-employment and property income, they must report that to HMRC just as they would in their Self Assessment return. 
 
-><p>The endpoints for reporting additional income through software were previously included in the 
-	<a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-income-received-api/">Individuals Income Received API</a>. The Individuals Income Received API has now been deprecated and replaced with the following new APIs:</p><ul> 
-	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-employments-income-api/">Individuals Employments Income API</a></li>
-	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/">Individuals Dividends Income API</a></li>
-	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-foreign-income-api/">Individuals Foreign Income API</a></li> 
-	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-insurance-policies-income-api/">Individuals Insurance Policies Income API</a></li>
-	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-pensions-income-api/">Individuals Pensions Income API</a></li>
-	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-other-income-api/">Individuals Other Income API</a></li>
-	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-savings-income-api/">Individuals Savings Income API</a></li>
-	<li><a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-capital-gains-income-api/">Individuals Capital Gains Income API</a></li></ul>
-<p>These new APIs are now available in Production.</p>
-
 Your software should prompt customers to provide details about any additional income sources. If the software does not support submission of any applicable additional income customers must be diverted to a channel where they can make their submission. For more information about which type of income to tell HMRC, refer to [Check if you need to tell HMRC about additional income (GOV.UK)](https://www.gov.uk/check-additional-income-tax). 
 
 Customers who need to submit their additional income must do it before making their final declaration. The following sections cover the different types of additional income and the endpoints needed to submit them in the software. 
@@ -308,6 +296,7 @@ Customers must submit information to HMRC about any UK savings accounts they hol
 Customers can use their software to submit information about each account and record the annual interest income data for it at any time during the tax year. The software can use the following endpoints to enable customers to:
 
 - [Add a UK Savings Account](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-savings-income-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1savings-income~1uk-accounts~1%7Bnino%7D/post)
+- [Update a UK Savings Account Name](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-savings-income-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1savings-income~1uk-accounts~1%7Bnino%7D~1account-name~1%7BsavingsId%7D/put)
 - [Create and Amend a UK Savings Account Annual Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-savings-income-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1savings-income~1uk-accounts~1%7Bnino%7D~1%7BtaxYear%7D~1%7BsavingsAccountId%7D/put)
 - [List All UK Savings Accounts](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-savings-income-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1savings-income~1uk-accounts~1%7Bnino%7D/get)
 - [Retrieve UK Savings Account Annual Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-savings-income-api/2.0/oas/page#tag/UK-Savings-Account/paths/~1individuals~1savings-income~1uk-accounts~1%7Bnino%7D~1%7BtaxYear%7D~1%7BsavingsAccountId%7D/get)
@@ -609,9 +598,9 @@ The customer can also delete their previously submitted annual allowance and adj
 
 When the customer has submitted all quarterly updates, they may need to make an accounting adjustment to their income or expenses. They should first make changes to their digital records and then use the software to submit them to HMRC. The [Business Source Adjustable Summary API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/) enables a customer to submit or retrieve an adjustable summary calculation for a specified self-employment or property business.
 
-If a customer submits an annual or quarterly update after making BSAS adjustments, their submitted adjustments become invalid. They will need to make their BSAS adjustments again. 
-
-If a customer has multiple agents who make BSAS adjustments, the latest adjustments will overwrite earlier adjustments.
+> If a customer submits an annual or quarterly update after making BSAS adjustments, their submitted adjustments become invalid. They will need to make their BSAS adjustments again. 
+>
+> If a customer has multiple agents who make BSAS adjustments, the latest adjustments will overwrite earlier adjustments.
 
 The adjustments should be submitted as a positive or negative amount. For example, if a customer has already submitted advertising costs of £250 but the figure should be £200, the adjustment required would be -50. Adjustments are always made against the total of the original quarterly updates. Each new adjustment will overwrite the previous adjustment as shown in the table below.
 
