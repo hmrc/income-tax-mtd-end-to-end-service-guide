@@ -32,6 +32,8 @@ HMRC recognises that an all-in-one product will not be right for everyone, and s
 
 Software Choices is a service designed to help users find compatible software for Making Tax Digital for Income Tax which meets their needs. For further information, refer to the [Software choices section](/guides/income-tax-mtd-end-to-end-service-guide/documentation/prepare-for-mtd.html#software-choices).
 
+> Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
+
 ### Bridging software
 
 Some customers may wish to integrate their existing software solution for record keeping along with another product that can submit quarterly updates, make a final declaration and view tax liabilities. We refer to these products as 'bridging products'. 
@@ -67,6 +69,7 @@ The following table lists the documents for Making Tax Digital for Income Tax an
 | [API landing pages](/api-documentation/docs/api?filter=income-tax-mtd) <br /><br />Example:<br/> [Business Details API](/api-documentation/docs/api/service/business-details-api/) | Learn about the high-level functionality of each API. | Functional | Product managers<br /><br />Business analysts<br /><br />Software developers |
 | API reference pages (accessible from API landing pages)<br /><br />Example:<br/> [Business Details API v1.0](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/1.0/oas/page) | Learn in detail about the request and response schemas, test data and error handling of each API. | Technical | Business analysts<br /><br />Software developers |
 
+> Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
 
 ## Changelogs
 
@@ -333,3 +336,5 @@ Minor fixes to remove typos and inconsistent capitalisation
 #### 14 June 2023
 
 * Update API and endpoint links
+
+> Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
