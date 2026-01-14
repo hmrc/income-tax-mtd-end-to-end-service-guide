@@ -29,6 +29,8 @@ If the software retrieves a calculation, it will cover only the period up to the
 
 Before presenting your customer with an in-year tax calculation, the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards) state that a disclaimer must be presented. This disclaimer is returned through the [Individual Calculations API](/api-documentation/docs/api/service/individual-calculations-api/) as ‘This calculation is only based on information HMRC have received about your income and expenses to 20XX-XX-XX. This may change as we receive further information about you during the tax year’. Software providers can choose to use this exact disclaimer or design their own.
 
+> Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
+
 ### Calculations that produce errors
 
 HMRC validates the information submitted by the software by checking the data quality and data integrity. These checks include both technical (schema) specifications and business-related factors to ensure that the data is complete and meaningful. Any validation errors will be returned by using the [Retrieve a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}~1{calculationId}/get) endpoint. The software should make sure that the validation errors are presented to the customer.
@@ -82,3 +84,5 @@ To acknowledge the report, an HTTP 204 code is returned and contains no content.
 <a href="figures/customer-journey-transactional-risking-high-level.svg" target="blank"><img src="figures/customer-journey-transactional-risking-high-level.svg" alt="HMRC Assist customer journey" style="width:720px;" /></a>
 
 <a href="figures/customer-journey-transactional-risking-high-level.svg" target="blank">Open the high-level diagram in a new tab.</a>
+
+> Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
