@@ -122,12 +122,24 @@ Customers must submit at least one update for each quarter. The following table 
 
 Customers must report their rental income and other receipts from foreign land or property through their Making Tax Digital Software. To ensure the correct tax is calculated software must ensure the customer creates a unique property ID for each property within the foreign country. This must still be completed if only one property is applicable.
 
-Software will use the Create Foreign Property Details endpoint with a property name provided by the customer to retrieve a unique property ID from HMRC for each foreign property. 
+Software will use the [Create Foreign Property Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Foreign-Property-Details/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1details~1%7BtaxYear%7D/post) endpoint with a property name provided by the customer to retrieve a unique property ID from HMRC for each foreign property. 
 
-Software will use the business ID and the property ID when submitting quarterly updates through the Create and Amend a Foreign Property Cumulative Period Summary endpoint. 
+Software will use the business ID and the property ID when submitting quarterly updates through the [Create and Amend a Foreign Property Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Income-and-Expenses-Period-Summaries/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put) endpoint. 
 
-To remove a foreign property, software can provide an end date for income from that property at any time during the tax year using the Update Foreign Property Details endpoint.
+To remove a foreign property, software can provide an end date for income from that property at any time during the tax year using the [Update Foreign Property Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Foreign-Property-Details/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1details~1%7BpropId%7D~1%7BtaxYear%7D/put) endpoint.
 
+<a href="figures/foreign-property-income.svg" target="blank"><img src="figures/foreign-property-income.svg" alt="foreign property income journey" style="width:720px;" /></a>
+
+<a href="figures/foreign-property-income.svg" target="blank">Open the end-to-end journey diagram in a new tab</a>.
+
+1. The customer needs to report foreign property rental income.
+2. Software submits propertyName and countryCode.
+3. HMRC stores this information and creates a unique propertyID. 
+4. Software retrieves the propertyID.
+5. If multiple properties exist, then the process is repeated for each one.
+6. Customer wants to submit their foreign property quarterly update.
+7. Software submits the propertyID along with the income and expense information using the [Create and Amend a Foreign Property Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Income-and-Expenses-Period-Summaries/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put) endpoint.
+8. HMRC accepts the submission.
 
 ### Submit and amend quarterly update
 
@@ -148,7 +160,7 @@ If a customer wants to make a change to a previously submitted periodic update, 
 
 <a href="figures/end-to-end-journey-fixed.svg" target="blank">Open the end-to-end journey diagram in a new tab</a>.
 
-### User journey
+#### User journey
 
 1. The software prompts the customer when they need to submit an update. This prompt will not be sent from any API.
 2. The customer receives the prompt in the software and begins their submission process.
@@ -162,7 +174,7 @@ If a customer wants to make a change to a previously submitted periodic update, 
 7. The software receives the success response and confirms with the customer that the update has been received and stored by HMRC.
 8. The customer views the confirmation.
 
-### View update
+#### View update
 
 When a quarterly update has been made, the customer can view a summary of the updates made to date. To retrieve this summary, the software should call any of the following endpoints, depending on the business income type:
 
