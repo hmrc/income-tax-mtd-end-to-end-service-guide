@@ -654,6 +654,8 @@ After submitting the above losses, customers can view their loss position. If th
 - [Amend a Loss Claim Type](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims~1{claimId}~1change-type-of-claim/post)
 - [Amend Loss Claims Order](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims~1order~1{taxYearClaimedFor}/put)
 
+> Customers use [Create a Loss Claim](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims/post) to indicate to HMRC how they want losses to be treated. Customers and software do not need to calculate loss amounts; HMRC will calculate profit and loss through the tax calculation and make this available via the [Retrieve a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint.
+
 ## Final declaration
 
 Final declaration is the process that allows customers to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise. 
