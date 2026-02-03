@@ -55,7 +55,7 @@ HMRC Assist is a new digital service to support customers using Making Tax Digit
 
 The service will supplement any existing guidance within software by using data available to HMRC to provide personalised feedback messages on the information submitted on quarterly updates and final declarations.
 
-This service will be accessible to customers and agents through compatible software and [HMRC online services]( /guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services). As a software provider, you will be able to integrate HMRC Assist into your MTD-compatible product using the [Self Assessment Assist API](/api-documentation/docs/api/service/self-assessment-assist/). Once integrated, customers or their agents submitting information using software can request feedback messages. HMRC Assist will then review the data and provide feedback and suggested actions to ensure accurate tax reporting. Additionally, the service may include links to helpful guidance on [GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs)
+This service will be accessible to customers and agents through compatible software. As a software provider, you will be able to integrate HMRC Assist into your MTD-compatible product using the [Self Assessment Assist API](/api-documentation/docs/api/service/self-assessment-assist/). Once integrated, customers or their agents submitting information using software can request feedback messages. HMRC Assist will then review the data and provide feedback and suggested actions to ensure accurate tax reporting. Additionally, the service may include links to helpful guidance on [GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs)
 
 For example, if HMRC data suggests that rental income should be declared but has not been, a feedback message may prompt the customer to declare it. Similarly, the service will highlight any tax reliefs or allowances to which the customer may be entitled. While this feature is optional for MTD software, it is expected to meet market demand due to its benefits, including improving the customer experience and increasing accuracy in tax filings.
 
@@ -68,6 +68,8 @@ The report contains targeted feedback based on what the customer advises HMRC in
 <a href="figures/customer-journey-transactional-risking-produce-report.svg" target="blank">Open the produce a report diagram in a new tab.</a>
 
 An HTTP 200 success code is returned and the targeted message, recommended action and guidance links are within the JSON for the software to display.
+
+> The user must allow sufficient time for the tax calculation to be generated before creating an Assist report, as generating the Assist report prior to the tax calc will return an HTTP 404 error code.
 
 ### Acknowledge an HMRC Self Assessment assist report
 
@@ -84,5 +86,13 @@ To acknowledge the report, an HTTP 204 code is returned and contains no content.
 <a href="figures/customer-journey-transactional-risking-high-level.svg" target="blank"><img src="figures/customer-journey-transactional-risking-high-level.svg" alt="HMRC Assist customer journey" style="width:720px;" /></a>
 
 <a href="figures/customer-journey-transactional-risking-high-level.svg" target="blank">Open the high-level diagram in a new tab.</a>
+
+### Troubleshooting
+
+If an HTTP 404 error code is returned, follow these steps:
+
+- Wait sufficient time for the tax calculation to be generated
+- Check that a BVR failure has not been triggered
+- Try again 
 
 > Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
