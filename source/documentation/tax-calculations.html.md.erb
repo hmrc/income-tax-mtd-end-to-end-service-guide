@@ -69,7 +69,8 @@ The report contains targeted feedback based on what the customer advises HMRC in
 
 An HTTP 200 success code is returned and the targeted message, recommended action and guidance links are within the JSON for the software to display.
 
-> The user must allow sufficient time for the tax calculation to be generated before creating an Assist report, as generating the Assist report prior to the tax calc will return an HTTP 404 error code.
+> Software must allow sufficient time for the tax calculation to be generated before requesting an Assist report, as requesting the Assist report prior to the tax calculation being generated will return an HTTP 404 error code.
+
 
 ### Acknowledge an HMRC Self Assessment assist report
 
@@ -92,7 +93,7 @@ To acknowledge the report, an HTTP 204 code is returned and contains no content.
 If an HTTP 404 error code is returned, follow these steps:
 
 - Wait sufficient time for the tax calculation to be generated
-- Check that a BVR failure has not been triggered
+- Check that a validation error has not been triggered
 - Try again 
 
 > Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
