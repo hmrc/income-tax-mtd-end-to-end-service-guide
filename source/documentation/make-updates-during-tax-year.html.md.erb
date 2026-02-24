@@ -41,7 +41,7 @@ A customer’s property income includes the following:
 A Making Tax Digital for Income Tax mandated or voluntary customer will have a set of obligations for each tax year. These are:
 
 - 4 quarterly updates
-- final declaration 
+- final declaration
 
 At any time of the year, customers can check their obligations. To provide this information, the software needs details about their business income sources. It gets this information by using the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint, which provides the business ID. This ID is required to call multiple self-employment and property endpoints. To save time, the software should store this ID instead of making extra calls.
 
@@ -50,9 +50,9 @@ Quarterly obligations are created for sole trader and property income sources. I
 - [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/3.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get)
 - [Retrieve Income Tax (Self Assessment) Final Declaration Obligations](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/3.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1crystallisation/get)
 
-These endpoints provide obligation dates for all self-employment and property businesses, and inform whether or not obligations have been met. The deadline for meeting a quarterly obligation is one month after the obligation period end date. The software should communicate these deadlines clearly to the customer and prompt them to submit the information when the update is due. 
+These endpoints provide obligation dates for all self-employment and property businesses, and inform whether or not obligations have been met. The deadline for meeting a quarterly obligation is one month after the obligation period end date. The software should communicate these deadlines clearly to the customer and prompt them to submit the information when the update is due.
 
-After submitting a quarterly update or a final declaration, it may take up to an hour for the obligation to be marked as fulfilled in HMRC's system. 
+After submitting a quarterly update or a final declaration, it may take up to an hour for the obligation to be marked as fulfilled in HMRC's system.
 
 A customer should always be able to view their latest obligations. To do this, the software should be aware that the customer’s obligation will be created or updated for the following reasons:
 
@@ -65,7 +65,7 @@ A customer should always be able to view their latest obligations. To do this, t
 
 From the tax year 2024 to 2025, accounting periods that run from 1 April to 31 March will be treated as equivalent to 6 April to 5 April. This removes the need for customers to make small adjustments of a few days to determine their profit or loss for the tax year.
 
-As a result, customers with an accounting period that starts on 1 April (rather than 6 April) and ends on 31 March will have the opportunity to change their quarterly updates to also start at the beginning of the month. Although all Making Tax Digital for Income Tax customers or their agents will be able to make this change through their software regardless of their accounting period, only customers with accounting periods starting on 1 April will benefit. Consequently, the software must avoid allowing customers with accounting periods other than 1 April to 31 March to make this change.
+As a result, customers with an accounting period that starts on 1 April (rather than 6 April) and ends on 31 March will have the opportunity to change their quarterly updates to also start at the beginning of the month. All Making Tax Digital for Income Tax customers or their agents will be able to make this change through their software regardless of their accounting period, however only customers with accounting periods that align with the end of a month will benefit. Consequently, the software must avoid allowing customers with accounting periods that do not align with the end of the month to make this change.
 
 The following table shows an example.
 
@@ -80,7 +80,7 @@ By default, a customer’s quarterly updates will be set automatically to standa
 
 However, if the customer is signing up to Making Tax Digital for Income Tax late in the tax year, they can still make this change as long as it is before their first quarterly update. This change will have no effect on the update deadlines.
 
-To allow a customer to change their periods to calendar quarters, the software should use the [Create and Amend Quarterly Period Type for a Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#/paths/~1individuals~1business~1details~1{nino}~1{businessId}~1{taxYear}/put) endpoint. The software should use the [Obligations API](/api-documentation/docs/api/service/obligations-api/) to access the new calendar quarterly periods. 
+To allow a customer to change their periods to calendar quarters, the software should use the [Create and Amend Quarterly Period Type for a Business](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#/paths/~1individuals~1business~1details~1{nino}~1{businessId}~1{taxYear}/put) endpoint. The software should use the [Obligations API](/api-documentation/docs/api/service/obligations-api/) to access the new calendar quarterly periods.
 
 For those customers who took part in MTD from April 2025 and chose to send calendar quarterly updates, the first quarterly period starts on 6 April and ends on 30 June. As a result, customers with a 1 April to 31 March accounting period will need to ensure that income and expenses for the period from 1 April to 5 April are also submitted so that their liability can be assessed accurately for the full tax year equivalent period.
 
@@ -96,7 +96,7 @@ Consider the following example:
     | 3                | 1 October to 31 December  |
     | 4                | 1 January to 31 March     |
 
-- the change affects the first period of the first year and starts from 6 April because that is the first day of the tax year - the first period for subsequent tax years starts on 1 April 
+- the change affects the first period of the first year and starts from 6 April because that is the first day of the tax year - the first period for subsequent tax years starts on 1 April
 - the customer uses the steps described in [Submit quarterly update](#submit-quarterly-update) to submit their calendar quarterly updates through their software
 - when all calendar quarterly updates have been made, the customer needs to account for the income and expense information for the period to 5 April - they can do this through their software by using the [Business Source Adjustable Summary API](/api-documentation/docs/api/service/self-assessment-bsas-api/)
 
@@ -108,7 +108,7 @@ After the calendar quarterly election change has been made, it will continue yea
 
 Making Tax Digital for Income Tax mandated and voluntary customers must create and keep digital records of their self-employment and property business income and expenses. They must then submit summary totals of the information in their digital records to HMRC every quarter.  If they wish, they can also submit this summary-level information more frequently, for example, monthly.
 
-Customers are required to submit each quarterly update by the relevant quarterly due date to avoid receiving a late submission penalty point. If a customer misses the deadline for the first quarterly update, such as by 7th August, they can still submit the second quarterly update by 7th November. The second update will satisfy the obligations for both Q1 and Q2. However, the customer may incur a penalty point for not submitting the first quarterly update on time. 
+Customers are required to submit each quarterly update by the relevant quarterly due date to avoid receiving a late submission penalty point. If a customer misses the deadline for the first quarterly update, such as by 7th August, they can still submit the second quarterly update by 7th November. The second update will satisfy the obligations for both Q1 and Q2. However, the customer may incur a penalty point for not submitting the first quarterly update on time.
 
 Customers must submit at least one update for each quarter. The following table shows an example:
 
@@ -122,9 +122,9 @@ Customers must submit at least one update for each quarter. The following table 
 
 Customers must report their rental income and other receipts from foreign land or property through their Making Tax Digital Software. To ensure the correct tax is calculated software must ensure the customer creates a unique property ID for each property within the foreign country. This must still be completed if only one property is applicable.
 
-Software will use the [Create Foreign Property Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Foreign-Property-Details/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1details~1%7BtaxYear%7D/post) endpoint with a property name provided by the customer to retrieve a unique property ID from HMRC for each foreign property. 
+Software will use the [Create Foreign Property Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Foreign-Property-Details/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1details~1%7BtaxYear%7D/post) endpoint with a property name provided by the customer to retrieve a unique property ID from HMRC for each foreign property.
 
-Software will use the business ID and the property ID when submitting quarterly updates through the [Create and Amend a Foreign Property Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Income-and-Expenses-Period-Summaries/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put) endpoint. 
+Software will use the business ID and the property ID when submitting quarterly updates through the [Create and Amend a Foreign Property Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Income-and-Expenses-Period-Summaries/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put) endpoint.
 
 To remove a foreign property, software can provide an end date for income from that property at any time during the tax year using the [Update Foreign Property Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Foreign-Property-Details/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1details~1%7BpropId%7D~1%7BtaxYear%7D/put) endpoint.
 
@@ -134,7 +134,7 @@ To remove a foreign property, software can provide an end date for income from t
 
 1. The customer needs to report foreign property rental income.
 2. Software submits propertyName and countryCode.
-3. HMRC stores this information and creates a unique propertyID. 
+3. HMRC stores this information and creates a unique propertyID.
 4. Software retrieves the propertyID.
 5. If multiple properties exist, then the process is repeated for each one.
 6. Customer wants to submit their foreign property quarterly update.
