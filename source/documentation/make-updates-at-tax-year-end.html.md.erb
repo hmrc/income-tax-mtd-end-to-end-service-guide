@@ -567,18 +567,13 @@ If they have already finalised their return but they are in the 12 month amendme
 
 ## Submit allowance and adjustments
 
-Some customers must submit an annual summary update. An annual summary is defined as a set of summary data for a tax year, containing allowances and adjustments broken down by category. They can provide updates more frequently if they wish, though they must make this submission before making their final declaration. The following endpoints enable customers to submit their annual allowances or adjustments:
+Some customers must submit an annual summary update. An annual summary is defined as a set of summary data for a tax year, containing allowances and adjustments broken down by category. They can provide updates more frequently if they wish, though they must make this submission before making their final declaration. If a customer is claiming Trading Income Allowance, Rent a Room, Property Income Allowance, or any combination thereof, they are not allowed to claim any other expenses. All expenses included in their cumulative updates must be removed by amending their final cumulative update. The Trading Income Allowance, Rent a Room and Property Income Allowance are then claimed after the end of the tax year using the annual summary update. The following endpoints enable customers to submit their annual allowances or adjustments:
 
 - [Create and Amend Self-Employment Annual Submission](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/5.0/oas/page#tag/Self-Employment-Annual-Submission/paths/~1individuals~1business~1self-employment~1{nino}~1{businessId}~1annual~1{taxYear}/put)
 - [Create and Amend a UK Property Business Annual Submission](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/UK-Property-Business-Annual-Submission/paths/~1individuals~1business~1property~1uk~1{nino}~1{businessId}~1annual~1{taxYear}/put)
 - [Create and Amend a Foreign Property Annual Submission](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Foreign-Property-Annual-Submission/paths/~1individuals~1business~1property~1foreign~1{nino}~1{businessId}~1annual~1{taxYear}/put)
 - [Create and Amend Historic FHL UK Property Business Annual Submission](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Historic-FHL-UK-Property-Business-Annual-Submission/paths/~1individuals~1business~1property~1uk~1annual~1furnished-holiday-lettings~1{nino}~1{taxYear}/put)
 - [Create and Amend Historic Non-FHL UK Property Business Annual Submission](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Historic-non-FHL-UK-Property-Business-Annual-Submission/paths/~1individuals~1business~1property~1uk~1annual~1non-furnished-holiday-lettings~1{nino}~1{taxYear}/put)
-
-Customers eligible to claim the Electric Charge Point Allowance for the 25/26 and 26/27 tax years should report this as an 'Other Capital Allowance'.
-
-- For the Property Business API, use the Create and Amend Self-Employment Annual Submission endpoint and enhancedCapitalAllowance data item.
-- For the Self Employment Business API, use the Create and Amend a UK Property Business Annual Submission endpoint and otherCapitalAllowance data item.
 
 ### View allowance and adjustments
 
