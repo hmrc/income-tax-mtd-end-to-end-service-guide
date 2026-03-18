@@ -205,6 +205,31 @@ The software can also use the following endpoints to enable customers to:
 - [Retrieve additional directorship/dividend data under each employment ID](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/2.0/oas/page#tag/Additional-Directorship-and-Dividend-Information/paths/~1individuals~1dividends-income~1directorship~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D/get)
 - [Delete additional directorship/dividend data under each employment ID](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-dividends-income-api/2.0/oas/page#tag/Additional-Directorship-and-Dividend-Information/paths/~1individuals~1dividends-income~1directorship~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D/delete)
 
+### Partnership income
+
+Partners in a partnership are taxed individually on their share of the partnership’s profits or losses.Customers can use software to submit details of income received from one or more partnerships. 
+
+It is essential that all submissions and amendments use the correct Partnership Unique Tax Reference (UTR), this is provided to the nominated partner when the partnership is registered with HMRC. 
+
+Only the format of the UTR is validated. Therefore if an incorrect UTR is submitted, a new partnership will be created and the information submitted will be recorded under the newly created partnership. 
+
+Software can call the List all Partner Income endpoint to retrieve a list of all partner income submissions and partnership UTRs. Once created, a partnership must be re-asserted each new tax year.
+
+Software can use the following endpoints to allow the customer to:
+
+- [Create or Amend Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership/put)  
+- [Retrieve Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/get)
+- [Delete Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete)  
+- [List All Partner Income Submissions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete)  
+
+In software, customers can submit partnership income for all partnerships in which they are a partner. Each partnership may include more than one trade or profession, customers must provide a description of each partnership trade or profession when submitting multiple trades as part of their partner income. The same partnership UTR applies to all trades within one partnership.
+
+The Delete Partner Income endpoint deletes the whole selected Partner Income array, including all of the trades within it. To delete an individual trade, software should use the Amend Partner Income endpoint. 
+
+Providing a cease date for a partnership does not cease the partnership. It is an indication that no partnership income will be submitted beyond the cease date.
+
+If no partnership income data has previously been submitted for the customer, a 404 error will be returned when the List All Partner Income Submissions endpoint is called.
+
 ### Foreign income
 
 Foreign income is any income earned outside England, Wales, Scotland and Northern Ireland. The Channel Islands and the Isle of Man are classed as foreign.
@@ -656,30 +681,69 @@ Customers with accounting dates later in the calendar year may have to estimate 
 
 ## How to treat a loss
 
-A self-employed business can have a loss when trade expenses are more than trade income. If the business has a loss for a year before signing up to Making Tax Digital, the customer or agent will need to submit details about the loss to be brought forward. For more information, refer to [HS227 Losses (GOV.UK).](https://www.gov.uk/government/publications/losses-hs227-self-assessment-helpsheet/hs227-losses-2023#using-losses-types-of-claim)
+Customers who are self-employed, landlords with property income or a member of a trading partnership will usually make a loss when their business-related expenses are more than the business income. 
 
-Customers can submit different types of losses through their software. This includes brought forward losses and capital gains losses. Brought forward losses can be calculated for the customer’s self-employment, UK property, and foreign property business income types. The software can use the following endpoints to enable customers to:
+Trade losses can be used by customers in the following 3 ways:
 
-- [Create a Brought Forward Loss](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Brought-Forward-Losses/paths/~1individuals~1losses~1{nino}~1brought-forward-losses/post)
-- [List Brought Forward Losses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Brought-Forward-Losses/paths/~1individuals~1losses~1{nino}~1brought-forward-losses~1tax-year~1{taxYearBroughtForwardFrom}/get)
-- [Amend a Brought Forward Loss Amount](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Brought-Forward-Losses/paths/~1individuals~1losses~1{nino}~1brought-forward-losses~1{lossId}~1change-loss-amount/post)
-- [Retrieve a Brought Forward Loss](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Brought-Forward-Losses/paths/~1individuals~1losses~1{nino}~1brought-forward-losses~1{lossId}/get)
-- [Delete a Brought Forward Loss](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Brought-Forward-Losses/paths/~1individuals~1losses~1{nino}~1brought-forward-losses~1{lossId}/delete)
+- Carry back - The ability to set off losses made in the current tax year against profit made in the previous tax year(s).  
+- Carry sideways - The ability to set off losses made in the current tax year against the current tax year’s total income.  
+- Carry forward - The ability to set off losses made in the current tax year against  profits from the same business in a future tax year.
 
-For capital gains losses, the software can use the following endpoints to enable customers to:
+For information on the limits and restrictions related to each of these options, refer to the relevant help sheets on [GOV.UK](https://www.gov.uk/government/publications/limit-on-income-tax-reliefs-hs204-self-assessment-helpsheet/hs204-limit-on-income-tax-reliefs-2025). 
 
-- [Create and Amend Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-capital-gains-income-api/3.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1disposals-income~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/put)
-- [Retrieve Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-capital-gains-income-api/3.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1disposals-income~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/get)
-- [Delete Other Capital Gains and Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-capital-gains-income-api/3.0/oas/page#tag/Other-Capital-Gains-and-Disposals/paths/~1individuals~1disposals-income~1other-gains~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+### Identifying losses
 
-After submitting the above losses, customers can view their loss position. If they do not agree with that, they can submit an independent loss claim. The software can use the following endpoints to enable a customer to:
+At tax year end, software can use the following APIs and endpoints to retrieve losses and present them to customers who can then choose how they should be dealt with, and in which priority.
 
-- [Create a Loss Claim](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims/post)
-- [List Loss Claims](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims~1tax-year~1{taxYearClaimedFor}/get)
-- [Retrieve a Loss Claim](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims~1{claimId}/get)
-- [Delete a Loss Claim](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims~1{claimId}/delete)
-- [Amend a Loss Claim Type](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims~1{claimId}~1change-type-of-claim/post)
-- [Amend Loss Claims Order](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/6.0/oas/page#tag/Loss-Claims/paths/~1individuals~1losses~1{nino}~1loss-claims~1order~1{taxYearClaimedFor}/put)
+- Business Source Adjustable Summary (BSAS) API \- Use the following endpoints for the relevant income sources:  
+  - [Retrieve a Self-Employment Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/7.0/oas/page#tag/Self-employment-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1self-employment~1%7BcalculationId%7D~1%7BtaxYear%7D/get)  
+  - [Retrieve a UK Property Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/7.0/oas/page#tag/UK-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1uk-property~1%7BcalculationId%7D~1%7BtaxYear%7D/get)  
+  - [Retrieve a Foreign Property Business Source Adjustable Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-bsas-api/7.0/oas/page#tag/Foreign-property-business/paths/~1individuals~1self-assessment~1adjustable-summary~1%7Bnino%7D~1foreign-property~1%7BcalculationId%7D~1%7BtaxYear%7D/get)
+
+>  Note: If a customer has both UK and Foreign property businesses then they need to repeat the process for both, where loss claims are present. 
+
+- Individual Calculation API \- Use the [Retrieve a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint
+
+During the tax year, use the [Retrieve a Business Income Source Summary (BISS) endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-biss-api/3.0/oas/page#/paths/~1individuals~1self-assessment~1income-summary~1%7Bnino%7D~1%7BtypeOfBusiness%7D~1%7BtaxYear%7D~1%7BbusinessId%7D/get) from the Business Income Source Summary (BISS) API to track losses.
+
+Losses are indicated to customers by one of the following fields:
+
+- Adjusted Income Tax Loss  
+- Net Loss  
+- Adjusted Loss - this only applies to losses from foreign property where foreign tax has been paid on property income
+
+### Loss set-off against income (carry back and sideways)
+
+Customers may use the loss against income from the current tax year, the previous year, or both years, in any priority. Losses can only be used once. Customers can not claim more loss than has been stated as total adjusted loss. 
+
+When carry back and carry sideways claims are being made, software must provide the facility for customers to state their preference order. For more information, refer to the Trade Losses Business Income Manual on [GOV.UK](https://www.gov.uk/hmrc-internal-manuals/business-income-manual/bim85015). 
+
+In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+
+### Loss used against income in first 4 years of trade (carry back)
+
+Customers can make this claim for losses made in the first 4 years of trading. They must start by the earliest years income. If the loss is more than the income of that year, they must use the remaining loss against the next year, and so on.
+
+In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+
+### Losses used against profit in year of cessation (carry back)
+
+Customers can claim relief for losses in the final 12 months of the business against profits in that business in the current tax year, and the 3 previous years. They must start with the latest year and inform HMRC that their claim is for terminal loss relief. In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+
+In software the total amount of loss claim credit adjustment is entered using the [Create or Amend Tax Liability Adjustments endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-tax-liability-adjustments-api/1.0/oas/page#/paths/~1individuals~1tax-liability~1adjustments~1%7Bnino%7D~1%7BtaxYear%7D/put).
+
+### Relief against profit of the same trade (carry forward)
+
+Customers can carry forward their loss, or the unused part of the loss, and any unused losses from earlier years to use against profits of the trade in later years. They can not carry forward more loss than has already been reported as total adjusted loss (or total adjusted loss minus loss carried sideways or carried back, if customer has carried sideways or carried back).  
+In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+
+### Brought forward losses
+
+Customers can bring forward unused losses from earlier years to reduce profits in the current year. In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+
+The submitted figures can be retrieved using the [Retrieve Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/get) or, if found to be submitted in error, can be deleted using the [Delete Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/delete).
+
+If the customer changes their expenses after their loss submission, their loss amount may change. Software must resubmit the updated loss amounts.
 
 ## Final declaration
 
