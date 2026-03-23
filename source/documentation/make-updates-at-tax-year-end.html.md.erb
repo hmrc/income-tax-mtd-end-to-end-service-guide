@@ -224,11 +224,11 @@ Software can use the following endpoints to allow the customer to:
 
 In software, customers can submit partnership income for all partnerships in which they are a partner. Each partnership may include more than one trade or profession, customers must provide a description of each partnership trade or profession when submitting multiple trades as part of their partner income. The same partnership UTR applies to all trades within one partnership.
 
-The Delete Partner Income endpoint deletes the whole selected Partner Income array, including all of the trades within it. To delete an individual trade, software should use the Amend Partner Income endpoint. 
+The [Delete Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete) deletes the whole selected Partner Income array, including all of the trades within it. To delete an individual trade, software should use the [Create or Amend Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership/put) endpoint. 
 
 Providing a cease date for a partnership does not cease the partnership. It is an indication that no partnership income will be submitted beyond the cease date.
 
-If no partnership income data has previously been submitted for the customer, a 404 error will be returned when the List All Partner Income Submissions endpoint is called.
+If no partnership income data has previously been submitted for the customer, a 404 error will be returned when you call the [List All Partner Income Submissions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete).
 
 ### Foreign income
 
