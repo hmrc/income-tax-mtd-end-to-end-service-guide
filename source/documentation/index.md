@@ -81,13 +81,13 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 
 Below is a summary of updates to this service guide.
 
-#### 23 March 2025
+#### 23 March 2026
 
 Add the following sections:
 
-- [Partnership income](https://developer.qa.tax.service.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#partnership-income)
+- [Partnership income](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#partnership-income)
 
-Update guidance on [How to treat a loss](https://developer.qa.tax.service.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#how-to-treat-a-loss)
+Update guidance on [How to treat a loss](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#how-to-treat-a-loss)
 
 #### 15 December 2025
 
