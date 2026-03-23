@@ -207,28 +207,28 @@ The software can also use the following endpoints to enable customers to:
 
 ### Partnership income
 
-Partners in a partnership are taxed individually on their share of the partnership’s profits or losses.Customers can use software to submit details of income received from one or more partnerships. 
+Partners in a partnership are taxed individually on their share of the partnership’s profits or losses. Customers can use software to submit details of income received from one or more partnerships. 
 
 It is essential that all submissions and amendments use the correct Partnership Unique Tax Reference (UTR), this is provided to the nominated partner when the partnership is registered with HMRC. 
 
-Only the format of the UTR is validated. Therefore if an incorrect UTR is submitted, a new partnership will be created and the information submitted will be recorded under the newly created partnership. 
+Only the format of the UTR is validated. Therefore if an incorrect or badly formatted UTR is submitted, a new partnership will be created and the information submitted will be recorded under the newly created partnership. 
 
-Software can call the List all Partner Income endpoint to retrieve a list of all partner income submissions and partnership UTRs. Once created, a partnership must be re-asserted each new tax year.
+Software can call the [List All Partner Income Submissions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership/get) endpoint to retrieve a list of all partner income submissions and partnership UTRs. Once created, a partnership must be re-asserted each new tax year.
 
 Software can use the following endpoints to allow the customer to:
 
 - [Create or Amend Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership/put)  
 - [Retrieve Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/get)
 - [Delete Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete)  
-- [List All Partner Income Submissions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete)  
+- [List All Partner Income Submissions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership/get)  
 
 In software, customers can submit partnership income for all partnerships in which they are a partner. Each partnership may include more than one trade or profession, customers must provide a description of each partnership trade or profession when submitting multiple trades as part of their partner income. The same partnership UTR applies to all trades within one partnership.
 
-The [Delete Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete) deletes the whole selected Partner Income array, including all of the trades within it. To delete an individual trade, software should use the [Create or Amend Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership/put) endpoint. 
+The [Delete Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete) deletes the whole selected partnership, including all of the trades within it. To delete an individual trade, software should use the [Create or Amend Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership/put) endpoint. 
 
 Providing a cease date for a partnership does not cease the partnership. It is an indication that no partnership income will be submitted beyond the cease date.
 
-If no partnership income data has previously been submitted for the customer, a 404 error will be returned when you call the [List All Partner Income Submissions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/delete).
+If no partnership income data has previously been submitted for the customer, a 404 error will be returned when you call the [List All Partner Income Submissions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership/get) and [Retrieve Partner Income](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-partner-income-api/1.0/oas/page#/paths/~1individuals~1partner-income~1%7Bnino%7D~1%7BtaxYear%7D~1partnership~1%7BpartnershipUtr%7D/get) endpoints.
 
 ### Foreign income
 
@@ -718,28 +718,28 @@ Customers may use the loss against income from the current tax year, the previou
 
 When carry back and carry sideways claims are being made, software must provide the facility for customers to state their preference order. For more information, refer to the Trade Losses Business Income Manual on [GOV.UK](https://www.gov.uk/hmrc-internal-manuals/business-income-manual/bim85015). 
 
-In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+In software claims are made using the [Create or Amend Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
 
 ### Loss used against income in first 4 years of trade (carry back)
 
 Customers can make this claim for losses made in the first 4 years of trading. They must start by the earliest years income. If the loss is more than the income of that year, they must use the remaining loss against the next year, and so on.
 
-In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+In software claims are made using the [Create or Amend Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
 
 ### Losses used against profit in year of cessation (carry back)
 
-Customers can claim relief for losses in the final 12 months of the business against profits in that business in the current tax year, and the 3 previous years. They must start with the latest year and inform HMRC that their claim is for terminal loss relief. In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+Customers can claim relief for losses in the final 12 months of the business against profits in that business in the current tax year, and the 3 previous years. They must start with the latest year and inform HMRC that their claim is for terminal loss relief. In software claims are made using the [Create or Amend Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
 
 In software the total amount of loss claim credit adjustment is entered using the [Create or Amend Tax Liability Adjustments endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-tax-liability-adjustments-api/1.0/oas/page#/paths/~1individuals~1tax-liability~1adjustments~1%7Bnino%7D~1%7BtaxYear%7D/put).
 
 ### Relief against profit of the same trade (carry forward)
 
 Customers can carry forward their loss, or the unused part of the loss, and any unused losses from earlier years to use against profits of the trade in later years. They can not carry forward more loss than has already been reported as total adjusted loss (or total adjusted loss minus loss carried sideways or carried back, if customer has carried sideways or carried back).  
-In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+In software claims are made using the [Create or Amend Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
 
 ### Brought forward losses
 
-Customers can bring forward unused losses from earlier years to reduce profits in the current year. In software claims are made using the [Create or Amend Losses or Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
+Customers can bring forward unused losses from earlier years to reduce profits in the current year. In software claims are made using the [Create or Amend Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/put).
 
 The submitted figures can be retrieved using the [Retrieve Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/get) or, if found to be submitted in error, can be deleted using the [Delete Losses and Claims endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-losses-api/7.0/oas/page#/paths/~1individuals~1losses~1%7Bnino%7D~1businesses~1%7BbusinessId%7D~1loss-claims~1%7BtaxYear%7D/delete).
 
