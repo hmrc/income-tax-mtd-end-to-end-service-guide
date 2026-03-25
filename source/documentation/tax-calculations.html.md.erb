@@ -71,7 +71,6 @@ An HTTP 200 success code is returned and the targeted message, recommended actio
 
 > Software must allow sufficient time for the tax calculation to be generated before requesting an Assist report, as requesting the Assist report prior to the tax calculation being generated will return an HTTP 404 error code.
 
-
 ### Acknowledge an HMRC Self Assessment assist report
 
 This endpoint enables you to acknowledge that the given report has been read by either the customer or agent.
@@ -84,9 +83,9 @@ To acknowledge the report, an HTTP 204 code is returned and contains no content.
 
 ### HMRC Assist customer journey
 
-<a href="figures/customer-journey-transactional-risking-high-level.svg" target="blank"><img src="figures/customer-journey-transactional-risking-high-level.svg" alt="HMRC Assist customer journey" style="width:720px;" /></a>
+<a href="figures/HMRC-assist-e2e-journey.svg" target="blank"><img src="figures/HMRC-assist-e2e-journey.svg" alt="HMRC Assist customer journey" style="width:720px;" /></a>
 
-<a href="figures/customer-journey-transactional-risking-high-level.svg" target="blank">Open the high-level diagram in a new tab.</a>
+<a href="figures/HMRC-assist-e2e-journey.svg" target="blank">Open the high-level diagram in a new tab.</a>
 
 ### Troubleshooting
 
@@ -95,5 +94,8 @@ If an HTTP 404 error code is returned, follow these steps:
 - Wait sufficient time for the tax calculation to be generated
 - Check that a validation error has not been triggered
 - Try again 
+
+<a href="figures/HMRC-assist-error-404-troubleshooting.svg" target="blank">Open the error handling journey diagram in a new tab.</a>
+
 
 > Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
