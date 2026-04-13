@@ -24,17 +24,17 @@ Currently, under Self Assessment, a subcontractor submits their deductions on th
 
 Under Making Tax Digital for Income Tax, a customer can view what has been submitted by their contractor through their [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account or their software. Customers can complete the following tasks on their CIS deductions:
 
-- [view CIS deductions](#view-cis-deductions)
-- [create CIS deductions](#create-cis-deductions)
-- [amend CIS deductions](#amend-cis-deductions)
-- [delete CIS deductions](#delete-cis-deductions)
+- [View CIS deductions](#view-cis-deductions)
+- [Create CIS deductions](#create-cis-deductions)
+- [Amend CIS deductions](#amend-cis-deductions)
+- [Delete CIS deductions](#delete-cis-deductions)
 
 #### View CIS deductions
 
 A customer, at any time, can view a breakdown of all the CIS deductions that have been reported to HMRC by their contractors. In software, this is done by calling the [Retrieve CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1current-position~1%7BtaxYear%7D~1%7Bsource%7D/get) endpoint.
 
 <a href="figures/cis-retrieve-cis.svg" target="blank"><img src="figures/cis-retrieve-cis.svg" alt="CIS create diagram" style="width:720px;" /></a>
-<a href="figures/cis-retrieve-cis.svg" target="blank">Open the CIS retrieve deduction diagram in a new tab</a>.
+<a href="figures/cis-retrieve-cis.svg" target="blank">Open the View CIS deduction diagram in a new tab</a>.
 
 When the customer submits quarterly updates to HMRC through their software, they will not be required to provide a CIS deduction amount. When a quarterly update has been made, the software will trigger the tax calculation using the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint and display the calculation result to the customer using the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint. This calculation result will include the CIS deductions received by the contractor for that quarter.
 
@@ -42,24 +42,32 @@ If the customer does not agree with the amount the contractor has submitted to H
 
 #### Create CIS deductions
 
-At the end of the year, if the customer still does not agree with the CIS deductions amount the contractor has submitted to HMRC, they can submit what they believe to be the correct amount. This needs to be completed following the fourth quarterly update and before making a final declaration. In software, this is done by calling the [Create CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments/post) endpoint. After successfully creating CIS deductions for the customer, the API returns a submission ID in the success response. This ID must be used to amend or delete CIS deductions in the future. A customer might also submit their CIS deductions amount if they find that no data from the contractor is included in the tax calculation.
+At the end of the year, if the customer still does not agree with the CIS deductions amount the contractor has submitted to HMRC, they can submit what they believe to be the correct amount. This needs to be completed following the fourth quarterly update and before making a final declaration. In software, this is done by calling the [Create CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments/post) endpoint. 
+
+When creating CIS deductions, you must provide the correct Employer Reference (employerRef), as this is the primary identifier used to match CIS deductions to a contractor, accurate period start and end dates and the CIS deduction amounts for the disputed periods only.
+
+Where contractor data already exists, the Employer Reference should be taken from the retrieved response. Where no contractor data exists, the Employer Reference should be taken from official contractor documentation. Using the Create CIS deduction endpoint creates a customer CIS deduction submission, overwrites contractor-reported data only for the periods provided and leaves all other contractor-reported periods unchanged.
+
+After successfully creating CIS deductions for the customer, the API returns a submission ID in the success response. This ID must be used to amend or delete CIS deductions in the future. A customer might also submit their CIS deductions amount if they find that no data from the contractor is included in the tax calculation.
 
 <a href="figures/cis-create-cis.svg" target="blank"><img src="figures/cis-create-cis.svg" alt="CIS create diagram" style="width:720px;" /></a>
-<a href="figures/cis-create-cis.svg" target="blank">Open the CIS create deduction diagram in a new tab</a>
+<a href="figures/cis-create-cis.svg" target="blank">Open the Create CIS deduction diagram in a new tab</a>
 
 #### Amend CIS deductions
 
-If the customer has submitted a CIS deduction amount after the end of the year but later realises what they submitted was incorrect, they can provide the correct CIS deduction amount. This amendment should be done before making a final declaration. In software, amending CIS deductions is done by calling the [Amend CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/put) endpoint.
+If the customer has submitted a CIS deduction amount after the end of the year but later realises what they submitted was incorrect, they can provide the correct CIS deduction amount. This amendment should be done before making a final declaration, and applies only to CIS deductions previously submitted by the customer. 
+
+In software, amending CIS deductions is done by calling the [Amend CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/put) endpoint.
 
 <a href="figures/cis-amend-cis.svg" target="blank"><img src="figures/cis-amend-cis.svg" alt="CIS amend diagram" style="width:720px;" /></a>
-<a href="figures/cis-amend-cis.svg" target="blank">Open the CIS amend deduction diagram in a new tab</a>
+<a href="figures/cis-amend-cis.svg" target="blank">Open the Amend CIS deduction diagram in a new tab</a>
 
 #### Delete CIS deductions
 
 If the customer has submitted a CIS deduction amount after the end of the year but later realises they did not pay any CIS deductions and what they submitted was incorrect, they can delete the amount. This deletion should be done before making a final declaration. In software, deleting CIS deductions is done by calling the [Delete CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/delete) endpoint.
 
 <a href="figures/cis-delete-cis.svg" target="blank"><img src="figures/cis-delete-cis.svg" alt="CIS delete diagram" style="width:720px;" /></a>
-<a href="figures/cis-delete-cis.svg" target="blank">Open the CIS delete deduction diagram in a new tab</a>
+<a href="figures/cis-delete-cis.svg" target="blank">Open the Delete CIS deduction diagram in a new tab</a>
 
 ### Employment income
 
