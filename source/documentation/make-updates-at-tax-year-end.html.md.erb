@@ -567,17 +567,25 @@ There may be some sole traders who have a period of account (may also be referre
 - Does not align to the tax year
 - Changes from year to year
 
-This information is important to support customers in submitting the correct information for the correct tax year. To allow a customer to inform HMRC of their period of account, software must use the 'Create or Update Periods of Account' endpoint within the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/). This information must be provided at the end of year, after all four quarterly updates have been made.
+This information is important to support customers in submitting the correct information for the correct tax year. To allow a customer to inform HMRC of their period of account, software must use the [Create or Update Periods of Account](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#tag/Periods-of-Account/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D~1%7BtaxYear%7D~1periods-of-account/put) endpoint within the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/). This information must be provided at the end of year, after all four quarterly updates have been made.
 
-For each Self Employment business, software must first ask the customer if they have had a period of account that ended in the relevant tax year.  Only in the instance of the response being yes, must the software then go on to collect further information.
+For each Self Employment business, software must first ask the customer if they have had a period of account that ended in the relevant tax year. The response must then be submitted via the periodsOfAccount boolean within the within the [Create or Update Periods of Account](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#tag/Periods-of-Account/paths/~1individuals~1business~1details~1%7Bnino%7D~1%7BbusinessId%7D~1%7BtaxYear%7D~1periods-of-account/put) endpoint - a response `true` indicates that the customer does have a period of account that ended in the relevant tax year, `false` indicates that they did not. Only in the instance of the response being `true` must the software then collect the start and end dates of the relevant periods of account.
 
 ### Retrieve Periods of Account
 
 Once the software has successfully submitted the period of account information through to HMRC, the 'Retrieve Periods of Account' endpoint under the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/) allows the customer to view their submitted period of account for each business.
 
-<a href="figures/BPA-flow.svg" target="blank"><img src="figures/BPA-flow.svg" alt="Periods of account process diagram" style="width:720px;" /></a>
+#### Periods of Account that ended within tax year
 
-<a href="figures/BPA-flow.svg" target="blank">Open the Periods of account process diagram in a new tab</a>.
+<a href="figures/BasisPeriodReform1.svg" target="blank"><img src="figures/BasisPeriodReform1.svg" alt="Periods of account within tax year process diagram" style="width:720px;" /></a>
+
+<a href="figures/BasisPeriodReform1.svg" target="blank">Open the Periods of account within tax year process diagram in a new tab</a>.
+
+#### Periods of account that did not end within the Tax Year
+
+<a href="figures/BasisPeriodReform2.svg" target="blank"><img src="figures/BasisPeriodReform2.svg" alt="Periods of account that did not end within tax year process diagram" style="width:720px;" /></a>
+
+<a href="figures/BasisPeriodReform2.svg" target="blank">Open the Periods of account that did not end within tax year process diagram in a new tab</a>.
 
 ### Late Accounting Date Rule
 
