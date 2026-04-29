@@ -837,7 +837,7 @@ For example, for the 2025 to 2026 tax year customers have until 31 January 2028 
 
 You should use the same business and non-business income APIs to allow customers to notify HMRC of any amendments.
 
-Before an amendment submission is accepted, the customer must have completed their final declaration for the relevant tax year through software, and the amendment request must be submitted within the designated amendment window. Customers will first need to submit an **Intent to Amend Calculation**, during which additional validation checks will be carried out. If any errors are identified these will be sent to the software, which must display them to the customer or their authorised agent.
+Before an amendment submission is accepted, the customer must have completed their final declaration for the relevant tax year through software, and the amendment request must be submitted within the designated amendment window. Software should use the retrieve endpoint for the relevant submission endpoint when making an amendment, so that customers are displayed the most up to date information. Customers will first need to submit an **Intent to Amend Calculation**, during which additional validation checks will be carried out. If any errors are identified, these will be sent to the software, which must display them to the customer or their authorised agent.
 
 <a href="figures/PFA-customer-journey.svg" target="blank"><img src="figures/PFA-customer-journey.svg" alt="Diagram of post-finalisation amendment customer journey" style="width:720px;" /></a>
 <a href="figures/PFA-customer-journey.svg" target="blank">Open the post-finalisation amendment customer journey diagram in a new tab</a>.
