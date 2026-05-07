@@ -10,16 +10,15 @@ description: How MTD-compatible software can retrieve information about a custom
 
 # Viewing a customer's Self Assessment account information
 
-The [Self Assessment Accounts API](/api-documentation/docs/api/service/self-assessment-accounts-api/) has a suite of endpoints that retrieve the customer’s payment, refunds and liability information. The data returned relates to payments for the tax years since the customer joined the new service. There may also be outstanding liabilities and payment information a customer needs to view for the years before signing up to Making Tax Digital for Income Tax that can be viewed using the [HMRC online services]( /guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account.
+The [Self Assessment Accounts API](/api-documentation/docs/api/service/self-assessment-accounts-api/) has a suite of endpoints that retrieve the customer’s payment and liability information. The data returned relates only to payments and liabilities arising for tax years since the customer joined the new service. There may also be outstanding liabilities and payment information a customer needs to view for the years before signing up to Making Tax Digital for Income Tax that can be viewed using the [HMRC online services]( /guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account.
 
 The endpoints allow the customer to complete the following tasks:
 
 * view a list of MTD charges and their due dates
-* view a list of MTD credits available for refund
 * view the history of payments made to HMRC and how the money was used
 * view the history of changes made to an individual charge
 
-A customer, at any time, can view a breakdown of their MTD liabilities for a given date range as well as any refunds available. In software, this is done by calling the [Retrieve Self Assessment Balance and Transactions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/3.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1balance-and-transactions/get) endpoint. Customer liabilities in the endpoint are broken down into overdue, currently due (payable), and pending (not yet due) amounts. Refunds in the endpoint are broken down into unallocated, allocated, total and available credit. 
+A customer, at any time, can view a breakdown of their MTD liabilities for a given date range. In software, this is done by calling the [Retrieve Self Assessment Balance and Transactions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/3.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1balance-and-transactions/get) endpoint. Customer liabilities in the endpoint are broken down into overdue, currently due (payable), and pending (not yet due) amounts.
 
 <a href="figures/payments-and-liabilities-rsab.svg" target="blank"><img src="figures/payments-and-liabilities-rsab.svg" alt="Retrieve a Self Assessment Balance Transactions diagram" style="width:720px;" /></a>
 
@@ -36,13 +35,5 @@ A customer, at any time, can view the history of changes made to an individual c
 <a href="figures/payments-and-liabilities-rsach.svg" target="blank"><img src="figures/payments-and-liabilities-rsach.svg" alt="Retrieve a Self Assessment Charge's History diagram" style="width:720px;" /></a>
 
 <a href="figures/payments-and-liabilities-rsach.svg" target="blank">Open the Retrieve a Self Assessment Charge's History diagram in a new tab</a>.
-
-## Making a payment and claiming a refund
-
-For an MTD Customer to make a payment they can still access the Self Assessment service via the [Pay your Self Assessment tax bill - Overview page on GOV.UK](https://www.gov.uk/pay-self-assessment-tax-bill).
-
-To claim a refund, customers or their agents must access their HMRC online service and use the 'Request a Self Assessment Refund' service. Software can provide the following link for users to access these services - [HMRC online services: sign in or set up an account: Sign in or set up an account - GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services). Users will need to sign in with the User ID and Password they received when signing up for Making Tax Digital for Income Tax. 
-
-When a refund has been requested, software will be able to show the amount the users have requested using the [Retrieve Self Assessment Balance and Transactions endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1balance-and-transactions/get) and the `firstPendingAmountRequested` data item.
 
 > Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
