@@ -51,36 +51,15 @@ If a software provider identifies what they think could be a problem with the [I
 
 ## HMRC Assist
 
-HMRC Assist is a new digital service to support customers using Making Tax Digital for Income Tax. The goal of HMRC Assist is to ensure that customers get their tax returns right the first time. It will analyse information provided through quarterly updates and other data that HMRC holds, such as PAYE information from Real Time Information (RTI) submissions. Based on this data, HMRC Assist provides tailored feedback to customers to help them with their tax returns.
+HMRC Assist is a digital service that support customers using Making Tax Digital for Income Tax. The goal of HMRC Assist is to ensure that customers get their tax returns right the first time. It will analyse information provided through quarterly updates and other data that HMRC holds, such as PAYE information from Real Time Information (RTI) submissions. Based on this data, HMRC Assist provides tailored feedback to customers to help them with their tax returns. A message is only presented when HMRC identifies a potential error in the information provided and considers it necessary for the customer to review it.
 
-The service will supplement any existing guidance within software by using data available to HMRC to provide personalised feedback messages on the information submitted on quarterly updates and final declarations.
+The service will supplement any existing guidance within software by using data available to HMRC to provide personalised feedback messages on the information submitted in quarterly updates and tax returns. The messages returned by the HMRC Assist service are separate to messages received through a customer’s tax account and can only be accessed through MTD-compatible software.
 
-This service will be accessible to customers and agents through compatible software. As a software provider, you will be able to integrate HMRC Assist into your MTD-compatible product using the [Self Assessment Assist API](/api-documentation/docs/api/service/self-assessment-assist/). Once integrated, customers or their agents submitting information using software can request feedback messages. HMRC Assist will then review the data and provide feedback and suggested actions to ensure accurate tax reporting. Additionally, the service may include links to helpful guidance on [GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs)
+This service will be accessible to customers and agents through compatible software. As a software provider, you will be able to integrate HMRC Assist into your MTD-compatible product using the [Self Assessment Assist API](/api-documentation/docs/api/service/self-assessment-assist/). Once integrated, customers or their agents submitting information using software can request feedback messages. HMRC Assist will then review the data and provide feedback and suggested actions to ensure accurate tax reporting. Additionally, the service may include links to helpful guidance on [GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs). The service returns a maximum of five messages per request. This limit is intended to prevent information overload and to ensure that only the most relevant and high‑priority messages are presented to consumers. If the customer does not act on the feedback message, or if HMRC Assist determines that the feedback remains applicable, the same message will be reissued.
 
 For example, if HMRC data suggests that rental income should be declared but has not been, a feedback message may prompt the customer to declare it. Similarly, the service will highlight any tax reliefs or allowances to which the customer may be entitled. While this feature is optional for MTD software, it is expected to meet market demand due to its benefits, including improving the customer experience and increasing accuracy in tax filings.
 
-### Produce an HMRC Self Assessment assist report
-
-The report contains targeted feedback based on what the customer advises HMRC in their update for the given National Insurance number (NINO), calculation ID, and tax year.
-
-<a href="figures/customer-journey-transactional-risking-produce-report.svg" target="blank"><img src="figures/customer-journey-transactional-risking-produce-report.svg" alt="Produce report" style="width:720px;" /></a>
-
-<a href="figures/customer-journey-transactional-risking-produce-report.svg" target="blank">Open the produce a report diagram in a new tab.</a>
-
-An HTTP 200 success code is returned and the targeted message, recommended action and guidance links are within the JSON for the software to display.
-
-> Software must allow sufficient time for the tax calculation to be generated before requesting an Assist report, as requesting the Assist report prior to the tax calculation being generated will return an HTTP 404 error code.
-
-
-### Acknowledge an HMRC Self Assessment assist report
-
-This endpoint enables you to acknowledge that the given report has been read by either the customer or agent.
-
-<a href="figures/customer-journey-transactional-risking-acknowledge.svg" target="blank"><img src="figures/customer-journey-transactional-risking-acknowledge.svg" alt="Acknowledge a HMRC Assist Report" style="width:720px;" /></a>
-
-<a href="figures/customer-journey-transactional-risking-acknowledge.svg" target="blank">Open the Acknowledge HMRC Assist report diagram in a new tab</a>.
-
-To acknowledge the report, an HTTP 204 code is returned and contains no content.
+For more information on HMRC Assist, please refer to [GOV.UK](https://www.gov.uk/government/publications/find-out-about-hmrc-assist--2/hmrc-assist-submission-feedback).
 
 ### HMRC Assist customer journey
 
@@ -88,12 +67,38 @@ To acknowledge the report, an HTTP 204 code is returned and contains no content.
 
 <a href="figures/customer-journey-transactional-risking-high-level.svg" target="blank">Open the high-level diagram in a new tab.</a>
 
+1.  	Software calls the Produce a HMRC Self Assessment Assist Report endpoint using the nino, calcId and relevant tax year.
+2.  	HMRC receives the request.
+3.  	If HMRC does not have any messages for the calculation, software receives HTTP 204 (success with no messages) response.
+4.  	Customer views confirmation that there are no messages for that calculation.
+5.  	If HMRC does have messages for the calculation, software receives HTTP 200 response with the relevant report, reportId and correlationId and presents the messages to the customer in full.
+6.  	Customer views the message.
+7.  	Software calls the Acknowledge a HMRC Self Assessment Assist Report endpoint using the reportId, correlationId and nino.
+8.  	HMRC receives the acknowledgement and returns a HTTP 204 response.
+9.  	Software receives the HTTP 204 response.
+
+### Produce an HMRC Self Assessment assist report
+
+The report contains targeted feedback based on what the customer advises HMRC in their update for the given National Insurance number (NINO), calculation ID, and tax year.
+
+An HTTP 200 success code is returned and the targeted message, recommended action and guidance links are within the JSON for the software to display.
+
+> Software must allow sufficient time for the tax calculation to be generated before requesting an Assist report, as requesting the Assist report prior to the tax calculation being generated will return an HTTP 404 error code.
+
+### Acknowledge an HMRC Self Assessment assist report
+
+This endpoint enables you to acknowledge that the given report has been presented to either the customer or agent.
+
+To acknowledge the report has been presented, an HTTP 204 code is returned and contains no content.
+
+HMRC strongly encourages software providers to use the Acknowledge Report endpoint. Using this endpoint enables HMRC to improve message targeting and prioritisation, helping to ensure that customers receive the most appropriate and beneficial messages.
+
 ### Troubleshooting
 
 If an HTTP 404 error code is returned, follow these steps:
 
 - Wait sufficient time for the tax calculation to be generated
-- Check that a validation error has not been triggered
+- When generating a tax calculation, ensure that no validation errors have been triggered before generating a report
 - Try again 
 
 > Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
