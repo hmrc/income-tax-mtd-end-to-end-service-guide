@@ -451,6 +451,22 @@ Customers can use their software to submit information about incapacity benefits
 - [Ignore State Benefit](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/2.0/oas/page#/paths/~1individuals~1state-benefits~1%7Bnino%7D~1%7BtaxYear%7D~1%7BbenefitId%7D~1ignore/post)
 - [Unignore State Benefit](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-state-benefits-api/2.0/oas/page#/paths/~1individuals~1state-benefits~1%7Bnino%7D~1%7BtaxYear%7D~1%7BbenefitId%7D~1unignore/post)
 
+#### Winter Fuel Payments
+
+Customers of State Pension age may be in receipt of a Winter Fuel Payment (WFP). For more information refer to the [Winter Fuel Payment: Overview](https://www.gov.uk/winter-fuel-payment)  on GOV.UK.
+
+The government has introduced a tax charge equal to the full amount of WFP received which applies to individuals with income above a specified amount, in the year they receive the  WFP. Customers can use software to submit their Winter Fuel Payment information at the end of the year, so that it can be included within their tax liability calculation. This is applicable from the 2026 \- 2027 tax year onwards.
+
+WFP information is only relevant for customers of State Pension age. Customers below State Pension age will not have any data available.
+
+The software can use the following endpoints to enable customers to:
+
+- [Create or Amend Winter Fuel Payment](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/3.0/oas/page#tag/Winter-Fuel-Payment/paths/~1individuals~1charges~1winter-fuel-payment~1%7Bnino%7D~1%7BtaxYear%7D/put)  
+- [Retrieve Winter Fuel Payment](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/3.0/oas/page#tag/Winter-Fuel-Payment/paths/~1individuals~1charges~1winter-fuel-payment~1%7Bnino%7D~1%7BtaxYear%7D/get)  
+- [Delete Winter Fuel Payment](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-charges-api/3.0/oas/page#tag/Winter-Fuel-Payment/paths/~1individuals~1charges~1winter-fuel-payment~1%7Bnino%7D~1%7BtaxYear%7D/delete)
+
+In addition to this, the [Retrieve a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint contains the relevant information so that a customer's Winter Fuel Payment charge can be factored into their tax liability calculation.
+
 ### Capital Gains Tax
 
 Capital Gains Tax is a tax on the profit when someone sells or disposes of an asset that has increased in value. Customers may need to report on the following types of asset:
