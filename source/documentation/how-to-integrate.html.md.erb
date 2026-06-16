@@ -48,7 +48,7 @@ It is a legal requirement for software to provide compliant fraud prevention hea
 
 HMRC must see evidence that your software sends fraud prevention headers and must be satisfied with their level of accuracy. 
 
-Ensure that you test with a variety of user IDs, devices, browsers, and screen sizes to confirm that the fraud prevention header specification is implemented correctly. Before you start developing your Making Tax Digital for Income Tax-compatible software, we recommend you check whether your technology stack supports the collection of all header data required. For more guidance on fraud prevention headers, refer to [Send fraud prevention data (GOV.UK)](https://developer.service.hmrc.gov.uk/guides/fraud-prevention/).
+Ensure that you test with a variety of user IDs, devices, browsers, and screen sizes to confirm that the fraud prevention header specification is implemented correctly. Before you start developing your Making Tax Digital for Income Tax-compatible software, we recommend you check whether your technology stack supports the collection of all header data required. For more guidance on fraud prevention headers, refer to [Send fraud prevention data (GOV.UK)](/guides/fraud-prevention/).
 
 ### Terms of use
 
@@ -57,7 +57,7 @@ If you are creating a new Production application, you must comply with our [term
 ### Overview of developer journey to Production access
 
 1. Sign into the [Developer Hub](/api-documentation) and register your application for Sandbox testing.
-2. [Create a test user which is an individual](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0/oas/page#tag/create-test-user/operation/Createatestuserwhichisanindividual) to create test data.
+2. [Create a test user which is an individual](/api-documentation/docs/api/service/api-platform-test-user/1.0/oas/page#tag/create-test-user/operation/Createatestuserwhichisanindividual) to create test data.
 3. Review the [API documentation](/api-documentation/docs/api?filter=income-tax-mtd) and this guide.
 4. Develop your software application. Any queries during this phase should be sent to [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk).
 5. Register your application for Production credentials by creating a Production application within your HMRC Developer Hub account. Alternatively, if you already have an existing Production application, you should add the relevant API subscriptions to it.
@@ -77,7 +77,7 @@ You can build the following 3 types of products:
 
 #### Full end-to-end product
 
-Software providers have the option to either build all elements required to meet [minimum functionality standards](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards) in one go or to build these elements iteratively. If you choose to build iteratively, you are required to test the relevant APIs and complete the [Production Approvals Checklist](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#production-approvals-checklist) for the stage you are building.
+Software providers have the option to either build all elements required to meet [minimum functionality standards](#minimum-functionality-standards) in one go or to build these elements iteratively. If you choose to build iteratively, you are required to test the relevant APIs and complete the [Production Approvals Checklist](#production-approvals-checklist) for the stage you are building.
 
 For a full end-to-end product, there are 2 distinct stages and the following APIs are required for each one:
 
@@ -93,7 +93,7 @@ For a full end-to-end product, there are 2 distinct stages and the following API
   - [Self-Employment Business(MTD)](/api-documentation/docs/api/service/self-employment-business-api/) and/or [Property Business (MTD)](/api-documentation/docs/api/service/property-business-api/)
   - [Business Source Adjustable Summary (MTD)](/api-documentation/docs/api/service/self-assessment-bsas-api)
   - [Individual Losses (MTD)](/api-documentation/docs/api/service/individual-losses-api)
-  - [Individuals Tax Liability Adjustments (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-tax-liability-adjustments-api/1.0) 
+  - [Individuals Tax Liability Adjustments (MTD)](/api-documentation/docs/api/service/individuals-tax-liability-adjustments-api/1.0) 
   - [Obligations (MTD)](/api-documentation/docs/api/service/obligations-api/)
   - [Individual Calculations (MTD)](/api-documentation/docs/api/service/individual-calculations-api)
 
@@ -114,7 +114,7 @@ The following APIs are required:
 - [Self-Employment Business(MTD)](/api-documentation/docs/api/service/self-employment-business-api/) and/or [Property Business (MTD)](/api-documentation/docs/api/service/property-business-api/)
 - [Business Source Adjustable Summary (MTD)](/api-documentation/docs/api/service/self-assessment-bsas-api)
 - [Individual Losses (MTD)](/api-documentation/docs/api/service/individual-losses-api)
-- [Individuals Tax Liability Adjustments (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-tax-liability-adjustments-api/1.0) 
+- [Individuals Tax Liability Adjustments (MTD)](/api-documentation/docs/api/service/individuals-tax-liability-adjustments-api/1.0) 
 - [Obligations (MTD)](/api-documentation/docs/api/service/obligations-api/)
 - [Individual Calculations (MTD)](/api-documentation/docs/api/service/individual-calculations-api)
 
@@ -130,9 +130,9 @@ For APIs included in the [minimum functionality standards](#minimum-functionalit
 For APIs not included in the minimum functionality standards:
 
 - you are required to test only the endpoints relating to the data sources that your software supports 
-- if your software does not support all data items, please notify  [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk) separately to confirm which data items you do support, so we can take this into account when checking the testing logs
+- if your software does not support all data items, please notify [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk) separately to confirm which data items you do support, so we can take this into account when checking the testing logs
 
-[Fraud prevention headers](https://developer.service.hmrc.gov.uk/guides/fraud-prevention/) must be included in Sandbox calls, which will be checked by a specialist team. Once testing is complete, please send details of the Sandbox application ID used for testing to SDSTeam@hmrc.gov.uk. You will need to contact us as soon as you have completed your API testing to enable us to view the data within our logs.  
+[Fraud prevention headers](/guides/fraud-prevention/) must be included in Sandbox calls, which will be checked by a specialist team. Once testing is complete, please send details of the Sandbox application ID used for testing to [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk). You will need to contact us as soon as you have completed your API testing to enable us to view the data within our logs.  
 
 ### Production Approvals Checklist
 
@@ -152,7 +152,7 @@ For access to updated APIs (that is, new versions), we do not generally require 
 
 ## Sandbox testing
 
-Some APIs in the Sandbox environment allow software to test different scenarios by including ‘Gov-Test-Scenario’ headers in requests. The [Making Tax Digital for Income Tax API documentation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api?filter=income-tax-mtd) provides more information about how to use these test scenarios.
+Some APIs in the Sandbox environment allow software to test different scenarios by including ‘Gov-Test-Scenario’ headers in requests. The [Making Tax Digital for Income Tax API documentation](/api-documentation/docs/api?filter=income-tax-mtd) provides more information about how to use these test scenarios.
 
 #### Dynamic scenarios
 
