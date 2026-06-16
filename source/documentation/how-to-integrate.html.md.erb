@@ -46,7 +46,9 @@ In addition, software providers may wish to offer other functionality over and a
 
 It is a legal requirement for software to provide compliant fraud prevention header information for all Making Tax Digital for Income Tax APIs. This requirement must be fulfilled before Production access to the APIs can be granted.
 
-HMRC must see evidence that your software sends fraud prevention headers and must be satisfied with their level of accuracy. Before you start developing your Making Tax Digital for Income Tax-compatible software, we recommend you check whether your technology stack supports the collection of all header data required. For more guidance on fraud prevention headers, refer to [Send fraud prevention data (GOV.UK)](https://developer.service.hmrc.gov.uk/guides/fraud-prevention/).
+HMRC must see evidence that your software sends fraud prevention headers and must be satisfied with their level of accuracy. 
+
+Ensure that you test with a variety of user IDs, devices, browsers, and screen sizes to confirm that the fraud prevention header specification is implemented correctly. Before you start developing your Making Tax Digital for Income Tax-compatible software, we recommend you check whether your technology stack supports the collection of all header data required. For more guidance on fraud prevention headers, refer to [Send fraud prevention data (GOV.UK)](https://developer.service.hmrc.gov.uk/guides/fraud-prevention/).
 
 ### Terms of use
 
@@ -75,7 +77,7 @@ You can build the following 3 types of products:
 
 #### Full end-to-end product
 
-Software providers have the option to either build all elements required to meet [minimum functionality standards](#minimum-functionality-standards) in one go or to build these elements iteratively. If you choose to build iteratively, you are required to test the relevant APIs and complete the [Production Approvals Checklist](#production-approvals-checklist) for each stage of the build.
+Software providers have the option to either build all elements required to meet [minimum functionality standards](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards) in one go or to build these elements iteratively. If you choose to build iteratively, you are required to test the relevant APIs and complete the [Production Approvals Checklist](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#production-approvals-checklist) for the stage you are building.
 
 For a full end-to-end product, there are 2 distinct stages and the following APIs are required for each one:
 
@@ -88,11 +90,12 @@ For a full end-to-end product, there are 2 distinct stages and the following API
 
 - End-of-year functionality:
 
-  - [Self-Employment Business(MTD)](/api-documentation/docs/api/service/self-employment-business-api/) and/or [Property Business (MTD)](/api-documentation/docs/api/service/property-business-api/) - if including annual submission endpoints in end-of-year build 
+  - [Self-Employment Business(MTD)](/api-documentation/docs/api/service/self-employment-business-api/) and/or [Property Business (MTD)](/api-documentation/docs/api/service/property-business-api/)
   - [Business Source Adjustable Summary (MTD)](/api-documentation/docs/api/service/self-assessment-bsas-api)
   - [Individual Losses (MTD)](/api-documentation/docs/api/service/individual-losses-api)
-  - [Obligations (MTD)](/api-documentation/docs/api/service/obligations-api/) - if supporting final declaration
-  - [Individual Calculations (MTD)](/api-documentation/docs/api/service/individual-calculations-api) - if supporting final declaration in software and not diverting customers into a channel where they can submit it
+  - [Individuals Tax Liability Adjustments (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-tax-liability-adjustments-api/1.0) 
+  - [Obligations (MTD)](/api-documentation/docs/api/service/obligations-api/)
+  - [Individual Calculations (MTD)](/api-documentation/docs/api/service/individual-calculations-api)
 
 #### In-year product 
 
@@ -108,11 +111,12 @@ The following APIs are required:
 The following APIs are required:
 
 - [Business Details (MTD)](/api-documentation/docs/api/service/business-details-api/)
-- [Self-Employment Business(MTD)](/api-documentation/docs/api/service/self-employment-business-api/) and/or [Property Business (MTD)](/api-documentation/docs/api/service/property-business-api/) - annual submission endpoints
+- [Self-Employment Business(MTD)](/api-documentation/docs/api/service/self-employment-business-api/) and/or [Property Business (MTD)](/api-documentation/docs/api/service/property-business-api/)
 - [Business Source Adjustable Summary (MTD)](/api-documentation/docs/api/service/self-assessment-bsas-api)
 - [Individual Losses (MTD)](/api-documentation/docs/api/service/individual-losses-api)
-- [Obligations (MTD)](/api-documentation/docs/api/service/obligations-api/) – if supporting final declaration
-- [Individual Calculations (MTD)](/api-documentation/docs/api/service/individual-calculations-api) - if supporting final declaration in software and not diverting customers into a channel where they can submit it
+- [Individuals Tax Liability Adjustments (MTD)](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-tax-liability-adjustments-api/1.0) 
+- [Obligations (MTD)](/api-documentation/docs/api/service/obligations-api/)
+- [Individual Calculations (MTD)](/api-documentation/docs/api/service/individual-calculations-api)
 
 ### Testing requirements
 
@@ -128,7 +132,7 @@ For APIs not included in the minimum functionality standards:
 - you are required to test only the endpoints relating to the data sources that your software supports 
 - if your software does not support all data items, please notify  [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk) separately to confirm which data items you do support, so we can take this into account when checking the testing logs
 
-[Fraud prevention headers](/guides/fraud-prevention/) must be included in Sandbox calls, which will be checked by a specialist team. Once testing is complete, please send details of the dummy National Insurance Number used in the Sandbox to [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk). You will need to contact us within 14 days of completing your API testing to enable us to view the data within our logs.  
+[Fraud prevention headers](https://developer.service.hmrc.gov.uk/guides/fraud-prevention/) must be included in Sandbox calls, which will be checked by a specialist team. Once testing is complete, please send details of the Sandbox application ID used for testing to SDSTeam@hmrc.gov.uk. You will need to contact us as soon as you have completed your API testing to enable us to view the data within our logs.  
 
 ### Production Approvals Checklist
 
