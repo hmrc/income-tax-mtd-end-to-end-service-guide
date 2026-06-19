@@ -94,7 +94,6 @@ Update the following sections:
 - [Penalties for late payment and late submission](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/view-customer-self-assessment-account-information.html#penalties-for-late-payment-and-late-submission)
 - [Basis period reform: Capture Period of Account](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#basis-period-reform-capture-period-of-account)
 
-
 #### 23 March 2026
 
 Add the following sections:
