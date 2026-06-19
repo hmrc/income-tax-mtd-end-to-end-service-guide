@@ -1,6 +1,6 @@
 # Making Tax Digital for Income Tax end-to-end service guide
 
-Updated 23 March 2026 (see [changelog](#document-changelog))
+Updated 15 June 2026 (see [changelog](#document-changelog))
 
 This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
@@ -80,6 +80,20 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 ### Document changelog
 
 Below is a summary of updates to this service guide.
+
+#### 15 June 2026
+
+Add the following sections:
+
+- [Winter Fuel Payments](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#winter-fuel-payments)
+
+Update the following sections:
+
+- [Minimum Functionality Standards](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards)
+- [Process for being granted Production access](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#process-for-being-granted-production-access)
+- [Penalties for late payment and late submission](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/view-customer-self-assessment-account-information.html#penalties-for-late-payment-and-late-submission)
+- [Basis period reform: Capture Period of Account](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#basis-period-reform-capture-period-of-account)
+
 
 #### 23 March 2026
 
