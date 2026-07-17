@@ -26,7 +26,7 @@ The following table lists the tasks customers will be able to complete through H
 | [Add new business details for a self-employment sole trader or property business](#adding-new-business-details-for-a-self-employment-sole-trader-or-property-business) | Live | Yes | No | All business customers need access to this functionality. |
 | [Close (cease) a self-employment sole trader or property business](#closing-ceasing-a-self-employment-sole-trader-or-property-business) | Live | Yes | No | All business customers need access to this functionality. |
 | Elect for calendar quarterly periods | Live | No | Yes | User journey involves setting up software for sending quarterly updates. |
-| View Self Assessment tax calculations for in-year, forecast, and final declaration | Live | Yes | Yes | All users need access to this functionality. |
+| View Self Assessment tax calculations for in-year, forecast, and tax return | Live | Yes | Yes | All users need access to this functionality. |
 | Check how much is owed through MTD | Live | Yes | Yes | All users need access to this functionality. |
 | [Make a payment](#making-a-payment) | Live | Yes | No | Functionality will be available in software as part of a future HMRC delivery. |
 | Check money in the account | Live | Yes | Yes | All users need access to this functionality. |
@@ -56,11 +56,11 @@ To make MTD communication accessible to all customers, HMRC has provided them wi
 
 'Payments on account' (POA) are advance payments towards a customer's tax bill. For more information, refer to [Understand your Self-Assessment tax bill (GOV.UK)](https://www.gov.uk/understand-self-assessment-bill/payments-on-account).
 
-When a customer makes their final declaration for the previous tax year, the POAs for the current tax year are calculated. If they believe the amount to be incorrect, they can make a claim to adjust the POAs using [HMRC online services (GOV.UK)](https://www.gov.uk/log-in-register-hmrc-online-services). 
+When a customer submits their tax return for the previous tax year, the POAs for the current tax year are calculated. If they believe the amount to be incorrect, they can make a claim to adjust the POAs using [HMRC online services (GOV.UK)](https://www.gov.uk/log-in-register-hmrc-online-services). 
 
 When the customer adjusts the POA for the first time in a tax year, they can only reduce the POA amount. After that, they can either increase or decrease it. However, the increase is limited to the maximum value with which the POA was originally calculated. The updated POA values replace the existing ones and can be retrieved using the [Retrieve Self Assessment Balance and Transactions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/3.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1balance-and-transactions/get) endpoint.
 
-POAs can be adjusted throughout the tax year. However, all adjustments must be made before the customer makes their final declaration (or by 31st January following the end of that tax year). These changes are not dependent on any [customer status](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/prepare-for-mtd.html#mtd-customer-status).
+POAs can be adjusted throughout the tax year. However, all adjustments must be made before the customer submits their tax return (or by 31st January following the end of that tax year). These changes are not dependent on any [customer status](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/prepare-for-mtd.html#mtd-customer-status).
 
 ### Adding new business details for a self-employment sole trader or property business
 
@@ -100,7 +100,7 @@ The opt-out service will not be available through an API. Customers and agents m
 | Customer | Use their [HMRC online services](#hmrc-online-services) account to access the opt-out service and view their changed obligations immediately. |
 | Agent | Use their agent services account to access their client’s account. Changed obligations will be viewable immediately in their software. |
 
-If the customer has submitted updates of business income and expenses (self-employment and/or property) through their software for the tax year they opt out of MTD, these updates will be deleted. The customer or their agent will receive a warning message to inform them that this is going to happen. The total business income and expenses (for the tax year) must then be submitted as part of the customer’s tax return before completing their final declaration.
+If the customer has submitted updates of business income and expenses (self-employment and/or property) through their software for the tax year they opt out of MTD, these updates will be deleted. The customer or their agent will receive a warning message to inform them that this is going to happen. The total business income and expenses (for the tax year) must then be submitted as part of the customer’s tax return before submitting their tax return.
 
 If a customer is mandated to be in MTD, they will not be eligible to opt out. The opt-out service will be available in [HMRC online services](#hmrc-online-services) only for eligible customers.
 
@@ -110,7 +110,7 @@ If a customer is mandated to be in MTD, they will not be eligible to opt out. Th
 
 Customers can make payments towards their liability as described in [Pay your Self Assessment tax bill (GOV.UK)](https://www.gov.uk/pay-self-assessment-tax-bill). Payments cannot currently be made through software. However, once a payment has been made, customers can view it both in software (through the [Self Assessment Accounts API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/)) and using [HMRC online services (GOV.UK)](https://www.gov.uk/log-in-register-hmrc-online-services).
 
-When a payment is made, the current payment service will first check to see if there is any outstanding liability from previous Self Assessment Tax returns, and it will prioritise the allocation of funds there.  Following that allocation, if there is any payment remaining, it will be allocated to any unpaid Payment on account charges  or  owed liability following an MTD final declaration.  If those remaining funds do not fully cover that MTD liability, this still must  be paid by 31 January.  In this instance, the [Self Assessment Accounts API](/api-documentation/docs/api/service/self-assessment-accounts-api/) can be used through software to see how much of their MTD liability is outstanding. However, it will not show them the amount that has been apportioned to previous tax year Self Assessment returns.  To view this, a customer will need to access [HMRC online services](#hmrc-online-services).   
+When a payment is made, the current payment service will first check to see if there is any outstanding liability from previous Self Assessment Tax returns, and it will prioritise the allocation of funds there.  Following that allocation, if there is any payment remaining, it will be allocated to any unpaid Payment on account charges  or  owed liability following an MTD tax return.  If those remaining funds do not fully cover that MTD liability, this still must  be paid by 31 January.  In this instance, the [Self Assessment Accounts API](/api-documentation/docs/api/service/self-assessment-accounts-api/) can be used through software to see how much of their MTD liability is outstanding. However, it will not show them the amount that has been apportioned to previous tax year Self Assessment returns.  To view this, a customer will need to access [HMRC online services](#hmrc-online-services).   
 
 ## Claiming a refund
 

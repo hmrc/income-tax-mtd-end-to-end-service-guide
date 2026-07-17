@@ -19,7 +19,7 @@ HMRC's vision for Making Tax Digital for Income Tax is to allow individuals to f
 - make any accounting adjustments as needed
 - receive nudges and prompts from HMRC
 - submit any other income sources
-- make a final declaration to submit a tax return 
+- submit a tax return 
 - make an amendment to a submitted tax return
 
 HMRC will provide APIs to support submission of all personal data items under Self Assessment as set out above - that is, all the things individuals need to do to comply with their Income Tax obligations. This will create market demand for compatible software that enables users to finalise the entirety of their tax affairs.
@@ -36,7 +36,7 @@ Software Choices is a service designed to help users find compatible software fo
 
 ### Bridging software
 
-Some customers may wish to integrate their existing software solution for record keeping along with another product that can submit quarterly updates, make a final declaration and view tax liabilities. We refer to these products as 'bridging products'. 
+Some customers may wish to integrate their existing software solution for record keeping along with another product that can submit quarterly updates, submit and annual tax return and view tax liabilities. We refer to these products as 'bridging products'. 
 
 Customers who choose to use bridging software must digitally link it to their record-keeping software. This will ensure that customers meet their obligations when they use multiple compatible software products which collectively meet the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards) set out in this guide.
 
@@ -138,7 +138,7 @@ Update [Minimum functionality standards](/guides/income-tax-mtd-end-to-end-servi
 
 #### 24 March 2025
 
-Update [Amendments after making a final declaration](/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#amendments-after-making-a-final-declaration)
+Update [Amendments after submitting a tax return](/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#amendments-after-making-a-final-declaration)
 
 #### 17 December 2024
 
@@ -246,7 +246,7 @@ Minor fixes to remove typos and inconsistent capitalisation
 - Update Business and property income section:
   - add new section Change to calendar quarters
   - add new content to section Submit quarterly update
-- Update Final declaration section:
+- Update Tax return section:
   - remove all references to 'crystallisation'
   - remove sections Calculations that produce errors and Calculations that are free from errors, which are now in section Tax calculations
   - change 'calcuationId' to 'Calculation ID' and 'finalDeclaraton' to 'Final Declaration'

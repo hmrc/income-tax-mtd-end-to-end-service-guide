@@ -41,7 +41,7 @@ A customer’s property income includes the following:
 A Making Tax Digital for Income Tax mandated or voluntary customer will have a set of obligations for each tax year. These are:
 
 - 4 quarterly updates
-- final declaration
+- annual tax return
 
 At any time of the year, customers can check their obligations. To provide this information, the software needs details about their business income sources. It gets this information by using the [List All Businesses](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/2.0/oas/page#/paths/~1individuals~1business~1details~1%7Bnino%7D~1list/get) endpoint, which provides the business ID. This ID is required to call multiple self-employment and property endpoints. To save time, the software should store this ID instead of making extra calls.
 
@@ -52,7 +52,7 @@ Quarterly obligations are created for sole trader and property income sources. I
 
 These endpoints provide obligation dates for all self-employment and property businesses, and inform whether or not obligations have been met. The deadline for meeting a quarterly obligation is one month and 2 days after the obligation period end date. The software should communicate these deadlines clearly to the customer and prompt them to submit the information when the update is due.
 
-After submitting a quarterly update or a final declaration, it may take up to an hour for the obligation to be marked as fulfilled in HMRC's system.
+After submitting a quarterly update or an annual tax return, it may take up to an hour for the obligation to be marked as fulfilled in HMRC's system.
 
 A customer should always be able to view their latest obligations. To do this, the software should be aware that the customer’s obligation will be created or updated for the following reasons:
 

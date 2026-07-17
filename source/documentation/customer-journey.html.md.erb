@@ -50,10 +50,10 @@ The following end-to-end journey is for a Making Tax Digital for Income Tax cust
 30. HMRC receives the submission and updates records
 31. The software displays the confirmation of the update
 32. The customer views the confirmation
-33. The customer is ready to make their final declaration
+33. The customer is ready to submit their tax return
 34. The software calls the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint with `finalDeclaration` parameter value `true`
 35. HMRC receives the request, starts tax calculation and returns calculation ID
-36. HMRC generates final declaration tax calculation (converts any business validation warnings into errors)
+36. HMRC generates tax calculation (converts any business validation warnings into errors)
 37. The software receives calculation ID
 38. The software calls the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint using calculation ID
 39. HMRC returns the tax calculation with the requested calculation ID
@@ -61,7 +61,7 @@ The following end-to-end journey is for a Making Tax Digital for Income Tax cust
 41. The customer views final tax calculation results
 42. The customer reviews and confirms the calculation and declaration text 
 43. The software receives confirmation and calls the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D~1final-declaration/post) endpoint to confirm calculation
-44. HMRC receives the submission and marks the final declaration obligation as fulfilled 
+44. HMRC receives the submission and marks the tax return obligation as fulfilled 
 45. The software displays the confirmation of the submission (HMRC does not do this)
 46. The customer views confirmation that the return has been submitted successfully to HMRC
 

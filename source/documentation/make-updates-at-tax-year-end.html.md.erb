@@ -1,7 +1,7 @@
 ---
 title: Making updates at the end of a tax year | Making Tax Digital for Income Tax service guide
 weight: 15
-description: How to enable MTD-compatible software to make updates at the end of a tax year, including making a final declaration.
+description: How to enable MTD-compatible software to make updates at the end of a tax year, including submitting an annual tax return
 ---
 
 <%= partial 'documentation/partials/google_tag_manager_js' %>
@@ -14,7 +14,7 @@ If Making Tax Digital (MTD) customers are earning any type of income in addition
 
 Your software should prompt customers to provide details about any additional income sources. If the software does not support submission of any applicable additional income customers must be diverted to a channel where they can make their submission. For more information about which type of income to tell HMRC, refer to [Check if you need to tell HMRC about additional income (GOV.UK)](https://www.gov.uk/check-additional-income-tax).
 
-Customers who need to submit their additional income must do it before making their final declaration. The following sections cover the different types of additional income and the endpoints needed to submit them in the software.
+Customers who need to submit their additional income must do it before submitting their annual tax return. The following sections cover the different types of additional income and the endpoints needed to submit them in the software.
 
 ### Construction Industry Scheme
 
@@ -42,21 +42,21 @@ If the customer does not agree with the amount the contractor has submitted to H
 
 #### Create CIS deductions
 
-At the end of the year, if the customer still does not agree with the CIS deductions amount the contractor has submitted to HMRC, they can submit what they believe to be the correct amount. This needs to be completed following the fourth quarterly update and before making a final declaration. In software, this is done by calling the [Create CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments/post) endpoint. After successfully creating CIS deductions for the customer, the API returns a submission ID in the success response. This ID must be used to amend or delete CIS deductions in the future. A customer might also submit their CIS deductions amount if they find that no data from the contractor is included in the tax calculation.
+At the end of the year, if the customer still does not agree with the CIS deductions amount the contractor has submitted to HMRC, they can submit what they believe to be the correct amount. This needs to be completed following the fourth quarterly update and before submitting an annual tax return. In software, this is done by calling the [Create CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments/post) endpoint. After successfully creating CIS deductions for the customer, the API returns a submission ID in the success response. This ID must be used to amend or delete CIS deductions in the future. A customer might also submit their CIS deductions amount if they find that no data from the contractor is included in the tax calculation.
 
 <a href="figures/cis-create-cis.svg" target="blank"><img src="figures/cis-create-cis.svg" alt="CIS create diagram" style="width:720px;" /></a>
 <a href="figures/cis-create-cis.svg" target="blank">Open the CIS create deduction diagram in a new tab</a>
 
 #### Amend CIS deductions
 
-If the customer has submitted a CIS deduction amount after the end of the year but later realises what they submitted was incorrect, they can provide the correct CIS deduction amount. This amendment should be done before making a final declaration. In software, amending CIS deductions is done by calling the [Amend CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/put) endpoint.
+If the customer has submitted a CIS deduction amount after the end of the year but later realises what they submitted was incorrect, they can provide the correct CIS deduction amount. This amendment should be done before submitting an annual tax return. In software, amending CIS deductions is done by calling the [Amend CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/put) endpoint.
 
 <a href="figures/cis-amend-cis.svg" target="blank"><img src="figures/cis-amend-cis.svg" alt="CIS amend diagram" style="width:720px;" /></a>
 <a href="figures/cis-amend-cis.svg" target="blank">Open the CIS amend deduction diagram in a new tab</a>
 
 #### Delete CIS deductions
 
-If the customer has submitted a CIS deduction amount after the end of the year but later realises they did not pay any CIS deductions and what they submitted was incorrect, they can delete the amount. This deletion should be done before making a final declaration. In software, deleting CIS deductions is done by calling the [Delete CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/delete) endpoint.
+If the customer has submitted a CIS deduction amount after the end of the year but later realises they did not pay any CIS deductions and what they submitted was incorrect, they can delete the amount. This deletion should be done before submitting an annual tax return. In software, deleting CIS deductions is done by calling the [Delete CIS Deductions for Subcontractor](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/cis-deductions-api/3.0/oas/page#/paths/~1individuals~1deductions~1cis~1%7Bnino%7D~1amendments~1%7BsubmissionId%7D/delete) endpoint.
 
 <a href="figures/cis-delete-cis.svg" target="blank"><img src="figures/cis-delete-cis.svg" alt="CIS delete diagram" style="width:720px;" /></a>
 <a href="figures/cis-delete-cis.svg" target="blank">Open the CIS delete deduction diagram in a new tab</a>
@@ -96,7 +96,7 @@ Off-payroll working rules (IR35) govern how a worker (sometimes called a contrac
 
 The off-payroll worker status can be seen in-year as part of the employment pre-population into the customer’s Self Assessment tax calculations. In software, the off-payroll working status is retrieved using the [Retrieve an Employment and its Financial Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-employments-income-api/2.0/oas/page#tag/Employments/paths/~1individuals~1employments-income~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D~1financial-details/get) endpoint. The status is also available in the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint. If the status is set to false, indicating the worker is not regarded as being subject to OPW rules, the software should not display it to the customer. This status is view-only: the customer does not need to take any action unless they think it has been set in error, in which case they must contact their employer.
 
-After the end of the tax year, the off-payroll working status will be displayed to the customer along with the employment data fields. As part of their Self Assessment, if a customer agrees with their off-payroll working status, there is no further action required from them. However, if a customer disagrees with their off-payroll working status, they can change it after the end of tax year before making their final declaration. This change can be made in software or through their [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account. The software must call the [Create and Amend Employment Financial Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-employments-income-api/2.0/oas/page#tag/Employments/paths/~1individuals~1employments-income~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D~1financial-details/put) endpoint to change the off-payroll working status.
+After the end of the tax year, the off-payroll working status will be displayed to the customer along with the employment data fields. As part of their Self Assessment, if a customer agrees with their off-payroll working status, there is no further action required from them. However, if a customer disagrees with their off-payroll working status, they can change it after the end of tax year before submitting an annual tax return. This change can be made in software or through their [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services) account. The software must call the [Create and Amend Employment Financial Details](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-employments-income-api/2.0/oas/page#tag/Employments/paths/~1individuals~1employments-income~1%7Bnino%7D~1%7BtaxYear%7D~1%7BemploymentId%7D~1financial-details/put) endpoint to change the off-payroll working status.
 
 The following  warning message must be displayed to the customer:
 
@@ -482,7 +482,7 @@ Making Tax Digital for Income Tax customers can also report any losses they have
 
 When the customer sells or disposes of the whole or part of a UK residential property and is liable to pay Capital Gains Tax, they must tell HMRC within a specific time following the date of completion of the sale. For more information about the reporting requirement, refer to [Report and pay your Capital Gains Tax: If you sold a property in the UK on or after 6 April 2020 (GOV.UK)](https://www.gov.uk/report-and-pay-your-capital-gains-tax/if-you-sold-a-property-in-the-uk-on-or-after-6-april-2020). For non-resident customers, refer to [Tell HMRC about Capital Gains Tax on UK property or land if you’re not a UK resident (GOV.UK)](https://www.gov.uk/guidance/capital-gains-tax-for-non-residents-uk-residential-property), which advises on how these gains must be reported in year.
 
-The customer can create, update, or delete their capital gains tax in software only after the end of the tax year. If they need to make changes during the year, they need to use [HMRC online services](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services). When a gain is made from property disposal, customers must report and pay before they make their final declaration. However, this information will still need to be included in their final declaration if they are a Self Assessment or Making Tax Digital for Income Tax customer.
+The customer can create, update, or delete their capital gains tax in software only after the end of the tax year. If they need to make changes during the year, they need to use [HMRC online services](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services). When a gain is made from property disposal, customers must report and pay before they submit an annual tax return. However, this information will still need to be included in their tax return if they are a Self Assessment or Making Tax Digital for Income Tax customer.
 
 A Making Tax Digital for Income Tax customer can do the following:
 
@@ -499,7 +499,7 @@ At any time, a customer can view the capital gains tax information they have alr
 
 #### Creating or amending Capital Gains Tax
 
-Customers can create or amend the different types of Capital Gains Tax information after the end of the tax year. This change must be done before they make their final declaration. If a customer wants to amend a Capital Gains Tax submission, this will not amend or overwrite what they have previously submitted. If a customer wants to make changes to a previously submitted submission before the end of the tax year, this must be done via the original submission.
+Customers can create or amend the different types of Capital Gains Tax information after the end of the tax year. This change must be done before they submit an annual tax return. If a customer wants to amend a Capital Gains Tax submission, this will not amend or overwrite what they have previously submitted. If a customer wants to make changes to a previously submitted submission before the end of the tax year, this must be done via the original submission.
 
 In software, this information is updated using the following endpoints:
 
@@ -511,7 +511,7 @@ We perform calculations for fungible assets such as listed and unlisted shares a
 
 #### Deleting Capital Gains Tax
 
-Customers can delete different types of Capital Gains Tax only after the end of the tax year and only after they have created Capital Gains Tax using software. However, this change must be done before they make their final declaration. In software, this deletion is made using the following endpoints:
+Customers can delete different types of Capital Gains Tax only after the end of the tax year and only after they have created Capital Gains Tax using software. However, this change must be done before they submit an annual tax return. In software, this deletion is made using the following endpoints:
 
 * [Delete ‘Report and Pay Capital Gains Tax on Residential Property’ Overrides](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-capital-gains-income-api/3.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1disposals-income~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D~1ppd/delete)
 * [Delete CGT Residential Property Disposals](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individuals-capital-gains-income-api/3.0/oas/page#tag/Capital-Gains-on-Residential-Property-Disposals/paths/~1individuals~1disposals-income~1residential-property~1%7Bnino%7D~1%7BtaxYear%7D/delete)
@@ -568,7 +568,7 @@ A property business with receipts exceeding the income threshold must use accrua
 - The user's UK Property Business or Foreign Property Business exceeds the threshold
 - HMRC holds cash as their accounting method when calling the retrieve a self assessment tax calculation endpoint in-year or at end of year.
 
-At the end of the tax year, users/agents must confirm their accounting method for all their relevant self-employment or property income sources for that year before completing their final declaration.
+At the end of the tax year, users/agents must confirm their accounting method for all their relevant self-employment or property income sources for that year before submitting an annual tax return.
 
 Software should first show the user what HMRC holds for their accounting method by using the Retrieve Accounting Type endpoint in the [Business Details API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/business-details-api/).
 
@@ -620,7 +620,7 @@ If they have already finalised their return but they are in the 12 month amendme
 
 ## Submit allowance and adjustments
 
-Some customers must submit an annual summary update. An annual summary is defined as a set of summary data for a tax year, containing allowances and adjustments broken down by category. They can provide updates more frequently if they wish, though they must make this submission before making their final declaration.
+Some customers must submit an annual summary update. An annual summary is defined as a set of summary data for a tax year, containing allowances and adjustments broken down by category. They can provide updates more frequently if they wish, though they must make this submission before submitting an annual tax return.
 
 If a customer is claiming Trading Income Allowance, Rent a Room, Property Income Allowance, or any combination thereof, they are not allowed to claim any other expenses. All expenses included in their cumulative updates must be removed by amending their final cumulative update. The Trading Income Allowance, Rent a Room and Property Income Allowance are then claimed after the end of the tax year using the annual summary update.
 
@@ -773,17 +773,17 @@ The submitted figures can be retrieved using the [Retrieve Losses and Claims end
 
 If the customer changes their expenses after their loss submission, their loss amount may change. Software must resubmit the updated loss amounts.
 
-## Final declaration
+## Tax return
 
-Final declaration is the process that allows customers to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise.
+Submitting an annual tax return is the process that allows customers to finalise their tax position for any one tax year, taking into account all sources of chargeable income and gains, whether business income or otherwise.
 
 It is also the process by which most formal claims for reliefs and allowances and any deductions are made, where these were previously included within a Self Assessment tax return.
 
 Customers are able to tell us at this point (subject to the existing limits) how they wish any losses available to them to be treated.
 
-Customers can make a final declaration from 6 April Year 1. The deadline for final declaration is 31 January Year 2. The software should remind customers to help them to meet this deadline.
+Customers can submit an annual tax return from 6 April Year 1. The deadline for tax returns is 31 January Year 2. The software should remind customers to help them to meet this deadline.
 
-Before starting the final declaration journey, the software package must ensure that for the relevant tax year, the customer:
+Before starting the tax return journey, the software package must ensure that for the relevant tax year, the customer:
 
 * has submitted quarterly update information for each business income source (self-employment and property income)
 * has already provided their entire income (for example, interest, dividends, other SA schedules)
@@ -791,22 +791,23 @@ Before starting the final declaration journey, the software package must ensure 
 
 If your software will not allow customers to report their entire income and reliefs, customers should be informed to report them using [HMRC online services](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tasks-outside-mtd-software.html#hmrc-online-services).
 
-### Making a final declaration
+### Submitting an annual tax returnn
 
-The software will have to let HMRC know that the customer is ready to make a final declaration. To do this, you must call the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint under the [Individual Calculations (MTD) API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api) with the Final Declaration parameter set to 'true'. This has the following consequences:
+The software will have to let HMRC know that the customer is ready to submit a tax return. To do this, you must call the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint under the [Individual Calculations (MTD) API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api) with the Final Declaration parameter set to 'true'. This has the following consequences:
 
-* it starts the final declaration process in HMRC
+* it starts the tax return process in HMRC
 * it triggers the business validation rules (which, if violated, produce errors rather than warnings)
 * it generates a final liability calculation and a calculation ID
-* the software must then quote the calculation ID when retrieving the calculation output using the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint
+* the software must then quote the calculation ID when retrieving the calculation output using the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculatio
+ns/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint
 
-If the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}/post) does not pass HMRC validation, it results in an error. For more information, refer to [Tax calculations](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tax-calculations.html). If it results in no errors, the results of the final declaration calculation are available to the software to show the customer.
+If the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1{nino}~1self-assessment~1{taxYear}/post) does not pass HMRC validation, it results in an error. For more information, refer to [Tax calculations](/guides/income-tax-mtd-end-to-end-service-guide/documentation/tax-calculations.html). If it results in no errors, the results of the tax return calculation are available to the software to show the customer.
 
 If a customer thinks the calculation is incorrect based on the data they have submitted, they can go back and change the information by resubmitting the relevant update with the correct information. After they have done this, the software will have to call the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint again to generate a new final liability.
 
-If a customer does not agree with the calculation based on rules HMRC has used, they will need to contact HMRC before making their final declaration. If a software provider identifies a problem with the [Individual Calculations API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api), they will need to contact [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk).
+If a customer does not agree with the calculation based on rules HMRC has used, they will need to contact HMRC before submitting their tax return. If a software provider identifies a problem with the [Individual Calculations API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api), they will need to contact [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk).
 
-If a customer thinks the calculation is correct, they can use the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D~1final-declaration/post) endpoint to make their final declaration. After making the final declaration, it may take up to an hour for the obligation to be marked as fulfilled in HMRC's system.
+If a customer thinks the calculation is correct, they can use the [Submit a Self Assessment Final Declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Final-Declaration/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D~1final-declaration/post) endpoint to submit their annual tax return. After submitting the tax return, it may take up to an hour for the obligation to be marked as fulfilled in HMRC's system.
 
 #### Agreeing to the declaration
 
@@ -826,17 +827,17 @@ After a customer is confident that they have submitted all the required income t
 
 The software must send the calculation ID that matches the specific calculation that the customer is agreeing to in the declaration.
 
-### Final declaration user journey
+### Tax return user journey
 
-<a href="figures/tcp-end-to-end-diagram.svg" target="blank"><img src="figures/tcp-end-to-end-diagram.svg" alt="final declaration process API diagram" style="width:720px;" /></a>
+<a href="figures/tcp-end-to-end-diagram.svg" target="blank"><img src="figures/tcp-end-to-end-diagram.svg" alt="Tax return process API diagram" style="width:720px;" /></a>
 
-<a href="figures/tcp-end-to-end-diagram.svg" target="blank">Open the final declaration process diagram in a new tab</a>.
+<a href="figures/tcp-end-to-end-diagram.svg" target="blank">Open the tax return process diagram in a new tab</a>.
 
-1.	The customer is ready to make their final declaration.
+1.	The customer is ready to submit their tax return.
 2.	The software calls the [Trigger a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D/post) endpoint with `finalDeclaration` set to 'true'.
 3.	HMRC receives the request, starts the tax calculation, and returns a calculation ID.
 4. Software receives the calculationId and uses it to call the [Retrieve A Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint.
-5. HMRC generates the final declaration tax calculation and converts any business validation warnings into errors.
+5. HMRC generates the tax calculation and converts any business validation warnings into errors.
 6. HMRC stores the tax calculation with the `calculationId` and returns it to the software.
 7. Software receives the calculation and displays it to the user (if there are errors, user will not be able to view calculation results).
 8. User views and confirms the tax calculation results (must be able to view equivalent of what is in the SA302 as minimum).
@@ -845,22 +846,22 @@ The software must send the calculation ID that matches the specific calculation 
 11. Software displays the confirmation message to the user (HMRC does not do this).
 12. User receives confirmation that the return has been submitted successfully to HMRC.
 
-## Amendments after making a final declaration
+## Amendments after submitting a tax return
 
-Once a customer has completed their final declaration through software (this can be verified by calling the [Obligations API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/)), they have 12 months from the statutory filing date to make any changes to the information submitted (the online statutory filing date is the later of 31 January following the end of the tax year or 3 months from the date the taxpayer receives a Notice to File).
+Once a customer has completed their tax return through software (this can be verified by calling the [Obligations API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/)), they have 12 months from the statutory filing date to make any changes to the information submitted (the online statutory filing date is the later of 31 January following the end of the tax year or 3 months from the date the taxpayer receives a Notice to File).
 
 For example, for the 2025 to 2026 tax year customers have until 31 January 2028 to make changes.
 
 You should use the same business and non-business income APIs to allow customers to notify HMRC of any amendments.
 
-Before an amendment submission is accepted, the customer must have completed their final declaration for the relevant tax year through software, and the amendment request must be submitted within the designated amendment window. Software should use the retrieve endpoint for the relevant submission endpoint when making an amendment, so that customers are displayed the most up to date information. Customers will first need to submit an **Intent to Amend Calculation**, during which additional validation checks will be carried out. If any errors are identified, these will be sent to the software, which must display them to the customer or their authorised agent.
+Before an amendment submission is accepted, the customer must have completed their tax return for the relevant tax year through software, and the amendment request must be submitted within the designated amendment window. Software should use the retrieve endpoint for the relevant submission endpoint when making an amendment, so that customers are displayed the most up to date information. Customers will first need to submit an **Intent to Amend Calculation**, during which additional validation checks will be carried out. If any errors are identified, these will be sent to the software, which must display them to the customer or their authorised agent.
 
 <a href="figures/PFA-customer-journey.svg" target="blank"><img src="figures/PFA-customer-journey.svg" alt="Diagram of post-finalisation amendment customer journey" style="width:720px;" /></a>
 <a href="figures/PFA-customer-journey.svg" target="blank">Open the post-finalisation amendment customer journey diagram in a new tab</a>.
 
 1. User starts Post Finalisation Process in Software.
 2. (Optional) Software checks if customer is within the amendment window by calling the List endpoint within the Individual Calculations API.
-3. HMRC receives the request and the Individual Calculations API returns the date of the final declaration.
+3. HMRC receives the request and the Individual Calculations API returns the date of the tax return.
 4. Software allows user to make amendments (unless outside the amendment window, in which case software needs to inform the user to contact HMRC).
 5. User makes the relevant amendments in the software and submits them.
 6. Software uses the appropriate Income API to send the amended figures to HMRC (all submission APIs allow Post Finalisation Amendments).
@@ -892,9 +893,9 @@ However, if there is a change in the customer's tax code, it may no longer be po
 
 A customer can view the coded out Self Assessment underpayments stored by HMRC and the amount submitted for the previous tax year at any time. In the software, this is done by calling the [Retrieve Coding Out Underpayments and Debt Amounts](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Coding-Out-Underpayments-and-Debts/paths/~1accounts~1self-assessment~1%7Bnino%7D~1%7BtaxYear%7D~1collection~1tax-code/get) endpoint.
 
-At the end of the tax year, the customer will review their calculations before making the final declaration. If the customer does not agree with the coded out amount in their calculation shown by HMRC, they can submit what they believe to be the correct coded out amount. This can be corrected more than once if needed, but it needs to be done before the final declaration is made. In the software, this amendment is done by calling the [Create or Amend Coding Out Underpayments and Debt Amounts](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Coding-Out-Underpayments-and-Debts/paths/~1accounts~1self-assessment~1%7Bnino%7D~1%7BtaxYear%7D~1collection~1tax-code/put) endpoint. This endpoint can be used only after the tax year has ended.
+At the end of the tax year, the customer will review their calculations before submitting the tax return. If the customer does not agree with the coded out amount in their calculation shown by HMRC, they can submit what they believe to be the correct coded out amount. This can be corrected more than once if needed, but it needs to be done before the tax return is submitted. In the software, this amendment is done by calling the [Create or Amend Coding Out Underpayments and Debt Amounts](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Coding-Out-Underpayments-and-Debts/paths/~1accounts~1self-assessment~1%7Bnino%7D~1%7BtaxYear%7D~1collection~1tax-code/put) endpoint. This endpoint can be used only after the tax year has ended.
 
-If the customer has submitted an amendment to the coded out amount after the end of the tax year but later realises they agree with the coded out amount shown by HMRC, they can delete their submitted amount. This deletion needs to be done before the final declaration is made. In the software, this deletion is done by calling the [Delete Coding Out Underpayments and Debt Amounts](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Coding-Out-Underpayments-and-Debts/paths/~1accounts~1self-assessment~1%7Bnino%7D~1%7BtaxYear%7D~1collection~1tax-code/delete) endpoint.
+If the customer has submitted an amendment to the coded out amount after the end of the tax year but later realises they agree with the coded out amount shown by HMRC, they can delete their submitted amount. This deletion needs to be done before the tax return is submitted. In the software, this deletion is done by calling the [Delete Coding Out Underpayments and Debt Amounts](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Coding-Out-Underpayments-and-Debts/paths/~1accounts~1self-assessment~1%7Bnino%7D~1%7BtaxYear%7D~1collection~1tax-code/delete) endpoint.
 
 Coding out is specific to the tax year. If a customer opts out of coding out for a specific tax year, they will not be opted out for future tax years.
 
