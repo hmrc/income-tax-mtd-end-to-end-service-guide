@@ -36,7 +36,7 @@ Software Choices is a service designed to help users find compatible software fo
 
 ### Bridging software
 
-Some customers may wish to integrate their existing software solution for record keeping along with another product that can submit quarterly updates, submit and annual tax return and view tax liabilities. We refer to these products as 'bridging products'. 
+Some customers may wish to integrate their existing software solution for record keeping along with another product that can submit quarterly updates, submit an annual tax return and view tax liabilities. We refer to these products as 'bridging products'. 
 
 Customers who choose to use bridging software must digitally link it to their record-keeping software. This will ensure that customers meet their obligations when they use multiple compatible software products which collectively meet the [minimum functionality standards](/guides/income-tax-mtd-end-to-end-service-guide/documentation/how-to-integrate.html#minimum-functionality-standards) set out in this guide.
 
