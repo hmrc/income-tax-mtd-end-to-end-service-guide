@@ -2,6 +2,8 @@
 
 Updated 15 June 2026 (see [changelog](#document-changelog))
 
+> HMRC is no longer accepting production credential access requests for new 2026–27 quarterly update products, as the market window for these products has now closed.
+
 This service guide explains how you can integrate your software with the [Making Tax Digital for Income Tax APIs](/api-documentation/docs/api?filter=income-tax-mtd). 
 
 ## Overview
