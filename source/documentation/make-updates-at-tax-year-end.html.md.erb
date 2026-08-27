@@ -939,6 +939,16 @@ Penalties must be paid within 30 days of the date on the penalty notice. Late pa
 
 The existing process for appeals, as described in [Appeal a Self Assessment penalty for late filing or late payment (GOV.UK)](https://www.gov.uk/guidance/check-when-to-appeal-a-self-assessment-penalty-for-late-filing-or-late-payment), will remain in place, but a provision will be made to allow a customer to appeal new late submission and late payment penalties through their digital tax account.
 
+Where a customer submits an appeal against a charge, HMRC may apply a standover to postpone payment of all or part of the disputed amount while the appeal is being considered.
+
+#### Retrieving appeal and standover information
+
+Software can retrieve details of appeals and standovers by calling the [Retrieve Self Assessment Balance and Transactions endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1balance-and-transactions/get) in the Self Assessment Accounts API. This endpoint provides you with the data required to do the following:
+
+- Identify charges under appeal
+- Determine whether a standover is in place
+- Display stoodover and payable amounts accurately
+
 A customer or agent may contact HMRC if they have a query about a tax decision. If they do not understand the decision, they can also get advice from HMRC or professional help.
 
 > Your feedback matters! Share your thoughts and help us improve. Click [here](https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_1HNqtnocN4MeRme) to complete a survey.
