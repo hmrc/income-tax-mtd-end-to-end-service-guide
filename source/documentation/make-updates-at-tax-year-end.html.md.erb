@@ -915,6 +915,18 @@ The software can use the following endpoints to enable customers to:
 - [Retrieve Coding Out Status](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Coding-Out-Status/paths/~1accounts~1self-assessment~1{nino}~1{taxYear}~1collection~1tax-code~1coding-out~1status/get)
 - [Opt in to Coding Out](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Coding-Out-Status/paths/~1accounts~1self-assessment~1{nino}~1{taxYear}~1collection~1tax-code~1coding-out~1opt-in/post)
 
+## Errors and corrections
+
+Once a tax return has been submitted, if the information provided does not match what HMRC holds, data may be auto-corrected or manually corrected by HMRC.
+
+Any correction will result in a new tax calculation, software will be able to identify a new calculation by calling the List Self Assessment Tax calculations endpoint, which will show the calculation type as `confirm-amendment`. Software then needs to alert users to this new calculation along with the reason for the correction, and whether this correction has been done automatically or manually. This may result in new charges, which software should also display along with the reason behind it, by calling the [Retrieve Self Assessment Balance and Transactions](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-assessment-accounts-api/4.0/oas/page#tag/Payments-and-Liabilities/paths/~1accounts~1self-assessment~1%7Bnino%7D~1balance-and-transactions/get) endpoint in the Self Assessment Accounts API.
+
+Using the ID from the corrected calculation, software should then call the [Retrieve a Self Assessment Tax Calculation](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/individual-calculations-api/8.0/oas/page#tag/Tax-Calculations/paths/~1individuals~1calculations~1%7Bnino%7D~1self-assessment~1%7BtaxYear%7D~1%7BcalculationId%7D/get) endpoint in the Individual Calculations API. The response will include an array called `customerServiceMessages` which details whether the calculation was corrected manually or automatically, along with a list of the data items that have been corrected, software will need to show these messages to customers.
+
+Customers, or their agents, can [dispute any correction (GOV.UK)](https://www.gov.uk/guidance/disagree-with-a-revenue-correction-notice) by writing to HMRC. HMRC will review their dispute, and if accepted, a new tax calculation will be issued which needs to be displayed in software through the above steps.
+
+> Note: Following any post-finalisation corrections or amendments, software needs to ensure that the underlying records it holds accurately reflect the user’s current position. Software must call all relevant Retrieve endpoints for the records it holds.  
+
 ## Penalties and appeals
 
 ### Penalties for late payment and late submission
