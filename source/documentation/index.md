@@ -1,6 +1,6 @@
 # Making Tax Digital for Income Tax end-to-end service guide
 
-Updated 7 August 2026 (see [changelog](#document-changelog))
+Updated 15 September 2026 (see [changelog](#document-changelog))
 
 <div class="govuk-warning-text warning-icon-fix">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -88,6 +88,14 @@ The [API changelog](https://github.com/hmrc/income-tax-mtd-changelog) (GitHub) p
 ### Document changelog
 
 Below is a summary of updates to this service guide.
+
+#### 15 September 2026
+
+Add the following sections:
+
+- [Errors and corrections](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#errors-and-corrections)
+- [Retrieving appeal and standover information](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#appeals)
+- [Tax refunded or set off](https://developer.service.hmrc.gov.uk/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html#tax-refunded-or-set-off)
 
 #### 7 August 2026
 
