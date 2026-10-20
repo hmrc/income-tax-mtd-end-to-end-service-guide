@@ -28,3 +28,6 @@ Staticfile.auth
 /logs
 .idea
 /.bsp
+
+# Ignore check_links.rb output text file
+output.txt
