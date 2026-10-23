@@ -10,6 +10,18 @@ description: How to enable MTD-compatible software to make in-year updates and d
 
 # Making updates during the tax year
 
+## Self-employment and property income
+
+Mandated customers will have reported their income and expenses for self-employment and property businesses on a quarterly basis and therefore will only need to check the updates made ahead of submitting their tax return.
+
+Where a business was started after signing up to Making Tax Digital for Income Tax, users may have opted to report that on an annual basis. To do that, software must use the following endpoints to send the users' income and expenditure:
+
+- [Create or Amend a Self-Employment Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/5.0/oas/page#tag/Self-Employment-Cumulative-Period-Summary/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put)
+- [Create or Amend a UK Property Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Income-and-Expenses-Period-Summaries/paths/~1individuals~1business~1property~1uk~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put)
+- [Create or Amend a Foreign Property Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Income-and-Expenses-Period-Summaries/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put)
+
+The difference between sending this update compared to quarterly updates will be the omittance of the dates within the submission.
+
 ## Making Tax Digital for Income Tax mandated income
 
 A customer’s Making Tax Digital for Income Tax mandated income consists of the following:
@@ -63,7 +75,7 @@ Obligations will be created at the start of April for existing MTD customers. Fo
 
 ## Latency
 
-When customers add a new self-employment or property business in their HMRC online services ([sign in to HMRC online services](https://www.gov.uk/log-in-register-hmrc-online-services)), they can choose when to start using Making Tax Digital for Income Tax. They only need to start creating digital records and sending quarterly updates for the business after they include it in a tax return.   
+When customers add a new self-employment or property business in their HMRC online services ([sign in to HMRC online services](https://www.gov.uk/log-in-register-hmrc-online-services)), they can choose when to start using Making Tax Digital for Income Tax.    
    
 For example, consider a customer who is already using Making Tax Digital for Income Tax for one business. They start a new self-employment or property business in July 2028. This means they must include it for the first time in their 2028-2029 tax return, which is due by 31 January 2030. They therefore need to start creating digital records and sending quarterly updates for the new business from 6 April 2030. However, they do not have to wait until 6 April 2030; if they prefer, they can choose to start creating digital records and sending quarterly updates straight away. Software vendors should not be referring to a business as latent with their customers, as it will not be a term HMRC will include in guidance. 
    
@@ -72,18 +84,6 @@ Software can retrieve a customer’s latency status for each of their businesses
 Using the Obligations API to call the [Retrieve Income Tax (Self Assessment) Income and Expenditure Obligations endpoint](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/obligations-api/3.0/oas/page#/paths/~1obligations~1details~1%7Bnino%7D~1income-and-expenditure/get) for customers with a combination of businesses that are latent and non-latent, the businesses with latency active will not be shown in the response. Additionally, if you call this endpoint for customers who only have businesses with latency applied then the 404 response "NO_OBLIGATIONS_FOUND" will be returned.  
 
 For guidance on reporting self-employment and property income on an annual basis, refer to the [Making updates at the end of a tax year](/guides/income-tax-mtd-end-to-end-service-guide/documentation/make-updates-at-tax-year-end.html) section. 
-
-### Self-employment and property income
-
-Mandated customers will have reported their income and expenses for self-employment and property businesses on a quarterly basis and therefore will only need to check the updates made ahead of submitting their tax return.
-
-Where a business was started after signing up to Making Tax Digital for Income Tax, users may have opted to report that on an annual basis. To do that, software must use the following endpoints to send the users' income and expenditure:
-
-- [Create or Amend a Self-Employment Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/self-employment-business-api/5.0/oas/page#tag/Self-Employment-Cumulative-Period-Summary/paths/~1individuals~1business~1self-employment~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put)
-- [Create or Amend a UK Property Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Income-and-Expenses-Period-Summaries/paths/~1individuals~1business~1property~1uk~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put)
-- [Create or Amend a Foreign Property Cumulative Period Summary](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api/6.0/oas/page#tag/Income-and-Expenses-Period-Summaries/paths/~1individuals~1business~1property~1foreign~1%7Bnino%7D~1%7BbusinessId%7D~1cumulative~1%7BtaxYear%7D/put)
-
-The difference between sending this update compared to quarterly updates will be the omittance of the dates within the submission.
 
 ## Change to calendar quarters
 
